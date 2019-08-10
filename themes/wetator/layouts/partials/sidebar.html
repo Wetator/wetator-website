@@ -1,0 +1,67 @@
+<!-- partial sidebar begin -->
+<div id="sidebar">
+
+  <et:if_page url="/">
+    <!-- news begin -->
+    <h1>Latest News</h1>
+    <et:find url="/news">
+      <et:children:each order="desc" limit="2">
+        <div id="sidebar_news">
+          <h1><et:pagelink /> (<et:date format="%Y-%m-%d"/>)</h1>
+          <p><et:content part="summary" /></p>
+        </div>
+      </et:children:each>
+    </et:find>
+    <!-- news end -->
+  </et:if_page>
+
+  <et:find url="/">
+    <et:ns:children>
+      <et:each status="sticky,published" sort="position" order="asc">
+        <et:if_selected>
+          <h1><et:pagelink><et:breadcrumb /></et:pagelink></h1>
+        </et:if_selected>
+      </et:each>
+    </et:ns:children>
+  </et:find>
+  
+  <div id="sidebar_nav">
+    <ul>
+      <et:if_page url="/">
+        <et:ns:children>
+          <et:each category="sidebarhome" sort="position" order="asc">
+            <li><et:pagelink /></li>
+          </et:each>
+        </et:ns:children>
+      </et:if_page>
+
+      <et:find url="/">
+        <et:ns:children>
+          <et:each sort="position" order="desc">
+            <et:if_selected>
+              <et:design:snippet name="sidebar_part" />
+            </et:if_selected>
+          </et:each>
+        </et:ns:children>
+      </et:find>
+    </ul>
+  </div>
+
+  <et:if_page url="/">
+    <div id="cmdref" style="margin-left: 35px; margin-top: 40px;">
+      <a href="/wetator-documentation/reference/commands">COMMAND REFERENCE</a>
+    </div>
+    <div id="getwetator" style="margin-left: 59px; margin-top: 40px;">
+      <a href="/download"><et:design:image name="wetator-download" /></a>
+    </div>
+    <div id="cloudbees" style="margin-left: 45px;">
+      <a href="https://wetator.ci.cloudbees.com/" target="_blank"><et:design:image name="button-built-on-cb-1.png" width='149' height='52' /></a>
+    </div>
+<!--
+    <div id="ohloh" style="margin-left: 45px">
+      <script type='text/javascript' src='https://www.openhub.net/p/wetator/widgets/project_users_logo?format=js'></script>
+    </div>
+-->
+  </et:if_page>
+</div>
+<!-- partial sidebar end -->

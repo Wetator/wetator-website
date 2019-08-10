@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+{{- partial "head.html" . -}}
+
+<body>
+
+  {{- partial "header.html" . -}}
+  <div class="colmask leftmenu">
+    <div class="colright">
+      <div class="col1wrap">
+        <div class="col1">
+
+<div id="content">
+<!-- content begin -->
+<!-- todo
+<et:if_page url="/">
+<et:else />
+  <h1>{{ .Title }}</h1>
+</et:if_page>
+-->
+
+  <h1>{{ .Title }}</h1>
+  {{- block "main" . }}{{- end }}
+
+
+<!-- todo
+<et:if_content part="addcontent">
+  <et:content part="addcontent" />
+</et:if_content>
+
+<et:if_page url="/sitemap">
+  <et:design:snippet name="sitemap" />
+</et:if_page>
+-->
+
+<!-- content end -->
+</div>
+
+  {{- partial "footer.html" . -}}
+ 
+        </div>
+      </div>
+    <div class="col2">
+      {{- partial "sidebar.html" . -}}
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

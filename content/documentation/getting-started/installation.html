@@ -1,0 +1,60 @@
+---
+title: "Installation"
+menu:
+  main:
+    name: "Installation"
+    parent: Getting Started
+    weight: 100
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<h2>Prerequisites</h2>
+
+  <p>
+  <ul>
+    <li>JDK version 6 or higher
+    <li>If you plan to run Wetator tests from ant than you additionally need <a href="http://ant.apache.org/" target="_blank">Apache Ant</a> version 1.7.0 or newer.
+    <li>an XML editor (maybe the Eclipse plugin <a href="http://www.wetator.org/download" target="_blank">Wetator Test Editor</a>) to edit the Wetator test files (Wetator supports several formats, but XML is suggested)
+  </ul>
+  </p>
+
+  <h2>Command Line Version</h2>
+
+  <h3>Installation of the command line version</h3>
+  <p>
+   <ul>
+    <li>Download the latest <a href="../../download" target="_blank">stable version</a>.
+    <li>Create a new directory and unzip the file into it (preserve subdirectories).
+    <li>Open a command window and go to your Wetator directory.
+    <li>If under Windows start <pre>wetator.bat</pre>
+        under Mac OS execute <pre>java -cp lib/ -jar lib/wetator.jar</pre>
+    <li>If you see some message like
+<pre>Starting Wetator
+Wetator execution failed: The configuration file 'D:\Wetator\wetator.config' does not exist.
+</pre> then everything seems to be right and you can start with your first test.
+  </ul>
+  </p>
+
+  <h3>Run a simple test</h3>
+  <p>
+  <ul>
+    <li>Copy the file wetator.config from directory samples\wetator_testform to the root of your installation directory.<br>
+    This file defines Wetator's setup.
+    <li>Start Wetator again.
+    <li>A small popup window appears. Please choose the file samples\wetator_testform\wetator_testform.wett and click on open (You can select more
+    then one file if you like).
+    <li>Wetator executes all commands from the selected file. A small progress report is written to the console.
+    <li>If everything works fine you will end with some output like
+
+<pre>Tests run: 8,  Failures: 0,  Errors: 0</pre>
+    <li>Wetator writes a detailed protocol for every test run. You can find this protocol in the
+    subfolder 'logs'. Open the file 'run_report.xsl.html' with your browser.
+  </ul>
+  </p>
+
+  <p>For more details about the command line interface see <et:pages:pagelink id='21'>Command-Line Options</et:pages:pagelink>.
+  </p>
+
+  <p>To run your tests as ant task see <a href="ant-task">Ant Task</a>.
+  </p>

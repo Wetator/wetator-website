@@ -1,0 +1,103 @@
+---
+title: "WPath"
+menu:
+  main:
+    name: "WPath"
+    parent: General Concepts
+    weight: 300
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+<p>
+For commands interacting with controls (e.g. set, click-on) you need the WPath to address these controls.
+</p>
+<p>
+In many cases the WPath is simply the label text on the control itself or the label in front. This works for buttons, links, radiobuttons, checkboxes and entry fields.<br/>
+<et:image name="docu-cmd-click-button"/><et:image name="docu-cmd-set-inputtext"/>
+</p>
+<h3>Sample</h3>
+  <div class="examples">
+  <div class="example">
+    <p>Click on a button labeled 'Search'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Search</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  <div class="example">
+    <p>Change the text of an entry field labeled 'Your profession'</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Your profession</td>
+      <td class="col_param2">Wetator Test Wizard</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+
+<h2>Ambiguous Elements</h2>
+<p>
+For some more sophisticated web pages, it is a bit more complicated to address the right control.<br/>
+Sometimes the label might not be unique.<br/>
+<et:image name="docu-cmd-select-list"/><br/>
+For such situations the WPath might contain many parts pointing (stepwise) to the right control. The parts are separated by <et:block name="wpath-separator"/>.
+</p>
+<p>
+Sample:<br/>
+If you like to select a different background color, you can use 'Background > Red' as WPath.<br/>
+Wetator will interpret that as: Select 'Red' AFTER the occurrence of the text 'Background'.<br/>
+The WPath 'Layout > Background > Red' is also possible.
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">Background > Red</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">Layout > Background > Red</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+
+<p>&nbsp;</p>
+<h2>There is more</h2>
+<ul>
+  <li><et:pages:pagelink id='104'>WPath - Images</et:pages:pagelink>
+  <li><et:pages:pagelink id='106'>WPath and Tables</et:pages:pagelink>
+  <li><et:pages:pagelink id='105'>Empty WPath</et:pages:pagelink>
+</ul>
+</div>

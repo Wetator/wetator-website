@@ -26,7 +26,7 @@
   </et:find>
   
   <div id="sidebar_nav">
-    <ul>
+<ul>
       <et:if_page url="/">
         <et:ns:children>
           <et:each category="sidebarhome" sort="position" order="asc">
@@ -35,16 +35,29 @@
         </et:ns:children>
       </et:if_page>
 
-      <et:find url="/">
-        <et:ns:children>
-          <et:each sort="position" order="desc">
-            <et:if_selected>
-              <et:design:snippet name="sidebar_part" />
-            </et:if_selected>
-          </et:each>
-        </et:ns:children>
-      </et:find>
-    </ul>
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main }}
+    {{ if $currentPage.HasMenuCurrent "main" . }}
+      <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a>
+      {{ if .HasChildren }}
+        <ul>
+        {{ range .Children }}
+          <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a>
+          {{ if and (.HasChildren) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
+            <ul>
+            {{ range .Children }}
+              <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+            </ul>
+          {{ end }}
+          </li>
+        {{ end }}
+        </ul>
+      {{ end }}
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
   </div>
 
   <et:if_page url="/">
@@ -57,11 +70,6 @@
     <div id="cloudbees" style="margin-left: 45px;">
       <a href="https://wetator.ci.cloudbees.com/" target="_blank"><et:design:image name="button-built-on-cb-1.png" width='149' height='52' /></a>
     </div>
-<!--
-    <div id="ohloh" style="margin-left: 45px">
-      <script type='text/javascript' src='https://www.openhub.net/p/wetator/widgets/project_users_logo?format=js'></script>
-    </div>
--->
   </et:if_page>
 </div>
 <!-- partial sidebar end -->

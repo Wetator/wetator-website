@@ -1,0 +1,159 @@
+---
+title: "Content Pattern"
+menu:
+  main:
+    name: "Content Pattern"
+    parent: General Concepts
+    weight: 200
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+<p>
+  The Content Pattern is part of every assertion command (commands starting with assert-*). It is the expression defining what exactly you want to check in your assertion test step. The Content Pattern always relates to the textual content of the current page (including alt texts of images).
+</p>
+
+<p>Let us have a look at a typical application form and explain by example:</p>
+<et:image name="docu-cp-sample-form"/>
+<div class="examples">
+<div class="example">
+<p>You can use a content pattern to proof that you are on the right page by identifying some page individual content, e.g. a headline:</p>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">What do you think about WETATOR</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>Or, if you like to check a whole page, your Content Pattern should contain the whole textual content of that page:</p>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">What do you think about WETATOR? WETATOR is amazing visionary marvelous WETATOR makes</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p>And finally for checking to correct order of the checkboxes use this.</p>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">WETATOR is, amazing, visionary, marvelous</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+</div>
+</div>
+
+<h4>Wildcards</h4>
+<p>
+In general a Content Pattern might consist of 1..n patterns separated by ','. Every single pattern is the text you like to check for.
+Additonally you can use:
+</p>
+<ul>
+  <li>'*' means 0..n arbitrary characters and
+  <li>'?' stands for exactly one character.
+</ul>
+<h5>Sample</h5>
+<ul>
+  <li>'test' matches only the text 'test' (case sensitive)
+  <li>'te?t' matches e.g. 'test', 'text' but not 'tet'
+  <li>'te*t' matches e.g. 'test', 'text' and also 'tet'
+</ul>
+
+<h5>Escaping</h5>
+If your assertion contains a comma, star, or question mark, precede it with a backslash. 
+<ul>
+  <li>'Smart\?' matches the text 'Smart?' but not 'Smart!'
+</ul>
+
+<p>In the sample above, if you like to check for the question mark also, use</p>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">What do you think about WETATOR\?</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+<h4>Pattern parts</h4>
+<p> If your pattern consists of many parts, WETATOR proofs that the parts are found in the given order inside the checked content.
+</p>
+<h5>Sample</h5>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">WETATOR is, amazing, visionary, marvelous</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">WETATOR is, amazing, marvelous, visionary</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+<p> In the sample above, the second assert will fail, because of it expects a different order of the checkbox labels.
+</p>
+
+<h4>Negate a pattern part</h4>
+<p>Sometimes you have to ensure, that something is NOT part of the content. The content pattern supports this kind of check also.
+But there is no way to use a negated pattern part alone; you always have to combine your negated part with at least one other part.
+<br>Background: If you are only check that something is not on a page, this check passes also, if you are at the wrong page.
+</p>
+<h5>Sample</h5>
+<table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">WETATOR is, amazing, ~shiny, visionary</td>
+      <td class="col_param2"></td>
+    </tr>
+</table>
+<p>In this sample, wetator proofs, that there is no 'shiny' between 'amazing' and 'visionary'.
+</p>
+</div>

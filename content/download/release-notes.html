@@ -1,0 +1,562 @@
+---
+title: "Release Notes"
+menu:
+  main:
+    name: "Release Notes"
+    parent: Download
+    weight: 100
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<h4 class="togglePanel">Version 1.11.0 (not yet released)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+  </ul>
+  </p>
+</div>
+
+<h2>Version 1.10.0 (2018-08-12)</h2>
+  <p>
+  <ul>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.32 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.32' target='_blank'>HtmlUnit Release Notes</a>).
+This implies changed FF support; we are now supporting FF60 and FF52.
+    <li><b>Change:</b> Reworked table handling (used by the table filter [col; row]. This will many problem with tables using rowspan and colspan.
+    <li><b>Change:</b> Reworked parts of the ByLabelMatcher to get better results.
+    <li><b>Change:</b> Minor layout change for the output.
+    <li>various dependent library updates
+  </ul>
+  </p>
+
+
+<h4 class="togglePanel">Version 1.9.0 (2018-04-02)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Script converter for the wett format added.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.30 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.30' target='_blank'>HtmlUnit Release Notes</a>).
+This brings a notable performance update to our test suites (10-30%).
+    <li><b>Change:</b> Huge cleanup for the source code the build system.
+    <li><b>Change:</b> Switch to log4j 2 API; no direct dependency to commons logging anymore
+    <li>commons-text updated to version 1.3.
+    <li>PDFBox updated to 2.0.9
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.8.0 (2017-12-30)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> New variables ${wetator.testcase}, ${wetator.testfile}, and ${wetator.browser} added
+    <li><b>New:</b> Click-on now takes all dom elements with an onclick handler assigned into account.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.29 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.29' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> Improved report layout
+    <li><b>Change:</b> Improved highlighting for the screenshots.
+    <li><b>Change:</b> Harmonize the report counts with the counts reported at the console
+    <li><b>Change:</b> Visibility determination now uses our own index for speed and flexibility.
+    <li><b>Change:</b> Reworked selecting/deselecting hidden radio buttons and checkboxes via label
+    <li><b>Change:</b> original url as comment added to the output
+    <li><b>Bugfix:</b> Various fixes for the 'type' command from the incubator command set
+    <li>commons-text updated to version 1.2.
+    <li>commons-io updated to version 2.6.
+    <li>Automaton updated to 1.12.1
+    <li>PDFBox updated to 2.0.8; bouncycastle updated to 1.58
+    <li>POI updated to 3.17
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.7.0 (2017-06-19)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Finally we have a first version of the 'Write your first Wetator test' document online. And as always we did some more updates on the documentation.
+    <li><b>New:</b> WikiScripter supports escaped unicode characters like \u00ed.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.27 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.27' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> <b>Default browser is changed to Firefox 52 (ESR).</b>
+    <li><b>Change:</b> <b>FF38 support finally removed.</b>
+    <li><b>Change:</b> <b>JDK 1.8 is requred</b>
+    <li><b>Change:</b> Attachments are now always opened inside a new window. <b>This might break your tests</b>.If you face problems here, you usually have to replace 'go-back' by 'close-window'.
+    <li><b>Change:</b> Many internal matcher updates; the id matcher does no longer match elements without an id defined.
+    <li><b>Change:</b> When doing a snapshot of a canvas object we will copy the style and class attribute to our image replacement to end up with a more correct screenshot
+    <li><b>Change:</b> Progress listener calls are synchronized to avoid multithreading interference.
+    <li><b>Change:</b> More correct event simulation based on fixes done in HtmlUnit
+    <li><b>Change:</b> FF triggers mouse over events for disabled elements also
+    <li><b>Change:</b> Property coverage renamed to deviation to better match the value.
+    <li><b>Change:</b> Table coordinates are now supported by all matchers (and this feature is documented now)
+    <li><b>Change:</b> Browser setup is done later; this avoids the cleaning of the response store when the user cancels the file selection
+    <li><b>Change:</b> Highlighting now works correct for duplicate id's also.
+    <li><b>Change:</b> Improved logging for file uploads, now the complete path/filename is logged.
+    <li><b>Change:</b> The number of stars in password fields screenshots now matches the number of chars like in real browsers.
+    <li><b>Bugfix:</b> Duration formatting in the report is now more readable
+    <li><b>Bugfix:</b> Duration show in report for the 'use-module' command was wrong (issue #117)
+    <li><b>Bugfix:</b> Missing template files empty.xls and empty.wet added.
+    <li><b>Bugfix:</b> Use the correct style definitions for canvas elements in screenshots
+    <li><b>Bugfix:</b> Select options are got the wrong style when simulating IE.
+    <li><b>Bugfix:</b> When writing the report output download images only if needed.
+    <li>PDFBox updated to 2.0.6
+    <li>commons-lang updated to 3.6
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.6.0 (2016-07-28)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> We made some major improvements for HtmlUnit and Wetator to get better support of css hover styles. Now mouse-over applies these styles. This should make many variations of css based menus working.
+    <li><b>New:</b> Identification by table coordinates implemented for select controls also.
+    <li><b>New:</b> It is possible to identify anchors by the value of the aria-label attribute.
+    <li><b>New:</b> Classloader handling for the wetator-ant task fixed (again). For defining the task only the wetator-ant.jar is required. As a consequence, all wetator jar files have to be part of the classpath
+defined inside the task. The classpath element is now required.
+    <li><b>Change:</b> Processing of date urls improved; saving our screenshot no longer logs a warning
+    <li><b>Change:</b> FoundType is now a class instead of an enum to support the definition by extensions.
+    <li><b>Change:</b> Message generation is a bit more flexible; now supports objects as parameter.
+    <li><b>Change:</b> When saving content of unsupported type we now take the suffix of the provided filename (from Content-Disposition header) into account.
+    <li><b>Bugfix:</b> Retrospect did not work for test files in sub directories.
+    <li><b>Bugfix:</b> Regression from 1.5.0: Command line processor ignores test files provided as absolute paths.
+    <li><b>Bugfix:</b> Regression from 1.5.0: Log4j is only required if retrospect or logging (-log option from the command line) is enabled.
+    <li>PDFBox updated to 2.0.2
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.5.0 (2016-06-04)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> If the page contains a canvas element, our screenshot stores the content as image.
+    <li><b>New:</b> New configuration parameter 'wetator.uploadMimeType' to support correct simulation of sent mime type based on the software installed on the client.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.22 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.22' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 45(ESR).</b>
+    <li><b>Change:</b> RichFaces uses a special css trick to make elements invisible. WETATOR now takes care of this.
+    <li><b>Change:</b> Handling of debug output of the wire-log improved.
+    <li><b>Change:</b> Some fixes to support the various PrimeFaces upload controls.
+    <li><b>Bugfix:</b> Minor documentation fixes for the click-on command description.
+    <li><b>Bugfix:</b> Support ElementFromPointHandler feature of HtmlUnit to simulate Pointer events more correct.
+    <li><b>Bugfix:</b> Snapshots are correct if the code contains a &lt;base&gt; tag.
+    <li><b>Bugfix:</b> Some NPE fixed.
+    <li>PDFBox updated to 1.8.12
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.4.0 (2016-03-04)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Documentation of configuration option 'wetator.retrospect' added.
+    <li><b>New:</b> It is possible to identify buttons by the value of the aria-label attribute.
+    <li><b>New:</b> Asset-content now supports also docx and xlsx formats.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.20 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.20' target='_blank'>HtmlUnit Release Notes</a>). <b>IE8 support finally removed.</b>
+    <li><b>Change:</b> Retrospect setting is part of the output now.
+    <li><b>Change:</b> Improvements of the highlighting.
+    <li><b>Change:</b> Improved output formatting of link elements.
+    <li><b>Bugfix:</b> Improved xml encoding when writing our output.
+    <li><b>Bugfix:</b> MouseMove event processing fixed for single/multiple selects.
+    <li><b>Bugfix:</b> Event handling fixed when clearing an input field.
+    <li><b>Bugfix:</b> NPE when page contains image with empty src attribute.
+    <li><b>Bugfix:</b> Many fixes for the xsl used for output formatting. Errors occurring before starting the test case itself are
+         now handled correctly.
+    <li><b>Bugfix:</b> Regression from 1.3.0: Log4j is only required if retrospect is enabled.
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.3.0 (2015-11-24)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> More general support for the title attribute added; you can find now also anchors and div's by title attribute.
+    <li><b>New:</b> Configuration option 'wetator.browser.activeXObjects' added.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.19 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.19' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 38(ESR).</b>
+    <li><b>Change:</b> The url anchor check is removed; many modern web app using the hash part of the url for doing some magic.
+    <li><b>Bugfix:</b> Highlighting now works for frame content also.
+    <li><b>Bugfix:</b> Take care the screenshot always shows the current state of checkboxes and radio buttons.
+    <li><b>Bugfix:</b> Stylesheet detection for screenshots was a bit too picky (one more).
+    <li><b>Bugfix:</b> Improved error handling in case of classloader problems.
+    <li><b>Bugfix:</b> The content calculation now ignores the fallback text defined for object tags, if the object is emulated by HtmlUnit.
+    <li><b>Bugfix:</b> File js_filter.cfg was missing in the template directory.
+    <li><b>Bugfix:</b> Possible NPE excetion fixed when saving the screenshot.
+    <li><b>Bugfix:</b> Fix output for frame tags (self closing).
+    <li>PDFBox updated to 1.8.10
+    <li>POI updated to 3.13
+    <li>Checkstyle updated to 6.11.2
+    <li>forbiddenapi updated to 2.0
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.2.0 (2015-06-05)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Normalize file name used by the output to improve readability file names constructed from relative paths
+    <li><b>New:</b> Add the config file name to the config output.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.17. <b>Starting with this version we only support IE 8, IE11, Firefox 31(ESR), Firefox 38(ESR), and Chrome as browsers.</b>
+    <li><b>Bugfix:</b> Stylesheet detection for screenshots was a bit too picky.
+    <li>POI updated to 3.12
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.1.0 (2015-05-08)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Command describe added.
+    <li><b>New:</b> Finally we found a way to add highlighting to our output. Now the reports contains screenshots with the target control of the command highlighted.
+    <li><b>New:</b> Wetator takes care of the html5 placeholder attribute now when calculating the content and you can use it as wpath also.
+    <li><b>New:</b> Wiki scripter now supports a continuation sign.
+    <li><b>New:</b> The browser console output (js-function log(...)) is now captured and available from the report.
+    <li><b>New:</b> Configuration option wetator.jsJobFilterFile added. You can now define filters to exclude some javascript jobs from the internal wait processing. This is required for all applications using some kind of heartbeat jobs (like Vaadin).
+    <li><b>New:</b> Incorrectness messages generated from HtmlUnit are captured as warnings now.
+    <li><b>New:</b> Chrome support added.
+    <li><b>Change:</b> Wetator now requires <b>Java 1.7.</b>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.16. <b>Starting with this version we only support IE 8, IE11, Firefox 24(ESR), Firefox 31(ESR), and Chrome as browsers.</b>
+    <li><b>Change:</b> Improved set command implementation. We did some fixes to simulate a real user more closely. This fixes also sporadic problems when setting entry fields using the RichFaces placeholder.
+    <li><b>Change:</b> Improved log output, we can provide now more detailed reason info.
+    <li><b>Change:</b> Log now contains a complete overview of all running/pending js jobs in case we proceed with still running/pending jobs.
+    <li><b>Change:</b> Wetator will try to decrypt encrypted PDF documents.
+    <li><b>Change:</b> Wetator now checks the access permissions of PDF documents. If text extraction is not allowed a error is thrown.
+    <li><b>Change:</b> Xalan version in use added to the output.
+    <li><b>Change:</b> Thread from our ControlFinder ThreadPool are getting a specific name now.
+    <li><b>Change:</b> Buttons (&lt;button&gt;) are now identifiable by title tag also.
+    <li><b>Change:</b> File chooser dialogs now uses the system Look&Feel instead of the generic one.
+    <li><b>Bugfix:</b> Configuration setting 'wetator.proxyHostsToBypass' was ignored.
+    <li><b>Bugfix:</b> SVG elements missing in the snapshot.
+    <li><b>Bugfix:</b> Possible NPE when writing a warning.
+    <li><b>Bugfix:</b> NPE when analyzing broken tables.
+    <li><b>Bugfix:</b> BOM bytes (if any) removed from css files saved as part of the snapshots.
+    <li>PDFBox updated to 1.8.9; bouncycastle updated to 1.51
+    <li>POI updated to 3.11
+    <li>xsom updated to xsom20140925
+    <li>IVY updated to 2.4.0
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 1.0.0 (2014-06-24)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Command assert-enabled added.
+    <li><b>New:</b> Assert-title can be used with PDF content also.
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.15.
+    <li><b>Change:</b> Report error jumpers are placed at the top to be more handy.
+    <li><b>Change:</b> Some more layout improvements for the error report.
+    <li><b>New:</b> Report now includes start time and duration also.
+    <li><b>New:</b> IE11 support added.
+    <li><b>Bugfix:</b> Fix url construction when downloading resources required by the snapshot.
+    <li><b>Bugfix:</b> Improve recursion detection when replacing variables.
+    <li><b>Change:</b> Support old school table background images in our snapshots.
+    <li><b>Change:</b> Many documentation enhancements.
+    <li><b>Bugfix:</b> Ignore 'onload' and 'onerror' attributes when dumping screenshots.
+    <li><b>Change:</b> Finding more than one hit for a wpath is a usual case. Starting with this version Wetator reports this as info instead of warning.
+    <li><b>Change:</b> Minor change of the info icon if there is at least one warning.
+    <li><b>Change:</b> When deselecting an option from a multiselection list we simulate now Ctrl+Click. This triggers the correct events.
+    <li><b>Bugfix:</b> We did some fixes for the events triggered when an option will be selected (HtmlUnit). Now Wetator triggers exactly the same events as the browser in the same order.
+    <li><b>Change:</b> When calling select/deselect for an already (de)selected option Wetator will log a warning.
+    <li>Apache commons-lang updated to 3.3.1.
+    <li>PDFBox updated to 1.8.6; bouncycastle dependencies added for convenience
+    <li>POI updated to 3.10
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 0.9.14 (2013-12-11)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Change:</b> We did a minor change in our control finder. We now use the position on the page (in our page index) instead of the an internal textual description as final
+        criterion when comparing two controls. This is more reliable and 'natural' because the algorithm now chooses always the first control.
+    <li><b>Change:</b> The command line client no longer uses one-jar. We had many resource loading problems with this approach. Hopefully the simpler solution makes the client more robust.
+    <li><b>Change:</b> For the future we plan to generate more sophisticated output. Because of this, we made the file structure of our output a bit more flexible. There is now a subdirectorx
+'resources' that replaces the 'images' subdirectory. We add jQuery to the resources dir, because our html report will use this in the future.
+    <li><b>Change:</b> The replacement of non ASCII characters with '?' when normalizing unsupported content was removed. This allows more flexible testing (e.g. German umlauts in JSON results).
+    <li><b>Bugfix:</b> The source of embed tags are saved now also as part of the snapshot.
+    <li><b>Bugfix:</b> The version detection of our depended libraries is improved. Now the correct version is also available when running WETATOR from the command line (one-jar).
+    <li><b>Bugfix:</b> Trigger a ConfigurationException if something goes wrong setting up database connections for the SqlCommandSet.
+    <li>PDFBox updated to 1.8.3
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 0.9.13 (2013-09-02)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Change:</b> <strong>The parsing of WPath's is changed. Now the '&gt;' sign is the default separator instead of ','.</strong>
+           If you like to run your existing test without change you can configure the separator in your configuration.
+    <li><b>Bugfix:</b> Some layout issues in for the snapshots are fixed.
+    <li><b>Bugfix:</b> Class cast exception in our wait code when a page contains an iframe with non html content.
+    <li><b>Bugfix:</b> In case an action leads to an error (http 400, 404, 5xx) the error page is now visible in the output. The error page
+           is the current page the next assert content will work on.
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 0.9.12 (2013-07-16)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Change:</b> When building the 'flat' content of a web page (e.g. for assert-content) we now respect the value of the
+           display property when checking for block/inline elements. This fixes some problems with missing blanks between various
+           elements. <strong>This may some of your already working tests fail. But for all our test, the new results where more accurate.</strong>
+           Sorry for this inconvenience (thanks chriseverty).
+    <li><b>Change:</b> Improved configuration output; CommandSets, Controls, Scripters, and ProxyHostsToBypass are mentioned
+           also if not defined.
+    <li><b>Bugfix:</b> There was an old wetator.jar packed into wetator-ant.zip.
+    <li><b>Bugfix:</b> Checking a select option (or option group) for being disabled now respects also the disabled state of the whole select.
+    <li><b>Bugfix:</b> Duplicate proxy sample removed from the configuration templates.
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 0.9.11 (2013-06-16)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.13 SNAPSHOT.<br/>
+           again: This HtmlUnit release includes many fixes found by the wetator community during testing of sophisticated web apps (jQuery, RichFaces, Ajax).
+    <li><b>Bugfix:</b> There was a bug when choosing really many file for execution. Saving the list of files failed. This is fixed now; nothing can stop you now
+           writing that many tests.
+    <li><b>New:</b> Assert-content is now aware of zipped responses. Wetator will unpack the zip and build a textual representation out of the parts of the archive.
+           (again thanks tmandry for this suggestion and testing it)
+    <li><b>Change:</b> The handling of unsupported content types was changed; wetator processes this content now as plain ASCII.
+           So you can do some simple content checking for unsuported content also (e.g. Check the header bits of a gif/jpeg. (thanks tmandry for this suggestion)
+    <li><b>New:</b> Wetator now remembers the last selected test and the position and size of the file chooser. (thanks tmandry for this suggestion)
+    <li><b>Bugfix:</b> Again we did some work on our wait code; now wetator is a bit more clever when using assert-content or assert-title with a specific timeout.
+    <li><b>New:</b> We added a new configuration option 'wetator.httpTimeout'. This defines the timeout in seconds wetator will wait for a http response.
+    <li><b>New:</b> A new command line option '-log' was added. This generates a chatty log that might help when searching for problems.
+    <li><b>Bugfix:</b> Some minor bugfixes for the page preview of the html report. This works now wiht IE and Chrome also.
+    <li><b>Bugfix:</b> The wiki scripter now handles comments the same way as the other scripters.
+    <li>PDFBox updated to 1.8.2
+    <li>commons-logging updated to 1.1.3
+  </ul>
+  </p>
+</div>
+
+<h4 class="togglePanel">Version 0.9.10 (2013-03-17)</h4>
+<div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.13 SNAPSHOT. <b>Starting with this version we only support IE 8 and Firefox 17(ESR) as browsers.</b><br/>This HtmlUnit release includes many fixes found by the wetator community during testing of sophisticated web apps (jQuery, RichFaces, Ajax).
+    <li><b>New:</b> The html report now shows a page preview when moving the mouse over the result page snapshot icon.
+    <li><b>Change:</b> poi updated to 3.9
+    <li><b>Change:</b> The internal wait algorithm is again more clever. We have fixed some minor issues and a bigger one related to iframes. If there are still some jobs in the queue after the timeout, we add a warning to the output.
+    <li><b>Change:</b> The use-module command now writes an error message if the given module file is not available.
+    <li><b>Bugfix:</b> Setting the value of an input control now takes the focus into account. This fixes problems with some fancy controls that replacing controls with other ones during the processing of the onfocus event.
+    <li><b>New:</b> We set up a integration build server at Cloudbees (<a href="https://wetator.ci.cloudbees.com/">https://wetator.ci.cloudbees.com/</a>)
+    <li><b>New:</b> The ant task is now a separate eclipse project.
+    <li><b>Change:</b> Many more unit test added to the project.
+    <li><b>Bugfix:</b> Minor error in the script processing regarding directory handling fixed.
+    <li><b>Bugfix:</b> open-url: url's starting with file: are now handled as absolute
+    <li><b>Bugfix:</b> The escaping of special chars part of jvm -D parameters is now correct.
+    <li><b>Bugfix:</b> A bunch of minor code fixes (some found by FindBugs or PMD)
+    <li><b>Change:</b> Parts of the control finder engine are reworked to unify the wildcard processing of the wpath. Also some minor issues found and fixed in this area.
+    <li><b>Change:</b> Apache Ivy updated to 2.3.0 (we use ivy for our build).
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.9 (2012-10-03)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> NTLM support added
+    <li><b>Bugfix:</b> Improved error message for some rare cases
+    <li><b>Bugfix:</b> log4j is no longer required because WETATOR only uses commons-logging. The only code that directly relies on log4j was the output of the version number. This is still there but now only if log4j is in the classpath.
+    <li><b>Bugfix:</b> Improved credential handling; proxy credentials now used only for the proxy server. This fixes some issues when addressing a site with basic auth via a proxy
+    <li><b>Bugfix:</b> Minor build fixes; too many jars where packed
+    <li>JUnit updated to version 2.10
+    <li>HtmlUnit updated to the latest release 2.11-SNAPSHOT (including htmlunit-core-js 2.11-SNAPSHOT and cssparser 0.9.8-SNAPSHOT)
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.8 (2012-09-04)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <b>Attention:</b><br/>
+   This release no longer supports Firefox 3 emulation (because HtmlUnit 
+   will no longer support it).
+  <ul>
+    <li><b>New:</b> Experimental Firefox 10 (ESR) support added; the support for FF 10 is
+    not complete in HtmlUnit but will improve with the next versions.
+    <li><b>Bugfix:</b> Format of stacktraces in the report is fixed (preformated).
+    <li><b>Bugfix:</b> Build artifacts no longer including lib only required for our unit test.
+    <li><b>Bugfix:</b> Report fixed for ignored modules.
+    <li><b>Bugfix:</b> NPE in our internal page index related to strange usage of the button tag.
+    <li><b>Bugfix:</b> Minor code style fixes for the latest HtmlUnit snapshot.
+    <li>HtmlUnit updated to the latest release 2.11-SNAPSHOT
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.7 (2012-07-25)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <b>Attention:</b><br/>
+   This is our last release that supports Firefox 3 emulation (because HtmlUnit 
+   will no longer support it). With the next release we will support Firefox 10 (ESR).<br/>
+   Because of the major internal changes this release requires the Wetator Jenkins Plugin 0.3 at least.
+  <ul>
+    <li><b>New:</b> The whole error/exception handling logic is changed; now we have 
+      more fine grained control. As a visible result, Wetator now differs between failures and errors.
+      Failures do not block the test case and the steps after a failure are also executed whereas an error
+      stops the test case execution.
+    <li><b>Bugfix:</b> Possible endless loop during variable resolution.
+    <li><b>Bugfix:</b> Strange error message when downloading a broken Excel file.
+    <li><b>Change:</b> Wetator's file dialog is now visible for the task switcher.
+    <li><b>Change:</b> The locale handling when processing Excel files is improved. We now use
+       the browser locale for content generation.
+    <li>HtmlUnit updated to the latest release 2.10
+    <li>PDFBox updated to 1.7.1
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.6 (2012-06-10)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>Bugfix:</b> When calling a module from a module the parameter processing was broken.
+    <li><b>Bugfix:</b> Sometimes we logged an empty window as result.
+    <li><b>New:</b> Another input format added (wett-wiki like syntax for quick test writing).
+    <li><b>New:</b> Support csv content send by the server with content typ 'xls'.
+    <li><b>Bugfix:</b> Many fixes for frameset handling.
+    <li><b>New:</b> ControlFinder is now able to find checkboxes using the title attribute.
+    <li><b>New:</b> The output xml file contains the version info for the used libs also.
+    <li><b>Bugfix:</b> Improved waiting for AssertContent and AssertTitle.
+    <li><b>New:</b> Javascript timeout is now configurable (for really special web apps).
+    <li><b>Change:</b> Output from run_report.xsl contains some metrics now.
+    <li><b>Bugfix:</b> Send a Referer header when downloading snapshot content.
+    <li><b>Bugfix:</b> Provide a bit more info in the error message, if no scripter found.
+    <li><b>Bugfix:</b> Many small error handling issues are fixed, the output now contains also stacktraces.
+    <li><b>New:</b> New Incubator command 'assert-applet'.
+    <li><b>Bugfix:</b> NPE fix during generation of the output.
+    <li><b>New:</b> The start directory of the file selector dialog is now stored per config file. Hopefully this makes the GUI
+    more convenient if you use Wetator for many projects.
+    <li><b>New:</b> Assert Content now supports framesets.
+    <li><b>Change:</b> Checkboxes are selectable by title attribute now.
+    <li><b>Change:</b> Rewritten normalization of the excel file content used by the 'AssertContent' command. Most of the content is now formatted
+    like excel did it.
+    <li><b>Change:</b> Some whitspace was missing in the internal page representation, especially before some controls.<br/>
+    <b>Please note:</b> Because of the additional whitespace it is possible that some 'Assert Content' commands are failing. 
+    <li><b>New:</b> Some more content types to file extension mappings are supported. This generates more correct file extensions
+    for the output.
+    <li><b>Bugfix:</b> Referer header was missing if read linked resources (like stylesheets or images)
+    <li><b>Bugfix:</b> Selection in list boxes not visible in the snapshots
+    <li><b>Bugfix:</b> Some whitespace (&amp;ensp;, &amp;emsp;) was missing in the snapshots
+    <li>htmlunit updated to the latest snapshot (this includes also nekohtml and cssparser)
+    <li>automaton updated to 1.11.8
+    <li>commons-lang updated to 3.1
+    <li>pdf-box updated to 1.7.0
+    <li>poi updated to 3.8
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.5 (2011-06-13)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li><b>New:</b> Rewritten support of various input formats; the current formats are still supported<br>
+    Major changes are done for the default wet format (the xml is really different)<br>
+    The new wte eclipse plugin can read the old format and will write the new one.
+    <li><b>Bugfix:</b> Ant task confuses the normal ant class loader
+    <li>cssparser updated
+    <li><b>Bugfix:</b> Labels containing entry fields are not found in all cases
+    <li>htmlunit lib updates
+    <li>support for @import statements in css files added
+    <li>many fixes for the correct storage of files referenced from the snapshot (css, graphics)
+    <li>improved performance during storage of files referenced from the snapshot (css, graphics)
+    <li>support for rtf documents (Assert Content) added
+    <li>automaton updated to 1.11.7
+    <li>ant updated to 1.8.2
+    <li>commons-lang updated to 2.6
+    <li>pdf-box updated to 1.5.0
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.4 (2011-01-16)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li>initial support for iframes
+    <li>xls file reader supports cells with functions and cells with special format settings
+    <li>pdfbox updated to 1.4.0
+    <li>snapshot of the page added, if the page was changed when 'Assert Cotent' or 'Assert Title' waiting for the content
+    <li>the ant task now supports the attributes 'failureproperty' and 'haltonfailure'
+    <li>addressing fields by using a table column header
+    <li>htmlunit lib updates
+    <li>some fixes for the documentation
+    <li>improved schema support for the xml files
+    <li>all packages renamed to org.wetator
+    <li>set only if control is not readonly
+    <li>improved page snapshots (images referenced by css are stored)
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.3 (2010-11-14)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li>lib updates
+    <li>some fixes for the documentation of the ant task
+    <li>complete rewritten control finder; the new one is much faster and extendable
+    <li>test output improved
+    <li>source code cleanup
+    <li>many more javadoc comments
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.2 (2010-08-07)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li>lib updates
+    <li>many more tests
+    <li>xml based test files are now supported
+    <li>make it possible to run a test with different browsers
+    <li>source code cleanup
+    <li>many more javadoc comments
+    <li>support for the maxlengt attribute for input text and password
+    <li>more checks if a link points to an anchor at the same page
+    <li>set/select only if control is not disabled
+    <li>timeout support for assert title and assert content
+    <li>improved performance
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9.1 (2010-05-28)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li>many documentation and website updates (license, grapics, meta tags etc.)
+    <li>fixes for the log output
+    <li>lib updates
+    <li>many more tests
+    <li>source code cleanup
+    <li>improved parametr check
+    <li>start a new browser for every test
+    <li>html screenshots for every test step (without assert...)
+    <li>ant fixes for classpath handling
+  </ul>
+  </p>
+  </div>
+
+  <h4 class="togglePanel">Version 0.9 (2010-04-18)</h4>
+  <div class="togglePanel_content">
+  <p>
+  <ul>
+    <li>first public available version
+  </ul>
+  </p>
+  </div>

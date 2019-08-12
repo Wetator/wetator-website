@@ -1,1 +1,1 @@
-<img src="/images/{{.Get "src" }}" alt="{{.Get "alt" }}" />
+<img src="/images/{{.Get "src" }}" {{ if isset .Params "id" }}id="{{index .Params "id" }}"{{ end }} {{ if isset .Params "alt" }}alt="{{index .Params "alt" }}"{{ end }} />

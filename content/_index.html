@@ -1,7 +1,73 @@
 ---
-title: "Home"
+title: "Smart Web Application Testing"
 date: 2019-08-10T14:21:37+02:00
 draft: true
 ---
 
-<h3>Home</h3>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#hoverPicture').hover(function() {
+      $('#hoverPicture').stop().animate({'opacity': '0'}, 'slow');}, function() {$('#hoverPicture').stop().animate({'opacity': '1'}, 'slow');});
+  });
+</script>
+
+<h1>Wetator in a Nutshell</h1>
+<p>
+Wetator is a tool for automated Graphical User Interface (GUI) tests of web applications.<br/>
+It provides you with a simple command language for writing your tests, that
+<ul>
+<li>maps the typical user actions (open-url, click-on, select, set...) and</li>
+<li>includes commands to check the page content (assert-content, assert-title...).</li>
+</ul>
+</p>
+<p>
+This human readable language enables you to specify test cases that are easy to write and easy to read:
+</p>
+
+<div style="width: 958px;">
+<img style="float: left;" alt="" title="" height="307" width="958" src="/images/wetator-google-test-xml.png" />
+<img id="hoverPicture" style="float: left; margin-top: -307px; opacity: 1;" alt="" title="" height="307" width="958" src="/images/wetator-google-test.png" />
+</div>
+
+<p style="clear: both;"><br/>
+Wetator tests are executed using <a href="http://htmlunit.sourceforge.net/" target="blank">HtmlUnit</a>, a Java based framework which is able to simulate the most popular web browsers (Firefox, Internet Explorer and Chrome). The test result is summarized in a well-arranged report containing detailed information about the test run and snapshots for each step.<br/><br/>
+
+{{% image src="wetator-google-report.png" %}}
+<br/><br/>
+</p>
+
+<h2>Benefits</h2>
+<p>
+<ul>
+<li>There is no need for technical details in the tests like names or IDs of the GUI components. Wetator is able to find the corresponding GUI components by their labels, alt texts, position etc. Thus your test cases are not directly destroyed by each GUI change; e.g. it is not important if the button "Google Search" is in the upper left or the lower right corner, whether it has the id g:search or j:763223, or if it is changed into a clickable image with the alt attribute "Google Search"</li>
+<li>Wetator tests are predicted to be used in test driven development resp. test first approach. They can even be created as a part of requirements specification.</li>
+<li>Wetator can handle the following technologies: HTML, CSS, JavaScript (incl. highly sophisticated AJAX support) as well as MS Word, MS Excel, PDF and ZIP for assertion issues (e.g. for testing exports)</li>
+<li>The Wetator test format actually is XML (just hover the example test case at the top of the page). So you can use any editor you want to edit Wetator test cases or you may use the <a href="https://wetator.repositoryhosting.com/trac/wetator_wte" target="_blank">Wetator Test Editor</a> for convenient, Excel-like editing in your Eclipse IDE. Since they are XML, Wetator tests can easily be managed by version control systems and of course validated against their XML schemas.</li>
+<li>Wetator supports modular test case design and makes it possible to resuse identical parts of your test suite (including parameter support).</li>
+<li>Currently Wetator can emulate the following browsers for testing: Internet Explorer 11, Firefox 52(ESR), Firefox 45(ESR) and Chrome. So you can run your tests in different browser environments without effort.</li>
+<li>Wetator and its language are extensible; e.g. you could add special commands for special web site features or introduce new controls you implemented, define your test cases in XML or Excel, or just write your own scripter for another test case format; for maximum extension it is possible to call Java classes from a Wetator test, for instance to set up some test data in your database before a test can run.</li>
+</ul>
+</p><br/>
+
+<h2>Target Audience</h2>
+<p>
+<ul>
+<li>Wetator tests are written by developers and testers who want to have automated GUI tests for their web applications that are easy to maintain and easy to read.</li>
+<li>The Wetator language is understandable for project leads and customers – the people with whom you have to discuss if your tests are testing the requirements correctly and sufficiently.</li>
+<li>Manual testers get to know what they do not have to focus on (since it is already tested automatedly), for example they could focus on testing design, usability, and of course things that cannot or only hardly be tested automatedly.</li>
+</ul>
+</p><br/>
+
+<h2>Wetator & Friends</h2>
+<ul>
+<li>Downloads
+  <ul>
+    <li><a href="http://www.wetator.org/index.php/download#wetator">Wetator</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator">Wetator Ant Task</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator-test-editor">Wetator Test Editor (WTE)</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator-jenkins-plugin">Wetator Jenkins Plugin</a></li>
+  </ul>
+</li>
+<li><a href="https://wetator.repositoryhosting.com/trac/wetator_wte" target="blank">Wetator Test Editor (WTE)</a></li>
+<li><a href="https://github.com/fred4jupiter/wetator-maven-plugin" target="blank">Wetator Maven Plugin </a></li>
+</ul>

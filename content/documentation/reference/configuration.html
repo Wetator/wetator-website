@@ -192,14 +192,14 @@ This feature is helpful for applications using some kind of heartbeat jobs (e.g.
     <div class="examples">
     <div class="example">
       <p>You are testing a Vaadin app. Your result output contains many warnings stating "Still some JavaScript jobs pending".</p>
-      <et:image name="docu-cfg-jsjobs-error"/>
+      {{% image src="docu-cfg-jsjobs-error.png" %}}
       <p>&nbsp;</p>
       <h3>Enable the use of a jsJobFilterFile in wetator.config</h3>
       <pre>wetator.jsJobFilterFile = js_filter.cfg</pre>
       <p>Place an empty file named 'js_filter.cfg' in the same directory as wetator.config.</p>
       <p>&nbsp;</p>
       <h3>Add a filter definition to the filter file</h3>
-      <et:image name="docu-cfg-jsjobs-howto"/>
+      {{% image src="docu-cfg-jsjobs-howto.png" %}}
       <p>1. Open your result output and locate the string representation of the pending job.</p>
       <p>2. Copy the string into your filter file (js_filter.cfg).</p>
       <p>3. Remove all line breaks (but do not remove any blanks).</p>

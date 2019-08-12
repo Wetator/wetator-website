@@ -40,14 +40,14 @@ draft: true
 </ul>
 <p>So far we have anything ready to write our first test. We have an (empty) excel test definition file, a configuration and the result report visible in the browser.
 Your screen might look like this.</p>
-<et:image name="docu-first-test-screen"/>
+{{% image src="docu-first-test-screen.png" %}}
 </div>
 
 
 <h4 class="togglePanel">Step 1 - Open the Page</h4>
 <div class="togglePanel_content">
   <p>Now it is time to add our first test step - our test starts by opening the webpage 'http://www.wetator.org/testform'.</p>
-  <et:image name="docu-first-test-step1-openurl"/>
+  {{% image src="docu-first-test-step1-openurl.png" %}}
   <ul>
     <li>for the command use <et:pages:pagelink id='30' target='blank'>Open Url</et:pages:pagelink> (if you like, you can choose from the list of supported commands)
     <li>the url is the first (and only) parameter you have to provide
@@ -60,7 +60,7 @@ Your screen might look like this.</p>
     <li>refresh you browser content to see the current result output
   </ul>
 
-  <et:image name="docu-first-test-step1-openurl-report"/>
+  {{% image src="docu-first-test-step1-openurl-report.png" %}}
   <p>The report shows many info about your test</p>
   <ol>
     <li>The overview: you can see the number of executed test, the number of successful/failed test and more
@@ -71,7 +71,7 @@ Your screen might look like this.</p>
   </ol>
 
   <p>The report also contains snapshots of all the retrieved web pages. You can either hover the snapshot icon with the mouse or click on the icon to see a lager snapshot in a separate window.</p>
-  <et:image name="docu-first-test-step1-openurl-report-preview"/>
+  {{% image src="docu-first-test-step1-openurl-report-preview.png" %}}
 </div>
 
 
@@ -85,7 +85,7 @@ Your screen might look like this.</p>
     <li>Rerun your test and refresh the browser window.
   </ul>
   <p>If everything is correct you should get something like this</p>
-  <et:image name="docu-first-test-step2-assert"/>
+  {{% image src="docu-first-test-step2-assert.png" %}}
 </div>
 
 
@@ -99,15 +99,15 @@ Your screen might look like this.</p>
   </ul>
   <p>For filling the 'Project name' field we simply add the command</p>
   <p>The 'set' command requires two parameters, the first one points to the entry field and the second is the new value.</p>
-  <et:image name="docu-first-test-step3-set-project"/>
+  {{% image src="docu-first-test-step3-set-project.png" %}}
   <p>When running the test your report will offer two different screenshots for this command. This is because the set command (and many others)
   is modifying your application. Wetator takes a screenshot before executing the command and one of the resulting page.</p>
-  <et:image name="docu-first-test-step3-set-project-report"/>
+  {{% image src="docu-first-test-step3-set-project-report.png" %}}
   <p>Additionally Wetator will highlight the input control being the target of the action.</p>
-  <et:image name="docu-first-test-step3-set-project-report-highlight"/>
+  {{% image src="docu-first-test-step3-set-project-report-highlight.png" %}}
   <p>Filling the whole form is simple.</p>
-  <et:image name="docu-first-test-step3-fill-form"/>
-  <et:image name="docu-first-test-step3-fill-form-result"/>
+  {{% image src="docu-first-test-step3-fill-form.png" %}}
+  {{% image src="docu-first-test-step3-fill-form-result.png" %}}
   <p>Because of technical restrictions it is not possible to show the correct value for the file upload control.</p>
 </div>
 
@@ -116,11 +116,11 @@ Your screen might look like this.</p>
 <div class="togglePanel_content">
   <p>Finally we have to submit the form.<br/>
   The command to use is simply <et:pages:pagelink id='32' target='blank'>click-on</et:pages:pagelink></p>
-  <et:image name="docu-first-test-step4-submit"/>
+  {{% image src="docu-first-test-step4-submit.png" %}}
   <p>And for checking the result we can use again <et:pages:pagelink id='28' target='blank'>assert-content</et:pages:pagelink></p>
-  <et:image name="docu-first-test-step4-submit-assert"/>
+  {{% image src="docu-first-test-step4-submit-assert.png" %}}
   <p>That is more or less all.</p>
-  <et:image name="docu-first-test-step4-submit-assert-report"/>
+  {{% image src="docu-first-test-step4-submit-assert-report.png" %}}
   <p>Congratulations, you have written your first Wetator test.</p>
 </div>
 

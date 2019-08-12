@@ -1,0 +1,54 @@
+---
+title: "Command-Line Options"
+menu:
+  main:
+    name: "Command-Line Options"
+    parent: Reference
+    weight: 200
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+
+<div class="docu">
+  <p>It is possible to start Wetator with
+    <ul>
+      <li>a dedicated configuration file and/or
+      <li>one ore many test definition files; as long as you provide not absolute path it is also possible to use '*' as wildcard
+    </ul>
+  </p>
+  <p>Additionally you can provide the '-log' parameter to get a really detailed log output of all things Wetator does. This option is mainly for debugging
+     and support.
+  </p>
+
+  <h3>Examples:</h3>
+  <p>
+    <span class='configContent'>wetator -p my.properties</span><br/>
+    Starts Wetator with the configuration 'my.properties'
+  </p>
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator test1.wet</span><br/>
+    Starts Wetator and directly executes test1.wet (no file selection dialog).
+  </p>
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator test1.wet test2.wet</span><br/>
+    Starts Wetator and directly executes test1.wet and test2.wet.
+  </p>
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator *.wett</span><br/>
+    Starts Wetator and directly executes all files with the extension 'wett'.
+  </p>
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator -p my.properties test1.wet test2.wet</span><br/>
+    Starts Wetator with the configuration 'my.properties'. Wetator directly executes test1.wet and test2.wet.
+  </p>
+
+</div>

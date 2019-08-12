@@ -1,75 +1,34 @@
 <!-- partial sidebar begin -->
 <div id="sidebar">
 
-  <et:if_page url="/">
-    <!-- news begin -->
-    <h1>Latest News</h1>
-    <et:find url="/news">
-      <et:children:each order="desc" limit="2">
-        <div id="sidebar_news">
-          <h1><et:pagelink /> (<et:date format="%Y-%m-%d"/>)</h1>
-          <p><et:content part="summary" /></p>
-        </div>
-      </et:children:each>
-    </et:find>
-    <!-- news end -->
-  </et:if_page>
-
-  <et:find url="/">
-    <et:ns:children>
-      <et:each status="sticky,published" sort="position" order="asc">
-        <et:if_selected>
-          <h1><et:pagelink><et:breadcrumb /></et:pagelink></h1>
-        </et:if_selected>
-      </et:each>
-    </et:ns:children>
-  </et:find>
-  
-  <div id="sidebar_nav">
-<ul>
-      <et:if_page url="/">
-        <et:ns:children>
-          <et:each category="sidebarhome" sort="position" order="asc">
-            <li><et:pagelink /></li>
-          </et:each>
-        </et:ns:children>
-      </et:if_page>
-
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
-    {{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
-      <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a>
-      {{ if .HasChildren }}
-        <ul>
-        {{ range .Children }}
-          <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a>
-          {{ if and (.HasChildren) (or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .)) }}
-            <ul>
+      {{ $selected := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
+      {{ if $selected}}
+        <h1><a href="{{ .URL }}">{{ .Name }}</a></h1>
+        <div id="sidebar_nav">
+          <ul>
             {{ range .Children }}
-              <li class="{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}selected{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+              {{ template "sidebarnav" (dict "menu" . "currentPage" $currentPage) }}
             {{ end }}
-            </ul>
-          {{ end }}
-          </li>
+          </ul>
+        </div>
+      {{ end }}
+  {{ end }}
+  
+  {{ define "sidebarnav" }}
+      {{ $currentPage := .currentPage }}
+      {{ $selected := or ($currentPage.HasMenuCurrent "main" .menu) ($currentPage.IsMenuCurrent "main" .menu) }}
+
+      <li {{ if $selected }}class="selected"{{ end }}><a href="{{ .menu.URL }}">{{ .menu.Name }}</a>
+      {{ if and (.menu.HasChildren) $selected}}
+        <ul>
+        {{ range .menu.Children }}
+          {{ template "sidebarnav" (dict "menu" . "currentPage" $currentPage) }}
         {{ end }}
         </ul>
       {{ end }}
-      </li>
-    {{ end }}
   {{ end }}
-</ul>
-  </div>
 
-  <et:if_page url="/">
-    <div id="cmdref" style="margin-left: 35px; margin-top: 40px;">
-      <a href="/wetator-documentation/reference/commands">COMMAND REFERENCE</a>
-    </div>
-    <div id="getwetator" style="margin-left: 59px; margin-top: 40px;">
-      <a href="/download"><et:design:image name="wetator-download" /></a>
-    </div>
-    <div id="cloudbees" style="margin-left: 45px;">
-      <a href="https://wetator.ci.cloudbees.com/" target="_blank"><et:design:image name="button-built-on-cb-1.png" width='149' height='52' /></a>
-    </div>
-  </et:if_page>
 </div>
 <!-- partial sidebar end -->

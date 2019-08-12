@@ -1,0 +1,81 @@
+---
+title: "WikiText"
+menu:
+  main:
+    name: "WikiText"
+    parent: Test Case Files
+    weight: 200
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+
+<p>The wiki text format is a simple plain texts format. It is very easy to edit using any text editor and it also works very well with version control systems.<br/>
+The wiki text format uses two pipe characters (||) to separate between command, first, and second parameter.</p>
+
+<h4>A simple test script might look like this</h4>
+<p>
+<pre>
+open-url        || http://www.wetator.org/testform
+
+assert-title    || WETATOR / Test Form
+assert-content  || The form below is only for testing purpose
+
+set             || Project name    ||  My Fancy Web App Under Test
+select          || JAVA
+select          || amazing
+select          || visionary
+set             || Wetator makes   ||  testing fun
+set             || my resume       ||  resume.txt
+
+click-on        || Submit My Truth
+assert-content  || Thank you for submitting your truth about WETATOR
+</pre>
+</p>
+<p>As you can see the format is really simple. Of course there is no need to place all the separators ('||') in the same column but doing so will result in more readable files.
+</p>
+
+<h4>Comments</h4>
+<p>
+If you like to add comments to your file just start the line with '#' or '//'
+<pre>
+open-url        || http://www.wetator.org/testform
+
+# check form content
+assert-title    || WETATOR / Test Form
+assert-content  || The form below is only for testing purpose
+
+# fill the form
+set             || Project name    ||  My Fancy Web App Under Test
+....
+</pre>
+</p>
+
+<h4>Multiline</h4>
+<p>Especially for the describe command you need a way to provide multiline content; this can be done by simply ending a line using the \ as continuation character.
+<pre>
+describe        || My first simple testcase for [WETATOR](http://www.wetator.org) \
+This case consists of some tricky steps \
+* open the url \
+* fill the form and \
+* finally check the result
+
+# time to start
+open-url        || http://www.wetator.org/testform
+....
+</pre>
+</p>
+
+<h4>I18n</h4>
+<p>Wetator always assumes UTF-8 encoding of your wiki text file. If your editor uses this encoding also, you have no need to do anything special when working with unicode characters.
+Additionally you can use the Java/C way of unicode encoding (\uxxxx) to place special characters in your file.<br/>
+This sample selects the 'µl' from a list of units.
+<pre>
+....
+select          || unit > \u00B5l
+....
+</pre>
+</p>
+
+</div>

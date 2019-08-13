@@ -6,7 +6,7 @@
     {{ range where .Site.Pages "Type" "news" | first 3 }}
       {{ if ne .Title "News" }}
         <div id="sidebar_news">
-          <h1><a href="{{ .URL }}">{{ .Title }}</a> ({{ .PublishDate.Format "2006-04-01" }})
+          <h1><a href="{{ .URL }}">{{ .Title }}</a> ({{ .PublishDate.Format "2006-01-02" }})
           <p>{{ .Summary }}</p>
         </div>
       {{ end }}

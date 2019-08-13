@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+  {{ with .Site.GetPage "/news" }}
+    {{ range .Pages }}
+      <h4 class="togglePanel">{{ .Summary }} ({{ .PublishDate.Format "2006-01-02" }})</h4>
+      <div class="togglePanel_content">
+         {{ .Content }}
+         <div class="posted">Posted by {{ .Param "author" }}</div>
+      </div>
+    {{ end }}
+  {{end}}
+
+{{ end }}
+
+
+{{ define "sidebar" }}
+<div id="sidebar">
+  {{ $currentPage := . }}
+
+  {{ with .Site.GetPage "/news" }}
+        <h1><a href="{{ .URL }}">{{ .Name }}</a></h1>
+        <div id="sidebar_nav">
+          <ul>
+            {{ range .Pages }}
+              {{ $selected := eq $currentPage . }}
+              <li {{ if $selected }}class="selected"{{ end }}><a href="{{ .URL }}">{{ .Title }}</a>
+            {{ end }}
+          </ul>
+        </div>
+  {{end}}
+</div>
+{{ end }}

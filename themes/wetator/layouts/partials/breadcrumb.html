@@ -7,6 +7,6 @@
   {{ else if not .p1.IsHome }}
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
   {{ end }}
-      <li><a href="{{ .p1.Permalink }}">{{ .p1.Title }}{{ if ne .p1 .p2 }} &gt; {{ end }}</a></li>
+      <li><a href="{{ .p1.Permalink }}">{{ if .p1.IsHome }}Home{{ else }}{{ .p1.Title }}{{ end }}{{ if ne .p1 .p2 }} &gt; {{ end }}</a></li>
 {{ end }}
 <!-- partial breadcrumb end -->

@@ -1,24 +1,5 @@
 <!-- partial sidebar begin -->
 <div id="sidebar">
-  {{ if .IsHome }}
-    <h1>Latest News</h1>
-    <!-- news begin -->
-    {{ range where .Site.Pages "Type" "news" | first 3 }}
-      {{ if ne .Title "News" }}
-        <div id="sidebar_news">
-          <h1><a href="{{ .URL }}">{{ .Title }}</a> ({{ .PublishDate.Format "2006-01-02" }})
-          <p>{{ .Summary }}</p>
-        </div>
-      {{ end }}
-    {{ end }}
-    <!-- news end -->
-    <div id="sidebar_nav">
-      <ul>
-        <li><a href="/news">All News</a></li>
-      </ul>
-    </div>
-  {{ end }}
-
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
       {{ $selected := or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }}
@@ -46,15 +27,6 @@
         {{ end }}
         </ul>
       {{ end }}
-  {{ end }}
-
-  {{ if .IsHome }}
-    <div id="cmdref" style="margin-left: 35px; margin-top: 40px;">
-      <a href="/wetator-documentation/reference/commands">COMMAND REFERENCE</a>
-    </div>
-    <div id="getwetator" style="margin-left: 59px; margin-top: 40px;">
-      <a href="/download"><img src="/images/wetator-download.png" width="120" height="42"></a>
-    </div>
   {{ end }}
 </div>
 

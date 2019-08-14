@@ -1,0 +1,144 @@
+---
+title: "Use Module"
+menu:
+  main:
+    name: "Use Module"
+    parent: "Default Command Set"
+    weight: 300
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Calls another test and executes all commands as part of this test.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">module</div>
+    <div class="desc">
+      The (absolute or relative) path of the module.<br/>
+      When using relative paths, they are always relative to the callers file location.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">parameters</div>
+    <div class="desc">
+      The parameters (comma separated) to be used when executing the given
+      module. They can be accessed by their index within the module, e.g. the first parameter as ${1}.<br/>
+      If a parameter contains a comma, precede it with a backslash.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Use a module that performs the login.</h3>
+    <h5>The caller</h5>
+    <p>Call a module that performs the login. The first login is done with user/secret, the second login with admin/master and the last one uses some variables defined in config.properties.
+    </p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">user, secret</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">...</td>
+      <td class="col_param1"></td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">admin, master</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">...</td>
+      <td class="col_param1"></td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">${usr}, ${pwd}</td>
+    </tr>
+    </table>
+
+    <h5>The called module</h5>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">myapp.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">MyApp / Login</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">User Id</td>
+      <td class="col_param2">${1}</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Password</td>
+      <td class="col_param2">${2}</td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Login</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">MyApp / Home</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Welcome ${1}</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <h5>The config file</h5>
+    <div class="configFile">Config (wetator.properties)</div>
+    <div class="configContent">
+      ...<br/>
+      $usr=tester<br/>
+      $$pwd=accurate
+    </div>
+
+  </div>
+  </div>
+</div>

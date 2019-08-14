@@ -18,11 +18,11 @@
   {{- block "main" . }}{{- end }}
 
 
-<!-- todo
-<et:if_content part="addcontent">
-  <et:content part="addcontent" />
-</et:if_content>
--->
+  {{ if ne nil (.Resources.GetMatch "addcontent.html") }}
+    {{ with .Resources.GetMatch "addcontent.html" }}
+      {{ .Content }}
+    {{ end }}
+  {{ end }}
 
 <!-- content end -->
 </div>

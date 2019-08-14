@@ -1,0 +1,164 @@
+{{ define "main" }}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".tab-menu > li").click(function(e) {
+      switch(e.target.id){
+        case "default":
+          $("#default").addClass("active");$("#minimum").removeClass("active");$("#all").removeClass("active");$("#byset").removeClass("active");
+          $("div.default").fadeIn();
+          $("div.minimum").css("display", "none");$("div.all").css("display", "none");$("div.byset").css("display", "none");
+        break;
+        case "minimum":
+          $("#minimum").addClass("active");$("#default").removeClass("active");$("#all").removeClass("active");$("#byset").removeClass("active");
+          $("div.minimum").fadeIn();
+          $("div.default").css("display", "none");$("div.all").css("display", "none");$("div.byset").css("display", "none");
+        break;
+        case "all":
+          $("#all").addClass("active");$("#default").removeClass("active");$("#minimum").removeClass("active");$("#byset").removeClass("active");
+          $("div.all").fadeIn();
+          $("div.default").css("display", "none");$("div.minimum").css("display", "none");$("div.byset").css("display", "none");
+        break;
+        case "byset":
+          $("#byset").addClass("active");$("#default").removeClass("active");$("#minimum").removeClass("active");$("#all").removeClass("active");
+          $("div.byset").fadeIn();
+          $("div.default").css("display", "none");$("div.minimum").css("display", "none");$("div.all").css("display", "none");
+        break;
+      }
+      return false;
+    });
+  });
+</script>
+
+<p>
+    Wetator's commands are delivered in command sets. Each command set is described in its own XSD, which matches the generic <a href="http://www.wetator.org/xsd/test-case-1.0.0.xsd" target="_blank">test-case-1.0.0.xsd</a>.<br/>
+    All XSDs offered by Wetator are available online under http://www.wetator.org/xsd/.<br/>
+    <br/>
+    You also have the possibility to write your own command sets and therewith extend Wetator's capabilities according to your needs.<br/>
+</p>
+<div class="tab-container">
+  <ul class="tab-menu">
+    <li id="default" class="active">Default Command Set</li>
+    <li id="minimum">Minimum Command Set</li>
+    <li id="all">All Commands (alphabetical)</li>
+    <li id="byset">All Commands (by command set)</li>
+  </ul>
+  <span class="clear"></span>
+  <div class="tab-content">
+
+    <div class="default">
+      {{- partial "cmd-docu-overview" . -}}
+      <et:find url="/documentation/reference/commands/default-command-set">
+        <et:design:snippet name="cmd-docu-overview" />
+      </et:find>
+    </div>
+
+    <div class="minimum" style="display: none;">
+      <h3>Preparation</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/default-command-set">
+          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-preparation'>
+            <div class="togglePanel">
+              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
+            </div>
+            <div class="togglePanel_content">
+              <et:content />
+
+              <et:if_content part="addcontent">
+           <div class="more_examples">
+             <et:pagelink>more examples</et:pagelink>
+           </div>
+              </et:if_content>
+            </div>
+          </et:children:each>
+        </et:find>
+      </div>
+
+      <h3>Action</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/default-command-set">
+          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-action'>
+            <div class="togglePanel">
+              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
+            </div>
+            <div class="togglePanel_content">
+              <et:content />
+
+              <et:if_content part="addcontent">
+           <div class="more_examples">
+             <et:pagelink>more examples</et:pagelink>
+           </div>
+              </et:if_content>
+            </div>
+          </et:children:each>
+        </et:find>
+      </div>
+
+      <h3>Assertion</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/default-command-set">
+          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-assertion'>
+            <div class="togglePanel">
+              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
+            </div>
+            <div class="togglePanel_content">
+              <et:content />
+
+              <et:if_content part="addcontent">
+           <div class="more_examples">
+             <et:pagelink>more examples</et:pagelink>
+           </div>
+              </et:if_content>
+            </div>
+          </et:children:each>
+        </et:find>
+      </div>
+    </div>
+
+    <div class="all" style="display: none;">
+      <et:pages:each status="sticky,published" sort="title" order="asc" category='command'>
+        <div class="togglePanel">
+          <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
+        </div>
+        <div class="togglePanel_content">
+          <et:content />
+
+          <et:if_content part="addcontent">
+            <div class="more_examples">
+          <et:pagelink>more examples</et:pagelink>
+        </div>
+          </et:if_content>
+        </div>
+      </et:pages:each>
+    </div>
+
+    <div class="byset" style="display: none;">
+      <h3>Default Command Set</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/default-command-set">
+          <et:design:snippet name="cmd-docu-overview" />
+        </et:find>
+      </div>
+
+      <h3>SQL Command Set</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/sql-command-set">
+          <et:design:snippet name="cmd-docu-overview" />
+        </et:find>
+      </div>
+
+      <h3>Incubator Command Set</h3>
+      <div class="padding-left1">
+        <et:find url="/wetator-documentation/reference/commands/incubator-command-set">
+          <et:design:snippet name="cmd-docu-overview" />
+        </et:find>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }}
+
+{{ define "sidebar" }}
+  {{- partial "sidebar.html" . -}}
+{{ end }}

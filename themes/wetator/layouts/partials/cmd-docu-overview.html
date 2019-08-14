@@ -1,0 +1,17 @@
+{{ with .Site.GetPage "/documentation/reference/commands/default-command-set" }}
+    {{ range .Pages }}
+        <div class="togglePanel">
+            <span class="cmd_title">{{ .Title }}</span>  <span class='cmd_overview'>{{ (.Resources.GetMatch "overview.txt").Content }}</span>
+        </div>
+        <div class="togglePanel_content">
+            {{ .Content }}
+
+            {{ if ne nil (.Resources.GetMatch "addcontent.html") }}
+            <div class="more_examples">
+                <a href="{{ .URL }}">more examples</a>
+            </div>
+            {{ end }}
+        </div>
+    {{ end }}
+{{end}}
+

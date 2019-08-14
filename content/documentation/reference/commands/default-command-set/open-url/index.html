@@ -1,0 +1,56 @@
+---
+title: "Open URL"
+menu:
+  main:
+    name: "Open URL"
+    parent: "Default Command Set"
+    weight: 200
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Open a given URL in the current window.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">url</div>
+      <div class="desc">Specifies the URL to open (required).<br/>
+        May be absolute or relative to the configured base URL (see examples).
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Open a page by using a relative URL</h3>
+      <et:image name="docu-cmd-openurl"/>
+      <div class="configFile">Config (wetator.properties)</div>
+      <div class="configContent">wet.baseUrl=http://www.wetator.org</div> 
+      <p>Open url 'http://www.wetator.org/commands/openurl.html'.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">open-url</td>
+          <td class="col_param1">commands/openurl.html</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-title</td>
+          <td class="col_param1">WETATOR / Open Url</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,2 @@
-<img src="/images/{{.Get "src" }}" {{ if isset .Params "id" }}id="{{index .Params "id" }}"{{ end }} {{ if isset .Params "alt" }}alt="{{index .Params "alt" }}"{{ end }} />
+{{ $img := imageConfig (print "static/images/" (.Get "src")) }}
+<img src="/images/{{ .Get "src" }}" {{ if isset .Params "id" }}id="{{index .Params "id" }}"{{ end }} {{ if isset .Params "alt" }}alt="{{index .Params "alt" }}"{{ end }} width="{{$img.Width}}" height="{{$img.Height}}" />

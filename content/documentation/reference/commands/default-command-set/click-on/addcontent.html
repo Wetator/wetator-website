@@ -1,0 +1,74 @@
+<div class="docu">
+  <div class="examples">
+    <div class="example">
+    <h3>Click a graphic button</h3>
+    {{% image src="docu-cmd-click-imgbutton.png" %}}
+    <p>Because Wetator is not able to understand graphics you have to use the usual hints for clicking this kind of buttons.
+    Typically this kind of buttons have a tooltip (title attribute) that can be used. Another alternative is the use of the alt attribute defined for the image.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Add to cart</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="example">
+    <h3>Click by aria-label</h3>
+    <p>Some applications are styling buttons/anchors by assigning a picture using css. For these kind of buttons/anchors there is the aria-label attribute to assign an invisible label to the button (see <a href='http://www.w3.org/TR/WCAG20-TECHS/ARIA14.html'> W3C Spec</a>).
+    Wetator is able to identify these buttons/anchors based on the aria-label attribute value.</p>
+    <p>Button:
+<pre>
+&lt;button type="button" aria-label='Do Search' onClick="this.form.submit();"&gt;
+    &lt;span style="background: url(search.png); height: 44px; width: 44px; display: block;""&gt;&lt;/span"&gt;
+&lt;/button"&gt;
+</pre>
+    </p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Do Search</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+
+    <p>Anchor:
+<pre>
+&lt;a aria-label="Close" href="#" role="button"&gt;
+    &lt;span style="background: url(x.png); height: 10px; width: 10px; display: block;""&gt;&lt;/span"&gt;
+&lt;/a&gt;
+</pre>
+    </p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Close</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>

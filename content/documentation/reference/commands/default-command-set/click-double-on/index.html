@@ -1,0 +1,52 @@
+---
+title: "Click Double On"
+menu:
+  main:
+    name: "Click Double On"
+    parent: "Default Command Set"
+    weight: 500
+
+weight: 500
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Double click with the mouse on the specified element.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control to double click on <et:design:snippet name="link-wpath-docu"/>.<br/>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command clicks on the first double clickable element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Double click an entry field</h3>
+    <p>Double click on an entry field labled 'Name'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-double-on</td>
+      <td class="col_param1">Name</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

@@ -5,14 +5,56 @@ menu:
     name: "Describe"
     parent: "Default Command Set"
     weight: 100
+
+weight: 100
 date: 2019-08-10T14:21:37+02:00
 draft: true
 ---
 
-<p>
-    For working with Wetator you just need to know the <a href="/documentation/general-concepts/test-case-and-command">structure of the test cases</a> and the two concepts for addressing parts of your web application:
-    <ul>
-        <li>The <a href="/documentation/general-concepts/content-pattern">Content Pattern</a> – for asserting content
-        <li>The <a href="/documentation/general-concepts/wpath">WPath</a> – for addressing a distinct web page element
-    </ul>
-</p>
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p class="hint">Requires version 1.1</p>
+  <p>Descibes this test case using formatted text (incl. links).</p>
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">markdown</div>
+      <div class="desc">The description formatted using the <et:link name="markdown" target="_blank"/> notation.<br/>
+      Wetator uses the <et:link name="txtmark " target="_blank"/> markdown processor. Please check the <et:link name="txtmark " target="_blank"/> page for
+      more details.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Add a simple description to a test case.</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">describe</td>
+          <td class="col_param1"> # Happy path walktrough for our registration workflow.<br/>
+**Use case:** [Register User](http://www.wetator.org/use-cases/regitrer-user)<br/>
+<br/>
+You are now reading a more detailed description of this test case.</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">....</td>
+          <td class="col_param1">....</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+      <p>Your resulting report will look like this.</p>
+      {{% image src="docu-cmd-describe-result.png" %}}
+    </div>
+  </div>
+</div>

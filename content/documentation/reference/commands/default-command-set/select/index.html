@@ -1,0 +1,104 @@
+---
+title: "Select"
+menu:
+  main:
+    name: "Select"
+    parent: "Default Command Set"
+    weight: 800
+
+weight: 800
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Selects an entry from a list.<br>
+    Use this to select options from a single or multiple select list, a group of radio buttons or select a checkbox.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to select <et:design:snippet name="link-wpath-docu"/>.
+      <dl>
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Single Select Box</dt>
+        <dd>Usually you can select an option from a list simply by using the text of that option.<br>
+     If the same option is member of different lists use the label of the select box, a <et:block name="wpath-separator"/> and then the text of the option to select.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Select call.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command selects the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    {{% image src="docu-cmd-select.png" %}}
+    <h3>Select a check box</h3>
+    <p>Select the checkbox 'documentation' from the list of possible improvements.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">documentation</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <h3>Select a radio button</h3>
+    <p>Select the radio button 'American Express' from the payment options.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">American Express</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <h3>Select an entry from a list box</h3>
+    <p>Select the amount of 100&euro;.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">100&euro;</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

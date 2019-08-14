@@ -1,0 +1,185 @@
+---
+title: "Set"
+menu:
+  main:
+    name: "Set"
+    parent: "Default Command Set"
+    weight: 700
+
+weight: 700
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Sets the value of an entry field.<br>
+    Use this to set the value of an input field, a password field or a text area. This commands also supports the file input field (for file upload). 
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control <et:design:snippet name="link-wpath-docu"/>.
+      <dl>
+        <dt>Input Field, Password Field, Text Area, File Upload</dt>
+        <dd>The path is usually the label of the field.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command sets the value of the first element after all these words.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">value</div>
+    <div class="desc">
+      The new value to set.
+      <dl>
+        <dt>Input Field, Password Field, Text Area</dt>
+        <dd>The new value for the field. Leave this empty to clean the field.</dd>
+
+        <dt>File Upload</dt>
+        <dd>The file name (relativ to the location of the test source file).</dd>
+      </dl>
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Set the value of an input field</h3>
+    {{% image src="docu-cmd-set-inputtext.png" %}}
+    <p>Set the value of an input field labeled 'Your profession' to 'WebApp Tester'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Your profession</td>
+      <td class="col_param2">Wetator</td>
+    </tr>
+    </table>
+
+    <p>You can also clear the input field labeled 'Your profession'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Your profession</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <h3>Set the value of a file upload control</h3>
+    {{% image src="docu-cmd-set-uploadfile.png" %}}
+    <p>Set the value of a file upload control labeld 'Upload your resume' to 'my_resume.pdf'.<br/>
+    File 'my_resume.pdf' is in the same directory folder as the test script.
+    </p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Upload your resume</td>
+      <td class="col_param2">my_resume.pdf</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Submit</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Wow! What an impressive resume.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <p>With modern browsers the entry field for the file name is no longer visible. The set command works the same way.
+    </p>
+    {{% image src="docu-cmd-set-uploadfile-modern.png" %}}
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Please find attached my resume</td>
+      <td class="col_param2">my_resume.pdf</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Submit</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Wow! What an impressive resume.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <p>More sophisticated control libraries (like PrimeFaces) are adding a lot more decoration to the file upload control. But the usage from your Wetator test is still the same.
+    </p>
+    {{% image src="docu-cmd-set-uploadfile-primefaces.png" %}}
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Choose</td>
+      <td class="col_param2">upload.png</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Upload</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Thanks for the nice picture.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+Assert that the content matches the given one.

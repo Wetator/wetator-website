@@ -1,0 +1,101 @@
+<div class="docu">
+  <div class="examples">
+  <div class="example">
+    <h3>Check for a single word using wildcards on a page</h3>
+    <p>Check for a single word using wildcards on a page.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Gu<et:block name="wildcard-star"/>sa<et:block name="wildcard-questionmark"/>at</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  <div class="example">
+    <h3>Check for words in the right order on a page</h3>
+    <p>Check for words in the right order on a page.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Pferde, keinen, Gu<et:block name="wildcard-star"/>sa<et:block name="wildcard-questionmark"/>at</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+
+  <h3>Content checking for common file formats (PDF, RTF, xls, xlsx and docx)</h3>
+  <div class="examples">
+  <div class="example">
+    <p>The 'assert-content' command works with HTML pages and also supports common file formats. If your application offers the ability to download e.g. PDF files, you can simply write
+    tests for the correct content also. To make this happen the file has to sent out by the server with the correct (supported) content type. </br>
+    At the moment the following content types are supported:
+    <table>
+    <tr>
+      <th class="col_commmand">Type</th>
+      <th class="col_commmand">Content-Type Heder</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_commmand">PDF</td>
+      <td class="col_commmand">application/pdf</td>
+    </tr>
+    <tr class="even">
+      <td class="col_commmand">MS Excel (xls, xlsx)</td>
+      <td class="col_commmand">application/vnd.ms-excel,</br> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</td>
+    </tr>
+    <tr class="odd">
+      <td class="col_commmand">MS Word (docx)</td>
+      <td class="col_commmand">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td>
+    </tr>
+    <tr class="even">
+      <td class="col_commmand">RTF</td>
+      <td class="col_commmand">application/rtf,</br>text/rtf,</br>text/richtext,</br>text/enriched</td>
+    </tr>
+    </table>
+    </p>
+
+    <h3>Check the content of an PDF file.</h3>
+    <p>TODO</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">TODO</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+title: "Assert Content"
+menu:
+  main:
+    name: "Assert Content"
+    parent: "Default Command Set"
+    weight: 1400
+
+weight: 1400
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Asserts that the current page contains the expected content.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">content</div>
+      <div class="desc">The text to match <et:design:snippet name="link-contentpattern-docu"/>.<br>
+        It is possible to use the '*' and the '?' character as wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+        It is also possible to define a comma separated list of words (with '*' and '?' if needed). Then this command checks, that the words in the defined order are parts of the content.
+        <br>
+        At the moment content of type text, html/xhtml, pdf, rtf, xls, xlsx and docx are supported.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">wait</div>
+      <div class="desc">The (optional) timeout in seconds used for waiting for javascript events.
+        This is helpful for pages working with setTimeout javascript command or doing some AJAX polling for e.g. search results.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Check for a single word on a page</h3>
+    <p>Check for a single word on a page.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Gurkensalat</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

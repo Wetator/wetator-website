@@ -1,0 +1,60 @@
+---
+title: "Mouse Over"
+menu:
+  main:
+    name: "Mouse Over"
+    parent: "Default Command Set"
+    weight: 1100
+
+weight: 1100
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Moves the mouse over the specified item.<br>
+    Use this e.g. to simulate the use of menus that are only visible if the mouse is over some text.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The 'path' to the item to select <et:design:snippet name="link-wpath-docu"/>.<br>
+
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command selects the first element after all these words. 
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Place the mouse over an menu entry</h3>
+    <p>Place the mouse over a pull down menu entry named 'File'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">mouse-over</td>
+      <td class="col_param1">File</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">File, Save, Save As, Exit</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

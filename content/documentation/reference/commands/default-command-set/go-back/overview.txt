@@ -1,0 +1,1 @@
+Goes back in the current window using the back button.

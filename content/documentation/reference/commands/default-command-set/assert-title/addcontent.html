@@ -1,0 +1,54 @@
+<div class="docu">
+  <div class="examples">
+  <div class="example">
+    <h3>Check for title using wildcards</h3>
+    <p>Check for title using wildcards.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">W*R / Open*</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+    <p>&nbsp;</p>
+    <h3>Check for title of a PDF document</h3>
+    <p>Every PDF document holds some metadata including the author and the title. Usually this fields are filled.
+    The command 'assert-title' is able to check the title from these metadata.<br>
+    Not all browsers are using this title for the tab/window title if the PDF document is displayed inline. But checking
+    the title might helpful, if your document contains only graphics (e.g. scans) and therefore assert-content is not possible.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">download/wetator_overview.pdf</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">WETATOR / Smart web application testing</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

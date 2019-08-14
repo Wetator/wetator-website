@@ -1,0 +1,99 @@
+---
+title: "Confirm Next"
+menu:
+  main:
+    name: "Confirm Next"
+    parent: "Incubator Command Set"
+    weight: 600
+
+weight: 600
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Prepares the processing of the next confirmation dialog.<br/>
+  If your application makes usage of confirmation dialogs (javascript: res=window.confirm(question);), by default WETATOR will close those by clicking the 'OK' button.<br/>
+Use this command to assert the expected description or to click the 'Cancel' button instead.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">button</div>
+      <div class="desc">The button to click; only 'OK' and 'Cancel' are allowed here.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">message</div>
+      <div class="desc">The text to match against the confirmation dialog.<br>
+      If the confirmation text of the next dialog does not match, the command that started the dialog (usually a clock-on) will fail.
+      It is possible to use the '*' and the '?' character as wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a comma separated list of words (with '*' and '?' if needed). Then this command checks, that the words in the defined order are parts of the page title.<br>
+      If your assertion contains a comma, star, or question mark, precede it with a backslash.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>The application uses a dialog to get a confirmation from the user.</h3>
+      {{% image src="docu-cmd-confirmnext.png" %}}
+      <p>In this sample the click on the Delete button will open the confirmation dialog and the application deletes all the data only if the user confirms by clicking 'OK'.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">confirm-next</td>
+          <td class="col_param1">OK</td>
+          <td class="col_param2">Do you really like to delete all data?</td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Delete</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-content</td>
+          <td class="col_param1">All date deleted.</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+      <p>If you like to test the correct implementation for the case where the user clicks the cancel button do it like this.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">confirm-next</td>
+          <td class="col_param1">Cancel</td>
+          <td class="col_param2">Do you really like to delete all data?</td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Delete</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-content</td>
+          <td class="col_param1">Nothing deleted.</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

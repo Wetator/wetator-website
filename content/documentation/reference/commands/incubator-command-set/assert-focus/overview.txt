@@ -1,0 +1,1 @@
+Asserts, that an item owns the focus.

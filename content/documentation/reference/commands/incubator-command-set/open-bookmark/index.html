@@ -1,0 +1,73 @@
+---
+title: "Open Bookmark"
+menu:
+  main:
+    name: "Open Bookmark"
+    parent: "Incubator Command Set"
+    weight: 300
+
+weight: 300
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Opens the url previously saved as bookmark with the given name.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">name</div>
+    <div class="desc">
+      The name of the bookmark.<br>
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Bookmark a page, do something else and go back to the bookmarked page.</h3>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">http://www.wetator.org</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">save-bookmark</td>
+      <td class="col_param1">WETATOR</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">http://htmlunit.sourceforge.net/</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-bookmark</td>
+      <td class="col_param1">WETATOR</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Wetator is a tool for automatic</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

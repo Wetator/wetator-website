@@ -1,0 +1,47 @@
+---
+title: "Exec JS"
+menu:
+  main:
+    name: "Exec JS"
+    parent: "Incubator Command Set"
+    weight: 500
+
+weight: 500
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Execute the given javascript in the context of the current page.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">script</div>
+      <div class="desc">The script to execute.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Alert the value of an internal js variable (stateInternal) for debugging.</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-js</td>
+          <td class="col_param1">alert(stateInternal);</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

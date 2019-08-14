@@ -1,0 +1,48 @@
+---
+title: "Wait"
+menu:
+  main:
+    name: "Wait"
+    parent: "Incubator Command Set"
+    weight: 400
+
+weight: 400
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Waits the given time before continuing with the test execution.</p>
+  <p>Please use the wait command only if all other options do not work. Consider using the Assert Content command (defining a wait time) instead of this command.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">wait</div>
+      <div class="desc">The time to wait in seconds before continuing.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Pause test execution for 4s.</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">wait</td>
+          <td class="col_param1">4</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -47,75 +47,39 @@
   <div class="tab-content">
 
     <div class="default">
-      {{- partial "cmd-docu-overview" . -}}
-      <et:find url="/documentation/reference/commands/default-command-set">
-        <et:design:snippet name="cmd-docu-overview" />
-      </et:find>
+      {{- partial "cmd-docu-overview" (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
     </div>
 
     <div class="minimum" style="display: none;">
       <h3>Preparation</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/default-command-set">
-          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-preparation'>
-            <div class="togglePanel">
-              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
-            </div>
-            <div class="togglePanel_content">
-              <et:content />
-
-              <et:if_content part="addcontent">
-           <div class="more_examples">
-             <et:pagelink>more examples</et:pagelink>
-           </div>
-              </et:if_content>
-            </div>
-          </et:children:each>
-        </et:find>
+        {{- $all := (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
+        {{- $all := where $all "Params.cmd-category" "cmd-preparation" -}}
+        {{- partial "cmd-docu-overview" $all -}}
       </div>
 
       <h3>Action</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/default-command-set">
-          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-action'>
-            <div class="togglePanel">
-              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
-            </div>
-            <div class="togglePanel_content">
-              <et:content />
-
-              <et:if_content part="addcontent">
-           <div class="more_examples">
-             <et:pagelink>more examples</et:pagelink>
-           </div>
-              </et:if_content>
-            </div>
-          </et:children:each>
-        </et:find>
+        {{- $all := (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
+        {{- $all := where $all "Params.cmd-category" "cmd-action" -}}
+        {{- partial "cmd-docu-overview" $all -}}
       </div>
 
       <h3>Assertion</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/default-command-set">
-          <et:children:each status="sticky,published" sort="position" order="desc" category='cmd-assertion'>
-            <div class="togglePanel">
-              <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
-            </div>
-            <div class="togglePanel_content">
-              <et:content />
-
-              <et:if_content part="addcontent">
-           <div class="more_examples">
-             <et:pagelink>more examples</et:pagelink>
-           </div>
-              </et:if_content>
-            </div>
-          </et:children:each>
-        </et:find>
+        {{- $all := (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
+        {{- $all := where $all "Params.cmd-category" "cmd-assertion" -}}
+        {{- partial "cmd-docu-overview" $all -}}
       </div>
     </div>
 
     <div class="all" style="display: none;">
+      {{- $all := (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
+      {{- $all := union $all (.Site.GetPage "/documentation/reference/commands/sql-command-set").Pages -}}
+      {{- $all := union $all (.Site.GetPage "/documentation/reference/commands/incubator-command-set").Pages -}}
+      {{- $all := sort $all "Title" "asc" -}}
+      {{- partial "cmd-docu-overview" $all -}}
+
       <et:pages:each status="sticky,published" sort="title" order="asc" category='command'>
         <div class="togglePanel">
           <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
@@ -135,23 +99,17 @@
     <div class="byset" style="display: none;">
       <h3>Default Command Set</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/default-command-set">
-          <et:design:snippet name="cmd-docu-overview" />
-        </et:find>
+        {{- partial "cmd-docu-overview" (.Site.GetPage "/documentation/reference/commands/default-command-set").Pages -}}
       </div>
 
       <h3>SQL Command Set</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/sql-command-set">
-          <et:design:snippet name="cmd-docu-overview" />
-        </et:find>
+        {{- partial "cmd-docu-overview" (.Site.GetPage "/documentation/reference/commands/sql-command-set").Pages -}}
       </div>
 
       <h3>Incubator Command Set</h3>
       <div class="padding-left1">
-        <et:find url="/wetator-documentation/reference/commands/incubator-command-set">
-          <et:design:snippet name="cmd-docu-overview" />
-        </et:find>
+        {{- partial "cmd-docu-overview" (.Site.GetPage "/documentation/reference/commands/incubator-command-set").Pages -}}
       </div>
     </div>
   </div>

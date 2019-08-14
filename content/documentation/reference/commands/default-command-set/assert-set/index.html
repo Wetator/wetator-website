@@ -1,0 +1,64 @@
+---
+title: "Assert Set"
+menu:
+  main:
+    name: "Assert Set"
+    parent: "Default Command Set"
+    weight: 1700
+
+weight: 1700
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Assert that the value of an entry field matches the given one.<br>
+    Use this to check the value of an input field, a password field or a text area.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the entry field <et:design:snippet name="link-wpath-docu"/>.
+      <dl>
+        <dt>Input Field, Password Field, Text Area</dt>
+        <dd>The path is usually the label of the field.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command checks the value of the first element after all these words.<br>
+      If your assertion contains a comma, star, or question mark, precede it with a backslash.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">value</div>
+    <div class="desc">
+      The expected value.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Check the content of an entry field</h3>
+    <p>Check the content of an entry field.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-set</td>
+      <td class="col_param1">Color</td>
+      <td class="col_param2">blue</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+---
+title: "Exec Java"
+menu:
+  main:
+    name: "Exec Java"
+    parent: "Default Command Set"
+    weight: 2000
+
+weight: 2000
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Executes the defined java method.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">method</div>
+    <div class="desc">
+      The name of the class and method to be executed.<br>
+      Wetator first searches for static methods with the given name.<br>
+      Wetator searches for methods
+      <ul>
+        <li>with the same number of string parameters as strings given by the second parameter
+        <li>with exactly one parameter of type List&lt;String&gt; or
+        <li>with a vararg of type string.
+      </ul>
+      If nothing found then Wetator looks for a default constructor and if one is available,
+      Wetator creates an instance and performs the same lookup for instance methods.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">args</div>
+    <div class="desc">
+      The parametes for the method call.<br>
+       It is possible to provide a comma separated list of strings.
+    </div>
+    </div>
+  </div>
+
+  <h3>Classpath</h3>
+  <p>Of course you have to add your class (and all required classes) to the classpath. For the command line client simply copy the jar file into the lib directory.
+If you start wetator from inside eclipse, adjust the run configuration.
+For the ant task, you can define a separate classpath containing your stuff. The ant task uses a separate class loader to load your classes and shield your classes from the ant environment.
+  </p>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Execute a static method</h3>
+    <p>Call the static method 'staticMethodWithTwoParams(String, String)' in class 'org.rbri.wet.commandset.ExecTester'</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">exec-java</td>
+      <td class="col_param1">org.rbri.wet.commandset.ExecTester.staticMethodWithTwoParams</td>
+      <td class="col_param2">one, two</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

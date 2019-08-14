@@ -1,0 +1,65 @@
+---
+title: "Assert Disabled"
+menu:
+  main:
+    name: "Assert Disabled"
+    parent: "Default Command Set"
+    weight: 1600
+
+weight: 1600
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Asserts, that an item is disabled or readonly.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to check <et:design:snippet name="link-wpath-docu"/>.
+      <dl>
+        <dt>Input Field, Password Field, Text Area, File Upload</dt>
+        <dd>The path is usually the label of the field.</dd>
+
+        <dt>Single Select Box, Multiple Select Box</dt>
+        <dd>The path is usually the label of the select box, a <et:block name="wpath-separator"/> and then the text of the option to check.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert that an entry field is disabled</h3>
+    <p>Assert that the entry field labled 'Color' is disabled.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-disabled</td>
+      <td class="col_param1">Color</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

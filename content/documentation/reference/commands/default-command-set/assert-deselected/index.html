@@ -1,0 +1,66 @@
+---
+title: "Assert Deselected"
+menu:
+  main:
+    name: "Assert Deselected"
+    parent: "Default Command Set"
+    weight: 1900
+
+weight: 1900
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Asserts, that an entry from a list is deselected.<br>
+    Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to check <et:design:snippet name="link-wpath-docu"/>.
+      <dl>
+        <dt>Single Select Box</dt>
+        <dd>The path is usually the label of the select box, a <et:block name="wpath-separator"/> and then the text of the option to check.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Assert Select call.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to check. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert, that an entry from a select box is deselected</h3>
+    <p>Assert, that the color named 'red' from a select box labled 'Choose color' is deselected.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-deselected</td>
+      <td class="col_param1">Choose color<et:block name="wpath-separator"/> red</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

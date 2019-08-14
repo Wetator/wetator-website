@@ -25,10 +25,10 @@ draft: true
     <div class="param">
     <div class="name">wpath</div>
     <div class="desc">
-      The WPath identifying the item to deselect <et:design:snippet name="link-wpath-docu"/>.
+      The WPath identifying the item to deselect {{% link-wpath-docu %}}.
       <dl>
         <dt>Single Select Box</dt>
-        <dd>The path is usually the label of the select box, a <et:block name="wpath-separator"/> and then the text of the option to deselect.</dd>
+        <dd>The path is usually the label of the select box, a {{% wpath-separator %}} and then the text of the option to deselect.</dd>
 
         <dt>Multiple Select Box</dt>
         <dd>To make more than one selection in a multiple select box, use more than one Deselect call.</dd>
@@ -37,7 +37,7 @@ draft: true
         <dd>Use the text usually placed after the checkbox you like to deselect. If this text is not unique you can as always define some words before to make the path unique.</dd>
       </dl>
       It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
-      It is also possible to define a <et:block name="wpath-separator"/> separated list of words (with '*' and '?' if needed). Then this command deselects the first element after all these words.
+      It is also possible to define a {{% wpath-separator %}} separated list of words (with '*' and '?' if needed). Then this command deselects the first element after all these words.
     </div>
     </div>
   </div>
@@ -57,7 +57,7 @@ draft: true
     <tr class="odd">
       <td class="col_comment"></td>
       <td class="col_commmand">deselect</td>
-      <td class="col_param1">Choose color<et:block name="wpath-separator"/> red</td>
+      <td class="col_param1">Choose color{{% wpath-separator %}} red</td>
       <td class="col_param2"></td>
     </tr>
     </table>

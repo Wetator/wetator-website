@@ -1,1 +1,0 @@
-Asserts, that an entry from a list is selected.

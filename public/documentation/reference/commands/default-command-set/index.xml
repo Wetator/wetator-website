@@ -1,236 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Default Command Set on WETATOR</title>
-    <link>https://wetator.github.io/documentation/reference/commands/default-command-set/</link>
-    <description>Recent content in Default Command Set on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/documentation/reference/commands/default-command-set/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Describe</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/describe/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/describe/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Requires version 1.1
-Descibes this test case using formatted text (incl. links).
-ParametersmarkdownThe description formatted using the notation.Wetator uses the markdown processor. Please check the page formore details.ExamplesAdd a simple description to a test case.CommandParameterOptional Parameterdescribe# Happy path walktrough for our registration workflow.</description>
-    </item>
-    
-    <item>
-      <title>Open URL</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/open-url/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/open-url/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Open a given URL in the current window.
-ParametersurlSpecifies the URL to open (required).May be absolute or relative to the configured base URL (see examples).ExamplesOpen a page by using a relative URLConfig (wetator.properties)wet.baseUrl=http://www.wetator.org Open url &#39;http://www.wetator.org/commands/openurl.html&#39;.
-CommandParameterOptional Parameteropen-urlcommands/openurl.</description>
-    </item>
-    
-    <item>
-      <title>Use Module</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/use-module/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/use-module/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Calls another test and executes all commands as part of this test.ParametersmoduleThe (absolute or relative) path of the module.When using relative paths, they are always relative to the callers file location.parametersThe parameters (comma separated) to be used when executing the givenmodule.</description>
-    </item>
-    
-    <item>
-      <title>Click On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Click with the mouse on the specified element.
-Use this for clicking buttons and links.If you like to tick a checkbox, select a radio button or choose an item from a list, use the Select command instead.ParameterswpathThe WPath identifying the control to click on (see WPath for a detailed description).</description>
-    </item>
-    
-    <item>
-      <title>Click Double On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-double-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-double-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Double click with the mouse on the specified element.ParameterswpathThe WPath identifying the control to double click on (see WPath for a detailed description).It is possible to use the &#39;*&#39; and the &#39;?&#39; character als wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.</description>
-    </item>
-    
-    <item>
-      <title>Click Right On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-right-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-right-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Right click with the mouse on the specified element.ParameterswpathThe WPath identifying the control to right click on (see WPath for a detailed description).It is possible to use the &#39;*&#39; and the &#39;?&#39; character als wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.</description>
-    </item>
-    
-    <item>
-      <title>Set</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/set/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/set/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Sets the value of an entry field.
-Use this to set the value of an input field, a password field or a text area. This commands also supports the file input field (for file upload). ParameterswpathThe WPath identifying the control (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.</description>
-    </item>
-    
-    <item>
-      <title>Select</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/select/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/select/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Selects an entry from a list.
-Use this to select options from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to select (see WPath for a detailed description).Check BoxUse the text usually placed after the checkbox you like to select.</description>
-    </item>
-    
-    <item>
-      <title>Deselect</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/deselect/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/deselect/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Deselects an entry from a list.
-Use this to deselect options from a single or multiple select list, a group of radio buttons or deselect a checkbox.Keep in mind, that radio groups are not deselectable. So this command doesn&#39;t search for radio buttons. ParameterswpathThe WPath identifying the item to deselect (see WPath for a detailed description).</description>
-    </item>
-    
-    <item>
-      <title>Close Window</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/close-window/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/close-window/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Close the current window or close a window by name.ParametersnameThe name of the window to close.
-Leave this empty to close the current window.ExamplesClose the topmost windowClose the topmost window.
-CommandParameterOptional Parameterclick-onOpen Dialogclose-window</description>
-    </item>
-    
-    <item>
-      <title>Mouse Over</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/mouse-over/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/mouse-over/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Moves the mouse over the specified item.
-Use this e.g. to simulate the use of menus that are only visible if the mouse is over some text.ParameterswpathThe &#39;path&#39; to the item to select (see WPath for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Go Back</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/go-back/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/go-back/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Goes back in the current window using the back button.ParametersstepsThe number of steps to go back (default: 1)</description>
-    </item>
-    
-    <item>
-      <title>Assert Title</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-title/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-title/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Assert that the page title matches the given one.ParameterstitleThe text to match (see Content Pattern for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?&#39; character as wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.
-It is also possible to define a comma separated list of words (with &#39;*&#39; and &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Assert Content</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-content/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-content/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts that the current page contains the expected content.ParameterscontentThe text to match (see Content Pattern for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?&#39; character as wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.
-It is also possible to define a comma separated list of words (with &#39;*&#39; and &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Assert Enabled</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-enabled/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-enabled/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an item is enabled and not readonly.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Disabled</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-disabled/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-disabled/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an item is disabled or readonly.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Set</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-set/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-set/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Assert that the value of an entry field matches the given one.
-Use this to check the value of an input field, a password field or a text area.ParameterswpathThe WPath identifying the entry field (see WPath for a detailed description).Input Field, Password Field, Text AreaThe path is usually the label of the field.</description>
-    </item>
-    
-    <item>
-      <title>Assert Selected</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-selected/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-selected/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an entry from a list is selected.
-Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to select (see WPath for a detailed description).Single Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Deselected</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-deselected/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-deselected/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an entry from a list is deselected.
-Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Single Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Exec Java</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/exec-java/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/exec-java/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Executes the defined java method.ParametersmethodThe name of the class and method to be executed.
-Wetator first searches for static methods with the given name.
-Wetator searches for methodswith the same number of string parameters as strings given by the second parameterwith exactly one parameter of type List&amp;lt;String&amp;gt; orwith a vararg of type string.</description>
-    </item>
-    
-  </channel>
-</rss>

@@ -1,45 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Getting Started on WETATOR</title>
-    <link>https://wetator.github.io/documentation/getting-started/</link>
-    <description>Recent content in Getting Started on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/documentation/getting-started/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Ant Task</title>
-      <link>https://wetator.github.io/documentation/getting-started/ant-task/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/ant-task/</guid>
-      <description>Download &amp;amp; InstallationThe ant task requires a different Wetator distribution.Download the latest stable version.Create a new directory (or use the directory from the command line installation)and unzip the file into it (preserve subdirectories).The file build.xml in the templates directory contains sample ant targets that runsthe wetator with a collection of files. You only have to adjust the paths.</description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>https://wetator.github.io/documentation/getting-started/installation/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/installation/</guid>
-      <description>PrerequisitesJDK version 6 or higherIf you plan to run Wetator tests from ant than you additionally need Apache Ant version 1.7.0 or newer.an XML editor (maybe the Eclipse plugin Wetator Test Editor) to edit the Wetator test files (Wetator supports several formats, but XML is suggested)Command Line VersionInstallation of the command line versionDownload the latest stable version.Create a new directory and unzip the file into it (preserve subdirectories).</description>
-    </item>
-    
-    <item>
-      <title>Write Your First Wetator Test</title>
-      <link>https://wetator.github.io/documentation/getting-started/write-your-first-wetator-test/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/write-your-first-wetator-test/</guid>
-      <description>You have manged the installation so let us write our first real test case.
-For this mini tutorial we use a simple web form from http://www.wetator.org/testform.
-Wetator supports three different file formats for storing of test definitions:
-wett - a simple text file with a wiki/markdown like notationwet - xml based test definitonxls - use Excel to define/edit your test casesFor this tutorial we will use Excel.</description>
-    </item>
-    
-  </channel>
-</rss>

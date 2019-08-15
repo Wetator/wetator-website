@@ -1,1 +1,0 @@
-Open a given URL in the current window.

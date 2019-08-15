@@ -1,44 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>General Concepts on WETATOR</title>
-    <link>https://wetator.github.io/documentation/general-concepts/</link>
-    <description>Recent content in General Concepts on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/documentation/general-concepts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Content Pattern</title>
-      <link>https://wetator.github.io/documentation/general-concepts/content-pattern/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/content-pattern/</guid>
-      <description>The Content Pattern is part of every assertion command (commands starting with assert-*). It is the expression defining what exactly you want to check in your assertion test step. The Content Pattern always relates to the textual content of the current page (including alt texts of images).Let us have a look at a typical application form and explain by example:
-You can use a content pattern to proof that you are on the right page by identifying some page individual content, e.</description>
-    </item>
-    
-    <item>
-      <title>Test Case &amp; Command</title>
-      <link>https://wetator.github.io/documentation/general-concepts/test-case-and-command/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/test-case-and-command/</guid>
-      <description>A Wetator test case is a script of steps, so-called ‘commands’.A command may be a user action (e.g. click on button, set input in field) or an assertion.A Wetator test case is the equivalent to a JUnit test method. For maintenance reasons we recommend to structure test cases by functionality and to keep them small.Wetator test cases are usually defined in *.wet files containing XML.</description>
-    </item>
-    
-    <item>
-      <title>WPath</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/</guid>
-      <description>For commands interacting with controls (e.g. set, click-on) you need the WPath to address these controls.In many cases the WPath is simply the label text on the control itself or the label in front. This works for buttons, links, radiobuttons, checkboxes and entry fields.SampleClick on a button labeled &#39;Search&#39;.
-CommandParameterOptional Parameterclick-onSearchChange the text of an entry field labeled &#39;Your profession&#39;</description>
-    </item>
-    
-  </channel>
-</rss>

@@ -1,1 +1,0 @@
-Prepares the processing of the next confirmation dialog.

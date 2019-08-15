@@ -1,949 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Smart Web Application Testing on WETATOR</title>
-    <link>https://wetator.github.io/</link>
-    <description>Recent content in Smart Web Application Testing on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Assert Focus</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/assert-focus/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/assert-focus/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Asserts, that an item owns the focus.ParameterswpathThe WPath identifying the item to check.Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Describe</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/describe/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/describe/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Requires version 1.1
-Descibes this test case using formatted text (incl. links).
-ParametersmarkdownThe description formatted using the notation.Wetator uses the markdown processor. Please check the page formore details.ExamplesAdd a simple description to a test case.CommandParameterOptional Parameterdescribe# Happy path walktrough for our registration workflow.</description>
-    </item>
-    
-    <item>
-      <title>Exec SQL</title>
-      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/exec-sql/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/exec-sql/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).
-Executes the given SQL against the configured database and commits.
-ParameterssqlSpecifies the SQL to execute (required).ExamplesConfig (wetator.properties)wetator.db.connections=[db&amp;nbsp;name]wetator.db.[db&amp;nbsp;name].driver=org.hsqldb.jdbcDriver&amp;nbsp;(the&amp;nbsp;jdbc&amp;nbsp;driver&amp;nbsp;of&amp;nbsp;your&amp;nbsp;db)wetator.db.[db&amp;nbsp;name].url=[jdbc:...]&amp;nbsp;(the&amp;nbsp;jdbc&amp;nbsp;url&amp;nbsp;of&amp;nbsp;your&amp;nbsp;db) wetator.db.[db&amp;nbsp;name].user=[user]wetator.db.[db&amp;nbsp;name].password=[password] Create a new table and insert some valuesCommandParameterOptional Parameterexec-sqlDROP TABLE IF EXISTS test_tblexec-sqlCREATE TABLE test_tbl (col1 CHAR(20), col2 NUMERIC)exec-sqlINSERT INTO test_tbl (col1, col2) VALUES (&#39;First&#39;, 1)exec-sqlINSERT INTO test_tbl (col1, col2) VALUES (&#39;Second&#39;, 2)Call a stored procedure (ORACLE)CommandParameterOptional Parameterexec-sqlBEGIN MYSCHEMA.</description>
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>https://wetator.github.io/about/links/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/about/links/</guid>
-      <description> Used libraries Wetator uses many open source libraries. Writing a tool like this is impossible without the uncountable effort of all the people who have contributed to one of these:  HtmlUnit CSS Parser Apache commons (lang, io, logging, codec) Apache PDFBox Apache POI dk.brics.automaton Txtmark The Legion of the Bouncy Castle </description>
-    </item>
-    
-    <item>
-      <title>Assert SQL</title>
-      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).</description>
-    </item>
-    
-    <item>
-      <title>License</title>
-      <link>https://wetator.github.io/about/license/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/about/license/</guid>
-      <description>Copyright (c) 2008-2016 Ronald Brill
-Licensed under the Apache License, Version 2.0 (the &#34;License&#34;). You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</description>
-    </item>
-    
-    <item>
-      <title>Open URL</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/open-url/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/open-url/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Open a given URL in the current window.
-ParametersurlSpecifies the URL to open (required).May be absolute or relative to the configured base URL (see examples).ExamplesOpen a page by using a relative URLConfig (wetator.properties)wet.baseUrl=http://www.wetator.org Open url &#39;http://www.wetator.org/commands/openurl.html&#39;.
-CommandParameterOptional Parameteropen-urlcommands/openurl.</description>
-    </item>
-    
-    <item>
-      <title>Save Bookmark</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/save-bookmark/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/save-bookmark/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Bookmarks the current page.ParametersnameThe name of the bookmark. If there is already a bookmark with this name, it will be overwritten.
-ExamplesBookmark a page, do something else and go back to the bookmarked page.CommandParameterOptional Parameteropen-urlhttp://www.</description>
-    </item>
-    
-    <item>
-      <title>Assert SQL in Content</title>
-      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql-in-content/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql-in-content/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).</description>
-    </item>
-    
-    <item>
-      <title>Imprint</title>
-      <link>https://wetator.github.io/about/imprint/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/about/imprint/</guid>
-      <description> Haftungshinweis:
-Trotz sorgf&amp;auml;ltiger inhaltlicher Kontrolle &amp;uuml;bernehme ich keine Haftung f&amp;uuml;r die Inhalte externer Links. F&amp;uuml;r den Inhalt der verlinkten Seite sind ausschlie&amp;szlig;lich deren Betreiber verantwortlich.  Rechte an Inhalten dieser Seite:
-Inhalte dieser Seite k&amp;ouml;nnen &amp;uuml;bernommen werden, wenn sie ausschlie&amp;szlig;lich f&amp;uuml;r den privaten Gebrauch eines Nutzers bestimmt sind. Die &amp;Uuml;bernahme und Nutzung der Daten in jeder Form bedarf der schriftlichen Zustimmung von Ronald Brill. </description>
-    </item>
-    
-    <item>
-      <title>Open Bookmark</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/open-bookmark/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/open-bookmark/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Opens the url previously saved as bookmark with the given name.ParametersnameThe name of the bookmark.
-ExamplesBookmark a page, do something else and go back to the bookmarked page.CommandParameterOptional Parameteropen-urlhttp://www.wetator.orgsave-bookmarkWETATORopen-urlhttp://htmlunit.</description>
-    </item>
-    
-    <item>
-      <title>Use Module</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/use-module/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/use-module/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Calls another test and executes all commands as part of this test.ParametersmoduleThe (absolute or relative) path of the module.When using relative paths, they are always relative to the callers file location.parametersThe parameters (comma separated) to be used when executing the givenmodule.</description>
-    </item>
-    
-    <item>
-      <title>Click On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Click with the mouse on the specified element.
-Use this for clicking buttons and links.If you like to tick a checkbox, select a radio button or choose an item from a list, use the Select command instead.ParameterswpathThe WPath identifying the control to click on (see WPath for a detailed description).</description>
-    </item>
-    
-    <item>
-      <title>Wait</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/wait/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/wait/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Waits the given time before continuing with the test execution.
-Please use the wait command only if all other options do not work. Consider using the Assert Content command (defining a wait time) instead of this command.
-ParameterswaitThe time to wait in seconds before continuing.ExamplesPause test execution for 4s.</description>
-    </item>
-    
-    <item>
-      <title>Click Double On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-double-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-double-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Double click with the mouse on the specified element.ParameterswpathThe WPath identifying the control to double click on (see WPath for a detailed description).It is possible to use the &#39;*&#39; and the &#39;?&#39; character als wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.</description>
-    </item>
-    
-    <item>
-      <title>Exec JS</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/exec-js/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/exec-js/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Execute the given javascript in the context of the current page.
-ParametersscriptThe script to execute.ExamplesAlert the value of an internal js variable (stateInternal) for debugging.CommandParameterOptional Parameterexec-jsalert(stateInternal);</description>
-    </item>
-    
-    <item>
-      <title>Click Right On</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/click-right-on/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/click-right-on/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Right click with the mouse on the specified element.ParameterswpathThe WPath identifying the control to right click on (see WPath for a detailed description).It is possible to use the &#39;*&#39; and the &#39;?&#39; character als wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.</description>
-    </item>
-    
-    <item>
-      <title>Confirm Next</title>
-      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/confirm-next/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/confirm-next/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
-Prepares the processing of the next confirmation dialog.If your application makes usage of confirmation dialogs (javascript: res=window.confirm(question);), by default WETATOR will close those by clicking the &#39;OK&#39; button.Use this command to assert the expected description or to click the &#39;Cancel&#39; button instead.
-ParametersbuttonThe button to click; only &#39;OK&#39; and &#39;Cancel&#39; are allowed here.</description>
-    </item>
-    
-    <item>
-      <title>Set</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/set/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/set/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Sets the value of an entry field.
-Use this to set the value of an input field, a password field or a text area. This commands also supports the file input field (for file upload). ParameterswpathThe WPath identifying the control (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.</description>
-    </item>
-    
-    <item>
-      <title>Select</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/select/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/select/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Selects an entry from a list.
-Use this to select options from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to select (see WPath for a detailed description).Check BoxUse the text usually placed after the checkbox you like to select.</description>
-    </item>
-    
-    <item>
-      <title>Deselect</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/deselect/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/deselect/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Deselects an entry from a list.
-Use this to deselect options from a single or multiple select list, a group of radio buttons or deselect a checkbox.Keep in mind, that radio groups are not deselectable. So this command doesn&#39;t search for radio buttons. ParameterswpathThe WPath identifying the item to deselect (see WPath for a detailed description).</description>
-    </item>
-    
-    <item>
-      <title>Close Window</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/close-window/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/close-window/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Close the current window or close a window by name.ParametersnameThe name of the window to close.
-Leave this empty to close the current window.ExamplesClose the topmost windowClose the topmost window.
-CommandParameterOptional Parameterclick-onOpen Dialogclose-window</description>
-    </item>
-    
-    <item>
-      <title>Mouse Over</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/mouse-over/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/mouse-over/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Moves the mouse over the specified item.
-Use this e.g. to simulate the use of menus that are only visible if the mouse is over some text.ParameterswpathThe &#39;path&#39; to the item to select (see WPath for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Go Back</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/go-back/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/go-back/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Goes back in the current window using the back button.ParametersstepsThe number of steps to go back (default: 1)</description>
-    </item>
-    
-    <item>
-      <title>Assert Title</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-title/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-title/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Assert that the page title matches the given one.ParameterstitleThe text to match (see Content Pattern for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?&#39; character as wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.
-It is also possible to define a comma separated list of words (with &#39;*&#39; and &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Assert Content</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-content/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-content/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts that the current page contains the expected content.ParameterscontentThe text to match (see Content Pattern for a detailed description).
-It is possible to use the &#39;*&#39; and the &#39;?&#39; character as wildcards; &#39;*&#39; matches zero or many characters; &#39;?&#39; matches one single character.
-It is also possible to define a comma separated list of words (with &#39;*&#39; and &#39;?</description>
-    </item>
-    
-    <item>
-      <title>Assert Enabled</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-enabled/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-enabled/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an item is enabled and not readonly.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Disabled</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-disabled/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-disabled/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an item is disabled or readonly.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Set</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-set/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-set/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Assert that the value of an entry field matches the given one.
-Use this to check the value of an input field, a password field or a text area.ParameterswpathThe WPath identifying the entry field (see WPath for a detailed description).Input Field, Password Field, Text AreaThe path is usually the label of the field.</description>
-    </item>
-    
-    <item>
-      <title>Assert Selected</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-selected/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-selected/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an entry from a list is selected.
-Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to select (see WPath for a detailed description).Single Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Assert Deselected</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-deselected/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/assert-deselected/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Asserts, that an entry from a list is deselected.
-Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.ParameterswpathThe WPath identifying the item to check (see WPath for a detailed description).Single Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
-    </item>
-    
-    <item>
-      <title>Exec Java</title>
-      <link>https://wetator.github.io/documentation/reference/commands/default-command-set/exec-java/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/commands/default-command-set/exec-java/</guid>
-      <description>This command is not part of the Default Command Set. You have to register the Default Command Set first (see Configuration).
-Executes the defined java method.ParametersmethodThe name of the class and method to be executed.
-Wetator first searches for static methods with the given name.
-Wetator searches for methodswith the same number of string parameters as strings given by the second parameterwith exactly one parameter of type List&amp;lt;String&amp;gt; orwith a vararg of type string.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://wetator.github.io/about/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/about/</guid>
-      <description> The Team These are the people (in alphabetical order) working hard to improve WETATOR  Ronald Brill Frank Danek Tobias Wörenkämper  The following people have contributed to this project.  Christian Effertz Klaus Sausen Holger Schimanski Anand Sawanth </description>
-    </item>
-    
-    <item>
-      <title>Ant Task</title>
-      <link>https://wetator.github.io/documentation/getting-started/ant-task/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/ant-task/</guid>
-      <description>Download &amp;amp; InstallationThe ant task requires a different Wetator distribution.Download the latest stable version.Create a new directory (or use the directory from the command line installation)and unzip the file into it (preserve subdirectories).The file build.xml in the templates directory contains sample ant targets that runsthe wetator with a collection of files. You only have to adjust the paths.</description>
-    </item>
-    
-    <item>
-      <title>Command-Line Options</title>
-      <link>https://wetator.github.io/documentation/reference/command-line-options/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/command-line-options/</guid>
-      <description>It is possible to start Wetator witha dedicated configuration file and/orone ore many test definition files; as long as you provide not absolute path it is also possible to use &#39;*&#39; as wildcardAdditionally you can provide the &#39;-log&#39; parameter to get a really detailed log output of all things Wetator does. This option is mainly for debuggingand support.Examples:wetator -p my.propertiesStarts Wetator with the configuration &#39;my.</description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>https://wetator.github.io/documentation/reference/configuration/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/configuration/</guid>
-      <description>wetator.configThe file wetator.config is the single point of configuration for Wetator. In this configuration file you have to define some defaults for the Wetator test environment. You can configurethe base url (the root for all relative urls)the browser you like to emulate (Firefox or IE)the accept-language header Wetator uses (control the language of the simulated browser)the directory for the report outputas many xml templates you like to generate all reports you (or your boss) needsall the info you need to pass to your proxyauthorization credentials for HTTP basic out or NTLMthe timeout Wetator will wait for JavaScript jobs to completevariables, you can use in your testsadditional command sets (a way to add your own commands) together with their config parametersadditional scripters (if you like to make Wetator able to read your own input format)ActiveX object mocks (if you like to make Wetator able simulate AxtiveX objects)The file format is the usual windows property file format; &#39;#&#39; at the beginning of a line marks the line as a comment.</description>
-    </item>
-    
-    <item>
-      <title>Content Pattern</title>
-      <link>https://wetator.github.io/documentation/general-concepts/content-pattern/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/content-pattern/</guid>
-      <description>The Content Pattern is part of every assertion command (commands starting with assert-*). It is the expression defining what exactly you want to check in your assertion test step. The Content Pattern always relates to the textual content of the current page (including alt texts of images).Let us have a look at a typical application form and explain by example:
-You can use a content pattern to proof that you are on the right page by identifying some page individual content, e.</description>
-    </item>
-    
-    <item>
-      <title>Documentation</title>
-      <link>https://wetator.github.io/documentation/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/</guid>
-      <description>  Are you just starting using Wetator? Please read first  our Philosophy the Getting Started section   Searching for details? Check out our  General Concepts Reference FAQ  </description>
-    </item>
-    
-    <item>
-      <title>Download</title>
-      <link>https://wetator.github.io/download/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/download/</guid>
-      <description>Wetator &amp;nbsp;Release Type&amp;nbsp; &amp;nbsp;Version&amp;nbsp; &amp;nbsp;Date&amp;nbsp; &amp;nbsp;Download&amp;nbsp;   &amp;nbsp;Command Line&amp;nbsp; &amp;nbsp;1.10.0&amp;nbsp; &amp;nbsp;2018-08-12&amp;nbsp; &amp;nbsp;wetator_1_10_0.zip, wetator-1_10_0-sources.jar&amp;nbsp;   &amp;nbsp;Ant&amp;nbsp; &amp;nbsp;1.10.0&amp;nbsp; &amp;nbsp;2018-08-12&amp;nbsp; &amp;nbsp;wetator-ant_1_10_0.zip, wetator-ant-1_10_0-sources.jar&amp;nbsp;   &amp;nbsp
-Wetator Test Editor &amp;nbsp;Release Type&amp;nbsp; &amp;nbsp;Version&amp;nbsp; &amp;nbsp;Date&amp;nbsp; &amp;nbsp;Download&amp;nbsp;   &amp;nbsp;Eclipse Plugin&amp;nbsp; &amp;nbsp;1.1.0&amp;nbsp; &amp;nbsp;2017-06-19&amp;nbsp; &amp;nbsp;org.wetator.testeditor_1.1.0.jar&amp;nbsp;   &amp;nbsp
-Wetator Jenkins Plugin &amp;nbsp;Product&amp;nbsp; &amp;nbsp;Version&amp;nbsp; &amp;nbsp;Date&amp;nbsp; &amp;nbsp;Download&amp;nbsp;   &amp;nbsp;Jenkins Plugin&amp;nbsp; &amp;nbsp;0.7&amp;nbsp; &amp;nbsp;2017-06-19&amp;nbsp; &amp;nbsp;wetator-jenkins-plugin-0.7.hpi&amp;nbsp;   &amp;nbsp
-&amp;nbsp
-Wetator Beta Versions You can downlad the latest beta builds from CloudBees.</description>
-    </item>
-    
-    <item>
-      <title>Empty WPath</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-empty/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-empty/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-An empty WPath simply means:Please use the first matching control on the page. This might be handy for pages similar to the well known search engines.
-CommandParameterOptional ParametersetwetatorFurthermore you can use WPaths without a last selector like this:CommandParameterOptional Parameterclick-onHeadline This will click on the first clickable element after &#39;Headline&#39;.</description>
-    </item>
-    
-    <item>
-      <title>Excel</title>
-      <link>https://wetator.github.io/documentation/test-case-files/excel/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/excel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>FAQ</title>
-      <link>https://wetator.github.io/documentation/faq/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/faq/</guid>
-      <description>How can I trigger a file upload?Wetator handles file upload controls like ordinary input controls. You can simply use the set command with the file name (relative to the location of the test source file) as second parameter value.</description>
-    </item>
-    
-    <item>
-      <title>General Concepts</title>
-      <link>https://wetator.github.io/documentation/general-concepts/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/</guid>
-      <description>For working with Wetator you just need to know the structure of the test cases and the two concepts for addressing parts of your web application:The Content Pattern – for asserting contentThe WPath – for addressing a distinct web page element</description>
-    </item>
-    
-    <item>
-      <title>Getting Started</title>
-      <link>https://wetator.github.io/documentation/getting-started/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/</guid>
-      <description>For getting started please follow our installation guide and have a look at how to write your first Wetator test.Beyond running Wetator from command line you also have the possiblity to run Wetator via ant task.Furthermore Wetator comes withthe Wetator Test Editor (WTE) - an Eclipse plugin for convient editing of test filesand a Jenkins plugin to make Wetator part of your Continuous Integration.</description>
-    </item>
-    
-    <item>
-      <title>Glossary</title>
-      <link>https://wetator.github.io/documentation/reference/glossary/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/glossary/</guid>
-      <description>Test Casetest definition as a script of CommandsTest Filea file in a supported format (e.g. wet, wett, xlsx), holding (parts of) a Wetator Test Case
-one or multiple Test Files comprise one Test CaseCommandthe smallest unit of a Test CaseTestthe execution of a Test Case in a particular browserTest Stepthe execution of a Command during a Test</description>
-    </item>
-    
-    <item>
-      <title>Installation</title>
-      <link>https://wetator.github.io/documentation/getting-started/installation/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/installation/</guid>
-      <description>PrerequisitesJDK version 6 or higherIf you plan to run Wetator tests from ant than you additionally need Apache Ant version 1.7.0 or newer.an XML editor (maybe the Eclipse plugin Wetator Test Editor) to edit the Wetator test files (Wetator supports several formats, but XML is suggested)Command Line VersionInstallation of the command line versionDownload the latest stable version.Create a new directory and unzip the file into it (preserve subdirectories).</description>
-    </item>
-    
-    <item>
-      <title>Philosophy</title>
-      <link>https://wetator.github.io/documentation/philosophy/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/philosophy/</guid>
-      <description>As you might already know - Wetator wants to test the GUI of your web application.Since this is a somewhat generic statement we want to point out what appears to us when talking about &#34;testing a GUI&#34; and &#34;testing a web application&#34;:Wetator focuses on assuring the web GUI&#39;s functionality.This means it is not (or not first and foremost) focusing on content (e.g. particular search results), layout, or functionality of lower layers of your application.</description>
-    </item>
-    
-    <item>
-      <title>Reference</title>
-      <link>https://wetator.github.io/documentation/reference/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/reference/</guid>
-      <description>Our reference contains details about how to use Wetator.Here you can get familiar with Wetator&#39;s language and configuration.Our small glossary collects generally known terms and defines them within the Wetator environment.</description>
-    </item>
-    
-    <item>
-      <title>Release Notes</title>
-      <link>https://wetator.github.io/download/release-notes/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/download/release-notes/</guid>
-      <description>Version 1.11.0 (not yet released)Version 1.10.0 (2018-08-12)Change: HtmlUnit updated to the latest release 2.32 (HtmlUnit Release Notes).This implies changed FF support; we are now supporting FF60 and FF52.Change: Reworked table handling (used by the table filter [col; row]. This will many problem with tables using rowspan and colspan.Change: Reworked parts of the ByLabelMatcher to get better results.Change: Minor layout change for the output.</description>
-    </item>
-    
-    <item>
-      <title>Sample Reports</title>
-      <link>https://wetator.github.io/documentation/sample-reports/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/sample-reports/</guid>
-      <description>To get an impression of how Wetator presents test results we have some interactive samples for you:Wetator Test Form – The report from the sample included in the Wetator bundleSample with Errors – A report similar to the first one but with some failures/errors</description>
-    </item>
-    
-    <item>
-      <title>Sample with Errors</title>
-      <link>https://wetator.github.io/documentation/sample-reports/sample-with-errors/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/sample-reports/sample-with-errors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Support</title>
-      <link>https://wetator.github.io/support/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/support/</guid>
-      <description>Problems, Bugs We&#39;re sorry to hear you had a problem. To help us get it fixed, please fill out as much of this form as you can. Comments, Suggestions, Ideas Your comments, suggestions, and ideas for improvements are very important to us. We appreciate you taking the time to send us this information.
-Create an enhancement request (because of the amount of spam we got in the past, you have to login as &#39;guest&#39; with password &#39;wetator&#39;) Develoment Use one of this links to access the trac project pages.</description>
-    </item>
-    
-    <item>
-      <title>Test Case &amp; Command</title>
-      <link>https://wetator.github.io/documentation/general-concepts/test-case-and-command/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/test-case-and-command/</guid>
-      <description>A Wetator test case is a script of steps, so-called ‘commands’.A command may be a user action (e.g. click on button, set input in field) or an assertion.A Wetator test case is the equivalent to a JUnit test method. For maintenance reasons we recommend to structure test cases by functionality and to keep them small.Wetator test cases are usually defined in *.wet files containing XML.</description>
-    </item>
-    
-    <item>
-      <title>Test Case Files</title>
-      <link>https://wetator.github.io/documentation/test-case-files/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/</guid>
-      <description>Wetator test cases are stored in test case files as a table where every line contains a command.There a three different file formats supported for writing down your test cases out of the box:Wetator XML (*.wet)WikiText (*.wett)Excel (*.xls, xlsx)The details of these formats, as well as the main benefits and problems with them, are explained on the subsequent pages. Which format to use depends on your context.</description>
-    </item>
-    
-    <item>
-      <title>WPath</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/</guid>
-      <description>For commands interacting with controls (e.g. set, click-on) you need the WPath to address these controls.In many cases the WPath is simply the label text on the control itself or the label in front. This works for buttons, links, radiobuttons, checkboxes and entry fields.SampleClick on a button labeled &#39;Search&#39;.
-CommandParameterOptional Parameterclick-onSearchChange the text of an entry field labeled &#39;Your profession&#39;</description>
-    </item>
-    
-    <item>
-      <title>WPath and Images</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-images/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-images/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-In many situations, images (pictograms) are used instead of text.&amp;lt;button id=&amp;quot;addToCart&amp;quot; title=&amp;#39;Add to cart&amp;#39;&amp;gt;&amp;lt;img src=&amp;#39;shopping_cart.png&amp;#39; width=&amp;#39;26&amp;#39; height=&amp;#39;26&amp;#39; alt=&amp;#39;shopping cart&amp;#39; /&amp;gt;&amp;lt;/button&amp;gt;Wetator is not able to understand the meaning of the image, you have to use a different way to address this.Option 1: the &#39;alt&#39; attributeIt is good practice for web applications to assign a dedicated alt attribute to every image to make the page accessible in terms of barrier-free design.</description>
-    </item>
-    
-    <item>
-      <title>WPath and Tables</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-tables/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-tables/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-When working with tables, using the plain WPath syntax may not be sufficient or handy. Because of this there is a small enhancement.
-Let&#39;s start with a small sample:
-Your test script has to change the amount of ordered JProfiler licenses to 4.Simply do this by adding a column/row filter (syntax: [column;row]) to your WPath.</description>
-    </item>
-    
-    <item>
-      <title>Wetator Test Form</title>
-      <link>https://wetator.github.io/documentation/sample-reports/wetator-test-form/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/sample-reports/wetator-test-form/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wetator XML</title>
-      <link>https://wetator.github.io/documentation/test-case-files/wetator-xml/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/wetator-xml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WikiText</title>
-      <link>https://wetator.github.io/documentation/test-case-files/wikitext/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/wikitext/</guid>
-      <description>The wiki text format is a simple plain texts format. It is very easy to edit using any text editor and it also works very well with version control systems.The wiki text format uses two pipe characters (||) to separate between command, first, and second parameter.
-A simple test script might look like thisopen-url || http://www.wetator.org/testformassert-title || WETATOR / Test Formassert-content || The form below is only for testing purposeset || Project name || My Fancy Web App Under Testselect || JAVAselect || amazingselect || visionaryset || Wetator makes || testing funset || my resume || resume.</description>
-    </item>
-    
-    <item>
-      <title>Write Your First Wetator Test</title>
-      <link>https://wetator.github.io/documentation/getting-started/write-your-first-wetator-test/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/getting-started/write-your-first-wetator-test/</guid>
-      <description>You have manged the installation so let us write our first real test case.
-For this mini tutorial we use a simple web form from http://www.wetator.org/testform.
-Wetator supports three different file formats for storing of test definitions:
-wett - a simple text file with a wiki/markdown like notationwet - xml based test definitonxls - use Excel to define/edit your test casesFor this tutorial we will use Excel.</description>
-    </item>
-    
-    <item>
-      <title>1.10 released</title>
-      <link>https://wetator.github.io/news/1-10-released/</link>
-      <pubDate>Sun, 12 Aug 2018 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-10-released/</guid>
-      <description>Wetator version 1.10 released.</description>
-    </item>
-    
-    <item>
-      <title>1.9 released</title>
-      <link>https://wetator.github.io/news/1-9-released/</link>
-      <pubDate>Mon, 02 Apr 2018 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-9-released/</guid>
-      <description>Wetator version 1.9 released.</description>
-    </item>
-    
-    <item>
-      <title>1.8 released</title>
-      <link>https://wetator.github.io/news/1-8-released/</link>
-      <pubDate>Wed, 03 Jan 2018 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-8-released/</guid>
-      <description>Wetator version 1.8 released.</description>
-    </item>
-    
-    <item>
-      <title>Test Editor 1.1.0 available</title>
-      <link>https://wetator.github.io/news/test-editor-1-1-0-available/</link>
-      <pubDate>Mon, 19 Jun 2017 21:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/test-editor-1-1-0-available/</guid>
-      <description>Test Editor 1.1.0 available</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.7 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-7-available/</link>
-      <pubDate>Mon, 19 Jun 2017 20:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-7-available/</guid>
-      <description>Jenkins Plugin 0.7 available</description>
-    </item>
-    
-    <item>
-      <title>1.7 released</title>
-      <link>https://wetator.github.io/news/1-7-released/</link>
-      <pubDate>Mon, 19 Jun 2017 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-7-released/</guid>
-      <description>Wetator version 1.7 released.</description>
-    </item>
-    
-    <item>
-      <title>1.6 released</title>
-      <link>https://wetator.github.io/news/1-6-released/</link>
-      <pubDate>Thu, 28 Jul 2016 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-6-released/</guid>
-      <description>Wetator version 1.6 released.</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.6.1 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-6-1-available/</link>
-      <pubDate>Thu, 28 Jul 2016 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-6-1-available/</guid>
-      <description>Jenkins Plugin 0.6.1 available</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.6 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-6-available/</link>
-      <pubDate>Thu, 07 Jul 2016 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-6-available/</guid>
-      <description>Jenkins Plugin 0.6 available.</description>
-    </item>
-    
-    <item>
-      <title>1.5 released</title>
-      <link>https://wetator.github.io/news/1-5-released/</link>
-      <pubDate>Sat, 04 Jun 2016 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-5-released/</guid>
-      <description>Wetator version 1.5 released.</description>
-    </item>
-    
-    <item>
-      <title>1.4 released</title>
-      <link>https://wetator.github.io/news/1-4-released/</link>
-      <pubDate>Fri, 04 Mar 2016 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-4-released/</guid>
-      <description>Wetator version 1.4 released.</description>
-    </item>
-    
-    <item>
-      <title>1.3 released</title>
-      <link>https://wetator.github.io/news/1-3-released/</link>
-      <pubDate>Tue, 24 Nov 2015 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-3-released/</guid>
-      <description>Wetator version 1.3 released.</description>
-    </item>
-    
-    <item>
-      <title>1.2 released</title>
-      <link>https://wetator.github.io/news/1-2-released/</link>
-      <pubDate>Fri, 05 Jun 2015 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-2-released/</guid>
-      <description>Wetator version 1.2 released.</description>
-    </item>
-    
-    <item>
-      <title>1.1 released</title>
-      <link>https://wetator.github.io/news/1-1-released/</link>
-      <pubDate>Fri, 08 May 2015 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-1-released/</guid>
-      <description>Wetator version 1.1 released.</description>
-    </item>
-    
-    <item>
-      <title>Maven Plugin available</title>
-      <link>https://wetator.github.io/news/maven-plugin-available/</link>
-      <pubDate>Wed, 06 Aug 2014 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/maven-plugin-available/</guid>
-      <description>Maven Plugin available</description>
-    </item>
-    
-    <item>
-      <title>1.0 released</title>
-      <link>https://wetator.github.io/news/1-0-released/</link>
-      <pubDate>Tue, 24 Jun 2014 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/1-0-released/</guid>
-      <description>Wetator version 1.0 released.</description>
-    </item>
-    
-    <item>
-      <title>0.9.14 available</title>
-      <link>https://wetator.github.io/news/0-9-14-available/</link>
-      <pubDate>Wed, 11 Dec 2013 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-14-available/</guid>
-      <description>Wetator version 0.9.14 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.13 available</title>
-      <link>https://wetator.github.io/news/0-9-13-available/</link>
-      <pubDate>Mon, 02 Sep 2013 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-13-available/</guid>
-      <description>Wetator version 0.9.13 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.12 available</title>
-      <link>https://wetator.github.io/news/0-9-12-available/</link>
-      <pubDate>Tue, 16 Jul 2013 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-12-available/</guid>
-      <description>Wetator version 0.9.12 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.11 available</title>
-      <link>https://wetator.github.io/news/0-9-11-available/</link>
-      <pubDate>Sun, 16 Jun 2013 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-11-available/</guid>
-      <description>Wetator version 0.9.11 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.10 available</title>
-      <link>https://wetator.github.io/news/0-9-10-available/</link>
-      <pubDate>Sun, 17 Mar 2013 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-10-available/</guid>
-      <description>Wetator version 0.9.10 is available.</description>
-    </item>
-    
-    <item>
-      <title>Spam Blocker Trac plugin enabled</title>
-      <link>https://wetator.github.io/news/captcha-now-required-for-anonymous-users/</link>
-      <pubDate>Sun, 10 Mar 2013 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/captcha-now-required-for-anonymous-users/</guid>
-      <description>Captcha now required for anonymous users</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.4 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-4-available/</link>
-      <pubDate>Thu, 15 Nov 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-4-available/</guid>
-      <description>Jenkins Plugin 0.4 available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.9 available</title>
-      <link>https://wetator.github.io/news/0-9-9-available/</link>
-      <pubDate>Wed, 03 Oct 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-9-available/</guid>
-      <description>Wetator version 0.9.9 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.8 available</title>
-      <link>https://wetator.github.io/news/0-9-8-available/</link>
-      <pubDate>Tue, 04 Sep 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-8-available/</guid>
-      <description>Wetator version 0.9.8 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.7 available</title>
-      <link>https://wetator.github.io/news/0-9-7-available/</link>
-      <pubDate>Wed, 25 Jul 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-7-available/</guid>
-      <description>Wetator version 0.9.7 is available.</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.3 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-3-available/</link>
-      <pubDate>Wed, 27 Jun 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-3-available/</guid>
-      <description>Jenkins Plugin 0.3 available</description>
-    </item>
-    
-    <item>
-      <title>0.9.6 available</title>
-      <link>https://wetator.github.io/news/0-9-6-available/</link>
-      <pubDate>Sun, 10 Jun 2012 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-6-available/</guid>
-      <description>Wetator version 0.9.6 is available.</description>
-    </item>
-    
-    <item>
-      <title>Discussion forum available</title>
-      <link>https://wetator.github.io/news/discussion-forum-available/</link>
-      <pubDate>Sat, 15 Oct 2011 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/discussion-forum-available/</guid>
-      <description>Discussion forum available</description>
-    </item>
-    
-    <item>
-      <title>Jenkins Plugin 0.1 available</title>
-      <link>https://wetator.github.io/news/jenkins-plugin-0-1-available/</link>
-      <pubDate>Thu, 04 Aug 2011 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/jenkins-plugin-0-1-available/</guid>
-      <description>Wetator Jenkins Plugin version 0.1 is available.</description>
-    </item>
-    
-    <item>
-      <title>0.9.5 available</title>
-      <link>https://wetator.github.io/news/0-9-5-available/</link>
-      <pubDate>Thu, 21 Jul 2011 19:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-5-available/</guid>
-      <description>Wetator version 0.9.5 is available.</description>
-    </item>
-    
-    <item>
-      <title>Wetator philosophy online now.</title>
-      <link>https://wetator.github.io/news/news-philosophy/</link>
-      <pubDate>Thu, 21 Jul 2011 16:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/news-philosophy/</guid>
-      <description>Wetator philosophy online now.</description>
-    </item>
-    
-    <item>
-      <title>New Design</title>
-      <link>https://wetator.github.io/news/new-design/</link>
-      <pubDate>Thu, 21 Jul 2011 15:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/new-design/</guid>
-      <description>The new design of our web pages is finally online.</description>
-    </item>
-    
-    <item>
-      <title>0.9.4 available</title>
-      <link>https://wetator.github.io/news/0-9-4-available/</link>
-      <pubDate>Thu, 21 Jul 2011 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/news/0-9-4-available/</guid>
-      <description>Wetator version 0.9.4 is available.</description>
-    </item>
-    
-  </channel>
-</rss>

@@ -1,43 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Test Case Files on WETATOR</title>
-    <link>https://wetator.github.io/documentation/test-case-files/</link>
-    <description>Recent content in Test Case Files on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/documentation/test-case-files/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Excel</title>
-      <link>https://wetator.github.io/documentation/test-case-files/excel/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/excel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Wetator XML</title>
-      <link>https://wetator.github.io/documentation/test-case-files/wetator-xml/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/wetator-xml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>WikiText</title>
-      <link>https://wetator.github.io/documentation/test-case-files/wikitext/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/test-case-files/wikitext/</guid>
-      <description>The wiki text format is a simple plain texts format. It is very easy to edit using any text editor and it also works very well with version control systems.The wiki text format uses two pipe characters (||) to separate between command, first, and second parameter.
-A simple test script might look like thisopen-url || http://www.wetator.org/testformassert-title || WETATOR / Test Formassert-content || The form below is only for testing purposeset || Project name || My Fancy Web App Under Testselect || JAVAselect || amazingselect || visionaryset || Wetator makes || testing funset || my resume || resume.</description>
-    </item>
-    
-  </channel>
-</rss>

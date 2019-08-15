@@ -1,1 +1,0 @@
-Right click with the mouse on the specified element.

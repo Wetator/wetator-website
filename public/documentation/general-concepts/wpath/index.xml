@@ -1,51 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>WPath on WETATOR</title>
-    <link>https://wetator.github.io/documentation/general-concepts/wpath/</link>
-    <description>Recent content in WPath on WETATOR</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://wetator.github.io/documentation/general-concepts/wpath/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Empty WPath</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-empty/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-empty/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-An empty WPath simply means:Please use the first matching control on the page. This might be handy for pages similar to the well known search engines.
-CommandParameterOptional ParametersetwetatorFurthermore you can use WPaths without a last selector like this:CommandParameterOptional Parameterclick-onHeadline This will click on the first clickable element after &#39;Headline&#39;.</description>
-    </item>
-    
-    <item>
-      <title>WPath and Images</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-images/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-images/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-In many situations, images (pictograms) are used instead of text.&amp;lt;button id=&amp;quot;addToCart&amp;quot; title=&amp;#39;Add to cart&amp;#39;&amp;gt;&amp;lt;img src=&amp;#39;shopping_cart.png&amp;#39; width=&amp;#39;26&amp;#39; height=&amp;#39;26&amp;#39; alt=&amp;#39;shopping cart&amp;#39; /&amp;gt;&amp;lt;/button&amp;gt;Wetator is not able to understand the meaning of the image, you have to use a different way to address this.Option 1: the &#39;alt&#39; attributeIt is good practice for web applications to assign a dedicated alt attribute to every image to make the page accessible in terms of barrier-free design.</description>
-    </item>
-    
-    <item>
-      <title>WPath and Tables</title>
-      <link>https://wetator.github.io/documentation/general-concepts/wpath/wpath-tables/</link>
-      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
-      
-      <guid>https://wetator.github.io/documentation/general-concepts/wpath/wpath-tables/</guid>
-      <description>For more general information about the WPath please read the WPath page.
-&amp;nbsp;
-When working with tables, using the plain WPath syntax may not be sufficient or handy. Because of this there is a small enhancement.
-Let&#39;s start with a small sample:
-Your test script has to change the amount of ordered JProfiler licenses to 4.Simply do this by adding a column/row filter (syntax: [column;row]) to your WPath.</description>
-    </item>
-    
-  </channel>
-</rss>

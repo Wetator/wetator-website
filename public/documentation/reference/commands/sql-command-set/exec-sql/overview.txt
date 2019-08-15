@@ -1,0 +1,1 @@
+Executes the given SQL against the configured database and commits.

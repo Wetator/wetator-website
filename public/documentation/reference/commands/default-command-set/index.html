@@ -1,0 +1,1974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="language" content="english, en">
+  <meta name="keywords" content="wetator,web,application,test,testing,automation,GUI,tool,HTMLUnit">
+  <meta name="description" content="Wetator is a small, flexible and extendable test automation tool that drives and checks your web application. Wetator provides you with a language for writing test scripts that is simple and easily readable - also for non-IT-people. The list of supported commands is intended to be preferably small.">
+  <meta name="page-topic" content="Software-Testing">
+  <meta name="author" content="Ronald Brill">
+  <meta name="publisher" content="Ronald Brill">
+  <meta name="copyright" content="(c) Ronald Brill">
+  <meta name="robots" content="index,nofollow">
+  <meta name="revisit-after" content="14 days">
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <title>WETATOR / Default Command Set</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://wetator.github.io/images/favicon.ico" />
+  <link rel="stylesheet" href="https://wetator.github.io/css/normalize.css">
+  <link rel="stylesheet" href="https://wetator.github.io/css/default.css">
+  <link rel="stylesheet" href="https://wetator.github.io/css/content.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+  <link rel="stylesheet" href="https://wetator.github.io/css/tipsy.css">
+  <script type="text/javascript" src="https://wetator.github.io/js/jquery.tipsy.js"></script>
+
+  <script type="text/javascript" src="https://wetator.github.io/js/wetator.js" /></script>
+
+</head>
+<body>  
+  <div id="header">
+    <div id="header_logo">
+      <a href="http://www.wetator.org/"><img alt="WETATOR Smart Web Application Testing" title="Wetator" height="137" width="400" src="https://wetator.github.io/images/wetator.png" /></a>
+    </div>
+    
+    <div id="header_bottomline">
+      <div id="header_nav">
+<ul>
+  
+  <li><a href="https://wetator.github.io/">home</a></li>
+  
+    <li class="selected"><a href="/documentation/">Documentation</a>
+    
+      <ul>
+      
+        <li class=""><a href="/documentation/philosophy/">Philosophy</a></li>
+      
+        <li class=""><a href="/documentation/getting-started/">Getting Started</a></li>
+      
+        <li class=""><a href="/documentation/general-concepts/">General Concepts</a></li>
+      
+        <li class=""><a href="/documentation/test-case-files/">Test Case Files</a></li>
+      
+        <li class=""><a href="/documentation/sample-reports/">Sample Reports</a></li>
+      
+        <li class="selected"><a href="/documentation/reference/">Reference</a></li>
+      
+        <li class=""><a href="/documentation/faq/">FAQ</a></li>
+      
+      </ul>
+    
+    </li>
+  
+    <li class=""><a href="/download/">Download</a>
+    
+      <ul>
+      
+        <li class=""><a href="/download/release-notes/">Release Notes</a></li>
+      
+      </ul>
+    
+    </li>
+  
+    <li class=""><a href="/support/">Support</a>
+    
+    </li>
+  
+    <li class=""><a href="/about/">About</a>
+    
+      <ul>
+      
+        <li class=""><a href="/about/links/">Links</a></li>
+      
+        <li class=""><a href="/about/license/">License</a></li>
+      
+        <li class=""><a href="/about/imprint/">Imprint</a></li>
+      
+      </ul>
+    
+    </li>
+  
+</ul>
+</div>
+    </div>
+
+    <div id="header_breadcrumbs">
+<ol  class="nav navbar-nav">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+      <li><a href="https://wetator.github.io/">Home &gt; </a></li>
+
+  
+      <li><a href="https://wetator.github.io/documentation/">Documentation &gt; </a></li>
+
+  
+      <li><a href="https://wetator.github.io/documentation/reference/">Reference &gt; </a></li>
+
+  
+      <li><a href="https://wetator.github.io/documentation/reference/commands/">Commands &gt; </a></li>
+
+  
+      <li><a href="https://wetator.github.io/documentation/reference/commands/default-command-set/">Default Command Set</a></li>
+</ol>
+
+
+</div>
+    
+  </div>
+  <div class="colmask leftmenu">
+    <div class="colright">
+      <div class="col1wrap">
+        <div class="col1">
+
+<div id="content">
+
+
+  <h1>Default Command Set</h1>
+
+  <div class="padding-left1">
+    <div class="togglePanel">
+        <span class="cmd_title">Describe</span>  <span class='cmd_overview'>Describes this test case using formatted text.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p class="hint">Requires version 1.1</p>
+  <p>Descibes this test case using formatted text (incl. links).</p>
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">markdown</div>
+      <div class="desc">The description formatted using the <et:link name="markdown" target="_blank"/> notation.<br/>
+      Wetator uses the <et:link name="txtmark " target="_blank"/> markdown processor. Please check the <et:link name="txtmark " target="_blank"/> page for
+      more details.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Add a simple description to a test case.</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">describe</td>
+          <td class="col_param1"> # Happy path walktrough for our registration workflow.<br/>
+**Use case:** [Register User](http://www.wetator.org/use-cases/regitrer-user)<br/>
+<br/>
+You are now reading a more detailed description of this test case.</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">....</td>
+          <td class="col_param1">....</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+      <p>Your resulting report will look like this.</p>
+      
+<img src="/images/docu-cmd-describe-result.png"   width="881" height="125" />
+
+    </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Open URL</span>  <span class='cmd_overview'>Open a given URL in the current window.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Open a given URL in the current window.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">url</div>
+      <div class="desc">Specifies the URL to open (required).<br/>
+        May be absolute or relative to the configured base URL (see examples).
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Open a page by using a relative URL</h3>
+      
+<img src="/images/docu-cmd-openurl.png"   width="381" height="43" />
+
+      <div class="configFile">Config (wetator.properties)</div>
+      <div class="configContent">wet.baseUrl=http://www.wetator.org</div> 
+      <p>Open url 'http://www.wetator.org/commands/openurl.html'.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">open-url</td>
+          <td class="col_param1">commands/openurl.html</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-title</td>
+          <td class="col_param1">WETATOR / Open Url</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/open-url/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Use Module</span>  <span class='cmd_overview'>Calls another test and executes all commands as part of this test.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Calls another test and executes all commands as part of this test.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">module</div>
+    <div class="desc">
+      The (absolute or relative) path of the module.<br/>
+      When using relative paths, they are always relative to the callers file location.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">parameters</div>
+    <div class="desc">
+      The parameters (comma separated) to be used when executing the given
+      module. They can be accessed by their index within the module, e.g. the first parameter as ${1}.<br/>
+      If a parameter contains a comma, precede it with a backslash.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Use a module that performs the login.</h3>
+    <h5>The caller</h5>
+    <p>Call a module that performs the login. The first login is done with user/secret, the second login with admin/master and the last one uses some variables defined in config.properties.
+    </p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">user, secret</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">...</td>
+      <td class="col_param1"></td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">admin, master</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">...</td>
+      <td class="col_param1"></td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">use-module</td>
+      <td class="col_param1">modules/login.wet</td>
+      <td class="col_param2">${usr}, ${pwd}</td>
+    </tr>
+    </table>
+
+    <h5>The called module</h5>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">myapp.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">MyApp / Login</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">User Id</td>
+      <td class="col_param2">${1}</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Password</td>
+      <td class="col_param2">${2}</td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Login</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">MyApp / Home</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Welcome ${1}</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <h5>The config file</h5>
+    <div class="configFile">Config (wetator.properties)</div>
+    <div class="configContent">
+      ...<br/>
+      $usr=tester<br/>
+      $$pwd=accurate
+    </div>
+
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Click On</span>  <span class='cmd_overview'>Click with the mouse on the specified element.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Click with the mouse on the specified element.<br>
+  Use this for clicking buttons and links.
+  </p>
+  <div class="hint">
+  If you like to tick a checkbox, select a radio button or choose an item from a list, use the <a href="/documentation/reference/commands/default-command-set/select">Select</a> command instead.
+  </div>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control to click on (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).<br/>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command clicks on the first clickable element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Click a button</h3>
+    
+<img src="/images/docu-cmd-click-button.png"   width="88" height="47" />
+
+    <p>Click on a button labled 'Search'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Search</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  <div class="example">
+    <h3>Click an anchor</h3>
+    
+<img src="/images/docu-cmd-click-anchor.png"   width="103" height="45" />
+
+    <p>Click on an anchor labled 'Show details'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Show details</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/click-on/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Click Double On</span>  <span class='cmd_overview'>Double click with the mouse on the specified element.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Double click with the mouse on the specified element.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control to double click on (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).<br/>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command clicks on the first double clickable element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Double click an entry field</h3>
+    <p>Double click on an entry field labled 'Name'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-double-on</td>
+      <td class="col_param1">Name</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/click-double-on/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Click Right On</span>  <span class='cmd_overview'>Right click with the mouse on the specified element.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Right click with the mouse on the specified element.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control to right click on (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).<br/>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command clicks on the first double clickable element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Right click an entry field</h3>
+    <p>Right click on an entry field labled 'Name'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-right-on</td>
+      <td class="col_param1">Name</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/click-right-on/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Set</span>  <span class='cmd_overview'>Sets the value of an entry field.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Sets the value of an entry field.<br>
+    Use this to set the value of an input field, a password field or a text area. This commands also supports the file input field (for file upload). 
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the control (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Input Field, Password Field, Text Area, File Upload</dt>
+        <dd>The path is usually the label of the field.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command sets the value of the first element after all these words.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">value</div>
+    <div class="desc">
+      The new value to set.
+      <dl>
+        <dt>Input Field, Password Field, Text Area</dt>
+        <dd>The new value for the field. Leave this empty to clean the field.</dd>
+
+        <dt>File Upload</dt>
+        <dd>The file name (relativ to the location of the test source file).</dd>
+      </dl>
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Set the value of an input field</h3>
+    
+<img src="/images/docu-cmd-set-inputtext.png"   width="411" height="44" />
+
+    <p>Set the value of an input field labeled 'Your profession' to 'WebApp Tester'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Your profession</td>
+      <td class="col_param2">Wetator</td>
+    </tr>
+    </table>
+
+    <p>You can also clear the input field labeled 'Your profession'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Your profession</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <h3>Set the value of a file upload control</h3>
+    
+<img src="/images/docu-cmd-set-uploadfile.png"   width="381" height="45" />
+
+    <p>Set the value of a file upload control labeld 'Upload your resume' to 'my_resume.pdf'.<br/>
+    File 'my_resume.pdf' is in the same directory folder as the test script.
+    </p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Upload your resume</td>
+      <td class="col_param2">my_resume.pdf</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Submit</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Wow! What an impressive resume.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <p>With modern browsers the entry field for the file name is no longer visible. The set command works the same way.
+    </p>
+    
+<img src="/images/docu-cmd-set-uploadfile-modern.png"   width="460" height="70" />
+
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Please find attached my resume</td>
+      <td class="col_param2">my_resume.pdf</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Submit</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Wow! What an impressive resume.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="example">
+    <p>More sophisticated control libraries (like PrimeFaces) are adding a lot more decoration to the file upload control. But the usage from your Wetator test is still the same.
+    </p>
+    
+<img src="/images/docu-cmd-set-uploadfile-primefaces.png"   width="704" height="141" />
+
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">Choose</td>
+      <td class="col_param2">upload.png</td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Upload</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Thanks for the nice picture.</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Select</span>  <span class='cmd_overview'>Selects an entry from a list.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Selects an entry from a list.<br>
+    Use this to select options from a single or multiple select list, a group of radio buttons or select a checkbox.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to select (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Single Select Box</dt>
+        <dd>Usually you can select an option from a list simply by using the text of that option.<br>
+     If the same option is member of different lists use the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to select.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Select call.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command selects the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    
+<img src="/images/docu-cmd-select.png"   width="608" height="216" />
+
+    <h3>Select a check box</h3>
+    <p>Select the checkbox 'documentation' from the list of possible improvements.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">documentation</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <h3>Select a radio button</h3>
+    <p>Select the radio button 'American Express' from the payment options.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">American Express</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+
+    <p>&nbsp;</p>
+    <h3>Select an entry from a list box</h3>
+    <p>Select the amount of 100&euro;.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">select</td>
+      <td class="col_param1">100&euro;</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/select/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Deselect</span>  <span class='cmd_overview'>Deselects an entry from a list.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Deselects an entry from a list.<br>
+    Use this to deselect options from a single or multiple select list, a group of radio buttons or deselect a checkbox.
+  </p>
+  <div class="hint">
+    Keep in mind, that radio groups are not deselectable. So this command doesn't search for radio buttons. 
+  </div>
+  
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to deselect (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Single Select Box</dt>
+        <dd>The path is usually the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to deselect.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Deselect call.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to deselect. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command deselects the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Deselect an entry from a select box</h3>
+    <p>Deselect the color named 'red' from a select box labled 'Choose color'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">deselect</td>
+      <td class="col_param1">Choose color<span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> red</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Close Window</span>  <span class='cmd_overview'>Close the current window or close a window by name.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Close the current window or close a window by name.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">name</div>
+    <div class="desc">The name of the window to close.<br>
+      Leave this empty to close the current window.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Close the topmost window</h3>
+    <p>Close the topmost window.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Open Dialog</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">close-window</td>
+      <td class="col_param1"></td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/close-window/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Mouse Over</span>  <span class='cmd_overview'>Moves the mouse over the specified item.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Moves the mouse over the specified item.<br>
+    Use this e.g. to simulate the use of menus that are only visible if the mouse is over some text.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The 'path' to the item to select (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).<br>
+
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command selects the first element after all these words. 
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Place the mouse over an menu entry</h3>
+    <p>Place the mouse over a pull down menu entry named 'File'.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">mouse-over</td>
+      <td class="col_param1">File</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">File, Save, Save As, Exit</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Go Back</span>  <span class='cmd_overview'>Goes back in the current window using the back button.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Goes back in the current window using the back button.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">steps</div>
+    <div class="desc">The number of steps to go back (default: 1)
+    </div>
+    </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Title</span>  <span class='cmd_overview'>Assert that the page title matches the given one.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Assert that the page title matches the given one.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">title</div>
+    <div class="desc">The text to match (see <a href="/documentation/general-concepts/content-pattern" target="blank">Content Pattern</a> for a detailed description).<br>
+      It is possible to use the '*' and the '?' character as wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a comma separated list of words (with '*' and '?' if needed). Then this command checks, that the words in the defined order are parts of the page title.
+      <br>
+      You can also check the title of PDF documents.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">wait</div>
+    <div class="desc">The (optional) timeout in seconds used for waiting for javascript events.
+      This is helpful for pages working with setTimeout javascript command or doing some AJAX polling for e.g. search results.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Check the whole title</h3>
+    <p>Check for the whole title.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-title</td>
+      <td class="col_param1">WETATOR / Open Url</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/assert-title/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Content</span>  <span class='cmd_overview'>Assert that the content matches the given one.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Asserts that the current page contains the expected content.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">content</div>
+      <div class="desc">The text to match (see <a href="/documentation/general-concepts/content-pattern" target="blank">Content Pattern</a> for a detailed description).<br>
+        It is possible to use the '*' and the '?' character as wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+        It is also possible to define a comma separated list of words (with '*' and '?' if needed). Then this command checks, that the words in the defined order are parts of the content.
+        <br>
+        At the moment content of type text, html/xhtml, pdf, rtf, xls, xlsx and docx are supported.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">wait</div>
+      <div class="desc">The (optional) timeout in seconds used for waiting for javascript events.
+        This is helpful for pages working with setTimeout javascript command or doing some AJAX polling for e.g. search results.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Check for a single word on a page</h3>
+    <p>Check for a single word on a page.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">commands/openurl.html</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-content</td>
+      <td class="col_param1">Gurkensalat</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/assert-content/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Enabled</span>  <span class='cmd_overview'>Asserts, that an item is enabled and not readonly.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Asserts, that an item is enabled and not readonly.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to check (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Input Field, Password Field, Text Area, File Upload</dt>
+        <dd>The path is usually the label of the field.</dd>
+
+        <dt>Single Select Box, Multiple Select Box</dt>
+        <dd>The path is usually the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to check.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert that an entry field is enabled</h3>
+    <p>Assert that the entry field labled 'Color' is enabled.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-enabled</td>
+      <td class="col_param1">Color</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Disabled</span>  <span class='cmd_overview'>Asserts, that an item is disabled or readonly.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Asserts, that an item is disabled or readonly.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to check (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Input Field, Password Field, Text Area, File Upload</dt>
+        <dd>The path is usually the label of the field.</dd>
+
+        <dt>Single Select Box, Multiple Select Box</dt>
+        <dd>The path is usually the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to check.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert that an entry field is disabled</h3>
+    <p>Assert that the entry field labled 'Color' is disabled.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-disabled</td>
+      <td class="col_param1">Color</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Set</span>  <span class='cmd_overview'>Assert that the value of an entry field matches the given one.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Assert that the value of an entry field matches the given one.<br>
+    Use this to check the value of an input field, a password field or a text area.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the entry field (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Input Field, Password Field, Text Area</dt>
+        <dd>The path is usually the label of the field.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command checks the value of the first element after all these words.<br>
+      If your assertion contains a comma, star, or question mark, precede it with a backslash.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">value</div>
+    <div class="desc">
+      The expected value.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Check the content of an entry field</h3>
+    <p>Check the content of an entry field.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-set</td>
+      <td class="col_param1">Color</td>
+      <td class="col_param2">blue</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+        <div class="more_examples">
+            <a href="/documentation/reference/commands/default-command-set/assert-set/">more examples</a>
+        </div>
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Selected</span>  <span class='cmd_overview'>Asserts, that an entry from a list is selected.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Asserts, that an entry from a list is selected.<br>
+    Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to select (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Single Select Box</dt>
+        <dd>The path is usually the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to check.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Assert Select call.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to check. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert, that an entry from a select box is selected</h3>
+    <p>Assert, that the color named 'red' from a select box labled 'Choose color' is selected.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-selected</td>
+      <td class="col_param1">Choose color<span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> red</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Assert Deselected</span>  <span class='cmd_overview'>Asserts, that an entry from a list is deselected.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Asserts, that an entry from a list is deselected.<br>
+    Use this to check the selection from a single or multiple select list, a group of radio buttons or select a checkbox.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">wpath</div>
+    <div class="desc">
+      The WPath identifying the item to check (see <a href="/documentation/general-concepts/wpath" target='blank'>WPath</a> for a detailed description).
+      <dl>
+        <dt>Single Select Box</dt>
+        <dd>The path is usually the label of the select box, a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> and then the text of the option to check.</dd>
+
+        <dt>Multiple Select Box</dt>
+        <dd>To make more than one selection in a multiple select box, use more than one Assert Select call.</dd>
+
+        <dt>Radio Group</dt>
+        <dd>Use the label of the radio button you like to select. If this text is not unique you can as always define some words before to make the path unique.</dd>
+
+        <dt>Check Box</dt>
+        <dd>Use the text usually placed after the checkbox you like to check. If this text is not unique you can as always define some words before to make the path unique.</dd>
+      </dl>
+      It is possible to use the '*' and the '?' character als wildcards; '*' matches zero or many characters; '?' matches one single character.<br>
+      It is also possible to define a <span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> separated list of words (with '*' and '?' if needed). Then this command checks the first element after all these words.
+    </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Assert, that an entry from a select box is deselected</h3>
+    <p>Assert, that the color named 'red' from a select box labled 'Choose color' is deselected.</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">assert-deselected</td>
+      <td class="col_param1">Choose color<span class="tooltip" original-title="You can configure this separator by the 'wetator.wpath.separator' setting.">&gt;</span> red</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+    <div class="togglePanel">
+        <span class="cmd_title">Exec Java</span>  <span class='cmd_overview'>Executes the defined java method.</span>
+    </div>
+    <div class="togglePanel_content">
+        
+<div class="docu">
+  
+  <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>Default Command Set</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
+
+
+  <p>Executes the defined java method.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+    <div class="name">method</div>
+    <div class="desc">
+      The name of the class and method to be executed.<br>
+      Wetator first searches for static methods with the given name.<br>
+      Wetator searches for methods
+      <ul>
+        <li>with the same number of string parameters as strings given by the second parameter
+        <li>with exactly one parameter of type List&lt;String&gt; or
+        <li>with a vararg of type string.
+      </ul>
+      If nothing found then Wetator looks for a default constructor and if one is available,
+      Wetator creates an instance and performs the same lookup for instance methods.
+    </div>
+    </div>
+    <div class="param">
+    <div class="name">args</div>
+    <div class="desc">
+      The parametes for the method call.<br>
+       It is possible to provide a comma separated list of strings.
+    </div>
+    </div>
+  </div>
+
+  <h3>Classpath</h3>
+  <p>Of course you have to add your class (and all required classes) to the classpath. For the command line client simply copy the jar file into the lib directory.
+If you start wetator from inside eclipse, adjust the run configuration.
+For the ant task, you can define a separate classpath containing your stuff. The ant task uses a separate class loader to load your classes and shield your classes from the ant environment.
+  </p>
+
+  <h3>Examples</h3>
+  <div class="examples">
+  <div class="example">
+    <h3>Execute a static method</h3>
+    <p>Call the static method 'staticMethodWithTwoParams(String, String)' in class 'org.rbri.wet.commandset.ExecTester'</p>
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">exec-java</td>
+      <td class="col_param1">org.rbri.wet.commandset.ExecTester.staticMethodWithTwoParams</td>
+      <td class="col_param2">one, two</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
+        
+    </div>
+
+
+</div>
+
+
+
+
+  
+
+
+</div>  
+  <div id="footer">
+    <p>Copyright &copy; 2019 Wetator.org  All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;Logo designed by <a target="_blank" title="Bj&ouml;rn Westermann" href="http://www.chessburgers.com">Bj&ouml;rn Westermann</a>&nbsp;&nbsp;|&nbsp;&nbsp;Created using&nbsp;<a target="_blank" title="HUGO" href="https://gohugo.io/">HUGO</a></p>
+  </div>
+  </div>
+      </div>
+    <div class="col2">
+<div id="sidebar">
+  
+  
+      
+      
+        <h1><a href="/documentation/">Documentation</a></h1>
+        <div id="sidebar_nav">
+          <ul>
+            
+              
+      
+      
+
+      <li ><a href="/documentation/philosophy/">Philosophy</a>
+      
+  
+            
+              
+      
+      
+
+      <li ><a href="/documentation/getting-started/">Getting Started</a>
+      
+  
+            
+              
+      
+      
+
+      <li ><a href="/documentation/general-concepts/">General Concepts</a>
+      
+  
+            
+              
+      
+      
+
+      <li ><a href="/documentation/test-case-files/">Test Case Files</a>
+      
+  
+            
+              
+      
+      
+
+      <li ><a href="/documentation/sample-reports/">Sample Reports</a>
+      
+  
+            
+              
+      
+      
+
+      <li class="selected"><a href="/documentation/reference/">Reference</a>
+      
+        <ul>
+        
+          
+      
+      
+
+      <li class="selected"><a href="/documentation/reference/commands/">Commands</a>
+      
+        <ul>
+        
+          
+      
+      
+
+      <li class="selected"><a href="/documentation/reference/commands/default-command-set/">Default Command Set</a>
+      
+        <ul>
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/describe/">Describe</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/open-url/">Open URL</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/use-module/">Use Module</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/click-on/">Click On</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/click-double-on/">Click Double On</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/click-right-on/">Click Right On</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/set/">Set</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/select/">Select</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/deselect/">Deselect</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/close-window/">Close Window</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/mouse-over/">Mouse Over</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/go-back/">Go Back</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-title/">Assert Title</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-content/">Assert Content</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-enabled/">Assert Enabled</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-disabled/">Assert Disabled</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-set/">Assert Set</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-selected/">Assert Selected</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/assert-deselected/">Assert Deselected</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/default-command-set/exec-java/">Exec Java</a>
+      
+  
+        
+        </ul>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/sql-command-set/">SQL Command Set</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/commands/incubator-command-set/">Incubator Command Set</a>
+      
+  
+        
+        </ul>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/command-line-options/">Command-Line Options</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/configuration/">Configuration</a>
+      
+  
+        
+          
+      
+      
+
+      <li ><a href="/documentation/reference/glossary/">Glossary</a>
+      
+  
+        
+        </ul>
+      
+  
+            
+              
+      
+      
+
+      <li ><a href="/documentation/faq/">FAQ</a>
+      
+  
+            
+          </ul>
+        </div>
+      
+  
+      
+      
+  
+      
+      
+  
+      
+      
+  
+  
+  
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

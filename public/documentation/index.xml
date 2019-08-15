@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on WETATOR</title>
+    <link>https://wetator.github.io/documentation/</link>
+    <description>Recent content in Documentation on WETATOR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://wetator.github.io/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://wetator.github.io/documentation/faq/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/faq/</guid>
+      <description>How can I trigger a file upload?Wetator handles file upload controls like ordinary input controls. You can simply use the set command with the file name (relative to the location of the test source file) as second parameter value.</description>
+    </item>
+    
+    <item>
+      <title>General Concepts</title>
+      <link>https://wetator.github.io/documentation/general-concepts/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/general-concepts/</guid>
+      <description>For working with Wetator you just need to know the structure of the test cases and the two concepts for addressing parts of your web application:The Content Pattern – for asserting contentThe WPath – for addressing a distinct web page element</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://wetator.github.io/documentation/getting-started/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/getting-started/</guid>
+      <description>For getting started please follow our installation guide and have a look at how to write your first Wetator test.Beyond running Wetator from command line you also have the possiblity to run Wetator via ant task.Furthermore Wetator comes withthe Wetator Test Editor (WTE) - an Eclipse plugin for convient editing of test filesand a Jenkins plugin to make Wetator part of your Continuous Integration.</description>
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>https://wetator.github.io/documentation/philosophy/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/philosophy/</guid>
+      <description>As you might already know - Wetator wants to test the GUI of your web application.Since this is a somewhat generic statement we want to point out what appears to us when talking about &#34;testing a GUI&#34; and &#34;testing a web application&#34;:Wetator focuses on assuring the web GUI&#39;s functionality.This means it is not (or not first and foremost) focusing on content (e.g. particular search results), layout, or functionality of lower layers of your application.</description>
+    </item>
+    
+    <item>
+      <title>Reference</title>
+      <link>https://wetator.github.io/documentation/reference/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/</guid>
+      <description>Our reference contains details about how to use Wetator.Here you can get familiar with Wetator&#39;s language and configuration.Our small glossary collects generally known terms and defines them within the Wetator environment.</description>
+    </item>
+    
+    <item>
+      <title>Sample Reports</title>
+      <link>https://wetator.github.io/documentation/sample-reports/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/sample-reports/</guid>
+      <description>To get an impression of how Wetator presents test results we have some interactive samples for you:Wetator Test Form – The report from the sample included in the Wetator bundleSample with Errors – A report similar to the first one but with some failures/errors</description>
+    </item>
+    
+    <item>
+      <title>Test Case Files</title>
+      <link>https://wetator.github.io/documentation/test-case-files/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/test-case-files/</guid>
+      <description>Wetator test cases are stored in test case files as a table where every line contains a command.There a three different file formats supported for writing down your test cases out of the box:Wetator XML (*.wet)WikiText (*.wett)Excel (*.xls, xlsx)The details of these formats, as well as the main benefits and problems with them, are explained on the subsequent pages. Which format to use depends on your context.</description>
+    </item>
+    
+  </channel>
+</rss>

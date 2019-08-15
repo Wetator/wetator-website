@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL Command Set on WETATOR</title>
+    <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/</link>
+    <description>Recent content in SQL Command Set on WETATOR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://wetator.github.io/documentation/reference/commands/sql-command-set/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exec SQL</title>
+      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/exec-sql/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/exec-sql/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).
+Executes the given SQL against the configured database and commits.
+ParameterssqlSpecifies the SQL to execute (required).ExamplesConfig (wetator.properties)wetator.db.connections=[db&amp;nbsp;name]wetator.db.[db&amp;nbsp;name].driver=org.hsqldb.jdbcDriver&amp;nbsp;(the&amp;nbsp;jdbc&amp;nbsp;driver&amp;nbsp;of&amp;nbsp;your&amp;nbsp;db)wetator.db.[db&amp;nbsp;name].url=[jdbc:...]&amp;nbsp;(the&amp;nbsp;jdbc&amp;nbsp;url&amp;nbsp;of&amp;nbsp;your&amp;nbsp;db) wetator.db.[db&amp;nbsp;name].user=[user]wetator.db.[db&amp;nbsp;name].password=[password] Create a new table and insert some valuesCommandParameterOptional Parameterexec-sqlDROP TABLE IF EXISTS test_tblexec-sqlCREATE TABLE test_tbl (col1 CHAR(20), col2 NUMERIC)exec-sqlINSERT INTO test_tbl (col1, col2) VALUES (&#39;First&#39;, 1)exec-sqlINSERT INTO test_tbl (col1, col2) VALUES (&#39;Second&#39;, 2)Call a stored procedure (ORACLE)CommandParameterOptional Parameterexec-sqlBEGIN MYSCHEMA.</description>
+    </item>
+    
+    <item>
+      <title>Assert SQL</title>
+      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).</description>
+    </item>
+    
+    <item>
+      <title>Assert SQL in Content</title>
+      <link>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql-in-content/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/sql-command-set/assert-sql-in-content/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the SQL Command Set first (see Configuration).</description>
+    </item>
+    
+  </channel>
+</rss>

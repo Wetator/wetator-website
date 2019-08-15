@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.56.3" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <meta http-equiv="language" content="english, en">
+  <meta name="keywords" content="wetator,web,application,test,testing,automation,GUI,tool,HTMLUnit">
+  <meta name="description" content="Wetator is a small, flexible and extendable test automation tool that drives and checks your web application. Wetator provides you with a language for writing test scripts that is simple and easily readable - also for non-IT-people. The list of supported commands is intended to be preferably small.">
+  <meta name="page-topic" content="Software-Testing">
+  <meta name="author" content="Ronald Brill">
+  <meta name="publisher" content="Ronald Brill">
+  <meta name="copyright" content="(c) Ronald Brill">
+  <meta name="robots" content="index,nofollow">
+  <meta name="revisit-after" content="14 days">
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <title>WETATOR / Smart Web Application Testing</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://wetator.github.io/images/favicon.ico" />
+  <link rel="stylesheet" href="https://wetator.github.io/css/normalize.css">
+  <link rel="stylesheet" href="https://wetator.github.io/css/default.css">
+  <link rel="stylesheet" href="https://wetator.github.io/css/content.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+  <link rel="stylesheet" href="https://wetator.github.io/css/tipsy.css">
+  <script type="text/javascript" src="https://wetator.github.io/js/jquery.tipsy.js"></script>
+
+  <script type="text/javascript" src="https://wetator.github.io/js/wetator.js" /></script>
+
+</head>
+<body>  
+  <div id="header">
+    <div id="header_logo">
+      <a href="http://www.wetator.org/"><img alt="WETATOR Smart Web Application Testing" title="Wetator" height="137" width="400" src="https://wetator.github.io/images/wetator.png" /></a>
+    </div>
+    
+    <div id="header_bottomline">
+      <div id="header_nav">
+<ul>
+  
+  <li><a href="https://wetator.github.io/">home</a></li>
+  
+    <li class=""><a href="/documentation/">Documentation</a>
+    
+      <ul>
+      
+        <li class=""><a href="/documentation/philosophy/">Philosophy</a></li>
+      
+        <li class=""><a href="/documentation/getting-started/">Getting Started</a></li>
+      
+        <li class=""><a href="/documentation/general-concepts/">General Concepts</a></li>
+      
+        <li class=""><a href="/documentation/test-case-files/">Test Case Files</a></li>
+      
+        <li class=""><a href="/documentation/sample-reports/">Sample Reports</a></li>
+      
+        <li class=""><a href="/documentation/reference/">Reference</a></li>
+      
+        <li class=""><a href="/documentation/faq/">FAQ</a></li>
+      
+      </ul>
+    
+    </li>
+  
+    <li class=""><a href="/download/">Download</a>
+    
+      <ul>
+      
+        <li class=""><a href="/download/release-notes/">Release Notes</a></li>
+      
+      </ul>
+    
+    </li>
+  
+    <li class=""><a href="/support/">Support</a>
+    
+    </li>
+  
+    <li class=""><a href="/about/">About</a>
+    
+      <ul>
+      
+        <li class=""><a href="/about/links/">Links</a></li>
+      
+        <li class=""><a href="/about/license/">License</a></li>
+      
+        <li class=""><a href="/about/imprint/">Imprint</a></li>
+      
+      </ul>
+    
+    </li>
+  
+</ul>
+</div>
+    </div>
+
+    <div id="header_breadcrumbs">
+<ol  class="nav navbar-nav">
+  
+      <li><a href="https://wetator.github.io/">Home</a></li>
+</ol>
+
+
+</div>
+    
+  </div>
+  <div class="colmask leftmenu">
+    <div class="colright">
+      <div class="col1wrap">
+        <div class="col1">
+
+<div id="content">
+
+
+  
+  
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#hoverPicture').hover(function() {
+      $('#hoverPicture').stop().animate({'opacity': '0'}, 'slow');}, function() {$('#hoverPicture').stop().animate({'opacity': '1'}, 'slow');});
+  });
+</script>
+
+<h1>Wetator in a Nutshell</h1>
+<p>
+Wetator is a tool for automated Graphical User Interface (GUI) tests of web applications.<br/>
+It provides you with a simple command language for writing your tests, that
+<ul>
+<li>maps the typical user actions (open-url, click-on, select, set...) and</li>
+<li>includes commands to check the page content (assert-content, assert-title...).</li>
+</ul>
+</p>
+<p>
+This human readable language enables you to specify test cases that are easy to write and easy to read:
+</p>
+
+<div style="width: 958px;">
+<img style="float: left;" alt="" title="" height="307" width="958" src="/images/wetator-google-test-xml.png" />
+<img id="hoverPicture" style="float: left; margin-top: -307px; opacity: 1;" alt="" title="" height="307" width="958" src="/images/wetator-google-test.png" />
+</div>
+
+<p style="clear: both;"><br/>
+Wetator tests are executed using <a href="http://htmlunit.sourceforge.net/" target="blank">HtmlUnit</a>, a Java based framework which is able to simulate the most popular web browsers (Firefox, Internet Explorer and Chrome). The test result is summarized in a well-arranged report containing detailed information about the test run and snapshots for each step.<br/><br/>
+
+
+<img src="/images/wetator-google-report.png"   width="1016" height="411" />
+
+<br/><br/>
+</p>
+
+<h2>Benefits</h2>
+<p>
+<ul>
+<li>There is no need for technical details in the tests like names or IDs of the GUI components. Wetator is able to find the corresponding GUI components by their labels, alt texts, position etc. Thus your test cases are not directly destroyed by each GUI change; e.g. it is not important if the button "Google Search" is in the upper left or the lower right corner, whether it has the id g:search or j:763223, or if it is changed into a clickable image with the alt attribute "Google Search"</li>
+<li>Wetator tests are predicted to be used in test driven development resp. test first approach. They can even be created as a part of requirements specification.</li>
+<li>Wetator can handle the following technologies: HTML, CSS, JavaScript (incl. highly sophisticated AJAX support) as well as MS Word, MS Excel, PDF and ZIP for assertion issues (e.g. for testing exports)</li>
+<li>The Wetator test format actually is XML (just hover the example test case at the top of the page). So you can use any editor you want to edit Wetator test cases or you may use the <a href="https://wetator.repositoryhosting.com/trac/wetator_wte" target="_blank">Wetator Test Editor</a> for convenient, Excel-like editing in your Eclipse IDE. Since they are XML, Wetator tests can easily be managed by version control systems and of course validated against their XML schemas.</li>
+<li>Wetator supports modular test case design and makes it possible to resuse identical parts of your test suite (including parameter support).</li>
+<li>Currently Wetator can emulate the following browsers for testing: Internet Explorer 11, Firefox 52(ESR), Firefox 45(ESR) and Chrome. So you can run your tests in different browser environments without effort.</li>
+<li>Wetator and its language are extensible; e.g. you could add special commands for special web site features or introduce new controls you implemented, define your test cases in XML or Excel, or just write your own scripter for another test case format; for maximum extension it is possible to call Java classes from a Wetator test, for instance to set up some test data in your database before a test can run.</li>
+</ul>
+</p><br/>
+
+<h2>Target Audience</h2>
+<p>
+<ul>
+<li>Wetator tests are written by developers and testers who want to have automated GUI tests for their web applications that are easy to maintain and easy to read.</li>
+<li>The Wetator language is understandable for project leads and customers – the people with whom you have to discuss if your tests are testing the requirements correctly and sufficiently.</li>
+<li>Manual testers get to know what they do not have to focus on (since it is already tested automatedly), for example they could focus on testing design, usability, and of course things that cannot or only hardly be tested automatedly.</li>
+</ul>
+</p><br/>
+
+<h2>Wetator & Friends</h2>
+<ul>
+<li>Downloads
+  <ul>
+    <li><a href="http://www.wetator.org/index.php/download#wetator">Wetator</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator">Wetator Ant Task</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator-test-editor">Wetator Test Editor (WTE)</a></li>
+    <li><a href="http://www.wetator.org/index.php/download#wetator-jenkins-plugin">Wetator Jenkins Plugin</a></li>
+  </ul>
+</li>
+<li><a href="https://wetator.repositoryhosting.com/trac/wetator_wte" target="blank">Wetator Test Editor (WTE)</a></li>
+<li><a href="https://github.com/fred4jupiter/wetator-maven-plugin" target="blank">Wetator Maven Plugin </a></li>
+</ul>
+
+
+
+
+  
+
+
+</div>  
+  <div id="footer">
+    <p>Copyright &copy; 2019 Wetator.org  All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;Logo designed by <a target="_blank" title="Bj&ouml;rn Westermann" href="http://www.chessburgers.com">Bj&ouml;rn Westermann</a>&nbsp;&nbsp;|&nbsp;&nbsp;Created using&nbsp;<a target="_blank" title="HUGO" href="https://gohugo.io/">HUGO</a></p>
+  </div>
+  </div>
+      </div>
+    <div class="col2">
+<div id="sidebar">
+    <h1>Latest News</h1>
+    
+    
+      
+    
+      
+        <div id="sidebar_news">
+          <h1><a href="/news/1-10-released/">1.10 released</a> (2018-08-12)</h1>
+          <p>Wetator version 1.10 released.</p>
+        </div>
+      
+    
+      
+        <div id="sidebar_news">
+          <h1><a href="/news/1-9-released/">1.9 released</a> (2018-04-02)</h1>
+          <p>Wetator version 1.9 released.</p>
+        </div>
+      
+    
+    
+    <div id="sidebar_nav">
+      <ul>
+        <li><a href="/news">All News</a></li>
+      </ul>
+    </div>
+
+    <div id="cmdref" style="margin-left: 35px; margin-top: 40px;">
+      <a href="/documentation/reference/commands">COMMAND REFERENCE</a>
+    </div>
+    <div id="getwetator" style="margin-left: 59px; margin-top: 40px;">
+      <a href="/download"><img src="/images/wetator-download.png" width="120" height="42"></a>
+    </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

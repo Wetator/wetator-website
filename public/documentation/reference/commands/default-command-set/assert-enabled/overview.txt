@@ -1,0 +1,1 @@
+Asserts, that an item is enabled and not readonly.

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on WETATOR</title>
+    <link>https://wetator.github.io/about/</link>
+    <description>Recent content in About on WETATOR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://wetator.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Links</title>
+      <link>https://wetator.github.io/about/links/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/about/links/</guid>
+      <description> Used libraries Wetator uses many open source libraries. Writing a tool like this is impossible without the uncountable effort of all the people who have contributed to one of these:  HtmlUnit CSS Parser Apache commons (lang, io, logging, codec) Apache PDFBox Apache POI dk.brics.automaton Txtmark The Legion of the Bouncy Castle </description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://wetator.github.io/about/license/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/about/license/</guid>
+      <description>Copyright (c) 2008-2016 Ronald Brill
+Licensed under the Apache License, Version 2.0 (the &#34;License&#34;). You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</description>
+    </item>
+    
+    <item>
+      <title>Imprint</title>
+      <link>https://wetator.github.io/about/imprint/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/about/imprint/</guid>
+      <description> Haftungshinweis:
+Trotz sorgf&amp;auml;ltiger inhaltlicher Kontrolle &amp;uuml;bernehme ich keine Haftung f&amp;uuml;r die Inhalte externer Links. F&amp;uuml;r den Inhalt der verlinkten Seite sind ausschlie&amp;szlig;lich deren Betreiber verantwortlich.  Rechte an Inhalten dieser Seite:
+Inhalte dieser Seite k&amp;ouml;nnen &amp;uuml;bernommen werden, wenn sie ausschlie&amp;szlig;lich f&amp;uuml;r den privaten Gebrauch eines Nutzers bestimmt sind. Die &amp;Uuml;bernahme und Nutzung der Daten in jeder Form bedarf der schriftlichen Zustimmung von Ronald Brill. </description>
+    </item>
+    
+  </channel>
+</rss>

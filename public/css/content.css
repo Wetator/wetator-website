@@ -1,0 +1,432 @@
+/* **************************** */
+/* wetator.org 2009, 2013, 2016 */
+/* **************************** */
+
+/*
+font size see: http://www.1ngo.de/web/em.html
+*/
+
+/* Wetator colors */
+
+
+
+
+
+
+
+
+
+
+
+#content {
+  padding-left: 1em;
+  border-left: 0.1em solid #bbbbbb;
+  padding-top: 0.1em;
+}
+
+#content h1 {
+  color: #00769c;
+  /* font-size: 1.75em; */
+  font-size:2.01em;
+  font-weight: normal;
+  font-variant: small-caps;
+  padding: 0.2em 0 0.3em;
+  margin-bottom: 0.1em;
+}
+
+#content h2 {
+  color: #00769c;
+  font-size: 1.38em;
+  font-weight: normal;
+  padding: 0.7em 0 0.48em;
+}
+
+#content h3 {
+  color: #00769c;
+  font-size: 1.12em;
+  font-weight: normal;
+  padding: 0.7em 0 0.48em;
+}
+
+
+#content h4 {
+  color: #00769c;
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: 0.5em;
+  padding: 0.7em 0 0.48em 0;
+}
+
+#content h5 {
+  color: #00769c;
+  font-size: 0.88em;
+  font-weight: normal;
+  padding: 0.8em 0 0.1em 0;
+}
+
+#content p, #content ul, #content ol {
+  font-size: 0.88em;
+}
+
+#content p {
+  background-color: transparent;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 4px;
+  margin-top: 0;
+  padding-top: 1px;
+}
+
+#content .cmd_overview {
+  font-size: 0.88em;
+}
+
+#content .cmd_title {
+  color: #00769c;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.1em 0 0em;
+  display: inline-block;
+  width: 170px;
+}
+
+#content ul, #content ol {
+  margin-bottom: 7px;
+  margin-top: 0;
+  padding-left: 25px;
+  padding-top: 1px;
+}
+
+.required {
+  font-weight: 500;
+}
+
+.padding-left1 {
+  padding-left: 20px;
+}
+.padding-left2 {
+  padding-left: 40px;
+}
+
+/* Tooltip */
+
+#content .tooltip {
+  background-color: #dddddd;
+  border-radius: 4px 4px 4px 4px;
+  padding: 1px 2px 1px 2px;
+  cursor: pointer;
+}
+
+/* Toggle Panel */
+
+#content .togglePanel {
+  font-size: 0.88em;
+  margin: 0.4em 0;
+  padding: 0.22em 0.2em 0.22em 23px;
+  border-radius: 4px 4px 4px 4px !important;
+  cursor: pointer;
+  background: #f6f6f6 url(/images/plus-wetator-border.png) no-repeat 6px center;
+}
+
+#content .togglePanel:hover {
+  background-color: #dddddd;
+  background-image: url(/images/plus-medium-wetator-border.png);
+}
+
+#content .togglePanel_open {
+  background-color: #dddddd;
+}
+
+#content .togglePanel_open {
+  border-bottom: 0 none;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-bottom: 0;
+  background-image: url(/images/minus-medium-wetator-border.png);
+}
+
+#content .togglePanel_open:hover {
+  background-image: url(/images/minus-medium-wetator-border.png);
+}
+
+#content .togglePanel_content {
+  font-size: 0.92em;
+  margin-bottom: 2px;
+  margin-top: -2px;
+  overflow: auto;
+  padding: 0.3em 1em 0.3em 23px;
+  position: relative;
+  top: 1px;
+  border: 1px solid #bbbbbb;
+  border-top: 0 none;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-color: #bbbbbb;  
+}
+
+#content .togglePanel_content .more_examples {
+  font-size: 0.75em;
+  margin-left: 1.2em;
+}
+
+
+/* Hover Picture */
+
+#content .hoverPicture {
+  opacity: 0;
+}
+
+
+/* Tab */
+
+.clear{
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+
+.tab-container {
+  padding: 20px 20px 20px 0px;
+}
+
+.tab-container ul {
+  list-style: none;
+  list-style-position: outside;
+  padding-left: 10px;
+}
+
+.tab-container ul.tab-menu li {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: -1px;
+}
+
+.tab-container ul.tab-menu li {
+  font-size: 0.9em;
+  font-weight: 5;
+  display: block;
+  padding: 5px 10px 3px 10px;
+  background: #efefef;
+  margin-bottom: -1px;
+  border: 1px solid #d0ccc9;
+  border-top-left-radius: 3px !important;
+  border-top-right-radius: 3px !important;
+  position: relative;
+  color: #898989;
+  cursor: pointer;
+}
+
+.tab-container ul.tab-menu li.active{
+  font-weight: 700;
+  background: #ffffff;
+  top: 1px;
+  border-bottom: 0;
+  color: #00769c;
+}
+
+.tab-container .tab-content {
+  margin: 0pt auto;
+  background: #fff;
+  border: 1px solid #d0ccc9;
+  border-radius: 3px 3px 3px 3px !important;
+  text-align: left;
+  padding: 5px 15px 5px 15px;
+}
+
+
+
+/* docu */
+
+.docu {
+  margin-top: 5px;
+}
+
+.docu h1 {
+  padding: 0.1em 0px .5em;
+}
+
+#content .docu h3 {
+  color: #585759;
+}
+
+#content .docu h4 {
+  margin-left: 0;
+}
+
+#content .docu h5 {
+  color: #585759;
+}
+
+#content .docu .examples {
+  margin-left: 0.88em;
+}
+
+#content .docu .example h3 {
+  color: #e75013;
+  font-size: 0.99em;
+  padding: 0 0 0.48em;
+}
+
+#content .docu .example img {
+  margin-left: 2em;
+}
+
+#content .togglePanel_content .docu h3 {
+  font-size: 0.95em;
+  padding: 0.2em 0 0.2em;
+}
+
+#content .togglePanel_content .docu h4 {
+  font-size: .93em;
+  color: black;
+}
+
+
+.docu h5 {
+//  margin-left: 0.5em;
+  padding-left: 0; /*<-- does not work because of CSS hierarchy*/
+}
+
+
+.docu p {
+//  margin-left: 0.88em;
+}
+
+.docu .params {
+  margin-bottom: 0.55em;
+  padding: 0 0 0.7em;
+  border-bottom: 1px solid #dddddd;
+}
+
+.docu .params .name {
+  font-weight: 600;
+  float: left;
+}
+
+.docu .params .desc {
+  margin-left: 7em;
+}
+
+.docu .params dl {
+}
+
+.docu .params dt {
+  margin-top: 0.3em;
+  font-weight: 700;
+}
+
+.docu .params dd {
+  margin-bottom: 0.3em;
+  padding-left: 1em;
+}
+
+#content .docu .params .param {
+  margin-left: 1em;
+  padding-top: 0.2em;
+  font-size: 0.88em;
+}
+
+#content .param {
+  padding-bottom: 0.4em;
+}
+
+.docu .hint {
+  font-size: 0.88em;
+  border: 1px solid #bbbbbb;
+  background: #f6f6f6;
+  padding: 0.4em;
+}
+
+.docu .hint:before {
+  content: "! ";
+  font-size: 150%;
+  font-weight: 600;
+  color: #e75013;
+  padding-right: 0.4em;
+}
+
+.docu .example {
+  margin-bottom: .88em;
+  padding-bottom: 1em;
+}
+
+.docu .configFile {
+  font-size: 0.88em;
+}
+
+.docu .configContent, .docu pre {
+  font-family: Fixed, monospace;
+  margin-top: 6px;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  border: thin solid #cccccc;
+  background-color: #f8f8f8;
+  padding-left: 0.2em;
+}
+
+.docu table {
+  font-family: "Lucida Grande", Verdana, Sans-Serif;
+  font-size: 0.71em;
+  border-collapse: collapse;
+  border: thin solid #cccccc;
+}
+
+.docu table th {
+  font-weight: normal;
+  line-height: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  border-bottom: thin solid #cccccc;
+  border-left: thin solid #cccccc;
+  background: url(/images/wte-header-bg.png) repeat;
+}
+
+.docu table td {
+  line-height: 17px;
+  font-weight: normal;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  border-left: thin solid #cccccc;
+}
+
+.docu table tr.even {
+  background-color: #edf3fe;
+}
+
+.docu table tr.odd {
+  background-color: #ffffff;
+}
+
+.docu table th.col_comment {
+  width: 0.6em;
+}
+
+.docu table th.col_commmand {
+  width: 11em;
+  text-align: center;
+}
+
+.docu table th.col_param1 {
+  width: 24em;
+}
+
+.docu table th.col_param2 {
+  width: 16em;
+}
+
+.docu table td.col_comment {
+}
+
+.docu table td.col_commmand {
+  text-align: center;
+}
+
+.docu table td.col_param1 {
+}
+
+.docu table td.col_param2 {
+}

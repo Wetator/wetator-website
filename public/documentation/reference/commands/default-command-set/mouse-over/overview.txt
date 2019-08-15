@@ -1,0 +1,1 @@
+Moves the mouse over the specified item.

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on WETATOR</title>
+    <link>https://wetator.github.io/documentation/reference/</link>
+    <description>Recent content in Reference on WETATOR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://wetator.github.io/documentation/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Command-Line Options</title>
+      <link>https://wetator.github.io/documentation/reference/command-line-options/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/command-line-options/</guid>
+      <description>It is possible to start Wetator witha dedicated configuration file and/orone ore many test definition files; as long as you provide not absolute path it is also possible to use &#39;*&#39; as wildcardAdditionally you can provide the &#39;-log&#39; parameter to get a really detailed log output of all things Wetator does. This option is mainly for debuggingand support.Examples:wetator -p my.propertiesStarts Wetator with the configuration &#39;my.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>https://wetator.github.io/documentation/reference/configuration/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/configuration/</guid>
+      <description>wetator.configThe file wetator.config is the single point of configuration for Wetator. In this configuration file you have to define some defaults for the Wetator test environment. You can configurethe base url (the root for all relative urls)the browser you like to emulate (Firefox or IE)the accept-language header Wetator uses (control the language of the simulated browser)the directory for the report outputas many xml templates you like to generate all reports you (or your boss) needsall the info you need to pass to your proxyauthorization credentials for HTTP basic out or NTLMthe timeout Wetator will wait for JavaScript jobs to completevariables, you can use in your testsadditional command sets (a way to add your own commands) together with their config parametersadditional scripters (if you like to make Wetator able to read your own input format)ActiveX object mocks (if you like to make Wetator able simulate AxtiveX objects)The file format is the usual windows property file format; &#39;#&#39; at the beginning of a line marks the line as a comment.</description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://wetator.github.io/documentation/reference/glossary/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/glossary/</guid>
+      <description>Test Casetest definition as a script of CommandsTest Filea file in a supported format (e.g. wet, wett, xlsx), holding (parts of) a Wetator Test Case
+one or multiple Test Files comprise one Test CaseCommandthe smallest unit of a Test CaseTestthe execution of a Test Case in a particular browserTest Stepthe execution of a Command during a Test</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1 @@
+Assert that the value of an entry field matches the given one.

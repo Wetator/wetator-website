@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Incubator Command Set on WETATOR</title>
+    <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/</link>
+    <description>Recent content in Incubator Command Set on WETATOR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2019 14:21:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://wetator.github.io/documentation/reference/commands/incubator-command-set/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Assert Focus</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/assert-focus/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/assert-focus/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Asserts, that an item owns the focus.ParameterswpathThe WPath identifying the item to check.Input Field, Password Field, Text Area, File UploadThe path is usually the label of the field.Single Select Box, Multiple Select BoxThe path is usually the label of the select box, a &amp;gt; and then the text of the option to check.</description>
+    </item>
+    
+    <item>
+      <title>Save Bookmark</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/save-bookmark/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/save-bookmark/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Bookmarks the current page.ParametersnameThe name of the bookmark. If there is already a bookmark with this name, it will be overwritten.
+ExamplesBookmark a page, do something else and go back to the bookmarked page.CommandParameterOptional Parameteropen-urlhttp://www.</description>
+    </item>
+    
+    <item>
+      <title>Open Bookmark</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/open-bookmark/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/open-bookmark/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Opens the url previously saved as bookmark with the given name.ParametersnameThe name of the bookmark.
+ExamplesBookmark a page, do something else and go back to the bookmarked page.CommandParameterOptional Parameteropen-urlhttp://www.wetator.orgsave-bookmarkWETATORopen-urlhttp://htmlunit.</description>
+    </item>
+    
+    <item>
+      <title>Wait</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/wait/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/wait/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Waits the given time before continuing with the test execution.
+Please use the wait command only if all other options do not work. Consider using the Assert Content command (defining a wait time) instead of this command.
+ParameterswaitThe time to wait in seconds before continuing.ExamplesPause test execution for 4s.</description>
+    </item>
+    
+    <item>
+      <title>Exec JS</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/exec-js/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/exec-js/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Execute the given javascript in the context of the current page.
+ParametersscriptThe script to execute.ExamplesAlert the value of an internal js variable (stateInternal) for debugging.CommandParameterOptional Parameterexec-jsalert(stateInternal);</description>
+    </item>
+    
+    <item>
+      <title>Confirm Next</title>
+      <link>https://wetator.github.io/documentation/reference/commands/incubator-command-set/confirm-next/</link>
+      <pubDate>Sat, 10 Aug 2019 14:21:37 +0200</pubDate>
+      
+      <guid>https://wetator.github.io/documentation/reference/commands/incubator-command-set/confirm-next/</guid>
+      <description>This command is not part of the Default Command Set. You have to register the Incubator Command Set first (see Configuration).
+Prepares the processing of the next confirmation dialog.If your application makes usage of confirmation dialogs (javascript: res=window.confirm(question);), by default WETATOR will close those by clicking the &#39;OK&#39; button.Use this command to assert the expected description or to click the &#39;Cancel&#39; button instead.
+ParametersbuttonThe button to click; only &#39;OK&#39; and &#39;Cancel&#39; are allowed here.</description>
+    </item>
+    
+  </channel>
+</rss>

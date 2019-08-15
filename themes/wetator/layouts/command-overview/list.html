@@ -79,21 +79,6 @@
       {{- $all := union $all (.Site.GetPage "/documentation/reference/commands/incubator-command-set").Pages -}}
       {{- $all := sort $all "Title" "asc" -}}
       {{- partial "cmd-docu-overview" $all -}}
-
-      <et:pages:each status="sticky,published" sort="title" order="asc" category='command'>
-        <div class="togglePanel">
-          <span class="cmd_title"><et:title /></span>  <span class='cmd_overview'><et:content part="overview" /></span>
-        </div>
-        <div class="togglePanel_content">
-          <et:content />
-
-          <et:if_content part="addcontent">
-            <div class="more_examples">
-          <et:pagelink>more examples</et:pagelink>
-        </div>
-          </et:if_content>
-        </div>
-      </et:pages:each>
     </div>
 
     <div class="byset" style="display: none;">

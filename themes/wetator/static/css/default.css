@@ -311,6 +311,22 @@ a:hover {
   color: #00769c;
 }
 
+#sidebar_nav li.selected li.selected li a {
+  color: #585759;
+}
+
+#sidebar_nav li.selected li.selected li.selected a {
+  color: #00769c;
+}
+
+#sidebar_nav li.selected li.selected li.selected li a {
+  color: #585759;
+}
+
+#sidebar_nav li.selected li.selected li.selected li.selected a {
+  color: #00769c;
+}
+
 #sidebar_news {
   font-size: 0.88em;
   margin: 0 0 10px;

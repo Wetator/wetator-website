@@ -1,0 +1,75 @@
+---
+title: "WPath and Tables"
+menu:
+  main:
+    name: "WPath and Tables"
+    parent: "WPath"
+    weight: 200
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+<p>For more general information about the WPath please read the <et:pages:pagelink id='80'>WPath page</et:pages:pagelink>.</p>
+<p>&nbsp;</p>
+<p>
+When working with tables, using the plain WPath syntax may not be sufficient or handy. Because of this there is a small enhancement.<br></br>
+Let's start with a small sample:<br></br>
+{{% image src="docu-wpath-table-sample.png" %}}<br></br>
+Your test script has to change the amount of ordered JProfiler licenses to 4.
+</p>
+<p>
+Simply do this by adding a column/row filter (syntax: [column;row]) to your WPath.
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1">[Quantity; JProfiler]</td>
+      <td class="col_param2">4</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+  <p>
+  This will choose the setable located inside a column containing the text 'Quantity' and also inside a row containing the text 'JProfiler'.<br></br>
+  {{% image src="docu-wpath-table-selection.png" %}}<br></br>
+  </p>
+  <p class="hint">For the table filter you have to use the whole cell text - in the example above [Quantity; Profi] or even [Quantity; JProf* ] will not work.</p>
+
+  <p>&nbsp;</p>
+  <h2>Filter by row/column</h2>
+  <p>You can use this filter together with plain WPath criteria and also leave one of the filter coordinates empty like in the following sample.</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">[; JProfiler] > Delete</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+  <p>
+  This will choose all delete buttons on the page and than filter out all buttons not part of a row containing the text 'JProfiler'.<br></br>
+  {{% image src="docu-wpath-table-selection-row.png" %}}<br></br>
+  The same works for columns as well by just leaving out the second coordinate (and the delimiting semicolon if you like).
+  </p>
+
+</div>

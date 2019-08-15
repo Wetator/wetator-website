@@ -1,0 +1,90 @@
+---
+title: "Exec SQL"
+menu:
+  main:
+    name: "Exec SQL"
+    parent: "SQL Command Set"
+    weight: 100
+
+weight: 100
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+  <et:design:snippet name="cmd-register-cs-hint" />
+  <p>Executes the given SQL against the configured database and commits.</p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">sql</div>
+      <div class="desc">Specifies the SQL to execute (required).<br/>
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="configFile">Config (wetator.properties)</div>
+    <div class="configContent">
+      wetator.db.connections=[db&nbsp;name]<br/>
+      wetator.db.[db&nbsp;name].driver=org.hsqldb.jdbcDriver&nbsp;(the&nbsp;jdbc&nbsp;driver&nbsp;of&nbsp;your&nbsp;db)<br/>
+      wetator.db.[db&nbsp;name].url=[jdbc:...]&nbsp;(the&nbsp;jdbc&nbsp;url&nbsp;of&nbsp;your&nbsp;db) <br/>
+      wetator.db.[db&nbsp;name].user=[user]<br/>
+      wetator.db.[db&nbsp;name].password=[password]
+    </div> 
+
+    <div class="example">
+      <h3>Create a new table and insert some values</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-sql</td>
+          <td class="col_param1">DROP TABLE IF EXISTS test_tbl</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-sql</td>
+          <td class="col_param1">CREATE TABLE test_tbl (col1 CHAR(20), col2 NUMERIC)</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-sql</td>
+          <td class="col_param1">INSERT INTO test_tbl (col1, col2) VALUES ('First', 1)</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-sql</td>
+          <td class="col_param1">INSERT INTO test_tbl (col1, col2) VALUES ('Second', 2)</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="example">
+      <h3>Call a stored procedure (ORACLE)</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">exec-sql</td>
+          <td class="col_param1">BEGIN MYSCHEMA.MYPROC; COMMIT; END;</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>  </div>
+</div>

@@ -1,0 +1,120 @@
+---
+title: "WPath and Images"
+menu:
+  main:
+    name: "WPath and Images"
+    parent: "WPath"
+    weight: 100
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+<p>For more general information about the WPath please read the <et:pages:pagelink id='80'>WPath page</et:pages:pagelink>.</p>
+<p>&nbsp;</p>
+<p>
+In many situations, images (pictograms) are used instead of text.
+</p>
+<table style='border: none;'><tr>
+<td style='border: none;'>
+  {{% image src="docu-cmd-click-imgbutton.png" %}}
+</td>
+<td style='border: none;'>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;addToCart&quot;</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&#39;Add to cart&#39;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;img</span> <span style="color: #7D9029">src=</span><span style="color: #BA2121">&#39;shopping_cart.png&#39;</span> <span style="color: #7D9029">width=</span><span style="color: #BA2121">&#39;26&#39;</span> <span style="color: #7D9029">height=</span><span style="color: #BA2121">&#39;26&#39;</span> <span style="color: #7D9029">alt=</span><span style="color: #BA2121">&#39;shopping cart&#39;</span> <span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
+</pre></div>
+</td>
+</tr></table>
+<p>
+Wetator is not able to understand the meaning of the image, you have to use a different way to address this.
+</p>
+<h4>Option 1: the 'alt' attribute</h4>
+<p>
+It is good practice for web applications to assign a dedicated alt attribute to every image to make the page accessible in terms of barrier-free design.<br/>
+Because Wetator is blind (in terms of understanding the image), you can use the value of the alt attribute in the WPath for pointing to that image.
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">shopping cart</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+<h4>Option 2: the 'title' attribute</h4>
+<p>
+Most browsers display the value of the title attribute of an image as tool-tip if you stay with mouse over the image for a certain amount of time.<br/>
+Because the tool-tip should somehow explain the image, you can use the value of the title attribute in the WPath for pointing to that image.
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Add to cart</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+<h4>Option 3: the image file name / the 'src' attribute</h4>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">shopping_cart.png</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+<h4>Option 4: the image 'id'</h4>
+<p>
+Using the ID for addressing controls is more of a fallback than a solution. It is possible though.<br/>
+Please keep in mind to keep your tests stable, readable and maintainable. With these paradigms in mind addressing controls by ID does not seem to be a good idea in most cases.
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">addToCart</td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+</div>

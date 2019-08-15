@@ -1,0 +1,61 @@
+---
+title: "Empty WPath"
+menu:
+  main:
+    name: "Empty WPath"
+    parent: "WPath"
+    weight: 300
+date: 2019-08-10T14:21:37+02:00
+draft: true
+---
+
+<div class="docu">
+<p>For more general information about the WPath please read the <a href="/documentation/general-concepts/wpath" >WPath page</a>.</p>
+<p>&nbsp;</p>
+<p>
+An empty WPath simply means:<br/>
+Please use the first matching control on the page. This might be handy for pages similar to the well known search engines.</p>
+{{% image src="docu-wpath-empty.png" %}}
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">set</td>
+      <td class="col_param1"></td>
+      <td class="col_param2">wetator</td>
+    </tr>
+    </table>
+  </div>
+  </div>
+<p>
+Furthermore you can use WPaths without a last selector like this:
+</p>
+  <div class="examples">
+  <div class="example">
+    <table>
+    <tr>
+      <th class="col_comment"></th>
+      <th class="col_commmand">Command</th>
+      <th class="col_param1">Parameter</th>
+      <th class="col_param2">Optional Parameter</th>
+    </tr>
+    <tr class="odd">
+      <td class="col_comment"></td>
+      <td class="col_commmand">click-on</td>
+      <td class="col_param1">Headline ></td>
+      <td class="col_param2"></td>
+    </tr>
+    </table>
+  </div>
+  </div>
+<p>
+This will click on the first clickable element after 'Headline'.
+</p>
+</div>

@@ -94,8 +94,8 @@ Your screen might look like this.</p>
   <p>Now we start doing some real stuff; at first we fill the form.<br/>
   The used Wetator commands are:</p>
   <ul>
-    <li>{{% pagelink "set" "set" "blank" %}} used for entry fields and file upload and
-    <li><et:pages:pagelink id='35' target='blank'>select</et:pages:pagelink> for list boxes, radio buttons and check boxes.
+    <li>{{% pagelink "set" "set" "_blank" %}} used for entry fields and file upload and
+    <li>{{% pagelink "select" "select" "_blank" %}} for list boxes, radio buttons and check boxes.
   </ul>
   <p>For filling the 'Project name' field we simply add the command</p>
   <p>The 'set' command requires two parameters, the first one points to the entry field and the second is the new value.</p>
@@ -115,9 +115,9 @@ Your screen might look like this.</p>
 <h4 class="togglePanel">Step 4 - Submit the Form and Check the Results</h4>
 <div class="togglePanel_content">
   <p>Finally we have to submit the form.<br/>
-  The command to use is simply <et:pages:pagelink id='32' target='blank'>click-on</et:pages:pagelink></p>
+  The command to use is simply {{% pagelink "click-on" "click-on" "_blank" %}}</p>
   {{% image src="docu-first-test-step4-submit.png" %}}
-  <p>And for checking the result we can use again <et:pages:pagelink id='28' target='blank'>assert-content</et:pages:pagelink></p>
+  <p>And for checking the result we can use again {{% pagelink "assert-content" "assert-content" "_blank" %}}</p>
   {{% image src="docu-first-test-step4-submit-assert.png" %}}
   <p>That is more or less all.</p>
   {{% image src="docu-first-test-step4-submit-assert-report.png" %}}
@@ -130,9 +130,9 @@ Your screen might look like this.</p>
   <p>You have written your first Wetator test.<br/>
   Now it is time to start writing tests for your application. To help you with this task we have some more documentation for you:</p>
   <ul>
-    <li><et:pages:pagelink id='16'>Philosophy</et:pages:pagelink> - a short overview about the idea we had in mind when building Wetator
-    <li><et:pages:pagelink id='18'>Command reference</et:pages:pagelink> - quick access to the detailed documentation of all supported commands
-    <li><et:pages:pagelink id='93'>FAQ</et:pages:pagelink> - maybe your question was asked before
-    <li><et:pages:pagelink id='38'>Support</et:pages:pagelink> - don't be shy; if you have any questions/problems/suggestions please contact us
+    <li>{{% pagelink "philosophy" "Philosophy" %}} - a short overview about the idea we had in mind when building Wetator
+    <li>{{% pagelink "commands" "Command reference" %}} - quick access to the detailed documentation of all supported commands
+    <li>{{% pagelink "faq" "FAQ" %}} - maybe your question was asked before
+    <li>{{% pagelink "support" "Support" %}} - don't be shy; if you have any questions/problems/suggestions please contact us
   </ul>
 </div>

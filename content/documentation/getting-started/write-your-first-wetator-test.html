@@ -49,7 +49,7 @@ Your screen might look like this.</p>
   <p>Now it is time to add our first test step - our test starts by opening the webpage 'http://www.wetator.org/testform'.</p>
   {{% image src="docu-first-test-step1-openurl.png" %}}
   <ul>
-    <li>for the command use <et:pages:pagelink id='30' target='blank'>Open Url</et:pages:pagelink> (if you like, you can choose from the list of supported commands)
+    <li>for the command use <a href="{{< ref "open-url" >}}" target='_blank'>Open Url</a> (if you like, you can choose from the list of supported commands)
     <li>the url is the first (and only) parameter you have to provide
     <li>save the file
     <li>Switch to the command window and run wetator again (Type wetator -p first-steps\wetator.config &#91;Enter&#93;)
@@ -78,7 +78,7 @@ Your screen might look like this.</p>
 <h4 class="togglePanel">Step 2 - Check That We See the Right Content</h4>
 <div class="togglePanel_content">
   <p>It is good practice to prove to get the correct page as result of opening an url. Wetator has two commands for this kind of checks: 
-<et:pages:pagelink id='29' target='blank'>assert-title</et:pages:pagelink> and <et:pages:pagelink id='28' target='blank'>assert-content</et:pages:pagelink>.</p>
+<a href="{{< ref "assert-title" >}}" target='_blank'>assert-title</a> and {{% image src="docu-first-test-step2-assert.png" %}} {{% pagelink "assert-content" "assert-content" "_blank" %}}.</p>
   <ul>
     <li>please add the command 'Assert Title' with parameter 'WETATOR / Test Form'. (Title comparison is done case sensitive)
     <li>please add the command 'Assert Title' with parameter 'The form below is only for testing purpose'
@@ -94,7 +94,7 @@ Your screen might look like this.</p>
   <p>Now we start doing some real stuff; at first we fill the form.<br/>
   The used Wetator commands are:</p>
   <ul>
-    <li><et:pages:pagelink id='34' target='blank'>set</et:pages:pagelink> used for entry fields and file upload and
+    <li>{{% pagelink "set" "set" "blank" %}} used for entry fields and file upload and
     <li><et:pages:pagelink id='35' target='blank'>select</et:pages:pagelink> for list boxes, radio buttons and check boxes.
   </ul>
   <p>For filling the 'Project name' field we simply add the command</p>

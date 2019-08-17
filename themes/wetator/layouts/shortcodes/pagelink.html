@@ -1,0 +1,1 @@
+<a href="{{ ref . (.Get 0) }}" {{ if isset .Params 2 }}target="{{index .Params 2 }}"{{ end }}>{{ .Get 1 }}</a>

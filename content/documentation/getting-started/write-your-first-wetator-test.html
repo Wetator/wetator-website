@@ -9,7 +9,7 @@ date: 2019-08-10T14:21:37+02:00
 draft: false
 ---
 
-<p>You have manged the installation so let us write our first real test case.</p>
+<p>You have managed the installation so let us write our first real test case.</p>
 <p>For this mini tutorial we use a simple web form from <a href='http://www.wetator.org/testform'>http://www.wetator.org/testform</a>.</p>
 
 <p>Wetator supports three different file formats for storing of test definitions:</p>
@@ -49,7 +49,7 @@ Your screen might look like this.</p>
   <p>Now it is time to add our first test step - our test starts by opening the webpage 'http://www.wetator.org/testform'.</p>
   {{% image src="docu-first-test-step1-openurl.png" %}}
   <ul>
-    <li>for the command use <a href="{{< ref "open-url" >}}" target='_blank'>Open Url</a> (if you like, you can choose from the list of supported commands)
+    <li>for the command use {{% pagelink "open-url" "Open Url" "_blank"%}} (if you like, you can choose from the list of supported commands)
     <li>the url is the first (and only) parameter you have to provide
     <li>save the file
     <li>Switch to the command window and run wetator again (Type wetator -p first-steps\wetator.config &#91;Enter&#93;)
@@ -78,7 +78,8 @@ Your screen might look like this.</p>
 <h4 class="togglePanel">Step 2 - Check That We See the Right Content</h4>
 <div class="togglePanel_content">
   <p>It is good practice to prove to get the correct page as result of opening an url. Wetator has two commands for this kind of checks: 
-<a href="{{< ref "assert-title" >}}" target='_blank'>assert-title</a> and {{% image src="docu-first-test-step2-assert.png" %}} {{% pagelink "assert-content" "assert-content" "_blank" %}}.</p>
+{{% pagelink "assert-title" "assert-title" "_blank"%}} and {{% image src="docu-first-test-step2-assert.png" %}} 
+{{% pagelink "assert-content" "assert-content" "_blank" %}}.</p>
   <ul>
     <li>please add the command 'Assert Title' with parameter 'WETATOR / Test Form'. (Title comparison is done case sensitive)
     <li>please add the command 'Assert Title' with parameter 'The form below is only for testing purpose'

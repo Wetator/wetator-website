@@ -1,3 +1,3 @@
-{{ if ne (.Site.GetPage "/documentation/reference/commands/default-command-set") $.Page }}
+{{ if ne (.Site.GetPage "/documentation/reference/commands/default-command-set") $.Page.Parent }}
   <p class='hint'>This command is not part of the Default Command Set. You have to register the <span class='required'>{{ $.Page.Parent.Title }}</span> first (see <a href='/wetator-documentation/reference/configuration' target='_blank'>Configuration</a>).</p>
 {{ end }}

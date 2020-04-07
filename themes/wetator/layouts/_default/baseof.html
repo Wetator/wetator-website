@@ -20,7 +20,7 @@
 
   {{ if ne nil (.Resources.GetMatch "addcontent.html") }}
     {{ with .Resources.GetMatch "addcontent.html" }}
-      {{ .Content }}
+      {{ .Content | safeHTML }}
     {{ end }}
   {{ end }}
 

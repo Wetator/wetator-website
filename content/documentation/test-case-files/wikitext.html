@@ -17,7 +17,7 @@ The wiki text format uses two pipe characters (||) to separate between command, 
 <h4>A simple test script might look like this</h4>
 <p>
 <pre>
-open-url        || http://www.wetator.org/testform
+open-url        || https://www.wetator.org/testform
 
 assert-title    || WETATOR / Test Form
 assert-content  || The form below is only for testing purpose
@@ -40,7 +40,7 @@ assert-content  || Thank you for submitting your truth about WETATOR
 <p>
 If you like to add comments to your file just start the line with '#' or '//'
 <pre>
-open-url        || http://www.wetator.org/testform
+open-url        || https://www.wetator.org/testform
 
 # check form content
 assert-title    || WETATOR / Test Form
@@ -55,14 +55,14 @@ set             || Project name    ||  My Fancy Web App Under Test
 <h4>Multiline</h4>
 <p>Especially for the describe command you need a way to provide multiline content; this can be done by simply ending a line using the \ as continuation character.
 <pre>
-describe        || My first simple testcase for [WETATOR](http://www.wetator.org) \
+describe        || My first simple testcase for [WETATOR](https://www.wetator.org) \
 This case consists of some tricky steps \
 * open the url \
 * fill the form and \
 * finally check the result
 
 # time to start
-open-url        || http://www.wetator.org/testform
+open-url        || https://www.wetator.org/testform
 ....
 </pre>
 </p>

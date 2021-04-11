@@ -5,12 +5,12 @@ menu:
     name: "Release Notes"
     parent: Download
     weight: 100
-date: 2019-08-10T14:21:37+02:00
+date: 2021-04-11T17:21:37+02:00
 draft: false
 ---
 
 
-<h4 class="togglePanel">Version 1.13.0 (not yet released)</h4>
+<h4 class="togglePanel">Version 1.14.0 (not yet released)</h4>
 <div class="togglePanel_content">
   <p>
   <ul>
@@ -19,10 +19,21 @@ draft: false
 </div>
 
 
+<h2>Version 1.13.0 (2021-04-11)</h2>
+  <p>
+  <ul>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.49.1 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.49.1' target='_blank'>HtmlUnit Release Notes</a>).
+    <li>PDFBox updated to 2.0.23
+    <li>commons-lang3 updated to 3.12.0
+    <li>log4j updated to 2.14.1
+  </ul>
+  </p>
+
+
 <h2>Version 1.12.0 (2021-02-08)</h2>
   <p>
   <ul>
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.47.1 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.47.1' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.47.1 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.47.1' target='_blank'>HtmlUnit Release Notes</a>).
 This implies changed FF support; we are now supporting FF78.
     <li>PDFBox updated to 2.0.21
     <li>commons-lang3 updated to 3.11
@@ -36,7 +47,7 @@ This implies changed FF support; we are now supporting FF78.
 <div class="togglePanel_content">
   <p>
   <ul>
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.39.0 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.39.0' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.39.0 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.39.0' target='_blank'>HtmlUnit Release Notes</a>).
 This implies changed FF support; we are now supporting FF68 and latest FIREFOX.
     <li><b>New:</b> first impl of animationFrame support
     <li><b>New:</b> Base URL is now available as variable
@@ -54,7 +65,7 @@ This implies changed FF support; we are now supporting FF68 and latest FIREFOX.
 <div class="togglePanel_content">
   <p>
   <ul>
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.32 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.32' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.32 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.32' target='_blank'>HtmlUnit Release Notes</a>).
 This implies changed FF support; we are now supporting FF60 and FF52.
     <li><b>Change:</b> Reworked table handling (used by the table filter [col; row]. This will many problem with tables using rowspan and colspan.
     <li><b>Change:</b> Reworked parts of the ByLabelMatcher to get better results.
@@ -69,7 +80,7 @@ This implies changed FF support; we are now supporting FF60 and FF52.
   <p>
   <ul>
     <li><b>New:</b> Script converter for the wett format added.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.30 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.30' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.30 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.30' target='_blank'>HtmlUnit Release Notes</a>).
 This brings a notable performance update to our test suites (10-30%).
     <li><b>Change:</b> Huge cleanup for the source code the build system.
     <li><b>Change:</b> Switch to log4j 2 API; no direct dependency to commons logging anymore
@@ -85,7 +96,7 @@ This brings a notable performance update to our test suites (10-30%).
   <ul>
     <li><b>New:</b> New variables ${wetator.testcase}, ${wetator.testfile}, and ${wetator.browser} added
     <li><b>New:</b> Click-on now takes all dom elements with an onclick handler assigned into account.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.29 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.29' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.29 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.29' target='_blank'>HtmlUnit Release Notes</a>).
     <li><b>Change:</b> Improved report layout
     <li><b>Change:</b> Improved highlighting for the screenshots.
     <li><b>Change:</b> Harmonize the report counts with the counts reported at the console
@@ -108,7 +119,7 @@ This brings a notable performance update to our test suites (10-30%).
   <ul>
     <li><b>New:</b> Finally we have a first version of the 'Write your first Wetator test' document online. And as always we did some more updates on the documentation.
     <li><b>New:</b> WikiScripter supports escaped unicode characters like \u00ed.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.27 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.27' target='_blank'>HtmlUnit Release Notes</a>).
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.27 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.27' target='_blank'>HtmlUnit Release Notes</a>).
     <li><b>Change:</b> <b>Default browser is changed to Firefox 52 (ESR).</b>
     <li><b>Change:</b> <b>FF38 support finally removed.</b>
     <li><b>Change:</b> <b>JDK 1.8 is requred</b>
@@ -163,7 +174,7 @@ defined inside the task. The classpath element is now required.
   <ul>
     <li><b>New:</b> If the page contains a canvas element, our screenshot stores the content as image.
     <li><b>New:</b> New configuration parameter 'wetator.uploadMimeType' to support correct simulation of sent mime type based on the software installed on the client.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.22 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.22' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 45(ESR).</b>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.22 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.22' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 45(ESR).</b>
     <li><b>Change:</b> RichFaces uses a special css trick to make elements invisible. WETATOR now takes care of this.
     <li><b>Change:</b> Handling of debug output of the wire-log improved.
     <li><b>Change:</b> Some fixes to support the various PrimeFaces upload controls.
@@ -183,7 +194,7 @@ defined inside the task. The classpath element is now required.
     <li><b>New:</b> Documentation of configuration option 'wetator.retrospect' added.
     <li><b>New:</b> It is possible to identify buttons by the value of the aria-label attribute.
     <li><b>New:</b> Asset-content now supports also docx and xlsx formats.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.20 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.20' target='_blank'>HtmlUnit Release Notes</a>). <b>IE8 support finally removed.</b>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.20 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.20' target='_blank'>HtmlUnit Release Notes</a>). <b>IE8 support finally removed.</b>
     <li><b>Change:</b> Retrospect setting is part of the output now.
     <li><b>Change:</b> Improvements of the highlighting.
     <li><b>Change:</b> Improved output formatting of link elements.
@@ -204,7 +215,7 @@ defined inside the task. The classpath element is now required.
   <ul>
     <li><b>New:</b> More general support for the title attribute added; you can find now also anchors and div's by title attribute.
     <li><b>New:</b> Configuration option 'wetator.browser.activeXObjects' added.
-    <li><b>Change:</b> HtmlUnit updated to the latest release 2.19 (<a href='http://htmlunit.sourceforge.net/changes-report.html#a2.19' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 38(ESR).</b>
+    <li><b>Change:</b> HtmlUnit updated to the latest release 2.19 (<a href='https://htmlunit.sourceforge.io/changes-report.html#a2.19' target='_blank'>HtmlUnit Release Notes</a>). <b>Default browser is changed to Firefox 38(ESR).</b>
     <li><b>Change:</b> The url anchor check is removed; many modern web app using the hash part of the url for doing some magic.
     <li><b>Bugfix:</b> Highlighting now works for frame content also.
     <li><b>Bugfix:</b> Take care the screenshot always shows the current state of checkboxes and radio buttons.

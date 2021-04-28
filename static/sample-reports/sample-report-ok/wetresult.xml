@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<wet id="0">
+  <about id="1">
+    <product id="2">Wetator</product>
+    <version id="3">local build</version>
+    <build id="4"></build>
+    <libraries id="5">
+      <library id="6">htmlunit-2.49.1.jar (2021-04-11)</library>
+      <library id="7">htmlunit-core-js-2.49.0.jar (2021-04-10)</library>
+      <library id="8">neko-htmlunit-2.49.0.jar (2021-04-10)</library>
+      <library id="9">htmlunit-cssparser-1.7.0.jar (2020-11-07)</library>
+      <library id="10">Apache Commons Lang 3.12.0</library>
+      <library id="11">Apache Commons Text 1.9</library>
+      <library id="12">Apache Commons Codec 1.13</library>
+      <library id="13">Apache Commons IO 2.8.0</library>
+      <library id="14">HttpComponents Apache HttpCore 4.4.13</library>
+      <library id="15">Apache HttpClient 4.5.13</library>
+      <library id="16">Apache HttpClient Mime 4.5.13</library>
+      <library id="17">Apache Log4j API 2.14.1</library>
+      <library id="18">Apache Log4j Core 2.14.1</library>
+      <library id="19">automaton-1.12-1.jar</library>
+      <library id="20">POI 4.1.2</library>
+      <library id="21">Apache PDFBox 2.0.23</library>
+      <library id="22">Apache FontBox 2.0.23</library>
+      <library id="23">XmlCommonsExternal 1.4.01</library>
+      <library id="24">Xerces-J 2.12.0</library>
+      <library id="25">Xalan Java 2.7.2</library>
+    </libraries>
+    <java id="26">
+      <property id="27" key="apache.commons.httpclient.cookiespec" value="COMPATIBILITY" />
+      <property id="28" key="awt.toolkit" value="sun.awt.windows.WToolkit" />
+      <property id="29" key="file.encoding" value="UTF-8" />
+      <property id="30" key="file.encoding.pkg" value="sun.io" />
+      <property id="31" key="file.separator" value="\" />
+      <property id="32" key="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+      <property id="33" key="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+      <property id="34" key="java.class.path" value="C:\RBRi\eclipse\workspace\wetator\bin;C:\RBRi\eclipse\workspace\wetator\lib\automaton-1.12-1.jar;C:\RBRi\eclipse\workspace\wetator\lib\bcmail-jdk15on-1.68.jar;C:\RBRi\eclipse\workspace\wetator\lib\bcpkix-jdk15on-1.68.jar;C:\RBRi\eclipse\workspace\wetator\lib\bcprov-jdk15on-1.68.jar;C:\RBRi\eclipse\workspace\wetator\lib\byte-buddy-1.10.19.jar;C:\RBRi\eclipse\workspace\wetator\lib\byte-buddy-agent-1.10.19.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-codec-1.13.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-collections4-4.4.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-compress-1.19.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-io-2.8.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-lang3-3.12.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-logging-1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-math3-3.6.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-net-3.8.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\commons-text-1.9.jar;C:\RBRi\eclipse\workspace\wetator\lib\curvesapi-1.06.jar;C:\RBRi\eclipse\workspace\wetator\lib\dec-0.1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\fontbox-2.0.23.jar;C:\RBRi\eclipse\workspace\wetator\lib\hamcrest-core-1.3.jar;C:\RBRi\eclipse\workspace\wetator\lib\hsqldb-2.5.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\htmlunit-2.49.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\htmlunit-core-js-2.49.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\htmlunit-cssparser-1.7.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\httpclient-4.5.13.jar;C:\RBRi\eclipse\workspace\wetator\lib\httpcore-4.4.13.jar;C:\RBRi\eclipse\workspace\wetator\lib\httpmime-4.5.13.jar;C:\RBRi\eclipse\workspace\wetator\lib\javax.servlet-api-3.1.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-client-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-continuation-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-http-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-io-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-security-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-server-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-servlet-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-servlets-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-util-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-webapp-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\jetty-xml-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\junit-4.13.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\log4j-api-2.14.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\log4j-core-2.14.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\log4j-jcl-2.14.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\log4j-slf4j-impl-2.14.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\mockito-core-3.7.7.jar;C:\RBRi\eclipse\workspace\wetator\lib\neko-htmlunit-2.49.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\objenesis-3.1.jar;C:\RBRi\eclipse\workspace\wetator\lib\pdfbox-2.0.23.jar;C:\RBRi\eclipse\workspace\wetator\lib\poi-4.1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\poi-ooxml-4.1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\poi-ooxml-schemas-4.1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\relaxngDatatype-20020414.jar;C:\RBRi\eclipse\workspace\wetator\lib\salvation2-3.0.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\serializer-2.7.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\slf4j-api-1.7.30.jar;C:\RBRi\eclipse\workspace\wetator\lib\SparseBitSet-1.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\txtmark-0.13.jar;C:\RBRi\eclipse\workspace\wetator\lib\websocket-api-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\websocket-client-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\websocket-common-9.4.39.v20210325.jar;C:\RBRi\eclipse\workspace\wetator\lib\xalan-2.7.2.jar;C:\RBRi\eclipse\workspace\wetator\lib\xercesImpl-2.12.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\xml-apis-1.4.01.jar;C:\RBRi\eclipse\workspace\wetator\lib\xmlbeans-3.1.0.jar;C:\RBRi\eclipse\workspace\wetator\lib\xsom-20140925.jar" />
+      <property id="35" key="java.class.version" value="52.0" />
+      <property id="36" key="java.endorsed.dirs" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\endorsed" />
+      <property id="37" key="java.ext.dirs" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+      <property id="38" key="java.home" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre" />
+      <property id="39" key="java.io.tmpdir" value="C:\Users\ronald\AppData\Local\Temp\" />
+      <property id="40" key="java.library.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\RBRi\apache-ant-1.10.8\bin;C:\RBRi\apache-maven-3.6.3\bin;C:\RBRi\gradle\gradle-6.5.1\bin;C:\Program Files\SmartGit\git\bin;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Users\ronald\AppData\Local\Microsoft\WindowsApps;;." />
+      <property id="41" key="java.runtime.name" value="OpenJDK Runtime Environment" />
+      <property id="42" key="java.runtime.version" value="1.8.0_282-b08" />
+      <property id="43" key="java.specification.name" value="Java Platform API Specification" />
+      <property id="44" key="java.specification.vendor" value="Oracle Corporation" />
+      <property id="45" key="java.specification.version" value="1.8" />
+      <property id="46" key="java.vendor" value="ojdkbuild" />
+      <property id="47" key="java.vendor.url" value="https://github.com/ojdkbuild" />
+      <property id="48" key="java.vendor.url.bug" value="https://github.com/ojdkbuild/ojdkbuild/issues" />
+      <property id="49" key="java.version" value="1.8.0_282" />
+      <property id="50" key="java.vm.info" value="mixed mode" />
+      <property id="51" key="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+      <property id="52" key="java.vm.specification.name" value="Java Virtual Machine Specification" />
+      <property id="53" key="java.vm.specification.vendor" value="Oracle Corporation" />
+      <property id="54" key="java.vm.specification.version" value="1.8" />
+      <property id="55" key="java.vm.vendor" value="ojdkbuild" />
+      <property id="56" key="java.vm.version" value="25.282-b08" />
+      <property id="57" key="line.separator" value="\r\n" />
+      <property id="58" key="os.arch" value="amd64" />
+      <property id="59" key="os.name" value="Windows 10" />
+      <property id="60" key="os.version" value="10.0" />
+      <property id="61" key="path.separator" value=";" />
+      <property id="62" key="sun.arch.data.model" value="64" />
+      <property id="63" key="sun.awt.enableExtraMouseButtons" value="true" />
+      <property id="64" key="sun.boot.class.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\resources.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\rt.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\sunrsasign.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\jsse.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\jce.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\charsets.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\lib\jfr.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\classes" />
+      <property id="65" key="sun.boot.library.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.282-1\jre\bin" />
+      <property id="66" key="sun.cpu.endian" value="little" />
+      <property id="67" key="sun.cpu.isalist" value="amd64" />
+      <property id="68" key="sun.desktop" value="windows" />
+      <property id="69" key="sun.io.unicode.encoding" value="UnicodeLittle" />
+      <property id="70" key="sun.java.command" value="org.wetator.Wetator" />
+      <property id="71" key="sun.java.launcher" value="SUN_STANDARD" />
+      <property id="72" key="sun.jnu.encoding" value="Cp1252" />
+      <property id="73" key="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+      <property id="74" key="sun.os.patch.level" value="" />
+      <property id="75" key="user.country" value="US" />
+      <property id="76" key="user.country.format" value="DE" />
+      <property id="77" key="user.dir" value="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform" />
+      <property id="78" key="user.home" value="C:\Users\ronald" />
+      <property id="79" key="user.language" value="en" />
+      <property id="80" key="user.language.format" value="de" />
+      <property id="81" key="user.name" value="Ronald" />
+      <property id="82" key="user.script" value="" />
+      <property id="83" key="user.timezone" value="Europe/Berlin" />
+      <property id="84" key="user.variant" value="" />
+    </java>
+  </about>
+  <configuration id="85">
+    <property id="86" key="configuration file" value="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator.config" />
+    <property id="87" key="wetator.baseUrl" value="http://www.wetator.org" />
+    <property id="88" key="wetator.browser" value="IE11" />
+    <property id="89" key="wetator.browser" value="Firefox" />
+    <property id="90" key="wetator.browser" value="Firefox78" />
+    <property id="91" key="wetator.browser" value="Chrome" />
+    <property id="92" key="wetator.acceptLanguage" value="en-us,en;q=0.8,de-de;q=0.5,de;q=0.3" />
+    <property id="93" key="wetator.outputDir" value="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\logs" />
+    <property id="94" key="wetator.jsTimeout" value="1s" />
+    <property id="95" key="wetator.httpTimeout" value="90s" />
+    <property id="96" key="wetator.wpath.separator" value="&gt;" />
+    <property id="97" key="wetator.xslTemplates" value="C:\RBRi\eclipse\workspace\wetator\xsl\run_report.xsl" />
+    <property id="98" key="wetator.commandSets" value="org.wetator.commandset.DefaultCommandSet" />
+    <property id="99" key="wetator.controls" value="" />
+    <property id="100" key="wetator.scripters" value="org.wetator.scripter.XMLScripter" />
+    <property id="101" key="wetator.scripters" value="org.wetator.scripter.LegacyXMLScripter" />
+    <property id="102" key="wetator.scripters" value="org.wetator.scripter.ExcelScripter" />
+    <property id="103" key="wetator.scripters" value="org.wetator.scripter.WikiTextScripter" />
+    <property id="104" key="wetator.proxyHost" />
+    <property id="105" key="wetator.proxyPort" value="0" />
+    <property id="106" key="wetator.proxyHostsToBypass" value="" />
+    <property id="107" key="wetator.proxyUser" />
+    <property id="108" key="wetator.basicAuthUser" />
+    <property id="109" key="wetator.ntlmUser" />
+    <property id="110" key="wetator.ntlmWorkstation" />
+    <property id="111" key="wetator.ntlmDomain" />
+    <property id="112" key="wetator.retrospect" value="-1" />
+    <property id="113" key="wetator.jsDebugger" value="false" />
+    <variables id="114">
+    </variables>
+    <commandSet id="115" class="class org.wetator.commandset.DefaultCommandSet">
+    </commandSet>
+  </configuration>
+  <startTime id="116">28.04.2021 19:45:14</startTime>
+  <testFile id="117">C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett</testFile>
+  <testcase id="118" name="wetator_testform.wett" file="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett">
+    <testrun id="119" browser="IE11">
+      <testfile id="120" file="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett">
+        <command id="121" name="" line="1" isComment="true">
+          <param0 id="122">simple test case</param0>
+          <param1 id="123"></param1>
+          <param2 id="124"></param2>
+          <executionTime id="125">0</executionTime>
+        </command>
+        <command id="126" name="comment" line="2" isComment="true">
+          <param0 id="127"></param0>
+          <param1 id="128"></param1>
+          <param2 id="129"></param2>
+          <executionTime id="130">0</executionTime>
+        </command>
+        <command id="131" name="" line="3" isComment="true">
+          <param0 id="132">open the page</param0>
+          <param1 id="133"></param1>
+          <param2 id="134"></param2>
+          <executionTime id="135">0</executionTime>
+        </command>
+        <command id="136" name="open-url" line="4">
+          <param0 id="137">http://www.wetator.org/testform</param0>
+          <param1 id="138"></param1>
+          <param2 id="139"></param2>
+          <log id="140">
+            <level id="141">WARN</level>
+            <message id="142">Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="143">
+            <level id="144">INFO</level>
+            <message id="145">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="146">ie11/responses_current/response_100000.html</response>
+          <executionTime id="147">1289</executionTime>
+        </command>
+        <command id="148" name="" line="6" isComment="true">
+          <param0 id="149">do we reach the correct page?</param0>
+          <param1 id="150"></param1>
+          <param2 id="151"></param2>
+          <executionTime id="152">0</executionTime>
+        </command>
+        <command id="153" name="assert-title" line="7">
+          <param0 id="154">WETATOR / Test Form</param0>
+          <param1 id="155"></param1>
+          <param2 id="156"></param2>
+          <executionTime id="157">7</executionTime>
+        </command>
+        <command id="158" name="" line="9" isComment="true">
+          <param0 id="159">Check the page defaults</param0>
+          <param1 id="160"></param1>
+          <param2 id="161"></param2>
+          <executionTime id="162">0</executionTime>
+        </command>
+        <command id="163" name="assert-content" line="10">
+          <param0 id="164">The form below is only for testing purpose.</param0>
+          <param1 id="165"></param1>
+          <param2 id="166"></param2>
+          <executionTime id="167">8</executionTime>
+        </command>
+        <command id="168" name="assert-set" line="11">
+          <param0 id="169">Project name</param0>
+          <param1 id="170"></param1>
+          <param2 id="171"></param2>
+          <log id="172">
+            <level id="173">INFO</level>
+            <message id="174">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="175">
+            <level id="176">INFO</level>
+            <message id="177">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="178">
+            <level id="179">INFO</level>
+            <message id="180">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="181">
+            <level id="182">INFO</level>
+            <message id="183">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="184">ie11/responses_current/response_100000.html?highlight=%23project</highlight>
+          <executionTime id="185">22</executionTime>
+        </command>
+        <command id="186" name="assert-selected" line="12">
+          <param0 id="187">other</param0>
+          <param1 id="188"></param1>
+          <param2 id="189"></param2>
+          <log id="190">
+            <level id="191">INFO</level>
+            <message id="192">Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="193">
+            <level id="194">INFO</level>
+            <message id="195">Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</message>
+          </log>
+          <log id="196">
+            <level id="197">INFO</level>
+            <message id="198">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</message>
+          </log>
+          <log id="199">
+            <level id="200">INFO</level>
+            <message id="201">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</message>
+          </log>
+          <log id="202">
+            <level id="203">INFO</level>
+            <message id="204">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="205">ie11/responses_current/response_100000.html?highlight=%23languages</highlight>
+          <executionTime id="206">7</executionTime>
+        </command>
+        <command id="207" name="assert-deselected" line="13">
+          <param0 id="208">WETATOR is &gt; amazing</param0>
+          <param1 id="209"></param1>
+          <param2 id="210"></param2>
+          <log id="211">
+            <level id="212">INFO</level>
+            <message id="213">Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="214">
+            <level id="215">INFO</level>
+            <message id="216">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</message>
+          </log>
+          <log id="217">
+            <level id="218">INFO</level>
+            <message id="219">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="220">
+            <level id="221">INFO</level>
+            <message id="222">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="223">ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_amazing</highlight>
+          <executionTime id="224">14</executionTime>
+        </command>
+        <command id="225" name="assert-deselected" line="14">
+          <param0 id="226">WETATOR is &gt; visionary</param0>
+          <param1 id="227"></param1>
+          <param2 id="228"></param2>
+          <log id="229">
+            <level id="230">INFO</level>
+            <message id="231">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="232">
+            <level id="233">INFO</level>
+            <message id="234">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="235">
+            <level id="236">INFO</level>
+            <message id="237">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="238">ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <executionTime id="239">5</executionTime>
+        </command>
+        <command id="240" name="assert-deselected" line="15">
+          <param0 id="241">WETATOR is &gt; marvelous</param0>
+          <param1 id="242"></param1>
+          <param2 id="243"></param2>
+          <log id="244">
+            <level id="245">INFO</level>
+            <message id="246">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="247">ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_marvelous</highlight>
+          <executionTime id="248">5</executionTime>
+        </command>
+        <command id="249" name="assert-set" line="16">
+          <param0 id="250">WETATOR makes</param0>
+          <param1 id="251"></param1>
+          <param2 id="252"></param2>
+          <log id="253">
+            <level id="254">INFO</level>
+            <message id="255">Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</message>
+          </log>
+          <log id="256">
+            <level id="257">INFO</level>
+            <message id="258">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</message>
+          </log>
+          <log id="259">
+            <level id="260">INFO</level>
+            <message id="261">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="262">ie11/responses_current/response_100000.html?highlight=%23wetatorIsText</highlight>
+          <executionTime id="263">2</executionTime>
+        </command>
+        <command id="264" name="" line="18" isComment="true">
+          <param0 id="265">time to start</param0>
+          <param1 id="266"></param1>
+          <param2 id="267"></param2>
+          <executionTime id="268">0</executionTime>
+        </command>
+        <command id="269" name="set" line="19">
+          <param0 id="270">Project name</param0>
+          <param1 id="271">HtmlUnit</param1>
+          <param2 id="272"></param2>
+          <log id="273">
+            <level id="274">INFO</level>
+            <message id="275">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="276">
+            <level id="277">INFO</level>
+            <message id="278">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="279">
+            <level id="280">INFO</level>
+            <message id="281">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="282">
+            <level id="283">INFO</level>
+            <message id="284">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="285">ie11/responses_current/response_100000.html?highlight=%23project</highlight>
+          <response id="286">ie11/responses_current/response_100001.html?highlight=%23project</response>
+          <executionTime id="287">9</executionTime>
+        </command>
+        <command id="288" name="select" line="20">
+          <param0 id="289">programming language &gt; JAVA</param0>
+          <param1 id="290"></param1>
+          <param2 id="291"></param2>
+          <log id="292">
+            <level id="293">INFO</level>
+            <message id="294">Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="295">
+            <level id="296">INFO</level>
+            <message id="297">Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</message>
+          </log>
+          <log id="298">
+            <level id="299">INFO</level>
+            <message id="300">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</message>
+          </log>
+          <log id="301">
+            <level id="302">INFO</level>
+            <message id="303">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</message>
+          </log>
+          <log id="304">
+            <level id="305">INFO</level>
+            <message id="306">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="307">ie11/responses_current/response_100001.html?highlight=%23languages</highlight>
+          <response id="308">ie11/responses_current/response_100002.html?highlight=%23languages</response>
+          <executionTime id="309">11</executionTime>
+        </command>
+        <command id="310" name="select" line="21">
+          <param0 id="311">WETATOR is &gt; visionary</param0>
+          <param1 id="312"></param1>
+          <param2 id="313"></param2>
+          <log id="314">
+            <level id="315">INFO</level>
+            <message id="316">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="317">
+            <level id="318">INFO</level>
+            <message id="319">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</message>
+          </log>
+          <log id="320">
+            <level id="321">INFO</level>
+            <message id="322">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="323">ie11/responses_current/response_100002.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <response id="324">ie11/responses_current/response_100003.html?highlight=%23wetatorIs_wetatorIs_visionary</response>
+          <executionTime id="325">7</executionTime>
+        </command>
+        <command id="326" name="click-on" line="22">
+          <param0 id="327">Submit My Truth</param0>
+          <param1 id="328"></param1>
+          <param2 id="329"></param2>
+          <log id="330">
+            <level id="331">INFO</level>
+            <message id="332">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</message>
+          </log>
+          <highlight id="333">ie11/responses_current/response_100003.html?highlight=%23submit</highlight>
+          <response id="334">ie11/responses_current/response_100004.html</response>
+          <executionTime id="335">82</executionTime>
+        </command>
+        <command id="336" name="assert-content" line="23">
+          <param0 id="337">We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</param0>
+          <param1 id="338"></param1>
+          <param2 id="339"></param2>
+          <executionTime id="340">1</executionTime>
+        </command>
+        <command id="341" name="assert-content" line="24">
+          <param0 id="342">Why not using WETATOR for your other JAVA projects?</param0>
+          <param1 id="343"></param1>
+          <param2 id="344"></param2>
+          <executionTime id="345">17</executionTime>
+        </command>
+        <command id="346" name="" line="26" isComment="true">
+          <param0 id="347">finally test the validation</param0>
+          <param1 id="348"></param1>
+          <param2 id="349"></param2>
+          <executionTime id="350">0</executionTime>
+        </command>
+        <command id="351" name="open-url" line="27">
+          <param0 id="352">/testform</param0>
+          <param1 id="353"></param1>
+          <param2 id="354"></param2>
+          <log id="355">
+            <level id="356">INFO</level>
+            <message id="357">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="358">ie11/responses_current/response_100005.html</response>
+          <executionTime id="359">113</executionTime>
+        </command>
+        <command id="360" name="assert-title" line="28">
+          <param0 id="361">WETATOR / Test Form</param0>
+          <param1 id="362"></param1>
+          <param2 id="363"></param2>
+          <executionTime id="364">0</executionTime>
+        </command>
+        <command id="365" name="assert-set" line="29">
+          <param0 id="366">Project name</param0>
+          <param1 id="367"></param1>
+          <param2 id="368"></param2>
+          <log id="369">
+            <level id="370">INFO</level>
+            <message id="371">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="372">
+            <level id="373">INFO</level>
+            <message id="374">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="375">
+            <level id="376">INFO</level>
+            <message id="377">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="378">
+            <level id="379">INFO</level>
+            <message id="380">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="381">ie11/responses_current/response_100005.html?highlight=%23project</highlight>
+          <executionTime id="382">2</executionTime>
+        </command>
+        <command id="383" name="click-on" line="30">
+          <param0 id="384">Submit My Truth</param0>
+          <param1 id="385"></param1>
+          <param2 id="386"></param2>
+          <log id="387">
+            <level id="388">INFO</level>
+            <message id="389">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 408 start: 408 index: 129'.</message>
+          </log>
+          <highlight id="390">ie11/responses_current/response_100005.html?highlight=%23submit</highlight>
+          <response id="391">ie11/responses_current/response_100006.html</response>
+          <executionTime id="392">68</executionTime>
+        </command>
+        <command id="393" name="assert-content" line="31">
+          <param0 id="394">"Project name" is a required field</param0>
+          <param1 id="395"></param1>
+          <param2 id="396"></param2>
+          <executionTime id="397">1</executionTime>
+        </command>
+      </testfile>
+    </testrun>
+    <testrun id="398" browser="Firefox">
+      <testfile id="399" file="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett">
+        <command id="400" name="" line="1" isComment="true">
+          <param0 id="401">simple test case</param0>
+          <param1 id="402"></param1>
+          <param2 id="403"></param2>
+          <executionTime id="404">0</executionTime>
+        </command>
+        <command id="405" name="comment" line="2" isComment="true">
+          <param0 id="406"></param0>
+          <param1 id="407"></param1>
+          <param2 id="408"></param2>
+          <executionTime id="409">0</executionTime>
+        </command>
+        <command id="410" name="" line="3" isComment="true">
+          <param0 id="411">open the page</param0>
+          <param1 id="412"></param1>
+          <param2 id="413"></param2>
+          <executionTime id="414">0</executionTime>
+        </command>
+        <command id="415" name="open-url" line="4">
+          <param0 id="416">http://www.wetator.org/testform</param0>
+          <param1 id="417"></param1>
+          <param2 id="418"></param2>
+          <log id="419">
+            <level id="420">WARN</level>
+            <message id="421">Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="422">
+            <level id="423">INFO</level>
+            <message id="424">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="425">firefox/responses_current/response_100007.html</response>
+          <executionTime id="426">524</executionTime>
+        </command>
+        <command id="427" name="" line="6" isComment="true">
+          <param0 id="428">do we reach the correct page?</param0>
+          <param1 id="429"></param1>
+          <param2 id="430"></param2>
+          <executionTime id="431">0</executionTime>
+        </command>
+        <command id="432" name="assert-title" line="7">
+          <param0 id="433">WETATOR / Test Form</param0>
+          <param1 id="434"></param1>
+          <param2 id="435"></param2>
+          <executionTime id="436">0</executionTime>
+        </command>
+        <command id="437" name="" line="9" isComment="true">
+          <param0 id="438">Check the page defaults</param0>
+          <param1 id="439"></param1>
+          <param2 id="440"></param2>
+          <executionTime id="441">0</executionTime>
+        </command>
+        <command id="442" name="assert-content" line="10">
+          <param0 id="443">The form below is only for testing purpose.</param0>
+          <param1 id="444"></param1>
+          <param2 id="445"></param2>
+          <executionTime id="446">2</executionTime>
+        </command>
+        <command id="447" name="assert-set" line="11">
+          <param0 id="448">Project name</param0>
+          <param1 id="449"></param1>
+          <param2 id="450"></param2>
+          <log id="451">
+            <level id="452">INFO</level>
+            <message id="453">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="454">
+            <level id="455">INFO</level>
+            <message id="456">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="457">
+            <level id="458">INFO</level>
+            <message id="459">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="460">
+            <level id="461">INFO</level>
+            <message id="462">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="463">firefox/responses_current/response_100007.html?highlight=%23project</highlight>
+          <executionTime id="464">3</executionTime>
+        </command>
+        <command id="465" name="assert-selected" line="12">
+          <param0 id="466">other</param0>
+          <param1 id="467"></param1>
+          <param2 id="468"></param2>
+          <log id="469">
+            <level id="470">INFO</level>
+            <message id="471">Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="472">
+            <level id="473">INFO</level>
+            <message id="474">Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</message>
+          </log>
+          <log id="475">
+            <level id="476">INFO</level>
+            <message id="477">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</message>
+          </log>
+          <log id="478">
+            <level id="479">INFO</level>
+            <message id="480">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</message>
+          </log>
+          <log id="481">
+            <level id="482">INFO</level>
+            <message id="483">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="484">firefox/responses_current/response_100007.html?highlight=%23languages</highlight>
+          <executionTime id="485">3</executionTime>
+        </command>
+        <command id="486" name="assert-deselected" line="13">
+          <param0 id="487">WETATOR is &gt; amazing</param0>
+          <param1 id="488"></param1>
+          <param2 id="489"></param2>
+          <log id="490">
+            <level id="491">INFO</level>
+            <message id="492">Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="493">
+            <level id="494">INFO</level>
+            <message id="495">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</message>
+          </log>
+          <log id="496">
+            <level id="497">INFO</level>
+            <message id="498">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="499">
+            <level id="500">INFO</level>
+            <message id="501">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="502">firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_amazing</highlight>
+          <executionTime id="503">2</executionTime>
+        </command>
+        <command id="504" name="assert-deselected" line="14">
+          <param0 id="505">WETATOR is &gt; visionary</param0>
+          <param1 id="506"></param1>
+          <param2 id="507"></param2>
+          <log id="508">
+            <level id="509">INFO</level>
+            <message id="510">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="511">
+            <level id="512">INFO</level>
+            <message id="513">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="514">
+            <level id="515">INFO</level>
+            <message id="516">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="517">firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <executionTime id="518">1</executionTime>
+        </command>
+        <command id="519" name="assert-deselected" line="15">
+          <param0 id="520">WETATOR is &gt; marvelous</param0>
+          <param1 id="521"></param1>
+          <param2 id="522"></param2>
+          <log id="523">
+            <level id="524">INFO</level>
+            <message id="525">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="526">firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_marvelous</highlight>
+          <executionTime id="527">2</executionTime>
+        </command>
+        <command id="528" name="assert-set" line="16">
+          <param0 id="529">WETATOR makes</param0>
+          <param1 id="530"></param1>
+          <param2 id="531"></param2>
+          <log id="532">
+            <level id="533">INFO</level>
+            <message id="534">Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</message>
+          </log>
+          <log id="535">
+            <level id="536">INFO</level>
+            <message id="537">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</message>
+          </log>
+          <log id="538">
+            <level id="539">INFO</level>
+            <message id="540">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="541">firefox/responses_current/response_100007.html?highlight=%23wetatorIsText</highlight>
+          <executionTime id="542">1</executionTime>
+        </command>
+        <command id="543" name="" line="18" isComment="true">
+          <param0 id="544">time to start</param0>
+          <param1 id="545"></param1>
+          <param2 id="546"></param2>
+          <executionTime id="547">0</executionTime>
+        </command>
+        <command id="548" name="set" line="19">
+          <param0 id="549">Project name</param0>
+          <param1 id="550">HtmlUnit</param1>
+          <param2 id="551"></param2>
+          <log id="552">
+            <level id="553">INFO</level>
+            <message id="554">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="555">
+            <level id="556">INFO</level>
+            <message id="557">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="558">
+            <level id="559">INFO</level>
+            <message id="560">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="561">
+            <level id="562">INFO</level>
+            <message id="563">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="564">firefox/responses_current/response_100007.html?highlight=%23project</highlight>
+          <response id="565">firefox/responses_current/response_100008.html?highlight=%23project</response>
+          <executionTime id="566">7</executionTime>
+        </command>
+        <command id="567" name="select" line="20">
+          <param0 id="568">programming language &gt; JAVA</param0>
+          <param1 id="569"></param1>
+          <param2 id="570"></param2>
+          <log id="571">
+            <level id="572">INFO</level>
+            <message id="573">Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="574">
+            <level id="575">INFO</level>
+            <message id="576">Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</message>
+          </log>
+          <log id="577">
+            <level id="578">INFO</level>
+            <message id="579">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</message>
+          </log>
+          <log id="580">
+            <level id="581">INFO</level>
+            <message id="582">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</message>
+          </log>
+          <log id="583">
+            <level id="584">INFO</level>
+            <message id="585">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="586">firefox/responses_current/response_100008.html?highlight=%23languages</highlight>
+          <response id="587">firefox/responses_current/response_100009.html?highlight=%23languages</response>
+          <executionTime id="588">6</executionTime>
+        </command>
+        <command id="589" name="select" line="21">
+          <param0 id="590">WETATOR is &gt; visionary</param0>
+          <param1 id="591"></param1>
+          <param2 id="592"></param2>
+          <log id="593">
+            <level id="594">INFO</level>
+            <message id="595">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="596">
+            <level id="597">INFO</level>
+            <message id="598">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</message>
+          </log>
+          <log id="599">
+            <level id="600">INFO</level>
+            <message id="601">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="602">firefox/responses_current/response_100009.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <response id="603">firefox/responses_current/response_100010.html?highlight=%23wetatorIs_wetatorIs_visionary</response>
+          <executionTime id="604">4</executionTime>
+        </command>
+        <command id="605" name="click-on" line="22">
+          <param0 id="606">Submit My Truth</param0>
+          <param1 id="607"></param1>
+          <param2 id="608"></param2>
+          <log id="609">
+            <level id="610">INFO</level>
+            <message id="611">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</message>
+          </log>
+          <highlight id="612">firefox/responses_current/response_100010.html?highlight=%23submit</highlight>
+          <response id="613">firefox/responses_current/response_100011.html</response>
+          <executionTime id="614">84</executionTime>
+        </command>
+        <command id="615" name="assert-content" line="23">
+          <param0 id="616">We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</param0>
+          <param1 id="617"></param1>
+          <param2 id="618"></param2>
+          <executionTime id="619">1</executionTime>
+        </command>
+        <command id="620" name="assert-content" line="24">
+          <param0 id="621">Why not using WETATOR for your other JAVA projects?</param0>
+          <param1 id="622"></param1>
+          <param2 id="623"></param2>
+          <executionTime id="624">1</executionTime>
+        </command>
+        <command id="625" name="" line="26" isComment="true">
+          <param0 id="626">finally test the validation</param0>
+          <param1 id="627"></param1>
+          <param2 id="628"></param2>
+          <executionTime id="629">0</executionTime>
+        </command>
+        <command id="630" name="open-url" line="27">
+          <param0 id="631">/testform</param0>
+          <param1 id="632"></param1>
+          <param2 id="633"></param2>
+          <log id="634">
+            <level id="635">INFO</level>
+            <message id="636">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="637">firefox/responses_current/response_100012.html</response>
+          <executionTime id="638">107</executionTime>
+        </command>
+        <command id="639" name="assert-title" line="28">
+          <param0 id="640">WETATOR / Test Form</param0>
+          <param1 id="641"></param1>
+          <param2 id="642"></param2>
+          <executionTime id="643">0</executionTime>
+        </command>
+        <command id="644" name="assert-set" line="29">
+          <param0 id="645">Project name</param0>
+          <param1 id="646"></param1>
+          <param2 id="647"></param2>
+          <log id="648">
+            <level id="649">INFO</level>
+            <message id="650">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="651">
+            <level id="652">INFO</level>
+            <message id="653">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="654">
+            <level id="655">INFO</level>
+            <message id="656">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="657">
+            <level id="658">INFO</level>
+            <message id="659">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="660">firefox/responses_current/response_100012.html?highlight=%23project</highlight>
+          <executionTime id="661">2</executionTime>
+        </command>
+        <command id="662" name="click-on" line="30">
+          <param0 id="663">Submit My Truth</param0>
+          <param1 id="664"></param1>
+          <param2 id="665"></param2>
+          <log id="666">
+            <level id="667">INFO</level>
+            <message id="668">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 408 start: 408 index: 129'.</message>
+          </log>
+          <highlight id="669">firefox/responses_current/response_100012.html?highlight=%23submit</highlight>
+          <response id="670">firefox/responses_current/response_100013.html</response>
+          <executionTime id="671">61</executionTime>
+        </command>
+        <command id="672" name="assert-content" line="31">
+          <param0 id="673">"Project name" is a required field</param0>
+          <param1 id="674"></param1>
+          <param2 id="675"></param2>
+          <executionTime id="676">0</executionTime>
+        </command>
+      </testfile>
+    </testrun>
+    <testrun id="677" browser="Firefox78">
+      <testfile id="678" file="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett">
+        <command id="679" name="" line="1" isComment="true">
+          <param0 id="680">simple test case</param0>
+          <param1 id="681"></param1>
+          <param2 id="682"></param2>
+          <executionTime id="683">0</executionTime>
+        </command>
+        <command id="684" name="comment" line="2" isComment="true">
+          <param0 id="685"></param0>
+          <param1 id="686"></param1>
+          <param2 id="687"></param2>
+          <executionTime id="688">0</executionTime>
+        </command>
+        <command id="689" name="" line="3" isComment="true">
+          <param0 id="690">open the page</param0>
+          <param1 id="691"></param1>
+          <param2 id="692"></param2>
+          <executionTime id="693">0</executionTime>
+        </command>
+        <command id="694" name="open-url" line="4">
+          <param0 id="695">http://www.wetator.org/testform</param0>
+          <param1 id="696"></param1>
+          <param2 id="697"></param2>
+          <log id="698">
+            <level id="699">WARN</level>
+            <message id="700">Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="701">
+            <level id="702">INFO</level>
+            <message id="703">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="704">firefox78/responses_current/response_100014.html</response>
+          <executionTime id="705">1559</executionTime>
+        </command>
+        <command id="706" name="" line="6" isComment="true">
+          <param0 id="707">do we reach the correct page?</param0>
+          <param1 id="708"></param1>
+          <param2 id="709"></param2>
+          <executionTime id="710">0</executionTime>
+        </command>
+        <command id="711" name="assert-title" line="7">
+          <param0 id="712">WETATOR / Test Form</param0>
+          <param1 id="713"></param1>
+          <param2 id="714"></param2>
+          <executionTime id="715">0</executionTime>
+        </command>
+        <command id="716" name="" line="9" isComment="true">
+          <param0 id="717">Check the page defaults</param0>
+          <param1 id="718"></param1>
+          <param2 id="719"></param2>
+          <executionTime id="720">0</executionTime>
+        </command>
+        <command id="721" name="assert-content" line="10">
+          <param0 id="722">The form below is only for testing purpose.</param0>
+          <param1 id="723"></param1>
+          <param2 id="724"></param2>
+          <executionTime id="725">1</executionTime>
+        </command>
+        <command id="726" name="assert-set" line="11">
+          <param0 id="727">Project name</param0>
+          <param1 id="728"></param1>
+          <param2 id="729"></param2>
+          <log id="730">
+            <level id="731">INFO</level>
+            <message id="732">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="733">
+            <level id="734">INFO</level>
+            <message id="735">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="736">
+            <level id="737">INFO</level>
+            <message id="738">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="739">
+            <level id="740">INFO</level>
+            <message id="741">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="742">firefox78/responses_current/response_100014.html?highlight=%23project</highlight>
+          <executionTime id="743">1</executionTime>
+        </command>
+        <command id="744" name="assert-selected" line="12">
+          <param0 id="745">other</param0>
+          <param1 id="746"></param1>
+          <param2 id="747"></param2>
+          <log id="748">
+            <level id="749">INFO</level>
+            <message id="750">Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="751">
+            <level id="752">INFO</level>
+            <message id="753">Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</message>
+          </log>
+          <log id="754">
+            <level id="755">INFO</level>
+            <message id="756">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</message>
+          </log>
+          <log id="757">
+            <level id="758">INFO</level>
+            <message id="759">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</message>
+          </log>
+          <log id="760">
+            <level id="761">INFO</level>
+            <message id="762">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="763">firefox78/responses_current/response_100014.html?highlight=%23languages</highlight>
+          <executionTime id="764">1</executionTime>
+        </command>
+        <command id="765" name="assert-deselected" line="13">
+          <param0 id="766">WETATOR is &gt; amazing</param0>
+          <param1 id="767"></param1>
+          <param2 id="768"></param2>
+          <log id="769">
+            <level id="770">INFO</level>
+            <message id="771">Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="772">
+            <level id="773">INFO</level>
+            <message id="774">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</message>
+          </log>
+          <log id="775">
+            <level id="776">INFO</level>
+            <message id="777">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="778">
+            <level id="779">INFO</level>
+            <message id="780">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="781">firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_amazing</highlight>
+          <executionTime id="782">1</executionTime>
+        </command>
+        <command id="783" name="assert-deselected" line="14">
+          <param0 id="784">WETATOR is &gt; visionary</param0>
+          <param1 id="785"></param1>
+          <param2 id="786"></param2>
+          <log id="787">
+            <level id="788">INFO</level>
+            <message id="789">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="790">
+            <level id="791">INFO</level>
+            <message id="792">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="793">
+            <level id="794">INFO</level>
+            <message id="795">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="796">firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <executionTime id="797">1</executionTime>
+        </command>
+        <command id="798" name="assert-deselected" line="15">
+          <param0 id="799">WETATOR is &gt; marvelous</param0>
+          <param1 id="800"></param1>
+          <param2 id="801"></param2>
+          <log id="802">
+            <level id="803">INFO</level>
+            <message id="804">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="805">firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_marvelous</highlight>
+          <executionTime id="806">1</executionTime>
+        </command>
+        <command id="807" name="assert-set" line="16">
+          <param0 id="808">WETATOR makes</param0>
+          <param1 id="809"></param1>
+          <param2 id="810"></param2>
+          <log id="811">
+            <level id="812">INFO</level>
+            <message id="813">Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</message>
+          </log>
+          <log id="814">
+            <level id="815">INFO</level>
+            <message id="816">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</message>
+          </log>
+          <log id="817">
+            <level id="818">INFO</level>
+            <message id="819">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="820">firefox78/responses_current/response_100014.html?highlight=%23wetatorIsText</highlight>
+          <executionTime id="821">1</executionTime>
+        </command>
+        <command id="822" name="" line="18" isComment="true">
+          <param0 id="823">time to start</param0>
+          <param1 id="824"></param1>
+          <param2 id="825"></param2>
+          <executionTime id="826">0</executionTime>
+        </command>
+        <command id="827" name="set" line="19">
+          <param0 id="828">Project name</param0>
+          <param1 id="829">HtmlUnit</param1>
+          <param2 id="830"></param2>
+          <log id="831">
+            <level id="832">INFO</level>
+            <message id="833">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="834">
+            <level id="835">INFO</level>
+            <message id="836">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="837">
+            <level id="838">INFO</level>
+            <message id="839">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="840">
+            <level id="841">INFO</level>
+            <message id="842">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="843">firefox78/responses_current/response_100014.html?highlight=%23project</highlight>
+          <response id="844">firefox78/responses_current/response_100015.html?highlight=%23project</response>
+          <executionTime id="845">3</executionTime>
+        </command>
+        <command id="846" name="select" line="20">
+          <param0 id="847">programming language &gt; JAVA</param0>
+          <param1 id="848"></param1>
+          <param2 id="849"></param2>
+          <log id="850">
+            <level id="851">INFO</level>
+            <message id="852">Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="853">
+            <level id="854">INFO</level>
+            <message id="855">Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</message>
+          </log>
+          <log id="856">
+            <level id="857">INFO</level>
+            <message id="858">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</message>
+          </log>
+          <log id="859">
+            <level id="860">INFO</level>
+            <message id="861">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</message>
+          </log>
+          <log id="862">
+            <level id="863">INFO</level>
+            <message id="864">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="865">firefox78/responses_current/response_100015.html?highlight=%23languages</highlight>
+          <response id="866">firefox78/responses_current/response_100016.html?highlight=%23languages</response>
+          <executionTime id="867">3</executionTime>
+        </command>
+        <command id="868" name="select" line="21">
+          <param0 id="869">WETATOR is &gt; visionary</param0>
+          <param1 id="870"></param1>
+          <param2 id="871"></param2>
+          <log id="872">
+            <level id="873">INFO</level>
+            <message id="874">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="875">
+            <level id="876">INFO</level>
+            <message id="877">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</message>
+          </log>
+          <log id="878">
+            <level id="879">INFO</level>
+            <message id="880">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="881">firefox78/responses_current/response_100016.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <response id="882">firefox78/responses_current/response_100017.html?highlight=%23wetatorIs_wetatorIs_visionary</response>
+          <executionTime id="883">3</executionTime>
+        </command>
+        <command id="884" name="click-on" line="22">
+          <param0 id="885">Submit My Truth</param0>
+          <param1 id="886"></param1>
+          <param2 id="887"></param2>
+          <log id="888">
+            <level id="889">INFO</level>
+            <message id="890">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</message>
+          </log>
+          <highlight id="891">firefox78/responses_current/response_100017.html?highlight=%23submit</highlight>
+          <response id="892">firefox78/responses_current/response_100018.html</response>
+          <executionTime id="893">56</executionTime>
+        </command>
+        <command id="894" name="assert-content" line="23">
+          <param0 id="895">We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</param0>
+          <param1 id="896"></param1>
+          <param2 id="897"></param2>
+          <executionTime id="898">0</executionTime>
+        </command>
+        <command id="899" name="assert-content" line="24">
+          <param0 id="900">Why not using WETATOR for your other JAVA projects?</param0>
+          <param1 id="901"></param1>
+          <param2 id="902"></param2>
+          <executionTime id="903">0</executionTime>
+        </command>
+        <command id="904" name="" line="26" isComment="true">
+          <param0 id="905">finally test the validation</param0>
+          <param1 id="906"></param1>
+          <param2 id="907"></param2>
+          <executionTime id="908">0</executionTime>
+        </command>
+        <command id="909" name="open-url" line="27">
+          <param0 id="910">/testform</param0>
+          <param1 id="911"></param1>
+          <param2 id="912"></param2>
+          <log id="913">
+            <level id="914">INFO</level>
+            <message id="915">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="916">firefox78/responses_current/response_100019.html</response>
+          <executionTime id="917">104</executionTime>
+        </command>
+        <command id="918" name="assert-title" line="28">
+          <param0 id="919">WETATOR / Test Form</param0>
+          <param1 id="920"></param1>
+          <param2 id="921"></param2>
+          <executionTime id="922">0</executionTime>
+        </command>
+        <command id="923" name="assert-set" line="29">
+          <param0 id="924">Project name</param0>
+          <param1 id="925"></param1>
+          <param2 id="926"></param2>
+          <log id="927">
+            <level id="928">INFO</level>
+            <message id="929">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="930">
+            <level id="931">INFO</level>
+            <message id="932">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="933">
+            <level id="934">INFO</level>
+            <message id="935">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="936">
+            <level id="937">INFO</level>
+            <message id="938">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="939">firefox78/responses_current/response_100019.html?highlight=%23project</highlight>
+          <executionTime id="940">2</executionTime>
+        </command>
+        <command id="941" name="click-on" line="30">
+          <param0 id="942">Submit My Truth</param0>
+          <param1 id="943"></param1>
+          <param2 id="944"></param2>
+          <log id="945">
+            <level id="946">INFO</level>
+            <message id="947">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 408 start: 408 index: 129'.</message>
+          </log>
+          <highlight id="948">firefox78/responses_current/response_100019.html?highlight=%23submit</highlight>
+          <response id="949">firefox78/responses_current/response_100020.html</response>
+          <executionTime id="950">99</executionTime>
+        </command>
+        <command id="951" name="assert-content" line="31">
+          <param0 id="952">"Project name" is a required field</param0>
+          <param1 id="953"></param1>
+          <param2 id="954"></param2>
+          <executionTime id="955">0</executionTime>
+        </command>
+      </testfile>
+    </testrun>
+    <testrun id="956" browser="Chrome">
+      <testfile id="957" file="C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform.wett">
+        <command id="958" name="" line="1" isComment="true">
+          <param0 id="959">simple test case</param0>
+          <param1 id="960"></param1>
+          <param2 id="961"></param2>
+          <executionTime id="962">0</executionTime>
+        </command>
+        <command id="963" name="comment" line="2" isComment="true">
+          <param0 id="964"></param0>
+          <param1 id="965"></param1>
+          <param2 id="966"></param2>
+          <executionTime id="967">0</executionTime>
+        </command>
+        <command id="968" name="" line="3" isComment="true">
+          <param0 id="969">open the page</param0>
+          <param1 id="970"></param1>
+          <param2 id="971"></param2>
+          <executionTime id="972">0</executionTime>
+        </command>
+        <command id="973" name="open-url" line="4">
+          <param0 id="974">http://www.wetator.org/testform</param0>
+          <param1 id="975"></param1>
+          <param2 id="976"></param2>
+          <log id="977">
+            <level id="978">WARN</level>
+            <message id="979">Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="980">
+            <level id="981">INFO</level>
+            <message id="982">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="983">chrome/responses_current/response_100021.html</response>
+          <executionTime id="984">743</executionTime>
+        </command>
+        <command id="985" name="" line="6" isComment="true">
+          <param0 id="986">do we reach the correct page?</param0>
+          <param1 id="987"></param1>
+          <param2 id="988"></param2>
+          <executionTime id="989">0</executionTime>
+        </command>
+        <command id="990" name="assert-title" line="7">
+          <param0 id="991">WETATOR / Test Form</param0>
+          <param1 id="992"></param1>
+          <param2 id="993"></param2>
+          <executionTime id="994">0</executionTime>
+        </command>
+        <command id="995" name="" line="9" isComment="true">
+          <param0 id="996">Check the page defaults</param0>
+          <param1 id="997"></param1>
+          <param2 id="998"></param2>
+          <executionTime id="999">0</executionTime>
+        </command>
+        <command id="1000" name="assert-content" line="10">
+          <param0 id="1001">The form below is only for testing purpose.</param0>
+          <param1 id="1002"></param1>
+          <param2 id="1003"></param2>
+          <executionTime id="1004">1</executionTime>
+        </command>
+        <command id="1005" name="assert-set" line="11">
+          <param0 id="1006">Project name</param0>
+          <param1 id="1007"></param1>
+          <param2 id="1008"></param2>
+          <log id="1009">
+            <level id="1010">INFO</level>
+            <message id="1011">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="1012">
+            <level id="1013">INFO</level>
+            <message id="1014">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="1015">
+            <level id="1016">INFO</level>
+            <message id="1017">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="1018">
+            <level id="1019">INFO</level>
+            <message id="1020">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="1021">chrome/responses_current/response_100021.html?highlight=%23project</highlight>
+          <executionTime id="1022">1</executionTime>
+        </command>
+        <command id="1023" name="assert-selected" line="12">
+          <param0 id="1024">other</param0>
+          <param1 id="1025"></param1>
+          <param2 id="1026"></param2>
+          <log id="1027">
+            <level id="1028">INFO</level>
+            <message id="1029">Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="1030">
+            <level id="1031">INFO</level>
+            <message id="1032">Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</message>
+          </log>
+          <log id="1033">
+            <level id="1034">INFO</level>
+            <message id="1035">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</message>
+          </log>
+          <log id="1036">
+            <level id="1037">INFO</level>
+            <message id="1038">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</message>
+          </log>
+          <log id="1039">
+            <level id="1040">INFO</level>
+            <message id="1041">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="1042">chrome/responses_current/response_100021.html?highlight=%23languages</highlight>
+          <executionTime id="1043">1</executionTime>
+        </command>
+        <command id="1044" name="assert-deselected" line="13">
+          <param0 id="1045">WETATOR is &gt; amazing</param0>
+          <param1 id="1046"></param1>
+          <param2 id="1047"></param2>
+          <log id="1048">
+            <level id="1049">INFO</level>
+            <message id="1050">Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="1051">
+            <level id="1052">INFO</level>
+            <message id="1053">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</message>
+          </log>
+          <log id="1054">
+            <level id="1055">INFO</level>
+            <message id="1056">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="1057">
+            <level id="1058">INFO</level>
+            <message id="1059">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="1060">chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_amazing</highlight>
+          <executionTime id="1061">0</executionTime>
+        </command>
+        <command id="1062" name="assert-deselected" line="14">
+          <param0 id="1063">WETATOR is &gt; visionary</param0>
+          <param1 id="1064"></param1>
+          <param2 id="1065"></param2>
+          <log id="1066">
+            <level id="1067">INFO</level>
+            <message id="1068">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="1069">
+            <level id="1070">INFO</level>
+            <message id="1071">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</message>
+          </log>
+          <log id="1072">
+            <level id="1073">INFO</level>
+            <message id="1074">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="1075">chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <executionTime id="1076">0</executionTime>
+        </command>
+        <command id="1077" name="assert-deselected" line="15">
+          <param0 id="1078">WETATOR is &gt; marvelous</param0>
+          <param1 id="1079"></param1>
+          <param2 id="1080"></param2>
+          <log id="1081">
+            <level id="1082">INFO</level>
+            <message id="1083">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</message>
+          </log>
+          <highlight id="1084">chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_marvelous</highlight>
+          <executionTime id="1085">1</executionTime>
+        </command>
+        <command id="1086" name="assert-set" line="16">
+          <param0 id="1087">WETATOR makes</param0>
+          <param1 id="1088"></param1>
+          <param2 id="1089"></param2>
+          <log id="1090">
+            <level id="1091">INFO</level>
+            <message id="1092">Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</message>
+          </log>
+          <log id="1093">
+            <level id="1094">INFO</level>
+            <message id="1095">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</message>
+          </log>
+          <log id="1096">
+            <level id="1097">INFO</level>
+            <message id="1098">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="1099">chrome/responses_current/response_100021.html?highlight=%23wetatorIsText</highlight>
+          <executionTime id="1100">1</executionTime>
+        </command>
+        <command id="1101" name="" line="18" isComment="true">
+          <param0 id="1102">time to start</param0>
+          <param1 id="1103"></param1>
+          <param2 id="1104"></param2>
+          <executionTime id="1105">0</executionTime>
+        </command>
+        <command id="1106" name="set" line="19">
+          <param0 id="1107">Project name</param0>
+          <param1 id="1108">HtmlUnit</param1>
+          <param2 id="1109"></param2>
+          <log id="1110">
+            <level id="1111">INFO</level>
+            <message id="1112">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="1113">
+            <level id="1114">INFO</level>
+            <message id="1115">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="1116">
+            <level id="1117">INFO</level>
+            <message id="1118">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="1119">
+            <level id="1120">INFO</level>
+            <message id="1121">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="1122">chrome/responses_current/response_100021.html?highlight=%23project</highlight>
+          <response id="1123">chrome/responses_current/response_100022.html?highlight=%23project</response>
+          <executionTime id="1124">4</executionTime>
+        </command>
+        <command id="1125" name="select" line="20">
+          <param0 id="1126">programming language &gt; JAVA</param0>
+          <param1 id="1127"></param1>
+          <param2 id="1128"></param2>
+          <log id="1129">
+            <level id="1130">INFO</level>
+            <message id="1131">Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</message>
+          </log>
+          <log id="1132">
+            <level id="1133">INFO</level>
+            <message id="1134">Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</message>
+          </log>
+          <log id="1135">
+            <level id="1136">INFO</level>
+            <message id="1137">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</message>
+          </log>
+          <log id="1138">
+            <level id="1139">INFO</level>
+            <message id="1140">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</message>
+          </log>
+          <log id="1141">
+            <level id="1142">INFO</level>
+            <message id="1143">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="1144">chrome/responses_current/response_100022.html?highlight=%23languages</highlight>
+          <response id="1145">chrome/responses_current/response_100023.html?highlight=%23languages</response>
+          <executionTime id="1146">2</executionTime>
+        </command>
+        <command id="1147" name="select" line="21">
+          <param0 id="1148">WETATOR is &gt; visionary</param0>
+          <param1 id="1149"></param1>
+          <param2 id="1150"></param2>
+          <log id="1151">
+            <level id="1152">INFO</level>
+            <message id="1153">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="1154">
+            <level id="1155">INFO</level>
+            <message id="1156">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</message>
+          </log>
+          <log id="1157">
+            <level id="1158">INFO</level>
+            <message id="1159">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</message>
+          </log>
+          <highlight id="1160">chrome/responses_current/response_100023.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <response id="1161">chrome/responses_current/response_100024.html?highlight=%23wetatorIs_wetatorIs_visionary</response>
+          <executionTime id="1162">3</executionTime>
+        </command>
+        <command id="1163" name="click-on" line="22">
+          <param0 id="1164">Submit My Truth</param0>
+          <param1 id="1165"></param1>
+          <param2 id="1166"></param2>
+          <log id="1167">
+            <level id="1168">INFO</level>
+            <message id="1169">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</message>
+          </log>
+          <highlight id="1170">chrome/responses_current/response_100024.html?highlight=%23submit</highlight>
+          <response id="1171">chrome/responses_current/response_100025.html</response>
+          <executionTime id="1172">66</executionTime>
+        </command>
+        <command id="1173" name="assert-content" line="23">
+          <param0 id="1174">We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</param0>
+          <param1 id="1175"></param1>
+          <param2 id="1176"></param2>
+          <executionTime id="1177">0</executionTime>
+        </command>
+        <command id="1178" name="assert-content" line="24">
+          <param0 id="1179">Why not using WETATOR for your other JAVA projects?</param0>
+          <param1 id="1180"></param1>
+          <param2 id="1181"></param2>
+          <executionTime id="1182">1</executionTime>
+        </command>
+        <command id="1183" name="" line="26" isComment="true">
+          <param0 id="1184">finally test the validation</param0>
+          <param1 id="1185"></param1>
+          <param2 id="1186"></param2>
+          <executionTime id="1187">0</executionTime>
+        </command>
+        <command id="1188" name="open-url" line="27">
+          <param0 id="1189">/testform</param0>
+          <param1 id="1190"></param1>
+          <param2 id="1191"></param2>
+          <log id="1192">
+            <level id="1193">INFO</level>
+            <message id="1194">Open URL 'http://www.wetator.org/testform'.</message>
+          </log>
+          <response id="1195">chrome/responses_current/response_100026.html</response>
+          <executionTime id="1196">101</executionTime>
+        </command>
+        <command id="1197" name="assert-title" line="28">
+          <param0 id="1198">WETATOR / Test Form</param0>
+          <param1 id="1199"></param1>
+          <param2 id="1200"></param2>
+          <executionTime id="1201">0</executionTime>
+        </command>
+        <command id="1202" name="assert-set" line="29">
+          <param0 id="1203">Project name</param0>
+          <param1 id="1204"></param1>
+          <param2 id="1205"></param2>
+          <log id="1206">
+            <level id="1207">INFO</level>
+            <message id="1208">Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</message>
+          </log>
+          <log id="1209">
+            <level id="1210">INFO</level>
+            <message id="1211">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</message>
+          </log>
+          <log id="1212">
+            <level id="1213">INFO</level>
+            <message id="1214">Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</message>
+          </log>
+          <log id="1215">
+            <level id="1216">INFO</level>
+            <message id="1217">Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</message>
+          </log>
+          <highlight id="1218">chrome/responses_current/response_100026.html?highlight=%23project</highlight>
+          <executionTime id="1219">1</executionTime>
+        </command>
+        <command id="1220" name="click-on" line="30">
+          <param0 id="1221">Submit My Truth</param0>
+          <param1 id="1222"></param1>
+          <param2 id="1223"></param2>
+          <log id="1224">
+            <level id="1225">INFO</level>
+            <message id="1226">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 408 start: 408 index: 129'.</message>
+          </log>
+          <highlight id="1227">chrome/responses_current/response_100026.html?highlight=%23submit</highlight>
+          <response id="1228">chrome/responses_current/response_100027.html</response>
+          <executionTime id="1229">59</executionTime>
+        </command>
+        <command id="1230" name="assert-content" line="31">
+          <param0 id="1231">"Project name" is a required field</param0>
+          <param1 id="1232"></param1>
+          <param2 id="1233"></param2>
+          <executionTime id="1234">0</executionTime>
+        </command>
+      </testfile>
+    </testrun>
+  </testcase>
+  <executionTime id="1235">5678</executionTime>
+  <!--
+  SearchPatternCache statistics:
+      Entries: 20
+      Hits:    2176
+  -->
+</wet>

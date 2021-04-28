@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://www.wetator.org/testform/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    
+    <meta http-equiv="language" content="english, en"/>
+    
+    <meta name="keywords" content="wetator,web,application,test,testing,automation,GUI,tool,HTMLUnit"/>
+    
+    <meta name="description" content="Wetator is a small, flexible and extendable test automation tool that drives and checks your web application. Wetator provides you with a language for writing test scripts that is simple and easily readable - also for non-IT-people. The list of supported commands is intended to be preferably small."/>
+    
+    <meta name="page-topic" content="Software-Testing"/>
+    
+    <meta name="author" content="Ronald Brill"/>
+    
+    <meta name="publisher" content="Ronald Brill"/>
+    
+    <meta name="copyright" content="(c) Ronald Brill"/>
+    
+    <meta name="robots" content="index,nofollow"/>
+    
+    <meta name="revisit-after" content="14 days"/>
+
+    
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" style="display: inline"/>
+
+    <title>WETATOR / Test Form</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" style="display: inline"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" title="" href="./css/normalize.css" style="display: inline"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" title="" href="./css/default.css" style="display: inline"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" title="" href="./css/content.css" style="display: inline"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" title="" href="./css/tipsy.css" style="display: inline"/>
+
+  </head><body style="; display: block; display: block">
+
+    <div id="header" style="display: block; display: block">
+
+      <div id="header_logo" style="display: block; display: block">
+
+        <a href="http://www.wetator.org/" style="display: inline; display: inline">
+
+          <img alt="WETATOR Smart Web Application Testing" title="Wetator" height="137" width="400" src="./images/wetator.png" style="display: inline; display: inline"/></a>
+      
+      </div>
+
+      <div id="header_bottomline" style="display: block; display: block">
+
+        <div id="header_nav" style="display: inline; display: inline">
+
+        </div>
+      
+      </div>
+
+      <div id="header_breadcrumbs" style="display: block; display: block">
+
+      </div>
+
+    </div>
+
+    <div class="colmask leftmenu" style="display: block; display: block">
+
+      <div class="colright" style="display: block; display: block">
+
+        <div class="col1wrap" style="display: block; display: block">
+
+          <div class="col1" style="display: block; display: block">
+
+            <div id="content" style="display: block; display: block">
+
+              <h1 style="display: block; display: block">Test Form</h1>
+
+              <style type="text/css">
+                  
+
+form {
+  margin:0;padding:0;
+}
+.action input {
+  padding: 3px 12px;
+}
+select {
+  padding: 2px;
+}
+fieldset {
+    border-right: medium none;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    margin: 1em 0;
+    padding: 5px 10px 12px 10px;
+}
+legend {
+    background: none repeat scroll 0 0 transparent;
+    color: #00769C;
+    font-size: 1.12em;
+    font-weight: normal;
+    margin: 1em 0;
+    padding: 0 0.5em;
+}
+fieldset div {
+    display: block;
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+fieldset div input, fieldset div textarea {
+    width: 25em;
+}
+div div .checkbox {
+    width: 1em;
+    float: none;
+}
+fieldset div div label.checkbox {
+    padding-left: 0.2em;
+    padding-right: 3em;
+}
+label, .action {
+  font-size: 0.88em;
+  float: left;
+  padding: 0 1em;
+  text-align: right;
+  width: 17em;
+}
+.action {
+  margin-left: 10px;
+}
+label.required {
+  font-weight: bold;
+}
+label.required:after {
+    content: "*";
+}
+div.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 5px 5px 5px 20px;
+}
+input.error {
+  border: 1px solid #D8000C;
+}
+              
+              </style>
+
+              
+              <p style="display: block; display: block">The form below is only for testing purpose. Please have a look at the WETATOR introduction for more info.</p>
+
+              <form action="" method="post" id="formTest" style="display: block; display: block" onsubmit="return false;">
+
+                <input type="hidden" name="flag_submitted" value="formTest" style="display: inline-block"/>
+
+                <div class="error" style="display: block; display: block">
+                  "Project name" is a required field
+                </div>
+
+                <fieldset style="display: block; display: block">
+
+                  <legend style="display: block; display: block">
+                    
+                    For which project do you use WETATOR?
+                  
+                  </legend>
+
+                  <div style="display: block; display: block">
+
+                    <label for="project" class="required" style="display: inline; display: inline">
+                      
+                      Project name
+                    
+                    </label>
+                    
+                    <input type="text" name="projectName" size="40" id="project" class="required error" style="display: inline-block; display: inline-block"/>
+
+                  </div>
+
+                  <div style="display: block; display: block">
+
+                    <label for="language" style="display: inline; display: inline">
+                      
+                      Project programming language
+                    
+                    </label>
+                    
+                    <select name="languages[]" size="4" id="languages" style="display: inline-block; display: inline-block">
+
+                      <option value="JAVA"> JAVA</option>
+
+                      <option value="JavaScript"> JavaScript</option>
+
+                      <option value="C#"> C#</option>
+
+                      <option selected="selected" value="other"> other</option>
+
+                    </select>
+
+                  </div>
+
+                </fieldset>
+
+                <fieldset style="display: block; display: block">
+
+                  <legend style="display: block; display: block">
+                    
+                    What do you think about WETATOR?
+                  
+                  </legend>
+
+                  <div style="display: block; display: block">
+
+                    <div id="wetatorIs" style="display: block; display: block">
+
+                      <label for="wetatorIs" style="display: inline; display: inline">
+                        
+                        WETATOR is
+                      
+                      </label> 
+
+      
+                      <input type="checkbox" name="wetatorIs[]" id="wetatorIs_wetatorIs_amazing" value="amazing" class="checkbox" style="display: inline-block; display: inline-block"/>
+
+                      <label for="wetatorIs_wetatorIs_amazing" class="checkbox" style="display: inline; display: inline">
+                        amazing
+                      </label> 
+      
+                      <input type="checkbox" name="wetatorIs[]" id="wetatorIs_wetatorIs_visionary" value="visionary" class="checkbox" style="display: inline-block; display: inline-block"/>
+
+                      <label for="wetatorIs_wetatorIs_visionary" class="checkbox" style="display: inline; display: inline">
+                        visionary
+                      </label> 
+      
+                      <input type="checkbox" name="wetatorIs[]" id="wetatorIs_wetatorIs_marvelous" value="marvelous" class="checkbox" style="display: inline-block; display: inline-block"/>
+
+                      <label for="wetatorIs_wetatorIs_marvelous" class="checkbox" style="display: inline; display: inline">
+                        marvelous
+                      </label> 
+  
+                    
+                    </div>
+
+                  </div>
+
+                  <div style="display: block; display: block">
+
+                    <label for="wetatorIsText" style="display: inline; display: inline">
+                      
+                      WETATOR makes
+                    
+                    </label><textarea name="wetatorIsText" id="wetatorIsText" style="display: inline-block; display: inline-block"></textarea>
+
+                  </div>
+
+                </fieldset>
+
+                <fieldset style="display: block; display: block">
+
+                  <legend style="display: block; display: block">
+                    
+                    I like to be a WETATOR developer
+                  
+                  </legend>
+
+                  <div style="display: block; display: block">
+
+                    <label for="resume" style="display: inline; display: inline">
+                      
+                      Please find attached my resume
+                    
+                    </label><input id="resume" class="required" type="file" name="resume" style="display: inline-block; display: inline-block"/>
+
+                  </div>
+
+                </fieldset>
+
+                <div class="action" style="display: block; display: block">
+
+                  <input type="submit" name="submit" value="Submit My Truth" id="submit" style="display: inline-block; display: inline-block"/>
+
+                </div>
+
+              </form>
+
+            </div>
+
+            <div id="footer" style="display: block; display: block">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col2" style="display: block; display: block">
+
+          <div id="sidebar" style="display: block; display: block">
+
+            <h1 style="display: block; display: block"><a href="http://www.wetator.org/testform" style="display: inline; display: inline">
+
+              </a></h1>
+
+            <div id="sidebar_nav" style="display: block; display: block">
+
+              <ul style="display: block; display: block">
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

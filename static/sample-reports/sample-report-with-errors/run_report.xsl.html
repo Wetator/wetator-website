@@ -1,0 +1,1621 @@
+<!DOCTYPE html PUBLIC "-//Wf3C//Dtd HTML 4.01 Transitional//EN">
+<html xmlns:fn="http://www.w3.org/2005/xpath-functions">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="text/css" http-equiv="content-style-type">
+<title>Wetator - Test Result</title>
+<script src="resources/jquery-1.10.2.min.js"></script><script src="resources/wetator_report.js"></script>
+<style type="text/css">
+                    body { background-color: #FFFFFF; font-size: 10pt; font-family: Arial, Helvetica, sans-serif; margin: 4px; }
+                    table { font-size: 10pt; empty-cells: show; border-collapse: collapse; }
+                    table.overview { width: 80%; }
+                    th { font-weight: bold; color: #FFFFFF; background-color: #555555; text-align: left; }
+                    td.step { border:1px solid #999; color: #000000; text-align: center; }
+                    td.light { background-color: #f8f8f8; }
+                    td.topBorder { border-top: 1px solid #999; }
+                    td.message { background-color: #fff8dc; color: #666666; font-size: 10pt; }
+                    td.properties { background-color: #f8f8f8; font-size: 10pt; }
+
+                    td.success { background-color: #ACC952; color: #ffffff; width: 4px; }
+                    td.ignored { background-color: #FFFFFF; color: #717173; width: 4px; }
+                    td.failure { background-color: #00769C; color: #ffffff; width: 8px; }
+                    td.error { background-color: #E75013; color: #ffffff; width: 8px; }
+
+                    td.errorJumper { text-align: right; vertical-align: top; }
+                    td.comment { background-color: #DDDDDD; color: #717173; }
+                    h1 { font-size: 12pt; color: #000000; margin-top: 20px; }
+                    h2 { font-size: 10pt; color: #4682b4; margin-top: 16px; }
+                    p.blue { color: #768bc2; }
+                    pre.details { margin-top: 1px; margin-bottom: 1px; margin-left: 40px; font-family: Courier new, monospace, sans-serif; white-space: pre; }
+                    a, a:link, a:visited, a:active, a:hover { color: #666666; text-decoration: none; }
+                    a.link:hover { text-decoration: underline; }
+                    a.linkToCommand { font-size: smaller; display: block; }
+
+                    img { border: 0; }
+                    img.resultIcon { height: 12px; width: 12px; padding: 3px; vertical-align: bottom; }
+                    #testSummary img.resultIcon { padding: 2px; }
+                    img.expandCollapse { cursor: pointer; padding: 1px; vertical-align: text-top; }
+                    img.expandCollapse#overviewswitcher { padding: 0; }
+                    #testCasesOverview img.browser { vertical-align: bottom; margin-left: 20px; }
+                    img.testStepScreenshot { vertical-align: top; }
+                    img.testStepInfo { cursor: pointer; vertical-align: bottom; }
+
+                    div.header { color: #768bc2; margin-left: 10px; }
+                    div.header img { margin-left: -10px; border: 0; }
+                    div.colorBar { height: 1em; border: 0; margin-left: 2px; margin-right: 1px; }
+                    .smallBorder { border: 1px solid #999999; }
+                    .bold { font-weight: bold; }
+                    table#testSummary td { padding: 5px; }
+                    p.backToTop img { padding-right: 3px; }
+                    .bars { color: #ffffff; }
+
+                    #debuginfo { display: none; }
+                    #debugtestbrowseroverviewinfo { display: none; }
+
+                    .describe { color: #3D2117; }
+                    .describe h1 { font-size: 1.5em; font-weight: bold; color: #3D2117; }
+                    .describe h2 { font-size: 1.17em; font-weight: bold; color: #3D2117; }
+                    .describe h3 { font-size: 1em; font-weight: bold; color: #3D2117; }
+                    .describe h4 { font-size: 1em; font-weight: bold; color: #3D2117; }
+                    .describe h5 { font-size: 1em; font-weight: bold; color: #3D2117; }
+                    .describe h6 { font-size: 1em; font-weight: bold; color: #3D2117; }
+                </style>
+</head>
+<body>
+<div id="debuginfo">
+                    testCaseCount 1<br>
+                    browserCount 4<br>
+                    testCount 4<br>
+                    testStepCount 80<br>
+<br>
+                    testCaseFailureCount 0<br>
+                    testCaseErrorCount 1<br>
+                    testCaseIgnoredCount 0<br>
+                    testCaseNotOkCount 1<br>
+                    testCaseOkCount 0<br>
+                    testFailureCount 0<br>
+                    testErrorCount 4<br>
+                    testIgnoredCount 0<br>
+<br>
+                    testCaseFailurePercentage 0<br>
+                    testCaseErrorPercentage 100<br>
+                    testCaseIgnoredPercentage 0<br>
+                    testCaseOkPercentage 0<br>
+                    testFailurePercentage 0<br>
+                    testErrorPercentage 100<br>
+                    testIgnoredPercentage 0<br>
+                    testNotOkPercentage 100<br>
+                    testOkPercentage 0<br>
+<br>
+                    stepsOkCount 64<br>
+                    stepsFailureCount 8<br>
+                    stepsErrorCount 4<br>
+                    stepsIgnoredCount 4<br>
+                    stepsNotOkCount 16<br>
+<br>
+                    stepsOkPercentage 80<br>
+                    stepsFailurePercentage 10<br>
+                    stepsErrorPercentage 5<br>
+                    stepsIgnoredPercentage 5<br>
+</div>
+<iframe src="" id="preview" style="overflow: hidden; display: none; position: absolute; background: white; border: solid 3px darkgray; box-shadow: 15px 15px 7px darkgray; width: 1600px; height: 1000px; -moz-transform: scale(0.6); -moz-transform-origin: 0 0; -webkit-transform: scale(0.6); -webkit-transform-origin: 0 0; -ms-transform: scale(0.6); -ms-transform-origin: 0 0;"></iframe>
+<a name="top"></a>
+<div style="text-align: center;">
+<img alt="Wetator" src="resources/wetator.png"></div>
+<table align="center" id="testSummary">
+<tr>
+<td class="bold">
+                            Tests:
+                        </td><td style="padding-left: 3px;">4</td><td style="padding-left: 25px; white-space: nowrap;" class="bold"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"> Errors:
+                        </td><td style="padding-left: 3px;">4</td><td style="padding-left: 25px; white-space: nowrap;" class="bold"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"> Failures:
+                        </td><td style="padding-left: 3px;">0</td><td style="padding-left: 25px;" class="bold">
+                            Distribution:
+                        </td><td style="padding-left: 3px;">1 TestCase
+                            / 4 Browsers</td><td style="padding-left: 25px;" class="bold">
+                            Start Time:
+                        </td><td style="padding-left: 3px;">28.04.2021 19:41:15</td><td style="padding-left: 25px;" class="bold">
+                            Total Time:
+                        </td><td style="padding-left: 3px;">4.2s</td>
+</tr>
+</table>
+<table onmouseover="switchTables(this, 'detailedoverview')" style="margin-top: 5px; text-align: center;" align="center" class="overview" id="summaryoverview">
+<tr height="20px">
+<td width="100%" class="smallBorder" bgcolor="#E75013"></td>
+</tr>
+</table>
+<table onmouseout="switchTables(this, 'summaryoverview')" style="display: none; margin-top: 5px; text-align: center;" align="center" class="overview bars" id="detailedoverview">
+<tr height="20px;">
+<td class="smallBorder" width="100%
+                                " bgcolor="#E75013" title="tests with error">100%
+                            </td>
+</tr>
+</table>
+<div style="margin-top: -18px; margin-left: 90.4%;">
+<img class="expandCollapse" onclick="showOrHide(this, 'casesandsteps'); switchOverviewTables(this);" alt="show/hide TestCases &amp; -Steps" src="resources/expand-square.png" id="overviewswitcher"></div>
+<table style="display: none; margin-top: 5px; float: center; text-align: center;" align="center" class="overview" id="casesandsteps">
+<tr>
+<td width="150px">
+                                TestCases (<span style="color: #E75013; font-weight: bold;">1</span>/1)</td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="100%
+                                                " bgcolor="#E75013" title="test cases with error">100%
+                                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td width="150px">
+                                TestSteps (<span style="color: #E75013; font-weight: bold;">4</span>/<span style="color: #00769C; font-weight: bold;">8</span>/80)</td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="5%
+                                            " bgcolor="#E75013" title="steps with error">5%
+                                            </td><td style="text-align: center;" class="smallBorder" width="10%
+                                            " bgcolor="#00769C" title="steps with failure">10%
+                                            </td><td style="text-align: center;" class="smallBorder" width="80%
+                                            " bgcolor="#ACC952" title="successful steps">80%
+                                            </td><td style="text-align: center;" class="smallBorder ignored" width="5%
+                                            " bgcolor="#FFFFFF" title="ignored steps">5%
+                                            </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table style="margin-top: 25px" border="0" cellspacing="0" cellpadding="4" align="center">
+<tr>
+<td></td><td><span class="bold">All</span>&nbsp;<img class="expandCollapse" alt="show/hide all browser overviews" src="resources/expand-square.png" onclick="showOrHideAll(this, 'ie11','ie11overview', 'ff','ffoverview', 'ff78','ff78overview', 'chrome','chromeoverview')"></td><td><span class="bold">IE11</span>&nbsp;<img class="expandCollapse" alt="show/hide IE11 overview" onclick="showOrHide(this, 'ie11overview')" src="resources/expand-square.png" id="ie11"></td><td><span class="bold">FF</span>&nbsp;<img class="expandCollapse" alt="show/hide FF overview" onclick="showOrHide(this, 'ffoverview')" src="resources/expand-square.png" id="ff"></td><td><span class="bold">FF78</span>&nbsp;<img class="expandCollapse" alt="show/hide FF78 overview" onclick="showOrHide(this, 'ff78overview')" src="resources/expand-square.png" id="ff78"></td><td><span class="bold">Chrome</span>&nbsp;<img class="expandCollapse" alt="show/hide Chrome overview" onclick="showOrHide(this, 'chromeoverview')" src="resources/expand-square.png" id="chrome"></td>
+</tr>
+</table>
+<table style="display: none; text-align: center;" align="center" class="overview" id="ie11overview">
+<div id="debugtestbrowseroverviewinfo">
+<br>
+            browserTestStepCount 20<br>
+<br>
+            browserTestFailureCount 0<br>
+            browserTestErrorCount 1<br>
+            browserTestIgnoredCount 0<br>
+<br>
+            browserTestFailurePercentage 0<br>
+            browserTestErrorPercentage 100<br>
+            browserTestIgnoredPercentage 0<br>
+            browserTestOkPercentage 0<br>
+<br>
+            browserStepsOkCount 16<br>
+            browserStepsFailureCount 2<br>
+            browserStepsErrorCount 1<br>
+            browserStepsIgnoredCount 1<br>
+<br>
+            browserStepsOkPercentage 80<br>
+            browserStepsFailurePercentage 10<br>
+            browserStepsErrorPercentage 5<br>
+            browserStepsIgnoredPercentage 5<br>
+</div>
+<tr>
+<td width="150px;">Tests in IE11<img style="padding-left: 4px;" src="resources/browser-ie.png" alt="IE11" title="IE11"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="100%
+                            " bgcolor="#E75013" title="IE11 tests with error">100%
+                        </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TestSteps in IE11<img style="padding-left: 4px;" src="resources/browser-ie.png" alt="IE11" title="IE11"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="5%
+                            " bgcolor="#E75013" title="IE11 steps with error">5%
+                            </td><td style="text-align: center;" class="smallBorder" width="10%
+                            " bgcolor="#00769C" title="IE11 steps with failure">10%
+                            </td><td style="text-align: center;" class="smallBorder" width="80%
+                            " bgcolor="#ACC952" title="successful IE11 steps">80%
+                            </td><td style="text-align: center;" class="smallBorder ignored" width="5%
+                            " bgcolor="#FFFFFF" title="ignored IE11 steps">5%
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" height="10px"></td>
+</tr>
+</table>
+<table style="display: none; text-align: center;" align="center" class="overview" id="ffoverview">
+<div id="debugtestbrowseroverviewinfo">
+<br>
+            browserTestStepCount 20<br>
+<br>
+            browserTestFailureCount 0<br>
+            browserTestErrorCount 1<br>
+            browserTestIgnoredCount 0<br>
+<br>
+            browserTestFailurePercentage 0<br>
+            browserTestErrorPercentage 100<br>
+            browserTestIgnoredPercentage 0<br>
+            browserTestOkPercentage 0<br>
+<br>
+            browserStepsOkCount 16<br>
+            browserStepsFailureCount 2<br>
+            browserStepsErrorCount 1<br>
+            browserStepsIgnoredCount 1<br>
+<br>
+            browserStepsOkPercentage 80<br>
+            browserStepsFailurePercentage 10<br>
+            browserStepsErrorPercentage 5<br>
+            browserStepsIgnoredPercentage 5<br>
+</div>
+<tr>
+<td width="150px;">Tests in FF<img style="padding-left: 4px;" src="resources/browser-firefox.png" alt="FF" title="FF"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="100%
+                            " bgcolor="#E75013" title="FF tests with error">100%
+                        </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TestSteps in FF<img style="padding-left: 4px;" src="resources/browser-firefox.png" alt="FF" title="FF"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="5%
+                            " bgcolor="#E75013" title="FF steps with error">5%
+                            </td><td style="text-align: center;" class="smallBorder" width="10%
+                            " bgcolor="#00769C" title="FF steps with failure">10%
+                            </td><td style="text-align: center;" class="smallBorder" width="80%
+                            " bgcolor="#ACC952" title="successful FF steps">80%
+                            </td><td style="text-align: center;" class="smallBorder ignored" width="5%
+                            " bgcolor="#FFFFFF" title="ignored FF steps">5%
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" height="10px"></td>
+</tr>
+</table>
+<table style="display: none; text-align: center;" align="center" class="overview" id="ff78overview">
+<div id="debugtestbrowseroverviewinfo">
+<br>
+            browserTestStepCount 20<br>
+<br>
+            browserTestFailureCount 0<br>
+            browserTestErrorCount 1<br>
+            browserTestIgnoredCount 0<br>
+<br>
+            browserTestFailurePercentage 0<br>
+            browserTestErrorPercentage 100<br>
+            browserTestIgnoredPercentage 0<br>
+            browserTestOkPercentage 0<br>
+<br>
+            browserStepsOkCount 16<br>
+            browserStepsFailureCount 2<br>
+            browserStepsErrorCount 1<br>
+            browserStepsIgnoredCount 1<br>
+<br>
+            browserStepsOkPercentage 80<br>
+            browserStepsFailurePercentage 10<br>
+            browserStepsErrorPercentage 5<br>
+            browserStepsIgnoredPercentage 5<br>
+</div>
+<tr>
+<td width="150px;">Tests in FF78<img style="padding-left: 4px;" src="resources/browser-firefox.png" alt="FF78" title="FF78"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="100%
+                            " bgcolor="#E75013" title="FF78 tests with error">100%
+                        </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TestSteps in FF78<img style="padding-left: 4px;" src="resources/browser-firefox.png" alt="FF78" title="FF78"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="5%
+                            " bgcolor="#E75013" title="FF78 steps with error">5%
+                            </td><td style="text-align: center;" class="smallBorder" width="10%
+                            " bgcolor="#00769C" title="FF78 steps with failure">10%
+                            </td><td style="text-align: center;" class="smallBorder" width="80%
+                            " bgcolor="#ACC952" title="successful FF78 steps">80%
+                            </td><td style="text-align: center;" class="smallBorder ignored" width="5%
+                            " bgcolor="#FFFFFF" title="ignored FF78 steps">5%
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" height="10px"></td>
+</tr>
+</table>
+<table style="display: none; text-align: center;" align="center" class="overview" id="chromeoverview">
+<div id="debugtestbrowseroverviewinfo">
+<br>
+            browserTestStepCount 20<br>
+<br>
+            browserTestFailureCount 0<br>
+            browserTestErrorCount 1<br>
+            browserTestIgnoredCount 0<br>
+<br>
+            browserTestFailurePercentage 0<br>
+            browserTestErrorPercentage 100<br>
+            browserTestIgnoredPercentage 0<br>
+            browserTestOkPercentage 0<br>
+<br>
+            browserStepsOkCount 16<br>
+            browserStepsFailureCount 2<br>
+            browserStepsErrorCount 1<br>
+            browserStepsIgnoredCount 1<br>
+<br>
+            browserStepsOkPercentage 80<br>
+            browserStepsFailurePercentage 10<br>
+            browserStepsErrorPercentage 5<br>
+            browserStepsIgnoredPercentage 5<br>
+</div>
+<tr>
+<td width="150px;">Tests in Chrome<img style="padding-left: 4px;" src="resources/browser-chrome.png" alt="Chrome" title="Chrome"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="100%
+                            " bgcolor="#E75013" title="Chrome tests with error">100%
+                        </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>TestSteps in Chrome<img style="padding-left: 4px;" src="resources/browser-chrome.png" alt="Chrome" title="Chrome"></td><td style="padding-right: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" class="bars">
+<tr>
+<td style="text-align: center;" class="smallBorder" width="5%
+                            " bgcolor="#E75013" title="Chrome steps with error">5%
+                            </td><td style="text-align: center;" class="smallBorder" width="10%
+                            " bgcolor="#00769C" title="Chrome steps with failure">10%
+                            </td><td style="text-align: center;" class="smallBorder" width="80%
+                            " bgcolor="#ACC952" title="successful Chrome steps">80%
+                            </td><td style="text-align: center;" class="smallBorder ignored" width="5%
+                            " bgcolor="#FFFFFF" title="ignored Chrome steps">5%
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" height="10px"></td>
+</tr>
+</table>
+<table style="margin-top: 10px" border="0" cellspacing="0" cellpadding="4" align="center">
+<tr>
+<td><span class="bold">Configuration</span>&nbsp;<img class="expandCollapse" alt="show/hide Configuration" onclick="showOrHide(this, 'configuration')" src="resources/expand-square.png"></td><td width="50px"></td><td><span class="bold">Variables</span>&nbsp;<img class="expandCollapse" alt="show/hide Variables" onclick="showOrHide(this, 'variables')" src="resources/expand-square.png"></td>
+</tr>
+</table>
+<table style="margin-top: 5px;" border="0" cellspacing="0" cellpadding="4" width="100%">
+<tr>
+<td style="width: 50%;" valign="top" align="right">
+<table style="display: none; margin-left: 20px; margin-bottom: 20px;" class="smallBorder" cellspacing="0" cellpadding="2" id="configuration">
+<tr>
+<th>Key</th><th></th><th>Value</th>
+</tr>
+<tr>
+<td>configuration file</td><td>&nbsp;&nbsp;</td><td>C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator.config</td>
+</tr>
+<tr>
+<td>wetator.baseUrl</td><td>&nbsp;&nbsp;</td><td>http://www.wetator.org</td>
+</tr>
+<tr>
+<td>wetator.browser</td><td>&nbsp;&nbsp;</td><td>IE11</td>
+</tr>
+<tr>
+<td>wetator.browser</td><td>&nbsp;&nbsp;</td><td>Firefox</td>
+</tr>
+<tr>
+<td>wetator.browser</td><td>&nbsp;&nbsp;</td><td>Firefox78</td>
+</tr>
+<tr>
+<td>wetator.browser</td><td>&nbsp;&nbsp;</td><td>Chrome</td>
+</tr>
+<tr>
+<td>wetator.acceptLanguage</td><td>&nbsp;&nbsp;</td><td>en-us,en;q=0.8,de-de;q=0.5,de;q=0.3</td>
+</tr>
+<tr>
+<td>wetator.outputDir</td><td>&nbsp;&nbsp;</td><td>C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\logs</td>
+</tr>
+<tr>
+<td>wetator.jsTimeout</td><td>&nbsp;&nbsp;</td><td>1s</td>
+</tr>
+<tr>
+<td>wetator.httpTimeout</td><td>&nbsp;&nbsp;</td><td>90s</td>
+</tr>
+<tr>
+<td>wetator.wpath.separator</td><td>&nbsp;&nbsp;</td><td>&gt;</td>
+</tr>
+<tr>
+<td>wetator.xslTemplates</td><td>&nbsp;&nbsp;</td><td>C:\RBRi\eclipse\workspace\wetator\xsl\run_report.xsl</td>
+</tr>
+<tr>
+<td>wetator.commandSets</td><td>&nbsp;&nbsp;</td><td>org.wetator.commandset.DefaultCommandSet</td>
+</tr>
+<tr>
+<td>wetator.controls</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.scripters</td><td>&nbsp;&nbsp;</td><td>org.wetator.scripter.XMLScripter</td>
+</tr>
+<tr>
+<td>wetator.scripters</td><td>&nbsp;&nbsp;</td><td>org.wetator.scripter.LegacyXMLScripter</td>
+</tr>
+<tr>
+<td>wetator.scripters</td><td>&nbsp;&nbsp;</td><td>org.wetator.scripter.ExcelScripter</td>
+</tr>
+<tr>
+<td>wetator.scripters</td><td>&nbsp;&nbsp;</td><td>org.wetator.scripter.WikiTextScripter</td>
+</tr>
+<tr>
+<td>wetator.proxyHost</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.proxyPort</td><td>&nbsp;&nbsp;</td><td>0</td>
+</tr>
+<tr>
+<td>wetator.proxyHostsToBypass</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.proxyUser</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.basicAuthUser</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.ntlmUser</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.ntlmWorkstation</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.ntlmDomain</td><td>&nbsp;&nbsp;</td><td></td>
+</tr>
+<tr>
+<td>wetator.retrospect</td><td>&nbsp;&nbsp;</td><td>-1</td>
+</tr>
+<tr>
+<td>wetator.jsDebugger</td><td>&nbsp;&nbsp;</td><td>false</td>
+</tr>
+</table>
+</td><td style="width: 50%;" valign="top">
+<table style="display: none; margin-left: 20px; margin-bottom: 20px;" class="smallBorder" cellspacing="0" cellpadding="2" id="variables">
+<tr>
+<th>Name</th><th></th><th>Value</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" class="smallBorder" cellspacing="0" cellpadding="2" width="100%" id="testCasesOverview">
+<tr>
+<th style="width: 30px;">No</th><th style="width: 15px;"></th><th>Name</th><th></th><th style="text-align: center;">Steps</th><th style="width: 80%">Graph</th><th style="text-align: right;">Duration</th>
+</tr>
+<tr>
+<td height="7px;" colspan="7"></td>
+</tr>
+<tr>
+<td align="center" rowspan="4">1</td><td rowspan="4"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"></td><td rowspan="4"><a class="link" href="#testspec_119">wetator_testform - Copy.wett</a></td><td><img class="browser" src="resources/browser-ie.png" alt="IE11" title="IE11"></td><td align="center">19/20</td><td>
+<table cellspacing="0" cellpadding="0" align="left">
+<tr>
+<td class="step success"><a class="linkToCommand" href="#136">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#153">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#163">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#168">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#186">&nbsp;</a></td><td class="step failure" title="The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected."><a class="linkToCommand" href="#207">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#227">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#242">&nbsp;</a></td><td class="step failure" title="Wrong value: expected: <my day> but was: <>"><a class="linkToCommand" href="#251">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#273">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#292">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#314">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#330">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#340">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#345">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#355">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#364">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#369">&nbsp;</a></td><td class="step error" title="No clickable HTML element found for 'Unknown Button'."><a class="linkToCommand" href="#387">&nbsp;</a></td><td class="step ignored"><a class="linkToCommand" href="#396">&nbsp;</a></td><td style="border-left:1px solid #999;">&nbsp;</td>
+</tr>
+</table>
+</td><td align="right"><span title="00:00:01:8">1.8s</span></td></tr><tr><td><img class="browser" src="resources/browser-firefox.png" alt="Firefox" title="Firefox"></td><td align="center">19/20</td><td>
+<table cellspacing="0" cellpadding="0" align="left">
+<tr>
+<td class="step success"><a class="linkToCommand" href="#419">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#436">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#446">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#451">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#469">&nbsp;</a></td><td class="step failure" title="The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected."><a class="linkToCommand" href="#490">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#510">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#525">&nbsp;</a></td><td class="step failure" title="Wrong value: expected: <my day> but was: <>"><a class="linkToCommand" href="#534">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#556">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#575">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#597">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#613">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#623">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#628">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#638">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#647">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#652">&nbsp;</a></td><td class="step error" title="No clickable HTML element found for 'Unknown Button'."><a class="linkToCommand" href="#670">&nbsp;</a></td><td class="step ignored"><a class="linkToCommand" href="#679">&nbsp;</a></td><td style="border-left:1px solid #999;">&nbsp;</td>
+</tr>
+</table>
+</td><td align="right"><span title="00:00:00:7">0.7s</span></td></tr><tr><td><img class="browser" src="resources/browser-firefox.png" alt="Firefox78" title="Firefox78"></td><td align="center">19/20</td><td>
+<table cellspacing="0" cellpadding="0" align="left">
+<tr>
+<td class="step success"><a class="linkToCommand" href="#702">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#719">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#729">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#734">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#752">&nbsp;</a></td><td class="step failure" title="The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected."><a class="linkToCommand" href="#773">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#793">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#808">&nbsp;</a></td><td class="step failure" title="Wrong value: expected: <my day> but was: <>"><a class="linkToCommand" href="#817">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#839">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#858">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#880">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#896">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#906">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#911">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#921">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#930">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#935">&nbsp;</a></td><td class="step error" title="No clickable HTML element found for 'Unknown Button'."><a class="linkToCommand" href="#953">&nbsp;</a></td><td class="step ignored"><a class="linkToCommand" href="#962">&nbsp;</a></td><td style="border-left:1px solid #999;">&nbsp;</td>
+</tr>
+</table>
+</td><td align="right"><span title="00:00:00:7">0.7s</span></td></tr><tr><td><img class="browser" src="resources/browser-chrome.png" alt="Chrome" title="Chrome"></td><td align="center">19/20</td><td>
+<table cellspacing="0" cellpadding="0" align="left">
+<tr>
+<td class="step success"><a class="linkToCommand" href="#985">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1002">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1012">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1017">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1035">&nbsp;</a></td><td class="step failure" title="The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected."><a class="linkToCommand" href="#1056">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1076">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1091">&nbsp;</a></td><td class="step failure" title="Wrong value: expected: <my day> but was: <>"><a class="linkToCommand" href="#1100">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1122">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1141">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1163">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1179">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1189">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1194">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1204">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1213">&nbsp;</a></td><td class="step success"><a class="linkToCommand" href="#1218">&nbsp;</a></td><td class="step error" title="No clickable HTML element found for 'Unknown Button'."><a class="linkToCommand" href="#1236">&nbsp;</a></td><td class="step ignored"><a class="linkToCommand" href="#1245">&nbsp;</a></td><td style="border-left:1px solid #999;">&nbsp;</td>
+</tr>
+</table>
+</td><td align="right"><span title="00:00:00:6">0.6s</span></td></tr><tr></tr>
+<tr>
+<td height="7px" colspan="7"></td>
+</tr>
+</table>
+<a name="details"></a>
+<div>
+<h2>
+<img title="error" alt="error" class="resultIcon" src="resources/x-error.png">&nbsp;<a name="testspec_119">C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform - Copy.wett</a> (IE11)</h2>
+<table class="smallBorder" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<th style="width: 30px;">Line</th><th style="width: 15px;">&nbsp;</th><th style="width: 120px;">Command</th><th style="width: 20px;">&nbsp;</th><th style="width: 20px;">&nbsp;</th><th style="width: 50%;">Parameter&nbsp;1</th><th>Parameter&nbsp;2</th><th>&nbsp;</th><th style="text-align: right;">Duration</th>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="121"></a>1</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >simple test case</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="126"></a>2</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" >comment</td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >-</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="131"></a>3</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >open the page</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="136"></a>4</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >http://www.wetator.org/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_136" onclick="showOrHide(this, 'log_136');"></td><td class="light topBorder" align="right"><span title="00:00:01:3">1.3s</span></td></tr>
+<tr style="display: none;" id="log_136">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="warn" height="11" width="11" src="resources/info-blue.png"></td><td>Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="148"></a>6</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >do we reach the correct page?</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="153"></a>7</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="158"></a>9</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >Check the page defaults</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="163"></a>10</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >The form below is only for testing purpose.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="168"></a>11</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23project" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_168" onclick="showOrHide(this, 'log_168');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_168">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="186"></a>12</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23languages" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >other</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_186" onclick="showOrHide(this, 'log_186');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_186">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="207"></a>13</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_amazing" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_amazing')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; amazing</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_207" onclick="showOrHide(this, 'log_207');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#251" onclick="makeVisible('testfile_120');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected.</td>
+</tr>
+<tr style="display: none;" id="log_207">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="227"></a>14</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_227" onclick="showOrHide(this, 'log_227');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_227">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="242"></a>15</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_marvelous" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23wetatorIs_wetatorIs_marvelous')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; marvelous</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_242" onclick="showOrHide(this, 'log_242');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_242">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="251"></a>16</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23wetatorIsText" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23wetatorIsText')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR makes</td><td class="light topBorder" >my day</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_251" onclick="showOrHide(this, 'log_251');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#207" onclick="makeVisible('testfile_120');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#387" onclick="makeVisible('testfile_120');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">Wrong value: expected: &lt;my day&gt; but was: &lt;&gt;</td>
+</tr>
+<tr style="display: none;" id="log_251">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="268"></a>18</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >time to start</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="273"></a>19</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >set</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100000.html?highlight=%23project" onmouseover="showPreview(event,'ie11/responses_current/response_100000.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100001.html?highlight=%23project" onmouseover="showPreview(event,'ie11/responses_current/response_100001.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Project name</td><td class="light topBorder" >HtmlUnit</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_273" onclick="showOrHide(this, 'log_273');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_273">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="292"></a>20</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100001.html?highlight=%23languages" onmouseover="showPreview(event,'ie11/responses_current/response_100001.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100002.html?highlight=%23languages" onmouseover="showPreview(event,'ie11/responses_current/response_100002.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >programming language &gt; JAVA</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_292" onclick="showOrHide(this, 'log_292');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_292">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="314"></a>21</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100002.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'ie11/responses_current/response_100002.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100003.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'ie11/responses_current/response_100003.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_314" onclick="showOrHide(this, 'log_314');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_314">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="330"></a>22</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100003.html?highlight=%23submit" onmouseover="showPreview(event,'ie11/responses_current/response_100003.html?highlight=%23submit')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100004.html" onmouseover="showPreview(event,'ie11/responses_current/response_100004.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Submit My Truth</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_330" onclick="showOrHide(this, 'log_330');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_330">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="340"></a>23</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="345"></a>24</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Why not using WETATOR for your other JAVA projects?</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="350"></a>26</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >finally test the validation</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="355"></a>27</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100005.html" onmouseover="showPreview(event,'ie11/responses_current/response_100005.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_355" onclick="showOrHide(this, 'log_355');"></td><td class="light topBorder" align="right"><span title="00:00:00:4">0.4s</span></td></tr>
+<tr style="display: none;" id="log_355">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="364"></a>28</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="369"></a>29</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100005.html?highlight=%23project" onmouseover="showPreview(event,'ie11/responses_current/response_100005.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_369" onclick="showOrHide(this, 'log_369');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_369">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="387"></a>30</td><td class="light topBorder" align="center"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="ie11/responses_current/response_100006.html" onmouseover="showPreview(event,'ie11/responses_current/response_100006.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Unknown Button</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_387" onclick="showOrHide(this, 'log_387');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#251" onclick="makeVisible('testfile_120');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#490" onclick="makeVisible('testfile_403');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="error">No clickable HTML element found for 'Unknown Button'.</td>
+</tr>
+<tr style="display: none;" id="log_387">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="error" height="11" width="11" src="resources/info-blue.png"></td><td>
+<pre class="details">org.wetator.exception.ActionException: No clickable HTML element found for 'Unknown Button'.
+	at org.wetator.commandset.AbstractCommandSet.getFirstRequiredHtmlElementFrom(AbstractCommandSet.java:154)
+	at org.wetator.commandset.DefaultCommandSet$CommandClickOn.execute(DefaultCommandSet.java:285)
+	at org.wetator.core.WetatorContext.determineAndExecuteCommandImpl(WetatorContext.java:260)
+	at org.wetator.core.WetatorContext.executeCommand(WetatorContext.java:216)
+	at org.wetator.core.WetatorContext.execute(WetatorContext.java:194)
+	at org.wetator.core.WetatorEngine.executeTests(WetatorEngine.java:169)
+	at org.wetator.Wetator.main(Wetator.java:137)
+</pre>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="ignored topBorder" align="center"><a name="396"></a>31</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >assert-content</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >"Project name" is a required field</td><td class="ignored topBorder" >-</td><td class="ignored topBorder" ></td><td class="ignored topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td colspan="8" class="light topBorder"></td><td align="right" class="light topBorder"><span title="00:00:01:8">1.8s</span></td>
+</tr>
+</table>
+<p class="backToTop">
+<a href="#top" class="link"><img alt="top" height="10" width="11" src="resources/arrow-up.png">Back to top
+                    </a>
+</p>
+</div>
+<div>
+<h2>
+<img title="error" alt="error" class="resultIcon" src="resources/x-error.png">&nbsp;<a name="testspec_402">C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform - Copy.wett</a> (Firefox)</h2>
+<table class="smallBorder" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<th style="width: 30px;">Line</th><th style="width: 15px;">&nbsp;</th><th style="width: 120px;">Command</th><th style="width: 20px;">&nbsp;</th><th style="width: 20px;">&nbsp;</th><th style="width: 50%;">Parameter&nbsp;1</th><th>Parameter&nbsp;2</th><th>&nbsp;</th><th style="text-align: right;">Duration</th>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="404"></a>1</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >simple test case</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="409"></a>2</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" >comment</td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >-</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="414"></a>3</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >open the page</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="419"></a>4</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >http://www.wetator.org/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_419" onclick="showOrHide(this, 'log_419');"></td><td class="light topBorder" align="right"><span title="00:00:00:5">0.5s</span></td></tr>
+<tr style="display: none;" id="log_419">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="warn" height="11" width="11" src="resources/info-blue.png"></td><td>Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="431"></a>6</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >do we reach the correct page?</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="436"></a>7</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="441"></a>9</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >Check the page defaults</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="446"></a>10</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >The form below is only for testing purpose.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="451"></a>11</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23project" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_451" onclick="showOrHide(this, 'log_451');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_451">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="469"></a>12</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23languages" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >other</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_469" onclick="showOrHide(this, 'log_469');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_469">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="490"></a>13</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_amazing" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_amazing')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; amazing</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_490" onclick="showOrHide(this, 'log_490');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#387" onclick="makeVisible('testfile_120');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#534" onclick="makeVisible('testfile_403');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected.</td>
+</tr>
+<tr style="display: none;" id="log_490">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="510"></a>14</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_510" onclick="showOrHide(this, 'log_510');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_510">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="525"></a>15</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_marvelous" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23wetatorIs_wetatorIs_marvelous')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; marvelous</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_525" onclick="showOrHide(this, 'log_525');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_525">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="534"></a>16</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23wetatorIsText" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23wetatorIsText')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR makes</td><td class="light topBorder" >my day</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_534" onclick="showOrHide(this, 'log_534');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#490" onclick="makeVisible('testfile_403');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#670" onclick="makeVisible('testfile_403');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">Wrong value: expected: &lt;my day&gt; but was: &lt;&gt;</td>
+</tr>
+<tr style="display: none;" id="log_534">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="551"></a>18</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >time to start</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="556"></a>19</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100007.html?highlight=%23project" onmouseover="showPreview(event,'firefox/responses_current/response_100007.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100008.html?highlight=%23project" onmouseover="showPreview(event,'firefox/responses_current/response_100008.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Project name</td><td class="light topBorder" >HtmlUnit</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_556" onclick="showOrHide(this, 'log_556');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_556">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="575"></a>20</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100008.html?highlight=%23languages" onmouseover="showPreview(event,'firefox/responses_current/response_100008.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100009.html?highlight=%23languages" onmouseover="showPreview(event,'firefox/responses_current/response_100009.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >programming language &gt; JAVA</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_575" onclick="showOrHide(this, 'log_575');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_575">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="597"></a>21</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100009.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox/responses_current/response_100009.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100010.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox/responses_current/response_100010.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_597" onclick="showOrHide(this, 'log_597');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_597">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="613"></a>22</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100010.html?highlight=%23submit" onmouseover="showPreview(event,'firefox/responses_current/response_100010.html?highlight=%23submit')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100011.html" onmouseover="showPreview(event,'firefox/responses_current/response_100011.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Submit My Truth</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_613" onclick="showOrHide(this, 'log_613');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_613">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="623"></a>23</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="628"></a>24</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Why not using WETATOR for your other JAVA projects?</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="633"></a>26</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >finally test the validation</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="638"></a>27</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100012.html" onmouseover="showPreview(event,'firefox/responses_current/response_100012.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_638" onclick="showOrHide(this, 'log_638');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_638">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="647"></a>28</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="652"></a>29</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100012.html?highlight=%23project" onmouseover="showPreview(event,'firefox/responses_current/response_100012.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_652" onclick="showOrHide(this, 'log_652');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_652">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="670"></a>30</td><td class="light topBorder" align="center"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox/responses_current/response_100013.html" onmouseover="showPreview(event,'firefox/responses_current/response_100013.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Unknown Button</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_670" onclick="showOrHide(this, 'log_670');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#534" onclick="makeVisible('testfile_403');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#773" onclick="makeVisible('testfile_686');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="error">No clickable HTML element found for 'Unknown Button'.</td>
+</tr>
+<tr style="display: none;" id="log_670">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="error" height="11" width="11" src="resources/info-blue.png"></td><td>
+<pre class="details">org.wetator.exception.ActionException: No clickable HTML element found for 'Unknown Button'.
+	at org.wetator.commandset.AbstractCommandSet.getFirstRequiredHtmlElementFrom(AbstractCommandSet.java:154)
+	at org.wetator.commandset.DefaultCommandSet$CommandClickOn.execute(DefaultCommandSet.java:285)
+	at org.wetator.core.WetatorContext.determineAndExecuteCommandImpl(WetatorContext.java:260)
+	at org.wetator.core.WetatorContext.executeCommand(WetatorContext.java:216)
+	at org.wetator.core.WetatorContext.execute(WetatorContext.java:194)
+	at org.wetator.core.WetatorEngine.executeTests(WetatorEngine.java:169)
+	at org.wetator.Wetator.main(Wetator.java:137)
+</pre>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="ignored topBorder" align="center"><a name="679"></a>31</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >assert-content</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >"Project name" is a required field</td><td class="ignored topBorder" >-</td><td class="ignored topBorder" ></td><td class="ignored topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td colspan="8" class="light topBorder"></td><td align="right" class="light topBorder"><span title="00:00:00:7">0.7s</span></td>
+</tr>
+</table>
+<p class="backToTop">
+<a href="#top" class="link"><img alt="top" height="10" width="11" src="resources/arrow-up.png">Back to top
+                    </a>
+</p>
+</div>
+<div>
+<h2>
+<img title="error" alt="error" class="resultIcon" src="resources/x-error.png">&nbsp;<a name="testspec_685">C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform - Copy.wett</a> (Firefox78)</h2>
+<table class="smallBorder" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<th style="width: 30px;">Line</th><th style="width: 15px;">&nbsp;</th><th style="width: 120px;">Command</th><th style="width: 20px;">&nbsp;</th><th style="width: 20px;">&nbsp;</th><th style="width: 50%;">Parameter&nbsp;1</th><th>Parameter&nbsp;2</th><th>&nbsp;</th><th style="text-align: right;">Duration</th>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="687"></a>1</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >simple test case</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="692"></a>2</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" >comment</td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >-</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="697"></a>3</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >open the page</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="702"></a>4</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >http://www.wetator.org/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_702" onclick="showOrHide(this, 'log_702');"></td><td class="light topBorder" align="right"><span title="00:00:00:5">0.5s</span></td></tr>
+<tr style="display: none;" id="log_702">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="warn" height="11" width="11" src="resources/info-blue.png"></td><td>Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="714"></a>6</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >do we reach the correct page?</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="719"></a>7</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="724"></a>9</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >Check the page defaults</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="729"></a>10</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >The form below is only for testing purpose.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="734"></a>11</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23project" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_734" onclick="showOrHide(this, 'log_734');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_734">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="752"></a>12</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23languages" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >other</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_752" onclick="showOrHide(this, 'log_752');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_752">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="773"></a>13</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_amazing" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_amazing')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; amazing</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_773" onclick="showOrHide(this, 'log_773');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#670" onclick="makeVisible('testfile_403');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#817" onclick="makeVisible('testfile_686');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected.</td>
+</tr>
+<tr style="display: none;" id="log_773">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="793"></a>14</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_793" onclick="showOrHide(this, 'log_793');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_793">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="808"></a>15</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_marvelous" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23wetatorIs_wetatorIs_marvelous')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; marvelous</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_808" onclick="showOrHide(this, 'log_808');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_808">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="817"></a>16</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23wetatorIsText" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23wetatorIsText')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR makes</td><td class="light topBorder" >my day</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_817" onclick="showOrHide(this, 'log_817');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#773" onclick="makeVisible('testfile_686');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#953" onclick="makeVisible('testfile_686');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">Wrong value: expected: &lt;my day&gt; but was: &lt;&gt;</td>
+</tr>
+<tr style="display: none;" id="log_817">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="834"></a>18</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >time to start</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="839"></a>19</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100014.html?highlight=%23project" onmouseover="showPreview(event,'firefox78/responses_current/response_100014.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100015.html?highlight=%23project" onmouseover="showPreview(event,'firefox78/responses_current/response_100015.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Project name</td><td class="light topBorder" >HtmlUnit</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_839" onclick="showOrHide(this, 'log_839');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_839">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="858"></a>20</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100015.html?highlight=%23languages" onmouseover="showPreview(event,'firefox78/responses_current/response_100015.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100016.html?highlight=%23languages" onmouseover="showPreview(event,'firefox78/responses_current/response_100016.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >programming language &gt; JAVA</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_858" onclick="showOrHide(this, 'log_858');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_858">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="880"></a>21</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100016.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox78/responses_current/response_100016.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100017.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'firefox78/responses_current/response_100017.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_880" onclick="showOrHide(this, 'log_880');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_880">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="896"></a>22</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100017.html?highlight=%23submit" onmouseover="showPreview(event,'firefox78/responses_current/response_100017.html?highlight=%23submit')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100018.html" onmouseover="showPreview(event,'firefox78/responses_current/response_100018.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Submit My Truth</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_896" onclick="showOrHide(this, 'log_896');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_896">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="906"></a>23</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="911"></a>24</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Why not using WETATOR for your other JAVA projects?</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="916"></a>26</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >finally test the validation</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="921"></a>27</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100019.html" onmouseover="showPreview(event,'firefox78/responses_current/response_100019.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_921" onclick="showOrHide(this, 'log_921');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_921">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="930"></a>28</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="935"></a>29</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100019.html?highlight=%23project" onmouseover="showPreview(event,'firefox78/responses_current/response_100019.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_935" onclick="showOrHide(this, 'log_935');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_935">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="953"></a>30</td><td class="light topBorder" align="center"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="firefox78/responses_current/response_100020.html" onmouseover="showPreview(event,'firefox78/responses_current/response_100020.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Unknown Button</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_953" onclick="showOrHide(this, 'log_953');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#817" onclick="makeVisible('testfile_686');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#1056" onclick="makeVisible('testfile_969');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="error">No clickable HTML element found for 'Unknown Button'.</td>
+</tr>
+<tr style="display: none;" id="log_953">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="error" height="11" width="11" src="resources/info-blue.png"></td><td>
+<pre class="details">org.wetator.exception.ActionException: No clickable HTML element found for 'Unknown Button'.
+	at org.wetator.commandset.AbstractCommandSet.getFirstRequiredHtmlElementFrom(AbstractCommandSet.java:154)
+	at org.wetator.commandset.DefaultCommandSet$CommandClickOn.execute(DefaultCommandSet.java:285)
+	at org.wetator.core.WetatorContext.determineAndExecuteCommandImpl(WetatorContext.java:260)
+	at org.wetator.core.WetatorContext.executeCommand(WetatorContext.java:216)
+	at org.wetator.core.WetatorContext.execute(WetatorContext.java:194)
+	at org.wetator.core.WetatorEngine.executeTests(WetatorEngine.java:169)
+	at org.wetator.Wetator.main(Wetator.java:137)
+</pre>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="ignored topBorder" align="center"><a name="962"></a>31</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >assert-content</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >"Project name" is a required field</td><td class="ignored topBorder" >-</td><td class="ignored topBorder" ></td><td class="ignored topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td colspan="8" class="light topBorder"></td><td align="right" class="light topBorder"><span title="00:00:00:7">0.7s</span></td>
+</tr>
+</table>
+<p class="backToTop">
+<a href="#top" class="link"><img alt="top" height="10" width="11" src="resources/arrow-up.png">Back to top
+                    </a>
+</p>
+</div>
+<div>
+<h2>
+<img title="error" alt="error" class="resultIcon" src="resources/x-error.png">&nbsp;<a name="testspec_968">C:\RBRi\eclipse\workspace\wetator\samples\wetator_testform\wetator_testform - Copy.wett</a> (Chrome)</h2>
+<table class="smallBorder" width="100%" cellspacing="0" cellpadding="2">
+<tr>
+<th style="width: 30px;">Line</th><th style="width: 15px;">&nbsp;</th><th style="width: 120px;">Command</th><th style="width: 20px;">&nbsp;</th><th style="width: 20px;">&nbsp;</th><th style="width: 50%;">Parameter&nbsp;1</th><th>Parameter&nbsp;2</th><th>&nbsp;</th><th style="text-align: right;">Duration</th>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="970"></a>1</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >simple test case</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="975"></a>2</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" >comment</td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >-</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="980"></a>3</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >open the page</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="985"></a>4</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >http://www.wetator.org/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_985" onclick="showOrHide(this, 'log_985');"></td><td class="light topBorder" align="right"><span title="00:00:00:5">0.5s</span></td></tr>
+<tr style="display: none;" id="log_985">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="warn" height="11" width="11" src="resources/info-blue.png"></td><td>Usage of absolute URLs like 'http://www.wetator.org/testform' is deprecated. Better Use only paths to make your test independent of a certain machine.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="997"></a>6</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >do we reach the correct page?</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1002"></a>7</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="1007"></a>9</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >Check the page defaults</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1012"></a>10</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >The form below is only for testing purpose.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1017"></a>11</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23project" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1017" onclick="showOrHide(this, 'log_1017');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1017">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1035"></a>12</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23languages" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >other</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1035" onclick="showOrHide(this, 'log_1035');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1035">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'other' on page; using the best matching one [HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 index: 72'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 44 distance: 302 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 52 distance: 310 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 62 distance: 320 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1056"></a>13</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-selected</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_amazing" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_amazing')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; amazing</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1056" onclick="showOrHide(this, 'log_1056');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#953" onclick="makeVisible('testfile_686');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#1100" onclick="makeVisible('testfile_969');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">The element/option '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')]' is not selected.</td>
+</tr>
+<tr style="display: none;" id="log_1056">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; amazing' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 0 start: 302 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 10 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1076"></a>14</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1076" onclick="showOrHide(this, 'log_1076');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1076">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 310 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1091"></a>15</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-deselected</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_marvelous" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23wetatorIs_wetatorIs_marvelous')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR is &gt; marvelous</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1091" onclick="showOrHide(this, 'log_1091');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1091">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 18 start: 320 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1100"></a>16</td><td class="light topBorder" align="center"><img title="failure" alt="failure" class="resultIcon" src="resources/x-failure.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23wetatorIsText" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23wetatorIsText')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR makes</td><td class="light topBorder" >my day</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1100" onclick="showOrHide(this, 'log_1100');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#1056" onclick="makeVisible('testfile_969');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a><a href="#1236" onclick="makeVisible('testfile_969');"><img title="next failure/error" alt="next failure/error" height="10" width="11" src="resources/arrow-down.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="failure">Wrong value: expected: &lt;my day&gt; but was: &lt;&gt;</td>
+</tr>
+<tr style="display: none;" id="log_1100">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR makes' on page; using the best matching one [HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 330 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 64 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="comment topBorder" align="center"><a name="1117"></a>18</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >time to start</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1122"></a>19</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >set</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100021.html?highlight=%23project" onmouseover="showPreview(event,'chrome/responses_current/response_100021.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100022.html?highlight=%23project" onmouseover="showPreview(event,'chrome/responses_current/response_100022.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Project name</td><td class="light topBorder" >HtmlUnit</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1122" onclick="showOrHide(this, 'log_1122');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1122">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1141"></a>20</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100022.html?highlight=%23languages" onmouseover="showPreview(event,'chrome/responses_current/response_100022.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100023.html?highlight=%23languages" onmouseover="showPreview(event,'chrome/responses_current/response_100023.html?highlight=%23languages')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >programming language &gt; JAVA</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1141" onclick="showOrHide(this, 'log_1141');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1141">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'programming language &gt; JAVA' on page; using the best matching one [HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 index: 66'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_amazing') (name='wetatorIs[]')] found by: BY_TEXT deviation: 64 distance: 69 start: 311 index: 89'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_TEXT deviation: 72 distance: 77 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 82 distance: 87 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1163"></a>21</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >select</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100023.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'chrome/responses_current/response_100023.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100024.html?highlight=%23wetatorIs_wetatorIs_visionary" onmouseover="showPreview(event,'chrome/responses_current/response_100024.html?highlight=%23wetatorIs_wetatorIs_visionary')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >WETATOR is &gt; visionary</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1163" onclick="showOrHide(this, 'log_1163');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1163">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 index: 94'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 18 start: 329 index: 99'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1179"></a>22</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100024.html?highlight=%23submit" onmouseover="showPreview(event,'chrome/responses_current/response_100024.html?highlight=%23submit')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100025.html" onmouseover="showPreview(event,'chrome/responses_current/response_100025.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Submit My Truth</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1179" onclick="showOrHide(this, 'log_1179');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1179">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 index: 129'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1189"></a>23</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1194"></a>24</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-content</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Why not using WETATOR for your other JAVA projects?</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="comment topBorder" align="center"><a name="1199"></a>26</td><td class="comment topBorder" align="center">&nbsp;</td><td class="comment topBorder" ></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" align="center"></td><td class="comment topBorder" >finally test the validation</td><td class="comment topBorder" >-</td><td class="comment topBorder" ></td><td class="comment topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1204"></a>27</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >open-url</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100026.html" onmouseover="showPreview(event,'chrome/responses_current/response_100026.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >/testform</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1204" onclick="showOrHide(this, 'log_1204');"></td><td class="light topBorder" align="right"><span title="00:00:00:1">0.1s</span></td></tr>
+<tr style="display: none;" id="log_1204">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Open URL 'http://www.wetator.org/testform'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1213"></a>28</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-title</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"></td><td class="light topBorder" >WETATOR / Test Form</td><td class="light topBorder" >-</td><td class="light topBorder" ></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr><td class="light topBorder" align="center"><a name="1218"></a>29</td><td class="light topBorder" align="center"><img title="success" alt="success" class="resultIcon" src="resources/ok.png"></td><td class="light topBorder" >assert-set</td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100026.html?highlight=%23project" onmouseover="showPreview(event,'chrome/responses_current/response_100026.html?highlight=%23project')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view highlight" src="resources/file-highlighted.png"></a></td><td class="light topBorder" align="center"></td><td class="light topBorder" >Project name</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle.png" id="showHide_log_1218" onclick="showOrHide(this, 'log_1218');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr style="display: none;" id="log_1218">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found more than one HTML element for pattern 'Project name' on page; using the best matching one [HtmlTextInput (id='project') (name='projectName')].</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 index: 57'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlTextArea (id='wetatorIsText') (name='wetatorIsText')] found by: BY_TEXT deviation: 140 distance: 344 start: 344 index: 110'.</td>
+</tr>
+<tr>
+<td><img alt="info" height="11" width="11" src="resources/info-green.png"></td><td>Found control '[HtmlFileInput (id='resume') (name='resume')] found by: BY_TEXT deviation: 204 distance: 408 start: 408 index: 123'.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="light topBorder" align="center"><a name="1236"></a>30</td><td class="light topBorder" align="center"><img title="error" alt="error" class="resultIcon" src="resources/x-error.png"></td><td class="light topBorder" >click-on</td><td class="light topBorder" align="center"></td><td class="light topBorder" align="center"><a target="_blank" href="chrome/responses_current/response_100027.html" onmouseover="showPreview(event,'chrome/responses_current/response_100027.html')" onmouseout="hidePreview()"><img class="testStepScreenshot" alt="view response" src="resources/file.png"></a></td><td class="light topBorder" >Unknown Button</td><td class="light topBorder" >-</td><td class="light topBorder" ><img class="testStepInfo" alt="Show/Hide log entries" src="resources/expand-circle-blue.png" id="showHide_log_1236" onclick="showOrHide(this, 'log_1236');"></td><td class="light topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td class="light"></td><td class="light"></td><td class="light errorJumper"><a href="#1100" onclick="makeVisible('testfile_969');"><img title="previous failure/error" alt="previous failure/error" height="10" width="11" src="resources/arrow-up.png"></a></td><td class="light"></td><td class="light"></td><td colspan="4" class="error">No clickable HTML element found for 'Unknown Button'.</td>
+</tr>
+<tr style="display: none;" id="log_1236">
+<td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td class="light"></td><td colspan="4" class="message">
+<table width="100%" cellspacing="0" cellpadding="1">
+<tr>
+<td><img alt="error" height="11" width="11" src="resources/info-blue.png"></td><td>
+<pre class="details">org.wetator.exception.ActionException: No clickable HTML element found for 'Unknown Button'.
+	at org.wetator.commandset.AbstractCommandSet.getFirstRequiredHtmlElementFrom(AbstractCommandSet.java:154)
+	at org.wetator.commandset.DefaultCommandSet$CommandClickOn.execute(DefaultCommandSet.java:285)
+	at org.wetator.core.WetatorContext.determineAndExecuteCommandImpl(WetatorContext.java:260)
+	at org.wetator.core.WetatorContext.executeCommand(WetatorContext.java:216)
+	at org.wetator.core.WetatorContext.execute(WetatorContext.java:194)
+	at org.wetator.core.WetatorEngine.executeTests(WetatorEngine.java:169)
+	at org.wetator.Wetator.main(Wetator.java:137)
+</pre>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td class="ignored topBorder" align="center"><a name="1245"></a>31</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >assert-content</td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" align="center"></td><td class="ignored topBorder" >"Project name" is a required field</td><td class="ignored topBorder" >-</td><td class="ignored topBorder" ></td><td class="ignored topBorder" align="right"><span title="00:00:00:0">0.0s</span></td></tr>
+<tr>
+<td colspan="8" class="light topBorder"></td><td align="right" class="light topBorder"><span title="00:00:00:6">0.6s</span></td>
+</tr>
+</table>
+<p class="backToTop">
+<a href="#top" class="link"><img alt="top" height="10" width="11" src="resources/arrow-up.png">Back to top
+                    </a>
+</p>
+</div>
+<hr>Created using Wetator version: local build.
+</body>
+</html>

@@ -13,9 +13,9 @@ draft: false
 
   <p>
   <ul>
-    <li>JDK version 6 or higher
-    <li>If you plan to run Wetator tests from ant than you additionally need <a href="http://ant.apache.org/" target="_blank">Apache Ant</a> version 1.7.0 or newer.
-    <li>an XML editor (maybe the Eclipse plugin {{% pagelink "download" "Wetator Test Editor" "_blank" %}}) to edit the Wetator test files (Wetator supports several formats, but XML is suggested)
+    <li>JDK version 1.8 or higher
+    <li>If you plan to run Wetator tests from ant than you additionally need <a href="http://ant.apache.org/" target="_blank">Apache Ant</a> version 1.10.12 or newer.
+    <li>a text editor to edit the test scripts (*.wett files)
   </ul>
   </p>
 
@@ -27,32 +27,34 @@ draft: false
     <li>Download the latest {{% pagelink "download" "stable version" "_blank" %}}.
     <li>Create a new directory and unzip the file into it (preserve subdirectories).
     <li>Open a command window and go to your Wetator directory.
-    <li>If under Windows start <pre>wetator.bat</pre>
-        under Mac OS execute <pre>java -cp lib/ -jar lib/wetator.jar</pre>
-    <li>If you see some message like
+    <li>If under Windows start <pre>wetator.bat empty.wett</pre>
+    <li>On Unix you have to make the file wetator.sh executable first; then run <pre>wetator.sh empty.wett</pre>
+    <li>You see some message like
 <pre>Starting Wetator
-Wetator execution failed: The configuration file 'D:\Wetator\wetator.config' does not exist.
-</pre> then everything seems to be right and you can start with your first test.
+java -cp ".:./lib/*:" org.wetator.Wetator empty.wet
+Wetator 2.0.0.beta3
+  using HtmlUnit version 2.57.0
+  Config:     'wet/wetator.config'
+  OutputDir:  'wet/logs'
+  Templates:  'wet/xsl/run_report.xsl'
+  TestFiles:  'empty.wet' (wet/empty.wet)
+              TestCase: 'empty.wet' (1/1)
+                FirefoxESR
+
+
+              Success
+                Tests: 1,  Errors: 0,  Failures: 0,  Ignored: 0
+                Steps: 0,  Errors: 0,  Failures: 0,  Ignored: 0
+</pre>
+    <li>Inside the output dir (usually the subdir log) you can find the result overview. Simple open the file logs/run_report.xsl.html with your browser.
+    <li>Thats all - you are ready now to start writing your first test script.
   </ul>
   </p>
 
-  <h3>Run a simple test</h3>
+  <h3>Run the simple wetator test selector ui</h3>
   <p>
-  <ul>
-    <li>Copy the file wetator.config from directory samples\wetator_testform to the root of your installation directory.<br>
-    This file defines Wetator's setup.
-    <li>Start Wetator again.
-    <li>A small popup window appears. Please choose the file samples\wetator_testform\wetator_testform.wett and click on open (You can select more
-    then one file if you like).
-    <li>Wetator executes all commands from the selected file. A small progress report is written to the console.
-    <li>If everything works fine you will end with some output like
-
-<pre>Tests run: 8,  Failures: 0,  Errors: 0</pre>
-    <li>Wetator writes a detailed protocol for every test run. You can find this protocol in the
-    subfolder 'logs'. Open the file 'run_report.xsl.html' with your browser.
-  </ul>
+  If you start the wetator without providing a specific test file, a small file dialog appears and let you choose the test scripts you like to run.
   </p>
-
   <p>For more details about the command line interface see {{% pagelink "command-line-options" "Command-Line Options" %}}.
   </p>
 

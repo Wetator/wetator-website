@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<wet id="0">
+  <about id="1">
+    <product id="2">Wetator</product>
+    <version id="3">local build</version>
+    <build id="4"></build>
+    <libraries id="5">
+      <library id="6">htmlunit-2.58.0.jar (2022-02-04)</library>
+      <library id="7">htmlunit-core-js-2.58.0.jar (2022-02-04)</library>
+      <library id="8">neko-htmlunit-2.58.0.jar (2022-02-04)</library>
+      <library id="9">htmlunit-cssparser-1.11.0.jar (2021-12-11)</library>
+      <library id="10">Apache Commons Lang 3.12.0</library>
+      <library id="11">Apache Commons Text 1.9</library>
+      <library id="12">Apache Commons Codec 1.15</library>
+      <library id="13">Apache Commons IO 2.10.0</library>
+      <library id="14">HttpComponents Apache HttpCore 4.4.13</library>
+      <library id="15">Apache HttpClient 4.5.13</library>
+      <library id="16">Apache HttpClient Mime 4.5.13</library>
+      <library id="17">Apache Log4j API 2.17.1</library>
+      <library id="18">Apache Log4j Core 2.17.1</library>
+      <library id="19">automaton-1.12-1.jar</library>
+      <library id="20">POI 5.1.0</library>
+      <library id="21">Apache PDFBox 2.0.24</library>
+      <library id="22">Apache FontBox 2.0.24</library>
+      <library id="23">XmlCommonsExternal 1.4.01</library>
+      <library id="24">Xerces-J 2.12.2</library>
+      <library id="25">Xalan Java 2.7.2</library>
+    </libraries>
+    <java id="26">
+      <property id="27" key="apache.commons.httpclient.cookiespec" value="COMPATIBILITY" />
+      <property id="28" key="awt.toolkit" value="sun.awt.windows.WToolkit" />
+      <property id="29" key="file.encoding" value="UTF-8" />
+      <property id="30" key="file.encoding.pkg" value="sun.io" />
+      <property id="31" key="file.separator" value="\" />
+      <property id="32" key="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+      <property id="33" key="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+      <property id="34" key="java.class.path" value="C:\RBRi\git_repo\wetator\bin;C:\RBRi\git_repo\wetator\lib\automaton-1.12-1.jar;C:\RBRi\git_repo\wetator\lib\bcmail-jdk15on-1.70.jar;C:\RBRi\git_repo\wetator\lib\bcpkix-jdk15on-1.70.jar;C:\RBRi\git_repo\wetator\lib\bcprov-jdk15on-1.70.jar;C:\RBRi\git_repo\wetator\lib\bcutil-jdk15on-1.70.jar;C:\RBRi\git_repo\wetator\lib\byte-buddy-1.11.3.jar;C:\RBRi\git_repo\wetator\lib\byte-buddy-agent-1.11.3.jar;C:\RBRi\git_repo\wetator\lib\commons-codec-1.15.jar;C:\RBRi\git_repo\wetator\lib\commons-collections4-4.4.jar;C:\RBRi\git_repo\wetator\lib\commons-compress-1.21.jar;C:\RBRi\git_repo\wetator\lib\commons-io-2.10.0.jar;C:\RBRi\git_repo\wetator\lib\commons-lang3-3.12.0.jar;C:\RBRi\git_repo\wetator\lib\commons-logging-1.2.jar;C:\RBRi\git_repo\wetator\lib\commons-math3-3.6.1.jar;C:\RBRi\git_repo\wetator\lib\commons-net-3.8.0.jar;C:\RBRi\git_repo\wetator\lib\commons-text-1.9.jar;C:\RBRi\git_repo\wetator\lib\curvesapi-1.06.jar;C:\RBRi\git_repo\wetator\lib\dec-0.1.2.jar;C:\RBRi\git_repo\wetator\lib\fontbox-2.0.24.jar;C:\RBRi\git_repo\wetator\lib\hamcrest-core-1.3.jar;C:\RBRi\git_repo\wetator\lib\hsqldb-2.5.2.jar;C:\RBRi\git_repo\wetator\lib\htmlunit-2.58.0.jar;C:\RBRi\git_repo\wetator\lib\htmlunit-core-js-2.58.0.jar;C:\RBRi\git_repo\wetator\lib\htmlunit-cssparser-1.11.0.jar;C:\RBRi\git_repo\wetator\lib\httpclient-4.5.13.jar;C:\RBRi\git_repo\wetator\lib\httpcore-4.4.13.jar;C:\RBRi\git_repo\wetator\lib\httpmime-4.5.13.jar;C:\RBRi\git_repo\wetator\lib\javax.servlet-api-3.1.0.jar;C:\RBRi\git_repo\wetator\lib\jetty-client-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-continuation-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-http-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-io-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-security-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-server-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-servlet-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-servlets-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-util-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-util-ajax-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-webapp-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\jetty-xml-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\junit-4.13.2.jar;C:\RBRi\git_repo\wetator\lib\log4j-api-2.17.1.jar;C:\RBRi\git_repo\wetator\lib\log4j-core-2.17.1.jar;C:\RBRi\git_repo\wetator\lib\log4j-jcl-2.17.1.jar;C:\RBRi\git_repo\wetator\lib\log4j-slf4j-impl-2.17.1.jar;C:\RBRi\git_repo\wetator\lib\mockito-core-3.11.2.jar;C:\RBRi\git_repo\wetator\lib\neko-htmlunit-2.58.0.jar;C:\RBRi\git_repo\wetator\lib\objenesis-3.2.jar;C:\RBRi\git_repo\wetator\lib\pdfbox-2.0.24.jar;C:\RBRi\git_repo\wetator\lib\poi-5.1.0.jar;C:\RBRi\git_repo\wetator\lib\poi-ooxml-5.1.0.jar;C:\RBRi\git_repo\wetator\lib\poi-ooxml-lite-5.1.0.jar;C:\RBRi\git_repo\wetator\lib\poi-scratchpad-5.1.0.jar;C:\RBRi\git_repo\wetator\lib\relaxngDatatype-20020414.jar;C:\RBRi\git_repo\wetator\lib\salvation2-3.0.0.jar;C:\RBRi\git_repo\wetator\lib\serializer-2.7.2.jar;C:\RBRi\git_repo\wetator\lib\slf4j-api-1.7.31.jar;C:\RBRi\git_repo\wetator\lib\SparseBitSet-1.2.jar;C:\RBRi\git_repo\wetator\lib\txtmark-0.13.jar;C:\RBRi\git_repo\wetator\lib\websocket-api-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\websocket-client-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\websocket-common-9.4.44.v20210927.jar;C:\RBRi\git_repo\wetator\lib\xalan-2.7.2.jar;C:\RBRi\git_repo\wetator\lib\xercesImpl-2.12.2.jar;C:\RBRi\git_repo\wetator\lib\xml-apis-1.4.01.jar;C:\RBRi\git_repo\wetator\lib\xmlbeans-5.0.2.jar;C:\RBRi\git_repo\wetator\lib\xsom-20140925.jar" />
+      <property id="35" key="java.class.version" value="52.0" />
+      <property id="36" key="java.endorsed.dirs" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\endorsed" />
+      <property id="37" key="java.ext.dirs" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+      <property id="38" key="java.home" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre" />
+      <property id="39" key="java.io.tmpdir" value="C:\Users\ronald\AppData\Local\Temp\" />
+      <property id="40" key="java.library.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\RBRi\apache-ant-1.10.8\bin;C:\RBRi\apache-maven-3.6.3\bin;C:\RBRi\gradle\gradle-6.5.1\bin;C:\Program Files\SmartGit\git\bin;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\bin;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\bin;C:\Program Files\PuTTY\;C:\Users\ronald\AppData\Local\Microsoft\WindowsApps;C:\Users\ronald\AppData\Roaming\npm;C:\RBRi\cck\Image-ExifTool-12.35;;." />
+      <property id="41" key="java.runtime.name" value="OpenJDK Runtime Environment" />
+      <property id="42" key="java.runtime.version" value="1.8.0_312-b07" />
+      <property id="43" key="java.specification.name" value="Java Platform API Specification" />
+      <property id="44" key="java.specification.vendor" value="Oracle Corporation" />
+      <property id="45" key="java.specification.version" value="1.8" />
+      <property id="46" key="java.vendor" value="ojdkbuild" />
+      <property id="47" key="java.vendor.url" value="https://github.com/ojdkbuild" />
+      <property id="48" key="java.vendor.url.bug" value="https://github.com/ojdkbuild/ojdkbuild/issues" />
+      <property id="49" key="java.version" value="1.8.0_312" />
+      <property id="50" key="java.vm.info" value="mixed mode" />
+      <property id="51" key="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+      <property id="52" key="java.vm.specification.name" value="Java Virtual Machine Specification" />
+      <property id="53" key="java.vm.specification.vendor" value="Oracle Corporation" />
+      <property id="54" key="java.vm.specification.version" value="1.8" />
+      <property id="55" key="java.vm.vendor" value="ojdkbuild" />
+      <property id="56" key="java.vm.version" value="25.312-b07" />
+      <property id="57" key="line.separator" value="\r\n" />
+      <property id="58" key="os.arch" value="amd64" />
+      <property id="59" key="os.name" value="Windows 10" />
+      <property id="60" key="os.version" value="10.0" />
+      <property id="61" key="path.separator" value=";" />
+      <property id="62" key="sun.arch.data.model" value="64" />
+      <property id="63" key="sun.boot.class.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\resources.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\rt.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\sunrsasign.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\jsse.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\jce.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\charsets.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\lib\jfr.jar;C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\classes" />
+      <property id="64" key="sun.boot.library.path" value="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.312-1\jre\bin" />
+      <property id="65" key="sun.cpu.endian" value="little" />
+      <property id="66" key="sun.cpu.isalist" value="amd64" />
+      <property id="67" key="sun.desktop" value="windows" />
+      <property id="68" key="sun.io.unicode.encoding" value="UnicodeLittle" />
+      <property id="69" key="sun.java.command" value="org.wetator.Wetator C:\RBRi\git_repo\wetator\web_page.wett" />
+      <property id="70" key="sun.java.launcher" value="SUN_STANDARD" />
+      <property id="71" key="sun.jnu.encoding" value="Cp1252" />
+      <property id="72" key="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+      <property id="73" key="sun.os.patch.level" value="" />
+      <property id="74" key="user.country" value="US" />
+      <property id="75" key="user.country.format" value="DE" />
+      <property id="76" key="user.dir" value="C:\RBRi\git_repo\wetator\samples\htmx" />
+      <property id="77" key="user.home" value="C:\Users\ronald" />
+      <property id="78" key="user.language" value="en" />
+      <property id="79" key="user.language.format" value="de" />
+      <property id="80" key="user.name" value="Ronald" />
+      <property id="81" key="user.script" value="" />
+      <property id="82" key="user.timezone" value="Europe/Berlin" />
+      <property id="83" key="user.variant" value="" />
+    </java>
+  </about>
+  <configuration id="84">
+    <property id="85" key="configuration file" value="C:\RBRi\git_repo\wetator\samples\htmx\wetator.config" />
+    <property id="86" key="wetator.baseUrl" value="https://htmx.org/examples" />
+    <property id="87" key="wetator.browser" value="Firefox" />
+    <property id="88" key="wetator.acceptLanguage" value="en-us,en;q=0.8,de-de;q=0.5,de;q=0.3" />
+    <property id="89" key="wetator.outputDir" value="C:\RBRi\git_repo\wetator\samples\htmx\logs" />
+    <property id="90" key="wetator.jsTimeout" value="1s" />
+    <property id="91" key="wetator.httpTimeout" value="90s" />
+    <property id="92" key="wetator.wpath.separator" value="&gt;" />
+    <property id="93" key="wetator.xslTemplates" value="C:\RBRi\git_repo\wetator\xsl\run_report.xsl" />
+    <property id="94" key="wetator.commandSets" value="org.wetator.commandset.DefaultCommandSet" />
+    <property id="95" key="wetator.controls" value="" />
+    <property id="96" key="wetator.scripters" value="org.wetator.scripter.XMLScripter" />
+    <property id="97" key="wetator.scripters" value="org.wetator.scripter.LegacyXMLScripter" />
+    <property id="98" key="wetator.scripters" value="org.wetator.scripter.ExcelScripter" />
+    <property id="99" key="wetator.scripters" value="org.wetator.scripter.WikiTextScripter" />
+    <property id="100" key="wetator.proxyHost" />
+    <property id="101" key="wetator.proxyPort" value="0" />
+    <property id="102" key="wetator.proxyHostsToBypass" value="" />
+    <property id="103" key="wetator.proxyUser" />
+    <property id="104" key="wetator.basicAuthUser" />
+    <property id="105" key="wetator.ntlmUser" />
+    <property id="106" key="wetator.ntlmWorkstation" />
+    <property id="107" key="wetator.ntlmDomain" />
+    <property id="108" key="wetator.retrospect" value="-1" />
+    <property id="109" key="wetator.jsDebugger" value="false" />
+    <variables id="110">
+    </variables>
+    <commandSet id="111" class="class org.wetator.commandset.DefaultCommandSet">
+    </commandSet>
+  </configuration>
+  <startTime id="112">05.02.2022 18:53:21</startTime>
+  <testFile id="113">C:\RBRi\git_repo\wetator\web_page.wett</testFile>
+  <testcase id="114" name="C:\RBRi\git_repo\wetator\web_page.wett" file="C:\RBRi\git_repo\wetator\web_page.wett">
+    <testrun id="115" browser="Firefox">
+      <testfile id="116" file="C:\RBRi\git_repo\wetator\web_page.wett">
+        <command id="117" name="" line="1" isComment="true">
+          <param0 id="118">open the page</param0>
+          <param1 id="119"></param1>
+          <param2 id="120"></param2>
+          <executionTime id="121">0</executionTime>
+        </command>
+        <command id="122" name="open-url" line="2">
+          <param0 id="123">https://www.wetator.org/testform</param0>
+          <param1 id="124"></param1>
+          <param2 id="125"></param2>
+          <log id="126">
+            <level id="127">WARN</level>
+            <message id="128">Usage of absolute URLs like 'https://www.wetator.org/testform' is deprecated. Better use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="129">
+            <level id="130">INFO</level>
+            <message id="131">Open URL 'https://www.wetator.org/testform'.</message>
+          </log>
+          <log id="132">
+            <level id="133">INFO</level>
+            <message id="134">Opening URL 'https://www.wetator.org/testform' was redirected to 'https://www.wetator.org/testform/'.</message>
+          </log>
+          <response id="135">firefox/responses_current/response_100000.html</response>
+          <executionTime id="136">1199</executionTime>
+        </command>
+        <command id="137" name="" line="4" isComment="true">
+          <param0 id="138">do we reach the correct page?</param0>
+          <param1 id="139"></param1>
+          <param2 id="140"></param2>
+          <executionTime id="141">0</executionTime>
+        </command>
+        <command id="142" name="assert-title" line="5">
+          <param0 id="143">WETATOR / Test Form</param0>
+          <param1 id="144"></param1>
+          <param2 id="145"></param2>
+          <executionTime id="146">6</executionTime>
+        </command>
+        <command id="147" name="" line="7" isComment="true">
+          <param0 id="148">Check the page defaults</param0>
+          <param1 id="149"></param1>
+          <param2 id="150"></param2>
+          <executionTime id="151">0</executionTime>
+        </command>
+        <command id="152" name="assert-content" line="8">
+          <param0 id="153">The form below is only for testing purpose.</param0>
+          <param1 id="154"></param1>
+          <param2 id="155"></param2>
+          <executionTime id="156">9</executionTime>
+        </command>
+        <command id="157" name="assert-set" line="9">
+          <param0 id="158">Project name</param0>
+          <param1 id="159"></param1>
+          <param2 id="160"></param2>
+          <log id="161">
+            <level id="162">INFO</level>
+            <message id="163">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;47&gt;52&gt;57 index: 57'.</message>
+          </log>
+          <highlight id="164">firefox/responses_current/response_100000.html?highlight=%23project</highlight>
+          <executionTime id="165">19</executionTime>
+        </command>
+        <command id="166" name="assert-selected" line="10">
+          <param0 id="167">other</param0>
+          <param1 id="168"></param1>
+          <param2 id="169"></param2>
+          <log id="170">
+            <level id="171">INFO</level>
+            <message id="172">Found control '[HtmlOption 'other' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 233 start: 252 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;47&gt;60&gt;65&gt;72 index: 72'.</message>
+          </log>
+          <highlight id="173">firefox/responses_current/response_100000.html?highlight=%23languages</highlight>
+          <executionTime id="174">5</executionTime>
+        </command>
+        <command id="175" name="" line="12" isComment="true">
+          <param0 id="176">time to start</param0>
+          <param1 id="177"></param1>
+          <param2 id="178"></param2>
+          <executionTime id="179">0</executionTime>
+        </command>
+        <command id="180" name="set" line="13">
+          <param0 id="181">Project name</param0>
+          <param1 id="182">HtmlUnit</param1>
+          <param2 id="183"></param2>
+          <log id="184">
+            <level id="185">INFO</level>
+            <message id="186">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;47&gt;52&gt;57 index: 57'.</message>
+          </log>
+          <highlight id="187">firefox/responses_current/response_100000.html?highlight=%23project</highlight>
+          <response id="188">firefox/responses_current/response_100001.html?highlight=%23project</response>
+          <executionTime id="189">12</executionTime>
+        </command>
+        <command id="190" name="select" line="14">
+          <param0 id="191">programming language &gt; JAVA</param0>
+          <param1 id="192"></param1>
+          <param2 id="193"></param2>
+          <log id="194">
+            <level id="195">INFO</level>
+            <message id="196">Found control '[HtmlOption 'JAVA' part of [HtmlSelect (id='languages') (name='languages[]')]] found by: BY_LABEL deviation: 0 distance: 0 start: 242 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;47&gt;60&gt;65&gt;66 index: 66'.</message>
+          </log>
+          <highlight id="197">firefox/responses_current/response_100001.html?highlight=%23languages</highlight>
+          <response id="198">firefox/responses_current/response_100002.html?highlight=%23languages</response>
+          <executionTime id="199">10</executionTime>
+        </command>
+        <command id="200" name="select" line="15">
+          <param0 id="201">WETATOR is &gt; visionary</param0>
+          <param1 id="202"></param1>
+          <param2 id="203"></param2>
+          <log id="204">
+            <level id="205">INFO</level>
+            <message id="206">Found more than one HTML element for pattern 'WETATOR is &gt; visionary' on page; using the best matching one [HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')].</message>
+          </log>
+          <log id="207">
+            <level id="208">INFO</level>
+            <message id="209">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_visionary') (name='wetatorIs[]')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 8 start: 319 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;77&gt;82&gt;84&gt;94 index: 94'.</message>
+          </log>
+          <log id="210">
+            <level id="211">INFO</level>
+            <message id="212">Found control '[HtmlCheckBoxInput (id='wetatorIs_wetatorIs_marvelous') (name='wetatorIs[]')] found by: BY_TEXT deviation: 0 distance: 9 start: 329 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;77&gt;82&gt;84&gt;99 index: 99'.</message>
+          </log>
+          <highlight id="213">firefox/responses_current/response_100002.html?highlight=%23wetatorIs_wetatorIs_visionary</highlight>
+          <response id="214">firefox/responses_current/response_100003.html?highlight=%23wetatorIs_wetatorIs_visionary</response>
+          <executionTime id="215">8</executionTime>
+        </command>
+        <command id="216" name="click-on" line="16">
+          <param0 id="217">Submit My Truth</param0>
+          <param1 id="218"></param1>
+          <param2 id="219"></param2>
+          <log id="220">
+            <level id="221">INFO</level>
+            <message id="222">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 417 start: 417 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;127&gt;129 index: 129'.</message>
+          </log>
+          <highlight id="223">firefox/responses_current/response_100003.html?highlight=%23submit</highlight>
+          <response id="224">firefox/responses_current/response_100004.html</response>
+          <executionTime id="225">60</executionTime>
+        </command>
+        <command id="226" name="assert-content" line="17">
+          <param0 id="227">We hope all your visionary WETATOR tests for the project 'HtmlUnit' are green.</param0>
+          <param1 id="228"></param1>
+          <param2 id="229"></param2>
+          <executionTime id="230">1</executionTime>
+        </command>
+        <command id="231" name="assert-content" line="18">
+          <param0 id="232">Why not using WETATOR for your other JAVA projects?</param0>
+          <param1 id="233"></param1>
+          <param2 id="234"></param2>
+          <executionTime id="235">23</executionTime>
+        </command>
+        <command id="236" name="" line="20" isComment="true">
+          <param0 id="237">finally test the validation</param0>
+          <param1 id="238"></param1>
+          <param2 id="239"></param2>
+          <executionTime id="240">0</executionTime>
+        </command>
+        <command id="241" name="open-url" line="21">
+          <param0 id="242">https://www.wetator.org/testform</param0>
+          <param1 id="243"></param1>
+          <param2 id="244"></param2>
+          <log id="245">
+            <level id="246">WARN</level>
+            <message id="247">Usage of absolute URLs like 'https://www.wetator.org/testform' is deprecated. Better use only paths to make your test independent of a certain machine.</message>
+          </log>
+          <log id="248">
+            <level id="249">INFO</level>
+            <message id="250">Open URL 'https://www.wetator.org/testform'.</message>
+          </log>
+          <log id="251">
+            <level id="252">INFO</level>
+            <message id="253">Opening URL 'https://www.wetator.org/testform' was redirected to 'https://www.wetator.org/testform/'.</message>
+          </log>
+          <response id="254">firefox/responses_current/response_100005.html</response>
+          <executionTime id="255">92</executionTime>
+        </command>
+        <command id="256" name="assert-title" line="22">
+          <param0 id="257">WETATOR / Test Form</param0>
+          <param1 id="258"></param1>
+          <param2 id="259"></param2>
+          <executionTime id="260">0</executionTime>
+        </command>
+        <command id="261" name="assert-set" line="23">
+          <param0 id="262">Project name</param0>
+          <param1 id="263"></param1>
+          <param2 id="264"></param2>
+          <log id="265">
+            <level id="266">INFO</level>
+            <message id="267">Found control '[HtmlTextInput (id='project') (name='projectName')] found by: BY_LABEL_ELEMENT deviation: 0 distance: 191 start: 204 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;47&gt;52&gt;57 index: 57'.</message>
+          </log>
+          <highlight id="268">firefox/responses_current/response_100005.html?highlight=%23project</highlight>
+          <executionTime id="269">2</executionTime>
+        </command>
+        <command id="270" name="click-on" line="24">
+          <param0 id="271">Submit My Truth</param0>
+          <param1 id="272"></param1>
+          <param2 id="273"></param2>
+          <log id="274">
+            <level id="275">INFO</level>
+            <message id="276">Found control '[HtmlSubmitInput 'Submit My Truth' (id='submit') (name='submit')] found by: BY_LABEL deviation: 0 distance: 408 start: 408 hierarchy: 0&gt;2&gt;4&gt;25&gt;27&gt;29&gt;31&gt;33&gt;43&gt;127&gt;129 index: 129'.</message>
+          </log>
+          <highlight id="277">firefox/responses_current/response_100005.html?highlight=%23submit</highlight>
+          <response id="278">firefox/responses_current/response_100006.html</response>
+          <executionTime id="279">59</executionTime>
+        </command>
+        <command id="280" name="assert-content" line="25">
+          <param0 id="281">"Project name" is a required field</param0>
+          <param1 id="282"></param1>
+          <param2 id="283"></param2>
+          <executionTime id="284">1</executionTime>
+        </command>
+      </testfile>
+    </testrun>
+  </testcase>
+  <executionTime id="285">1845</executionTime>
+  <!--
+  SearchPatternCache statistics:
+      Entries: 13
+      Hits:    159
+  -->
+</wet>

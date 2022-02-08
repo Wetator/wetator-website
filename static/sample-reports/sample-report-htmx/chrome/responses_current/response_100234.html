@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://htmx.org/examples/value-select/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <title>&lt;/&gt; htmx - high power tools for html</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link href="/feed.xml" rel="alternate" title="Sitewide Atom feed" type="application/atom+xml"/>
+
+    <link href="./css/site.css" rel="stylesheet"/>
+
+    <link href="./css/prism-htmx.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+
+    <style>
+                              .htmx-indicator{opacity:0;transition: opacity 200ms ease-in;}                      .htmx-request .htmx-indicator{opacity:1}                      .htmx-request.htmx-indicator{opacity:1}                    
+    </style></head><body hx-ext="class-tools, preload" style="display: block">
+
+    <div class="top-nav" style="display: block">
+
+      <div class="c" style="display: block">
+
+        <div class="menu" style="display: flex">
+
+          <div class="logo-wrapper" style="display: block">
+
+            <span class="logo light" hx-get="/" hx-push-url="true" hx-target="body" style="display: inline">
+              &lt;
+              <a style="display: inline">
+                /
+              </a>&gt; htm
+              <a style="display: inline">
+                x
+              </a></span>
+                
+            <svg _="on click toggle .show on #nav" class="hamburger" height="25" style="margin-bottom:-5px; display: none" viewbox="0 0 100 80" width="25">
+
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="30"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="60"/>
+                
+            </svg>
+            
+          </div>
+
+          <div id="nav" class="navigation nav" style="display: flex">
+
+
+            <div class="navigation-items" preload="mouseover" style="display: flex">
+
+              <div style="display: block">
+
+                <a href="/docs/" style="display: inline">
+                  docs
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/reference/" style="display: inline">
+                  reference
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/examples/" style="display: inline">
+                  examples
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/talk/" style="display: inline">
+                  talk
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="https://github.com/sponsors/bigskysoftware?o=esb" style="display: inline">
+                  sponsor
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <span class="algolia-autocomplete" style=";position:relative;display:inline-block;;direction:ltr; display: inline-block">
+                  <input id="search" _="on keyup[key is &apos;Escape&apos;] or click elsewhere
+                                    blur() then set my.value to &apos;&apos;
+                                  on keyup[key is &apos;/&apos;] from &lt;body/&gt;
+                                    focus()" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" autocomplete="off" class="ds-input" dir="auto" placeholder=" / to Search Docs" role="combobox" spellcheck="false" style="width:150px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; margin-right: 6px;position:relative;vertical-align:top;; display: inline-block" type="text"/>
+                  <pre aria-hidden="true" style=";position:absolute;visibility:hidden;white-space:pre;font-family:-apple-system, blinkmacsystemfont, &quot;segoe ui&quot;, roboto, oxygen, ubuntu, cantarell, &quot;fira sans&quot;, &quot;droid sans&quot;, &quot;helvetica neue&quot;, sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:400;word-spacing:0px;letter-spacing:normal;text-indent:0px;text-rendering:auto;text-transform:none;; display: block"></pre>
+                  <span id="algolia-autocomplete-listbox-0" class="ds-dropdown-menu" role="listbox" style=";position:absolute;top:100%;left:0;z-index:100;display:none;;left:0;right:auto;; display: none">
+                    <div class="ds-dataset-1" style="display: block">
+                    </div>
+                  </span></span>
+
+              </div>
+
+            </div>
+
+            <div class="github-stars" style="display: flex">
+
+              <iframe frameborder="0" height="20" scrolling="0" src="../../chrome/responses_current/response_100235.html" style="margin:auto;; display: inline" title="Star htmx on GitHub" width="150">
+              </iframe>
+                
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="c content" style="display: block">
+
+
+
+      <h2 style="display: block">Cascading Selects</h2>
+
+      <p style="display: block">In this example we show how to make the values in one <code style="display: inline">select</code> depend on the value selected in another <code style="display: inline">select</code>.</p>
+
+      <p style="display: block">To begin we start with a default value for the <code style="display: inline">make</code> select: Audi.  We render the <code style="display: inline">model</code> select for this make.  We
+then have the <code style="display: inline">make</code> select trigger a <code style="display: inline">GET</code> to <code style="display: inline">/models</code> to retrieve the models options and target the <code style="display: inline">models</code> select.</p>
+
+      <p style="display: block">Here is the code:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>label</span> <span class="token punctuation" style="display: inline">&gt;</span></span>Make<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>select</span> <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>make<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>#models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-indicator</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>.htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>audi<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Audi<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>toyota<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Toyota<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>bmw<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>BMW<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>select</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>Model<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>select</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>model<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>a1<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A1<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      ...
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>select</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code></pre>
+
+      <p style="display: block">When a request is made to the <code style="display: inline">/models</code> end point, we return the models for that make:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>325i<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>325i<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>325ix<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>325ix<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>X5<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>X5<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+</code></pre>
+
+      <p style="display: block">And they become available in the <code style="display: inline">model</code> select.</p>
+
+      <style>
+          
+    #demo-server-info {
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        width: 100vw;
+        background-color: whitesmoke;
+        border-top: 2px solid gray;
+        overflow: hide;
+        margin: 0px;
+    }
+    #demo-server-info.show {
+        max-height: 45vh;
+        height: 500px;
+        overflow: scroll;
+    }
+    #demo-activity {
+        height:300px
+    }
+
+    #demo-activity div {
+        vertical-align: top
+    }
+
+    #demo-canvas {
+        margin-bottom: 500px;
+        padding-top: 12px;
+    }
+
+
+      </style>
+
+
+      <div id="demo-server-info" style="display: block">
+
+        <div style="display: block">
+          Server Requests
+          <span id="request-count" style="display: inline">
+            : 2
+          </span> 
+          <a id="request-info-toggler" style="cursor: pointer; display: inline">
+            &#8593; Show
+          </a></div>
+
+        <div id="demo-activity" class="row" style="display: table">
+
+          <div class="3 col" style="display: table-cell">
+
+            <ol id="demo-timeline" reversed="" style="display: block">
+              <li id="req-2-link" class="active" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /models?make=audi
+                </a></li>
+              <li id="req-1-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /models?make=toyota
+                </a></li>
+              <li id="init-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  Initial State
+                </a></li>
+
+            </ol>
+
+          </div>
+
+          <div id="demo-current-request" class="9 col" style="display: table-cell">
+            <div id="req-2" class="" style="display: block">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /models?make=audi
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {"make":"audi"}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>A1<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A1<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>A4<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A4<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>A6<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A6<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span></code> </pre>
+
+                </div>
+
+              </span></div>
+            <div id="req-1" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /models?make=toyota
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {"make":"toyota"}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>Landcruiser<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Landcruiser<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>Tacoma<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Tacoma<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>Yaris<span class="token punctuation" style="display: inline">'</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Yaris<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span></code> </pre>
+
+                </div>
+
+              </span></div><div id="init" class="hide" style="display: none">
+              <span class="activity initial" style="display: inline">
+
+                <b style="display: inline">HTML</b>
+  
+                <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline">  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Pick A Make/Model<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>              
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>form</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>label</span> <span class="token punctuation" style="display: inline">&gt;</span></span>Make<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>select</span> <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>make<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>#models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-indicator</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>.htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>audi<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Audi<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>toyota<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>Toyota<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>bmw<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>BMW<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>select</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>Model<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>label</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>select</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>models<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>model<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>a1<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A1<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>a3<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A3<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>option</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>option</span> <span class="token attr-name" style="display: inline">value</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>a6<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>A6&lt;/op...</code></pre>
+              </span></div>
+        
+          </div>
+
+        </div>
+
+      </div>
+
+      <h2 style="display: block">Demo</h2>
+
+      <div id="demo-canvas" style="display: block">
+
+        <h3 style="display: block">Pick A Make/Model</h3>
+
+        <form style="display: block" onsubmit="return false;">
+
+          <div style="display: block">
+
+            <label style="display: inline">
+              Make
+            </label>
+    
+            <select name="make" hx-get="/models" hx-indicator=".htmx-indicator" hx-target="#models" style="display: inline-block">
+
+              <option selected="selected" value="audi">Audi</option>
+
+              <option value="toyota">Toyota</option>
+
+              <option value="bmw">BMW</option>
+
+            </select>
+
+          </div>
+
+          <div style="display: block">
+
+            <label style="display: inline">
+              Model
+            </label>
+    
+            <select id="models" name="model" class="" style="display: inline-block">
+              <option selected="selected" value="A1">A1</option>
+
+              <option value="A4">A4</option>
+
+              <option value="A6">A6</option>
+            </select>
+
+            <img class="htmx-indicator" src="./img/bars.svg" width="20" style="display: inline"/>    
+  
+          </div>
+
+        </form>
+      </div>
+
+
+    </div>
+
+
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

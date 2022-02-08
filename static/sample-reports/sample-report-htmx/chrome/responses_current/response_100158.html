@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://htmx.org/examples/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <title>&lt;/&gt; htmx - Examples</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link href="/feed.xml" rel="alternate" title="Sitewide Atom feed" type="application/atom+xml"/>
+
+    <link href="./css/site.css" rel="stylesheet"/>
+
+    <link href="./css/prism-htmx.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+
+    <style>
+                              .htmx-indicator{opacity:0;transition: opacity 200ms ease-in;}                      .htmx-request .htmx-indicator{opacity:1}                      .htmx-request.htmx-indicator{opacity:1}                    
+    </style></head><body hx-ext="class-tools, preload" style="display: block">
+
+    <div class="top-nav" style="display: block">
+
+      <div class="c" style="display: block">
+
+        <div class="menu" style="display: flex">
+
+          <div class="logo-wrapper" style="display: block">
+
+            <span class="logo light" hx-get="/" hx-push-url="true" hx-target="body" style="display: inline">
+              &lt;
+              <a style="display: inline">
+                /
+              </a>&gt; htm
+              <a style="display: inline">
+                x
+              </a></span>
+                
+            <svg _="on click toggle .show on #nav" class="hamburger" height="25" style="margin-bottom:-5px; display: none" viewbox="0 0 100 80" width="25">
+
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="30"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="60"/>
+                
+            </svg>
+            
+          </div>
+
+          <div id="nav" class="navigation nav" style="display: flex">
+
+
+            <div class="navigation-items" preload="mouseover" style="display: flex">
+
+              <div style="display: block">
+
+                <a href="/docs/" style="display: inline">
+                  docs
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/reference/" style="display: inline">
+                  reference
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/examples/" style="display: inline">
+                  examples
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/talk/" style="display: inline">
+                  talk
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="https://github.com/sponsors/bigskysoftware?o=esb" style="display: inline">
+                  sponsor
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <span class="algolia-autocomplete" style=";position:relative;display:inline-block;;direction:ltr; display: inline-block">
+                  <input id="search" _="on keyup[key is &apos;Escape&apos;] or click elsewhere
+                                    blur() then set my.value to &apos;&apos;
+                                  on keyup[key is &apos;/&apos;] from &lt;body/&gt;
+                                    focus()" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" autocomplete="off" class="ds-input" dir="auto" placeholder=" / to Search Docs" role="combobox" spellcheck="false" style="width:150px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; margin-right: 6px;position:relative;vertical-align:top;; display: inline-block" type="text"/>
+                  <pre aria-hidden="true" style=";position:absolute;visibility:hidden;white-space:pre;font-family:-apple-system, blinkmacsystemfont, &quot;segoe ui&quot;, roboto, oxygen, ubuntu, cantarell, &quot;fira sans&quot;, &quot;droid sans&quot;, &quot;helvetica neue&quot;, sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:400;word-spacing:0px;letter-spacing:normal;text-indent:0px;text-rendering:auto;text-transform:none;; display: block"></pre>
+                  <span id="algolia-autocomplete-listbox-0" class="ds-dropdown-menu" role="listbox" style=";position:absolute;top:100%;left:0;z-index:100;display:none;;left:0;right:auto;; display: none">
+                    <div class="ds-dataset-1" style="display: block">
+                    </div>
+                  </span></span>
+
+              </div>
+
+            </div>
+
+            <div class="github-stars" style="display: flex">
+
+              <iframe frameborder="0" height="20" scrolling="0" src="../../chrome/responses_current/response_100159.html" style="margin:auto;; display: inline" title="Star htmx on GitHub" width="150">
+              </iframe>
+                
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="c content" style="display: block">
+
+      <h2 style="display: block">Server-side Integration Examples</h2>
+
+      <p style="display: block">A list of <a href="/server-examples" style="display: inline">
+          GitHub repositories showing examples of integration
+        </a> with a wide variety of
+server-side languages and platforms, including JavaScript, Python, Java, and many others.</p>
+
+      <h2 style="display: block">UI Examples</h2>
+
+      <p style="display: block">Below are a set of UX patterns implemented in htmx with minimal HTML and styling.</p>
+
+      <p style="display: block">You can copy and paste them and then adjust them for your needs.</p>
+
+      <table style="display: table">
+
+        <thead style="display: table-header-group">
+
+          <tr style="display: table-row">
+
+            <th style="display: table-cell">
+              Pattern
+            </th>
+
+            <th style="display: table-cell">
+              Description
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody style="display: table-row-group">
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/click-to-edit" style="display: inline">
+                Click To Edit
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates inline editing of a data object
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/bulk-update" style="display: inline">
+                Bulk Update
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates bulk updating of multiple rows of data
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/click-to-load" style="display: inline">
+                Click To Load
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates clicking to load more rows in a table
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/delete-row" style="display: inline">
+                Delete Row
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates row deletion in a table
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/edit-row" style="display: inline">
+                Edit Row
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to edit rows in a table
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/lazy-load" style="display: inline">
+                Lazy Loading
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to lazy load content
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/inline-validation" style="display: inline">
+                Inline Validation
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to do inline field validation
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/infinite-scroll" style="display: inline">
+                Infinite Scroll
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates infinite scrolling of a page
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/active-search" style="display: inline">
+                Active Search
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates the active search box pattern
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/progress-bar" style="display: inline">
+                Progress Bar
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates a job-runner like progress bar
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/value-select" style="display: inline">
+                Value Select
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates making the values of a select dependent on another select
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/animations" style="display: inline">
+                Animations
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates various animation techniques
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/file-upload" style="display: inline">
+                File Upload
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to upload a file via ajax with a progress bar
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/dialogs" style="display: inline">
+                Dialogs - Browser
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates the prompt and confirm dialogs
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/modal-uikit" style="display: inline">
+                Dialogs - UIKIt
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates modal dialogs using UIKit
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/modal-bootstrap" style="display: inline">
+                Dialogs - Bootstrap
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates modal dialogs using Bootstrap
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/modal-custom" style="display: inline">
+                Dialogs - Custom
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates modal dialogs from scratch
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/tabs-hateoas" style="display: inline">
+                Tabs (Using HATEOAS)
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to display and select tabs using HATEOAS principles
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/tabs-hyperscript" style="display: inline">
+                Tabs (Using Hyperscript)
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to display and select tabs using Hyperscript
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/keyboard-shortcuts" style="display: inline">
+                Keyboard Shortcuts
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to create keyboard shortcuts for htmx enabled elements
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/sortable" style="display: inline">
+                Sortable
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to use htmx with the Sortable.js plugin to implement drag-and-drop reordering
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/update-other-content" style="display: inline">
+                Updating Other Content
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to update content beyond just the target elements
+            </td>
+
+          </tr>
+
+          <tr style="display: table-row">
+
+            <td style="display: table-cell">
+              <a href="/examples/confirm" style="display: inline">
+                Confirm
+              </a></td>
+
+            <td style="display: table-cell">
+              Demonstrates how to implement a custom confirmation dialog with htmx
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

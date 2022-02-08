@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://htmx.org/examples/click-to-load/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <title>&lt;/&gt; htmx - high power tools for html</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link href="/feed.xml" rel="alternate" title="Sitewide Atom feed" type="application/atom+xml"/>
+
+    <link href="./css/site.css" rel="stylesheet"/>
+
+    <link href="./css/prism-htmx.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+
+    <style>
+                              .htmx-indicator{opacity:0;transition: opacity 200ms ease-in;}                      .htmx-request .htmx-indicator{opacity:1}                      .htmx-request.htmx-indicator{opacity:1}                    
+    </style></head><body hx-ext="class-tools, preload" style="display: block">
+
+    <div class="top-nav" style="display: block">
+
+      <div class="c" style="display: block">
+
+        <div class="menu" style="display: flex">
+
+          <div class="logo-wrapper" style="display: block">
+
+            <span class="logo light" hx-get="/" hx-push-url="true" hx-target="body" style="display: inline">
+              &lt;
+              <a style="display: inline">
+                /
+              </a>&gt; htm
+              <a style="display: inline">
+                x
+              </a></span>
+                
+            <svg _="on click toggle .show on #nav" class="hamburger" height="25" style="margin-bottom:-5px; display: none" viewbox="0 0 100 80" width="25">
+
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="30"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="60"/>
+                
+            </svg>
+            
+          </div>
+
+          <div id="nav" class="navigation nav" style="display: flex">
+
+
+            <div class="navigation-items" preload="mouseover" style="display: flex">
+
+              <div style="display: block">
+
+                <a href="/docs/" style="display: inline">
+                  docs
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/reference/" style="display: inline">
+                  reference
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/examples/" style="display: inline">
+                  examples
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/talk/" style="display: inline">
+                  talk
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="https://github.com/sponsors/bigskysoftware?o=esb" style="display: inline">
+                  sponsor
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <span class="algolia-autocomplete" style=";position:relative;display:inline-block;;direction:ltr; display: inline-block">
+                  <input id="search" _="on keyup[key is &apos;Escape&apos;] or click elsewhere
+                                    blur() then set my.value to &apos;&apos;
+                                  on keyup[key is &apos;/&apos;] from &lt;body/&gt;
+                                    focus()" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" autocomplete="off" class="ds-input" dir="auto" placeholder=" / to Search Docs" role="combobox" spellcheck="false" style="width:150px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; margin-right: 6px;position:relative;vertical-align:top;; display: inline-block" type="text"/>
+                  <pre aria-hidden="true" style=";position:absolute;visibility:hidden;white-space:pre;font-family:-apple-system, blinkmacsystemfont, &quot;segoe ui&quot;, roboto, oxygen, ubuntu, cantarell, &quot;fira sans&quot;, &quot;droid sans&quot;, &quot;helvetica neue&quot;, sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:400;word-spacing:0px;letter-spacing:normal;text-indent:0px;text-rendering:auto;text-transform:none;; display: block"></pre>
+                  <span id="algolia-autocomplete-listbox-0" class="ds-dropdown-menu" role="listbox" style=";position:absolute;top:100%;left:0;z-index:100;display:none;;left:0;right:auto;; display: none">
+                    <div class="ds-dataset-1" style="display: block">
+                    </div>
+                  </span></span>
+
+              </div>
+
+            </div>
+
+            <div class="github-stars" style="display: flex">
+
+              <iframe frameborder="0" height="20" scrolling="0" src="../../chrome/responses_current/response_100093.html" style="margin:auto;; display: inline" title="Star htmx on GitHub" width="150">
+              </iframe>
+                
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="c content" style="display: block">
+
+
+
+      <h2 style="display: block">Click To Load</h2>
+
+      <p style="display: block">This example shows how to implement click-to-load the next page in a table of data.  The crux of the demo is
+the final row:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>replaceMe<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span> <span class="token attr-name" style="display: inline">colspan</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>3<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>button</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">'</span>btn<span class="token punctuation" style="display: inline">'</span></span> <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/contacts/?page=2<span class="token punctuation" style="display: inline">"</span></span> 
+                        <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>#replaceMe<span class="token punctuation" style="display: inline">"</span></span> 
+                        <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+         Load More Agents... <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>img</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>htmx-indicator<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">src</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/img/bars.svg<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>button</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+</code></pre>
+
+      <p style="display: block">This row contains a button that will replace the entire row with the next page of
+results (which will contain a button to load the <em style="display: inline">next</em> page of results).  And so on.</p>
+
+      <style>
+          
+    #demo-server-info {
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        width: 100vw;
+        background-color: whitesmoke;
+        border-top: 2px solid gray;
+        overflow: hide;
+        margin: 0px;
+    }
+    #demo-server-info.show {
+        max-height: 45vh;
+        height: 500px;
+        overflow: scroll;
+    }
+    #demo-activity {
+        height:300px
+    }
+
+    #demo-activity div {
+        vertical-align: top
+    }
+
+    #demo-canvas {
+        margin-bottom: 500px;
+        padding-top: 12px;
+    }
+
+
+      </style>
+
+
+      <div id="demo-server-info" style="display: block">
+
+        <div style="display: block">
+          Server Requests
+          <span id="request-count" style="display: inline">
+          </span> 
+          <a id="request-info-toggler" style="cursor: pointer; display: inline">
+            &#8593; Show
+          </a></div>
+
+        <div id="demo-activity" class="row" style="display: table">
+
+          <div class="3 col" style="display: table-cell">
+
+            <ol id="demo-timeline" reversed="" style="display: block">
+              <li id="init-link" class="active" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  Initial State
+                </a></li>
+
+            </ol>
+
+          </div>
+
+          <div id="demo-current-request" class="9 col" style="display: table-cell">
+            <div id="init" class="" style="display: block">
+              <span class="activity initial" style="display: inline">
+
+                <b style="display: inline">HTML</b>
+  
+                <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>table</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Name<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Email<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>ID<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tbody</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+                <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>Agent Smith<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>void10@null.org<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>AA23600EG65272C<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>Agent Smith<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>void11@null.org<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>3CB6F8248154FG1<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>Agent Smith<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>void12@null.org<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>879848A9A669B2D<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>Agent Smith<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>void13@null.org<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>td</span><span class="token punctuation" style="display: inline">&gt;</span></span>90B3808993A3481&amp;...</code></pre>
+              </span></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <h2 style="display: block">Demo</h2>
+
+      <div id="demo-canvas" style="display: block">
+        <table style="display: table">
+          <thead style="display: table-header-group">
+            <tr style="display: table-row">
+              <th style="display: table-cell">
+                Name
+              </th>
+              <th style="display: table-cell">
+                Email
+              </th>
+              <th style="display: table-cell">
+                ID
+              </th>
+            </tr>
+          </thead>
+          <tbody style="display: table-row-group">
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void10@null.org
+              </td>
+              <td style="display: table-cell">
+                AA23600EG65272C
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void11@null.org
+              </td>
+              <td style="display: table-cell">
+                3CB6F8248154FG1
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void12@null.org
+              </td>
+              <td style="display: table-cell">
+                879848A9A669B2D
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void13@null.org
+              </td>
+              <td style="display: table-cell">
+                90B3808993A3481
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void14@null.org
+              </td>
+              <td style="display: table-cell">
+                GF4363825BE565G
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void15@null.org
+              </td>
+              <td style="display: table-cell">
+                D2EGCFF05D2GDA1
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void16@null.org
+              </td>
+              <td style="display: table-cell">
+                GFCD3CBD841GCGA
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void17@null.org
+              </td>
+              <td style="display: table-cell">
+                1B5C1182EDE19FC
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void18@null.org
+              </td>
+              <td style="display: table-cell">
+                EF0FD8B170B93C8
+              </td>
+            </tr>
+
+            <tr style="display: table-row">
+              <td style="display: table-cell">
+                Agent Smith
+              </td>
+              <td style="display: table-cell">
+                void19@null.org
+              </td>
+              <td style="display: table-cell">
+                47FDB28213GABB4
+              </td>
+            </tr>
+
+            <tr id="replaceMe" style="display: table-row">
+
+              <td colspan="3" style="display: table-cell">
+
+                <center style="display: block">
+
+                  <button class="btn" hx-get="/contacts/?page=2" hx-swap="outerHTML" hx-target="#replaceMe" style="display: inline-block">
+                    
+         Load More Agents... 
+                    <img class="htmx-indicator" src="./img/bars.svg" style="display: inline"/>
+       
+                  </button>
+
+                </center>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

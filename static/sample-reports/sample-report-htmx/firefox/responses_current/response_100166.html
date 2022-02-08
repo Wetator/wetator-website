@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://htmx.org/examples/active-search/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <title>&lt;/&gt; htmx - high power tools for html</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link href="/feed.xml" rel="alternate" title="Sitewide Atom feed" type="application/atom+xml"/>
+
+    <link href="./css/site.css" rel="stylesheet"/>
+
+    <link href="./css/prism-htmx.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+
+    <style>
+                              .htmx-indicator{opacity:0;transition: opacity 200ms ease-in;}                      .htmx-request .htmx-indicator{opacity:1}                      .htmx-request.htmx-indicator{opacity:1}                    
+    </style></head><body hx-ext="class-tools, preload" style="display: block">
+
+    <div class="top-nav" style="display: block">
+
+      <div class="c" style="display: block">
+
+        <div class="menu" style="display: flex">
+
+          <div class="logo-wrapper" style="display: block">
+
+            <span class="logo light" hx-get="/" hx-push-url="true" hx-target="body" style="display: inline">
+              &lt;
+              <a style="display: inline">
+                /
+              </a>&gt; htm
+              <a style="display: inline">
+                x
+              </a></span>
+                
+            <svg _="on click toggle .show on #nav" class="hamburger" height="25" style="margin-bottom:-5px; display: none" viewbox="0 0 100 80" width="25">
+
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="30"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="60"/>
+                
+            </svg>
+            
+          </div>
+
+          <div id="nav" class="navigation nav" style="display: flex">
+
+
+            <div class="navigation-items" preload="mouseover" style="display: flex">
+
+              <div style="display: block">
+
+                <a href="/docs/" style="display: inline">
+                  docs
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/reference/" style="display: inline">
+                  reference
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/examples/" style="display: inline">
+                  examples
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/talk/" style="display: inline">
+                  talk
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="https://github.com/sponsors/bigskysoftware?o=esb" style="display: inline">
+                  sponsor
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <span class="algolia-autocomplete" style=";position:relative;display:inline-block;;direction:ltr; display: inline-block">
+                  <input id="search" _="on keyup[key is &apos;Escape&apos;] or click elsewhere
+                                    blur() then set my.value to &apos;&apos;
+                                  on keyup[key is &apos;/&apos;] from &lt;body/&gt;
+                                    focus()" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" autocomplete="off" class="ds-input" dir="auto" placeholder=" / to Search Docs" role="combobox" spellcheck="false" style="width:150px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; margin-right: 6px;position:relative;vertical-align:top;; display: inline-block" type="text"/>
+                  <pre aria-hidden="true" style=";position:absolute;visibility:hidden;white-space:pre;font-family:-apple-system, blinkmacsystemfont, &quot;segoe ui&quot;, roboto, oxygen, ubuntu, cantarell, &quot;fira sans&quot;, &quot;droid sans&quot;, &quot;helvetica neue&quot;, sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:400;word-spacing:0px;letter-spacing:normal;text-indent:0px;text-rendering:auto;text-transform:none;; display: block"></pre>
+                  <span id="algolia-autocomplete-listbox-0" class="ds-dropdown-menu" role="listbox" style=";position:absolute;top:100%;left:0;z-index:100;display:none;;left:0;right:auto;; display: none">
+                    <div class="ds-dataset-1" style="display: block">
+                    </div>
+                  </span></span>
+
+              </div>
+
+            </div>
+
+            <div class="github-stars" style="display: flex">
+
+              <iframe frameborder="0" height="20" scrolling="0" src="../../firefox/responses_current/response_100167.html" style="margin:auto;; display: inline" title="Star htmx on GitHub" width="150">
+              </iframe>
+                
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="c content" style="display: block">
+
+
+
+      <h2 style="display: block">Active Search</h2>
+
+      <p style="display: block">This example actively searches a contacts database as the user enters text.</p>
+
+      <p style="display: block">We start with a search input and an empty table:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+  Search Contacts 
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>span</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>img</span> <span class="token attr-name" style="display: inline">src</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/img/bars.svg<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">/&gt;</span></span> Searching... 
+   <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>span</span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>input</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>form-control<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">type</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">placeholder</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>Begin Typing To Search Users...<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>keyup changed delay:500ms, search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>#search-results<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-indicator</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>.htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>table</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>table<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>First Name<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Last Name<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+      <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Email<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tbody</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search-results<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tbody</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>table</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code></pre>
+
+      <p style="display: block">The input issues a <code style="display: inline">POST</code> to <code style="display: inline">/search</code> on the <code style="display: inline">keyup</code> event and sets the body of the table to be the resulting content.</p>
+
+      <p style="display: block">We add the <code style="display: inline">delay:500ms</code> modifier to the trigger to delay sending the query until the user stops typing.  Additionally,
+we add the <code style="display: inline">changed</code> modifier to the trigger to ensure we don't send new queries when the user doesn't change the
+value of the input (e.g. they hit an arrow key).</p>
+
+      <p style="display: block">Since we use a <code style="display: inline">search</code> type input we will get an <code style="display: inline">x</code> in the input field to clear the input.
+To make this trigger a new <code style="display: inline">POST</code> we have to specify another trigger. We specify another trigger by using a comma to
+separate them. The <code style="display: inline">search</code> trigger will be run when the field is cleared but it also makes it possible to override
+the 500 ms delay on <code style="display: inline">keyup</code> by just pressing enter.</p>
+
+      <p style="display: block">Finally, we show an indicator when the search is in flight with the <code style="display: inline">hx-indicator</code> attribute.</p>
+
+      <style>
+          
+    #demo-server-info {
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        width: 100vw;
+        background-color: whitesmoke;
+        border-top: 2px solid gray;
+        overflow: hide;
+        margin: 0px;
+    }
+    #demo-server-info.show {
+        max-height: 45vh;
+        height: 500px;
+        overflow: scroll;
+    }
+    #demo-activity {
+        height:300px
+    }
+
+    #demo-activity div {
+        vertical-align: top
+    }
+
+    #demo-canvas {
+        margin-bottom: 500px;
+        padding-top: 12px;
+    }
+
+
+      </style>
+
+
+      <div id="demo-server-info" style="display: block">
+
+        <div style="display: block">
+          Server Requests
+          <span id="request-count" style="display: inline">
+          </span> 
+          <a id="request-info-toggler" style="cursor: pointer; display: inline">
+            &#8593; Show
+          </a></div>
+
+        <div id="demo-activity" class="row" style="display: table">
+
+          <div class="3 col" style="display: table-cell">
+
+            <ol id="demo-timeline" reversed="" style="display: block">
+              <li id="init-link" class="active" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  Initial State
+                </a></li>
+
+            </ol>
+
+          </div>
+
+          <div id="demo-current-request" class="9 col" style="display: table-cell">
+            <div id="init" class="" style="display: block">
+              <span class="activity initial" style="display: inline">
+
+                <b style="display: inline">HTML</b>
+  
+                <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline">  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+Search Contacts
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>span</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>img</span> <span class="token attr-name" style="display: inline">src</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/img/bars.svg<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">/&gt;</span></span> Searching...
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>span</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>input</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>form-control<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">type</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">name</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">placeholder</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>Begin Typing To Search Users...<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>keyup changed delay:500ms, search<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>#search-results<span class="token punctuation" style="display: inline">"</span></span> 
+       <span class="token attr-name" style="display: inline">hx-indicator</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>.htmx-indicator<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>table</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>table<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>First Name<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Last Name<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>Email<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>th</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tr</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>thead</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>tbody</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>search-results<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>tbody</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+&lt;/table...</code></pre>
+              </span></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <h2 style="display: block">Demo</h2>
+
+      <div id="demo-canvas" style="display: block">
+
+        <h3 style="display: block">
+Search Contacts
+<span class="htmx-indicator" style="display: inline">
+
+            <img src="./img/bars.svg" style="display: inline"/> Searching...
+
+          </span>
+</h3>
+
+        <input name="search" class="form-control" hx-indicator=".htmx-indicator" hx-post="/search" hx-target="#search-results" hx-trigger="keyup changed delay:500ms, search" placeholder="Begin Typing To Search Users..." type="search" style="display: inline-block">
+        </input>
+
+        <table class="table" style="display: table">
+
+          <thead style="display: table-header-group">
+
+            <tr style="display: table-row">
+
+              <th style="display: table-cell">
+                First Name
+              </th>
+
+              <th style="display: table-cell">
+                Last Name
+              </th>
+
+              <th style="display: table-cell">
+                Email
+              </th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="search-results" style="display: table-row-group">
+
+          </tbody>
+
+        </table>
+      </div>
+
+
+    </div>
+
+
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Browser URL: https://htmx.org/examples/progress-bar/ -->
+  <head>
+    <script src='../../resources/jquery-1.10.2.min.js'></script>
+    <script src='../../resources/jquery.color-2.1.2.min.js'></script>
+    <script src='../../resources/wetator_report.js'></script>
+
+    <title>&lt;/&gt; htmx - high power tools for html</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link href="/feed.xml" rel="alternate" title="Sitewide Atom feed" type="application/atom+xml"/>
+
+    <link href="./css/site.css" rel="stylesheet"/>
+
+    <link href="./css/prism-htmx.css" rel="stylesheet"/>
+
+
+
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+
+    <style>
+                              .htmx-indicator{opacity:0;transition: opacity 200ms ease-in;}                      .htmx-request .htmx-indicator{opacity:1}                      .htmx-request.htmx-indicator{opacity:1}                    
+    </style></head><body hx-ext="class-tools, preload" style="display: block">
+
+    <div class="top-nav" style="display: block">
+
+      <div class="c" style="display: block">
+
+        <div class="menu" style="display: flex">
+
+          <div class="logo-wrapper" style="display: block">
+
+            <span class="logo light" hx-get="/" hx-push-url="true" hx-target="body" style="display: inline">
+              &lt;
+              <a style="display: inline">
+                /
+              </a>&gt; htm
+              <a style="display: inline">
+                x
+              </a></span>
+                
+            <svg _="on click toggle .show on #nav" class="hamburger" height="25" style="margin-bottom:-5px; display: none" viewbox="0 0 100 80" width="25">
+
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="30"/>
+                    
+              <rect height="20" rx="10" style="fill:rgb(52, 101, 164)" width="100" y="60"/>
+                
+            </svg>
+            
+          </div>
+
+          <div id="nav" class="navigation nav" style="display: flex">
+
+
+            <div class="navigation-items" preload="mouseover" style="display: flex">
+
+              <div style="display: block">
+
+                <a href="/docs/" style="display: inline">
+                  docs
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/reference/" style="display: inline">
+                  reference
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/examples/" style="display: inline">
+                  examples
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="/talk/" style="display: inline">
+                  talk
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <a href="https://github.com/sponsors/bigskysoftware?o=esb" style="display: inline">
+                  sponsor
+                </a>
+                    
+              </div>
+
+              <div style="display: block">
+
+                <span class="algolia-autocomplete" style=";position:relative;display:inline-block;;direction:ltr; display: inline-block">
+                  <input id="search" _="on keyup[key is &apos;Escape&apos;] or click elsewhere
+                                    blur() then set my.value to &apos;&apos;
+                                  on keyup[key is &apos;/&apos;] from &lt;body/&gt;
+                                    focus()" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" autocomplete="off" class="ds-input" dir="auto" placeholder=" / to Search Docs" role="combobox" spellcheck="false" style="width:150px; padding: 6px; border: 1px solid #ccc; border-radius: 4px; margin-right: 6px;position:relative;vertical-align:top;; display: inline-block" type="text"/>
+                  <pre aria-hidden="true" style=";position:absolute;visibility:hidden;white-space:pre;font-family:-apple-system, blinkmacsystemfont, &quot;segoe ui&quot;, roboto, oxygen, ubuntu, cantarell, &quot;fira sans&quot;, &quot;droid sans&quot;, &quot;helvetica neue&quot;, sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:400;word-spacing:0px;letter-spacing:normal;text-indent:0px;text-rendering:auto;text-transform:none;; display: block"></pre>
+                  <span id="algolia-autocomplete-listbox-0" class="ds-dropdown-menu" role="listbox" style=";position:absolute;top:100%;left:0;z-index:100;display:none;;left:0;right:auto;; display: none">
+                    <div class="ds-dataset-1" style="display: block">
+                    </div>
+                  </span></span>
+
+              </div>
+
+            </div>
+
+            <div class="github-stars" style="display: flex">
+
+              <iframe frameborder="0" height="20" scrolling="0" src="../../firefox/responses_current/response_100007.html" style="margin:auto;; display: inline" title="Star htmx on GitHub" width="150">
+              </iframe>
+                
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="c content" style="display: block">
+
+
+
+      <h2 style="display: block">Progress Bar</h2>
+
+      <p style="display: block">This example shows how to implement a smoothly scrolling progress bar.</p>
+
+      <p style="display: block">We start with an initial state with a button that issues a <code style="display: inline">POST</code> to <code style="display: inline">/start</code> to begin the job:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Start Progress<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>button</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/start<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+            Start Job
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>button</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code></pre>
+
+      <p style="display: block">This div is then replaced with a new div that reloads itself every 600ms:</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>0%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code></pre>
+
+      <p style="display: block">This HTML is rerendered every 600 milliseconds, with the "width" style attribute on the progress bar being updated.
+Because there is an id on the progress bar div, htmx will smoothly transition between requests by settling the
+style attribute into its new value.  This, when coupled with CSS transitions, make the visual transition continuous
+rather than jumpy.</p>
+
+      <p style="display: block">Finally, when the process is complete, a restart button is added to the UI (we are using the <a href="/extensions/class-tools" style="display: inline">
+          <code style="display: inline">class-tools</code></a>
+extension in this example):</p>
+
+      <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>none<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Complete<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>100%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>button</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>restart-btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/start<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">classes</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>add show:600ms<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  Restart Job
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>button</span><span class="token punctuation" style="display: inline">&gt;</span></span> 
+</code></pre>
+
+      <p style="display: block">This example uses styling cribbed from the bootstrap progress bar:</p>
+
+      <pre class="  language-css" style="display: block"><code class="  language-css" style="display: inline"><span class="token selector" style="display: inline">.progress</span> <span class="token punctuation" style="display: inline">{</span>
+    <span class="token property" style="display: inline">height</span><span class="token punctuation" style="display: inline">:</span> 20px<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">margin-bottom</span><span class="token punctuation" style="display: inline">:</span> 20px<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">overflow</span><span class="token punctuation" style="display: inline">:</span> hidden<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">background-color</span><span class="token punctuation" style="display: inline">:</span> #f5f5f5<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">border-radius</span><span class="token punctuation" style="display: inline">:</span> 4px<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">box-shadow</span><span class="token punctuation" style="display: inline">:</span> inset 0 1px 2px <span class="token function" style="display: inline">rgba</span><span class="token punctuation" style="display: inline">(</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>.1<span class="token punctuation" style="display: inline">)</span><span class="token punctuation" style="display: inline">;</span>
+<span class="token punctuation" style="display: inline">}</span>
+<span class="token selector" style="display: inline">.progress-bar</span> <span class="token punctuation" style="display: inline">{</span>
+    <span class="token property" style="display: inline">float</span><span class="token punctuation" style="display: inline">:</span> left<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span> 0%<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">height</span><span class="token punctuation" style="display: inline">:</span> 100%<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">font-size</span><span class="token punctuation" style="display: inline">:</span> 12px<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">line-height</span><span class="token punctuation" style="display: inline">:</span> 20px<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">color</span><span class="token punctuation" style="display: inline">:</span> #fff<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">text-align</span><span class="token punctuation" style="display: inline">:</span> center<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">background-color</span><span class="token punctuation" style="display: inline">:</span> #337ab7<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">-webkit-box-shadow</span><span class="token punctuation" style="display: inline">:</span> inset 0 -1px 0 <span class="token function" style="display: inline">rgba</span><span class="token punctuation" style="display: inline">(</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>.15<span class="token punctuation" style="display: inline">)</span><span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">box-shadow</span><span class="token punctuation" style="display: inline">:</span> inset 0 -1px 0 <span class="token function" style="display: inline">rgba</span><span class="token punctuation" style="display: inline">(</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>0<span class="token punctuation" style="display: inline">,</span>.15<span class="token punctuation" style="display: inline">)</span><span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">-webkit-transition</span><span class="token punctuation" style="display: inline">:</span> width .6s ease<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">-o-transition</span><span class="token punctuation" style="display: inline">:</span> width .6s ease<span class="token punctuation" style="display: inline">;</span>
+    <span class="token property" style="display: inline">transition</span><span class="token punctuation" style="display: inline">:</span> width .6s ease<span class="token punctuation" style="display: inline">;</span>
+<span class="token punctuation" style="display: inline">}</span>
+</code></pre>
+
+      <style>
+          
+    #demo-server-info {
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        width: 100vw;
+        background-color: whitesmoke;
+        border-top: 2px solid gray;
+        overflow: hide;
+        margin: 0px;
+    }
+    #demo-server-info.show {
+        max-height: 45vh;
+        height: 500px;
+        overflow: scroll;
+    }
+    #demo-activity {
+        height:300px
+    }
+
+    #demo-activity div {
+        vertical-align: top
+    }
+
+    #demo-canvas {
+        margin-bottom: 500px;
+        padding-top: 12px;
+    }
+
+
+      </style>
+
+
+      <div id="demo-server-info" style="display: block">
+
+        <div style="display: block">
+          Server Requests
+          <span id="request-count" style="display: inline">
+            : 7
+          </span> 
+          <a id="request-info-toggler" style="cursor: pointer; display: inline">
+            &#8593; Show
+          </a></div>
+
+        <div id="demo-activity" class="row" style="display: table">
+
+          <div class="3 col" style="display: table-cell">
+
+            <ol id="demo-timeline" reversed="" style="display: block">
+              <li id="req-7-link" class="active" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-6-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-5-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-4-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-3-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-2-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  GET /job
+                </a></li>
+              <li id="req-1-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  POST /start
+                </a></li>
+              <li id="init-link" class="" style="display: list-item">
+                <a style="cursor: pointer; display: inline">
+                  Initial State
+                </a></li>
+
+            </ol>
+
+          </div>
+
+          <div id="demo-current-request" class="9 col" style="display: table-cell">
+            <div id="req-7" class="" style="display: block">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>none<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Complete<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>108%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>button</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>restart-btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/start<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">classes</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>add show:600ms<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  Restart Job
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>button</span><span class="token punctuation" style="display: inline">&gt;</span></span></code> </pre>
+
+                </div>
+
+              </span></div>
+            <div id="req-6" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>99%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code> </pre>
+
+                </div>
+
+              </span></div><div id="req-5" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>75%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code> </pre>
+
+                </div>
+
+              </span></div><div id="req-4" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: ">"</span>/job<span class="token punctuation" style="display: ">"</span></span> 
+    <span class="token attr-name" style="display: ">hx-trigger</span><span class="token attr-value" style="display: "><span class="token punctuation" style="display: ">=</span><span class="token punctuation" style="display: ">"</span>load delay:600ms<span class="token punctuation" style="display: ">"</span></span> 
+    <span class="token attr-name" style="display: ">hx-swap</span><span class="token attr-value" style="display: "><span class="token punctuation" style="display: ">=</span><span class="token punctuation" style="display: ">"</span>outerHTML<span class="token punctuation" style="display: ">"</span></span><span class="token punctuation" style="display: ">&gt;</span></span></code> </pre>
+
+                </div>
+
+              </span></div><div id="req-3" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: ">class</span><span class="token attr-value" style="display: "><span class="token punctuation" style="display: ">=</span><span class="token punctuation" style="display: ">"</span>progress<span class="token punctuation" style="display: ">"</span></span><span class="token punctuation" style="display: ">&gt;</span></span></code> </pre>
+
+                </div>
+
+              </span></div><div id="req-2" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">GET</b> /job
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>10%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code> </pre>
+
+                </div>
+
+              </span></div><div id="req-1" class="hide" style="display: none">
+              <span class="activity response" style="display: inline">
+
+                <div style="display: block">
+
+                  <b style="display: inline">POST</b> /start
+  
+                </div>
+
+                <div style="display: block">
+                  
+    parameters: {}
+  
+                </div>
+
+                <div style="display: block">
+
+                  <b style="display: inline">Response</b>
+  
+                  <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span>
+    <span class="token attr-name" style="display: inline">hx-get</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/job<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-trigger</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>load delay:600ms<span class="token punctuation" style="display: inline">"</span></span> 
+    <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Running<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+    <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">id</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>pb<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>progress-bar<span class="token punctuation" style="display: inline">"</span></span><span class="token style-attr language-css" style="display: inline"><span class="token attr-name" style="display: inline"> <span class="token attr-name" style="display: inline">style</span></span><span class="token punctuation" style="display: inline">="</span><span class="token attr-value" style="display: inline"><span class="token property" style="display: inline">width</span><span class="token punctuation" style="display: inline">:</span>0%</span><span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+</code> </pre>
+
+                </div>
+
+              </span></div><div id="init" class="hide" style="display: none">
+              <span class="activity initial" style="display: inline">
+
+                <b style="display: inline">HTML</b>
+  
+                <pre class="  language-html" style="display: block"><code class="  language-html" style="display: inline"><span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>div</span> <span class="token attr-name" style="display: inline">hx-target</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>this<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-swap</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>outerHTML<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>Start Progress<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>h3</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;</span>button</span> <span class="token attr-name" style="display: inline">class</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>btn<span class="token punctuation" style="display: inline">"</span></span> <span class="token attr-name" style="display: inline">hx-post</span><span class="token attr-value" style="display: inline"><span class="token punctuation" style="display: inline">=</span><span class="token punctuation" style="display: inline">"</span>/start<span class="token punctuation" style="display: inline">"</span></span><span class="token punctuation" style="display: inline">&gt;</span></span>
+            Start Job
+  <span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>button</span><span class="token punctuation" style="display: inline">&gt;</span></span>
+<span class="token tag" style="display: inline"><span class="token tag" style="display: inline"><span class="token punctuation" style="display: inline">&lt;/</span>div</span><span class="token punctuation" style="display: inline">&gt;</span></span></code></pre>
+
+              </span></div>
+        
+          </div>
+
+        </div>
+
+      </div>
+
+      <h2 style="display: block">Demo</h2>
+
+      <div id="demo-canvas" style="display: block">
+        <div class="htmx-settling" hx-get="/job" hx-swap="outerHTML" hx-target="this" hx-trigger="none" style="display: block">
+
+          <h3 style="display: block">Complete</h3>
+
+          <div class="progress" style="display: block">
+
+            <div id="pb" class="progress-bar" style="width:108%; display: block">
+
+            </div>
+
+          </div>
+
+          <button id="restart-btn" class="btn" classes="add show:600ms" hx-post="/start" style="display: inline-block">
+            
+  Restart Job
+
+          </button>
+        </div>
+      </div>
+
+      <style>
+          
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+#restart-btn {
+  opacity:0;
+}
+#restart-btn.show {
+  opacity:1;
+  transition: opacity 100ms ease-in;
+}
+
+      </style>
+
+
+    </div>
+
+
+
+    <script>
+      highlight();
+    </script>
+  </body>
+</html>

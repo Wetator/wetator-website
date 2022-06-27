@@ -13,8 +13,10 @@ draft: false
 <div class="docu">
   <p>It is possible to start Wetator with
     <ul>
-      <li>a dedicated configuration file and/or
+      <li>a dedicated configuration file
+      <li>a dedicated variable definition file
       <li>one ore many test definition files; as long as you provide not absolute path it is also possible to use '*' as wildcard
+      <li>a flag to force appending of the current results to already existing ones
     </ul>
   </p>
   <p>Additionally you can provide the '-log' parameter to get a really detailed log output of all things Wetator does. This option is mainly for debugging
@@ -26,6 +28,16 @@ draft: false
     <span class='configContent'>wetator -p my.properties</span><br/>
     Starts Wetator with the configuration 'my.properties'
   </p>
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator -p my.properties -var variables.properties</span><br/>
+    Starts Wetator with the configuration 'my.properties'. Additional variable definitions are
+    taken fon the file variables.properties (varialbes defined inside variables.properties are
+    overwriting the ones from my.properties). Use this e.g. to have separate password variable
+    not checked in but available as (protected) file on the ci server.
+  </p>
+
 
   <p></p>
   <p>
@@ -51,4 +63,13 @@ draft: false
     Starts Wetator with the configuration 'my.properties'. Wetator directly executes test1.wet and test2.wet.
   </p>
 
+
+  <p></p>
+  <p>
+    <span class='configContent'>wetator -append test4.wet</span><br/>
+    Starts Wetator and append the results of test4.wet to the already existing ones<br/>.
+    Append requires to have the option 'wetator.distinctOutput' set to false. Additionally the configuration used
+    for this call should be the same as for the ones before (because only the config of the first test will be shown
+    in the report).
+  </p>
 </div>

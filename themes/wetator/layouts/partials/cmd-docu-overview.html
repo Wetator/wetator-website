@@ -1,6 +1,6 @@
 {{ range . }}
     <div class="togglePanel">
-        <span class="cmd_title">{{ .Title }}</span>  <span class='cmd_overview'>{{ (.Resources.GetMatch "overview.txt").Content }}</span>
+        <span class="cmd_title">{{ .Title }}</span>  <span class='cmd_overview'>{{ with .Resources.GetMatch "overview.txt" }} {{ .Content }} {{ end }} </span>
     </div>
     <div class="togglePanel_content">
         {{ .Content }}

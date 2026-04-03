@@ -430,3 +430,53 @@ font size see: http://www.1ngo.de/web/em.html
 
 .docu table td.col_param2 {
 }
+
+/* ====================== */
+/* RESPONSIVE — phone     */
+/* ====================== */
+
+@media (max-width: 600px) {
+  #content {
+    padding-left: 0.5em;
+    border-left: none;
+  }
+
+  #content h1 { font-size: 1.6em; }
+  #content h2 { font-size: 1.2em; }
+  #content h3 { font-size: 1.05em; }
+
+  /* Make images fluid */
+  #content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make tables scrollable horizontally */
+  .docu table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  /* Tab container */
+  .tab-container {
+    padding: 10px 10px 10px 0;
+  }
+
+  /* Toggle panel */
+  #content .togglePanel {
+    font-size: 0.82em;
+  }
+
+  /* Params layout */
+  .docu .params .name {
+    float: none;
+    display: block;
+  }
+
+  .docu .params .desc {
+    margin-left: 0;
+  }
+}

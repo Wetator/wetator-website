@@ -1,67 +1,51 @@
 /* ********************************** */
-/* RBRi 2009, 2011, 2016              */
+/* RBRi 2009, 2011, 2016, 2026        */
 /*                                    */
 /* The two column layout is based on  */
 /* the work of Matthew James Taylor   */
 /*   http://matthewjamestaylor.com    */
 /* ********************************** */
 
-/* Wetator colors */
-
-
-
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-html {
-}
-
 
 body {
-  border:0; /* This removes the border around the viewport in old versions of IE */
-  width:100%;
-  min-width:600px;  /* Minimum width of layout - remove line if not required */
-                    /* The min-width property does not work in old versions of Internet Explorer */
+  border: 0;
+  width: 100%;
   font-family: 'Droid Sans', arial, helvetica, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.28em;
   text-align: left;
-
   color: #000000;
-  background:#ffffff;
+  background: #ffffff;
 }
 
 a {
   color: #00769c;
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid;
   text-decoration: none;
   outline: 0;
 }
 
 a:hover {
   color: #e75013;
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid;
 }
-
 
 /* ------------- */
 /* Header styles */
 /* ------------- */
 
 #header {
-  clear:both;
-  float:left;
-  width:100%;
-  height: 148px;
+  clear: both;
+  float: left;
+  width: 100%;
+  min-height: 148px;
+  position: relative;
 }
 
 #header a, #header a:hover, #header a:visited, #header a:link, #header a:active {
@@ -70,16 +54,18 @@ a:hover {
 }
 
 #header_logo {
-  float:left;
+  float: left;
   width: 400px;
+  max-width: 100%;
   padding-top: 8px;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 #header_logo a img {
   border: none;
+  max-width: 100%;
+  height: auto;
 }
-
 
 #header_bottomline {
   border-bottom: 1px solid #bbbbbb;
@@ -87,14 +73,41 @@ a:hover {
   margin-left: 402px;
   margin-top: 9px;
   margin-right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Hamburger button — hidden on desktop */
+#nav_toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#nav_toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #585759;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+#nav_toggle:hover span {
+  background: #00769c;
 }
 
 #header_nav {
-  clear: right;
   display: inline;
   float: right;
   margin: 46px 15px 0 0;
-  background:#ffffff;
+  background: #ffffff;
 }
 
 #header_nav ul {
@@ -109,7 +122,6 @@ a:hover {
   float: left;
   padding-bottom: 1px;
 }
-
 
 #header_nav ul li a {
   color: #585759;
@@ -191,15 +203,11 @@ a:hover {
 /* ----------- */
 
 .colmask {
-  position:relative;  /* This fixes the IE7 overflow hidden bug and stops the layout jumping out of place */
-  clear:both;
-  float:left;
-  width:100%;         /* width of whole page */
-  overflow:hidden;    /* This chops off any overhanging divs */
-}
-
-/* 2 column left menu settings */
-.leftmenu {
+  position: relative;
+  clear: both;
+  float: left;
+  width: 100%;
+  overflow: hidden;
 }
 
 .leftmenu .colright {
@@ -222,9 +230,6 @@ a:hover {
   padding-bottom: 1em;
 }
 
-.col1 {
-}
-
 .leftmenu .col1 {
   margin: 0 70px 0 215px;
   position: relative;
@@ -238,7 +243,6 @@ a:hover {
   position: relative;
   right: 240px;
 }
-
 
 /* ------- */
 /* sidebar */
@@ -271,61 +275,41 @@ a:hover {
 
 #sidebar_nav ul li {
   color: #585759;
-  margin: 0px 8px;
+  margin: 0 8px;
   padding: 0;
   list-style-image: none;
   list-style-type: none;
 }
 
 #sidebar_nav ul ul {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 #sidebar_nav ul ul li {
-    list-style-image: none;
-    list-style-type: square;
-    margin-left: 20px;
+  list-style-image: none;
+  list-style-type: square;
+  margin-left: 20px;
 }
 
 #sidebar_nav ul ul ul {
-    margin-left: 0px;
+  margin-left: 0;
 }
 
 #sidebar_nav ul li a {
-  background: none repeat scroll 0 0 transparent;
+  background: none;
   color: #585759;
   padding: 0 2px;
   font-size: 0.75em;
   text-decoration: none;
 }
 
-#sidebar_nav li.selected a {
-  color: #00769c;
-}
-
-#sidebar_nav li.selected li a {
-  color: #585759;
-}
-
-#sidebar_nav li.selected li.selected a {
-  color: #00769c;
-}
-
-#sidebar_nav li.selected li.selected li a {
-  color: #585759;
-}
-
-#sidebar_nav li.selected li.selected li.selected a {
-  color: #00769c;
-}
-
-#sidebar_nav li.selected li.selected li.selected li a {
-  color: #585759;
-}
-
-#sidebar_nav li.selected li.selected li.selected li.selected a {
-  color: #00769c;
-}
+#sidebar_nav li.selected a { color: #00769c; }
+#sidebar_nav li.selected li a { color: #585759; }
+#sidebar_nav li.selected li.selected a { color: #00769c; }
+#sidebar_nav li.selected li.selected li a { color: #585759; }
+#sidebar_nav li.selected li.selected li.selected a { color: #00769c; }
+#sidebar_nav li.selected li.selected li.selected li a { color: #585759; }
+#sidebar_nav li.selected li.selected li.selected li.selected a { color: #00769c; }
 
 #sidebar_news {
   font-size: 0.88em;
@@ -345,9 +329,9 @@ a:hover {
 /* ------ */
 
 #footer {
-  clear:both;
-  float:left;
-  width:100%;
+  clear: both;
+  float: left;
+  width: 100%;
   border-top: 1px solid #bbbbbb;
   margin: 24px 18px;
 }
@@ -362,7 +346,6 @@ a:hover {
   text-decoration: none;
 }
 
-
 /* --------------- */
 /* general classes */
 /* --------------- */
@@ -371,4 +354,187 @@ a:hover {
   color: #918C7E;
   font-size: 0.63em;
   margin: -4px 0 6px;
+}
+
+
+/* ====================== */
+/* RESPONSIVE — tablet    */
+/* ====================== */
+
+@media (max-width: 860px) {
+  body { min-width: 0; }
+
+  #header_logo {
+    width: 280px;
+    padding-top: 6px;
+  }
+
+  #header_bottomline {
+    margin-left: 292px;
+    height: 60px;
+    margin-top: 6px;
+  }
+
+  #header_nav {
+    margin-top: 30px;
+    margin-right: 8px;
+  }
+
+  #header_nav ul li a {
+    padding: 0 6px;
+    font-size: 0.9em;
+  }
+}
+
+
+/* ====================== */
+/* RESPONSIVE — phone     */
+/* ====================== */
+
+@media (max-width: 600px) {
+
+  /* --- Header --- */
+  #header {
+    min-height: auto;
+    float: none;
+    padding-bottom: 0;
+  }
+
+  #header_logo {
+    float: none;
+    width: 100%;
+    padding: 10px 12px 0;
+  }
+
+  #header_logo a img {
+    width: 260px;
+    height: auto;
+  }
+
+  #header_bottomline {
+    margin: 0;
+    height: auto;
+    border-bottom: 1px solid #bbbbbb;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* Show hamburger */
+  #nav_toggle {
+    display: flex;
+  }
+
+  /* Nav collapsed by default on mobile */
+  #header_nav {
+    display: none;
+    float: none;
+    margin: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #bbbbbb;
+  }
+
+  /* When toggled open */
+  #header_nav.open {
+    display: block;
+  }
+
+  #header_nav ul {
+    display: block;
+    line-height: 1;
+  }
+
+  #header_nav li {
+    float: none;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  #header_nav ul li a {
+    padding: 10px 16px;
+    font-size: 1em;
+    display: block;
+  }
+
+  /* Sub-menus: always visible on mobile, indented */
+  #header_nav ul ul {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid #eeeeee;
+    margin: 0;
+    white-space: normal;
+  }
+
+  #header_nav ul ul li {
+    border-bottom: 1px solid #eeeeee;
+    background: #f8f8f8;
+    font-size: 0.95em;
+  }
+
+  #header_nav ul ul li a {
+    padding-left: 30px;
+  }
+
+  /* Breadcrumbs */
+  #header_breadcrumbs ol {
+    margin-bottom: 10px;
+  }
+
+  /* --- Two-column -> single column --- */
+  .colmask {
+    float: none;
+    overflow: visible;
+  }
+
+  .leftmenu .colright {
+    float: none;
+    width: 100%;
+    position: static;
+    left: auto;
+  }
+
+  .col1wrap {
+    float: none !important;
+    width: 100% !important;
+    position: static !important;
+    right: auto !important;
+    border-right: none;
+    padding-bottom: 0;
+  }
+
+  .leftmenu .col1wrap {
+    float: none !important;
+    width: 100% !important;
+    position: static !important;
+    right: auto !important;
+  }
+
+  .leftmenu .col1 {
+    margin: 0 12px;
+    position: static;
+    right: auto;
+    overflow: visible;
+  }
+
+  .leftmenu .col2 {
+    float: none !important;
+    width: 100% !important;
+    position: static !important;
+    right: auto !important;
+    border-top: 1px solid #bbbbbb;
+    padding: 12px 0;
+  }
+
+  /* Sidebar stacks below content */
+  #sidebar {
+    padding: 0 12px;
+  }
+
+  /* Footer */
+  #footer {
+    margin: 16px 12px;
+  }
 }

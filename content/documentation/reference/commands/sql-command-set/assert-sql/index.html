@@ -13,4 +13,73 @@ draft: false
 
 <div class="docu">
   {{% cmd-register-cs-hint %}}
+  <p>Executes the given SQL query against the configured database and asserts that the result matches the expected value.<br/>
+  The result is built by concatenating all column values of all rows, separated by spaces.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">sql-query</div>
+      <div class="desc">The SQL SELECT statement to execute (required).<br/>
+        To target a specific database connection, prefix the SQL with '@[db-name] ', e.g. '@mydb SELECT ...'.
+        If no prefix is given, the default connection is used.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">expected-result</div>
+      <div class="desc">The expected result as a content pattern (required).<br/>
+        The result is checked using the same pattern syntax as {{% pagelink "assert-content" "assert-content" %}}.
+        It is possible to use '*' and '?' as wildcards.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="configFile">Config (wetator.config)</div>
+    <div class="configContent">
+      wetator.commandSets=org.wetator.commandset.SqlCommandSet<br/>
+      wetator.db.connections=mydb<br/>
+      wetator.db.mydb.driver=org.hsqldb.jdbcDriver<br/>
+      wetator.db.mydb.url=jdbc:hsqldb:mem:testdb<br/>
+      wetator.db.mydb.user=sa<br/>
+      wetator.db.mydb.password=
+    </div>
+
+    <div class="example">
+      <h3>Assert the count of rows in a table</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-sql</td>
+          <td class="col_param1">SELECT COUNT(*) FROM users</td>
+          <td class="col_param2">5</td>
+        </tr>
+      </table>
+    </div>
+    <div class="example">
+      <h3>Assert the value of a specific column</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-sql</td>
+          <td class="col_param1">SELECT name FROM users WHERE id = 1</td>
+          <td class="col_param2">dobby</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

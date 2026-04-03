@@ -1,0 +1,63 @@
+---
+title: "Type"
+menu:
+  main:
+    name: "Type"
+    parent: "Incubator Command Set"
+    weight: 600
+
+weight: 600
+date: 2023-05-06T00:00:00+02:00
+draft: false
+---
+
+<div class="docu">
+  {{% cmd-register-cs-hint %}}
+  <p>Types the given key sequence into the currently focused control.<br/>
+  Use this command to send special keys (e.g. Tab, Enter, arrow keys) or to simulate
+  low-level keyboard input when the {{% pagelink "set" "Set" %}} command is not sufficient.
+  </p>
+  <div class="hint">
+    The control to type into must already be focused. Use {{% pagelink "click-on" "Click On" %}} or another
+    action to focus the control before using this command.
+  </div>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">keys</div>
+      <div class="desc">The key sequence to type into the focused control.<br/>
+        Printable characters are typed as-is. Special keys are enclosed in curly braces,
+        e.g. {KEY_TAB}, {KEY_RETURN}, {KEY_UP}, {KEY_DOWN}.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Type text followed by Tab key into the focused field</h3>
+      <p>Click on the 'Username' field to focus it, type a username, and then press Tab to move focus to the next field.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Username</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">type</td>
+          <td class="col_param1">dobby{KEY_TAB}</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

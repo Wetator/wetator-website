@@ -25,7 +25,7 @@ draft: false
       <li>variables, you can use in your tests
       <li>additional command sets (a way to add your own commands) together with their config parameters
       <li>additional scripters (if you like to make Wetator able to read your own input format)
-      <li>ActiveX object mocks (if you like to make Wetator able simulate AxtiveX objects)
+      <li>ActiveX object mocks (if you like to make Wetator able to simulate ActiveX objects)
     </ul>
   </p>
   <p>The file format is the usual windows property file format; '#' at the beginning of a line marks the line as a comment.
@@ -48,10 +48,10 @@ draft: false
     Possible values are:
     </p>
     <ul>
-      <li>Firefox_38
-      <li>Firefox_45
-      <li>IE_11
-      <li>CHROME
+      <li>Firefox_ESR
+      <li>Firefox
+      <li>Chrome
+      <li>Edge
     </ul>
   </div>
 
@@ -70,7 +70,7 @@ draft: false
 
   <h4 class="togglePanel">Mock ActiveX Objects (wetator.browser.activeXObjects)</h4>
   <div class="togglePanel_content">
-    <p>HtmlUnit supports ActiveX object mocks lets you simulate special plugins required for your application. For every AxtiveXObject (class) you have to write your own mocker java class and add it to the class path. For more details have a look at the HtmlUnit documentation.
+    <p>HtmlUnit supports ActiveX object mocks to let you simulate special plugins required for your application. For every ActiveXObject (class) you have to write your own mocker Java class and add it to the class path. For more details have a look at the HtmlUnit documentation.
     </p>
   </div>
 
@@ -87,9 +87,9 @@ draft: false
 
   <h4 class="togglePanel">Report XSL Templates (wetator.xslTemplates)</h4>
   <div class="togglePanel_content">
-    <p>After the whole test suite is processed, Wetator can execute xls transformations of the resutl file (xml) to produce nice reports.
+    <p>After the whole test suite is processed, Wetator can execute XSL transformations of the result file (xml) to produce nice reports.
     </p>
-    <p>This property holds a comma separated list of xsl templates files. TODO name
+    <p>This property holds a comma separated list of xsl template files.
     </p>
     <p>You can use a relative or an absolute files. For relative paths, the path is relative to the location of the config file.
     </p>
@@ -112,7 +112,7 @@ draft: false
 
   <h4 class="togglePanel">Basic Authentication (wetator.basicAuthUser, wetator.basicAuthPassword)</h4>
   <div class="togglePanel_content">
-    <p>If your application under test requires basic authentication, than you can define the user here.<br/>
+    <p>If your application under test requires basic authentication, then you can define the user here.<br/>
     <span class='configContent'>wetator.basicAuthUser=[user]</span><br/>
     <span class='configContent'>wetator.basicAuthPassword=[password]</span>
     </p>
@@ -120,25 +120,25 @@ draft: false
 
   <h4 class="togglePanel">NTLM Authentication (wetator.ntlmUser, wetator.ntlmPassword, wetator.ntlmWorkstation, wetator.ntlmDomain)</h4>
   <div class="togglePanel_content">
-    <p>If your application under test requires NTKM authentication, than you can define the client info here.<br/>
+    <p>If your application under test requires NTLM authentication, then you can define the client info here.<br/>
     <span class='configContent'>wetator.ntlmUser=[user]</span><br/>
     <span class='configContent'>wetator.ntlmPassword=[password]</span><br/>
-    <span class='configContent'>wetator.ntlmWorkstation=[password]</span><br/>
-    <span class='configContent'>wetator.ntlmDomain=[password]</span>
+    <span class='configContent'>wetator.ntlmWorkstation=[workstation]</span><br/>
+    <span class='configContent'>wetator.ntlmDomain=[domain]</span>
     </p>
   </div>
 
   <h4 class="togglePanel">Additional Command Sets (wetator.commandSets)</h4>
   <div class="togglePanel_content">
     <p>It is possible to extends the list of command by adding your own. Commands are grouped in CommandSets.<br/>
-      Two additional command sets are already availabale (as part of the wetator.jar):
+      Two additional command sets are already available (as part of the wetator.jar):
       <ul>
         <li>org.wetator.commandset.SqlCommandSet (commands for sql database access e.g. for setting up your testdata)
         <li>org.wetator.commandset.IncubatorCommandSet (command not yet part of the default command set but you can use it to play with this)
       </ul>
     </p>
     <p>Define all your command sets (classes) here as comma separated list.<br/>
-      There is no need to register the build in default command set (org.wetator.commandset.DefaultCommandSet) here.
+      There is no need to register the built-in default command set (org.wetator.commandset.DefaultCommandSet) here.
     </p>
   </div>
 
@@ -152,8 +152,8 @@ draft: false
 
   <h4 class="togglePanel">Additional Control Support (wetator.controls)</h4>
   <div class="togglePanel_content">
-    <p>Sometimes some companies using additional web controls (usually plugins). Because Wetator is based on HtmlUnit, there is no easy way too support this plugins.<br/>
-      But you can write your own support for this based (e.g. a simulation of the features). This additional controls are handled the same way than any outer control.
+    <p>Sometimes some companies use additional web controls (usually plugins). Because Wetator is based on HtmlUnit, there is no easy way to support these plugins.<br/>
+      But you can write your own support for this (e.g. a simulation of the features). These additional controls are handled the same way as any other control.
     </p>
     <p>Define all your control (classes) here as comma separated list.
     </p>
@@ -217,7 +217,7 @@ This feature is helpful for applications using some kind of heartbeat jobs (e.g.
     </p>
   </div>
 
-  <h4 class="togglePanel">Typing Speed (wetator.typingspeed)</h4>
+  <h4 class="togglePanel">Typing Speed (wetator.typingSpeed)</h4>
   <div class="togglePanel_content">
     <p> The simulated typing speed of the user in keystrokes per minute.
     </p>
@@ -231,7 +231,7 @@ This feature is helpful for applications using some kind of heartbeat jobs (e.g.
 
   <h4 class="togglePanel">Retrospect (wetator.retrospect)</h4>
   <div class="togglePanel_content">
-    <p>This is for debugging only. If enabled wetator will write detailed logs for the specified number of steps before the error ocurs.
+    <p>This is for debugging only. If enabled, Wetator will write detailed logs for the specified number of steps before the error occurs.
     </p>
     <p><strong>Enabling this requires log4j inside your classpath.</strong></p>
     <p>Enabling this will change the log level for org.apache.http.wire to TRACE. Take care that all your appenders for this logger have a proper threshold defined.

@@ -11,4 +11,60 @@ draft: false
 
 <div class="docu">
 
+<p>The Wetator XML format (file extension <code>.wet</code> or <code>.xml</code>) is an XML-based test definition format.
+It uses XML namespaces to distinguish the base test case structure from command sets,
+making it easy to validate files against the provided XSD schemas and to use XML editors with auto-completion.</p>
+
+<h4>A simple test script might look like this</h4>
+<p>
+<pre>
+&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+&lt;test-case
+    xmlns='http://www.wetator.org/xsd/test-case'
+    xmlns:d='http://www.wetator.org/xsd/default-command-set'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:schemaLocation='http://www.wetator.org/xsd/test-case test-case-1.0.0.xsd
+                        http://www.wetator.org/xsd/default-command-set default-command-set-1.0.0.xsd'
+    version='1.0.0'&gt;
+    &lt;command&gt;&lt;d:open-url&gt;&lt;d:url&gt;https://www.wetator.org/testform&lt;/d:url&gt;&lt;/d:open-url&gt;&lt;/command&gt;
+
+    &lt;command&gt;&lt;d:assert-title&gt;&lt;d:title&gt;WETATOR / Test Form&lt;/d:title&gt;&lt;/d:assert-title&gt;&lt;/command&gt;
+    &lt;command&gt;&lt;d:assert-content&gt;&lt;d:content&gt;The form below is only for testing purpose&lt;/d:content&gt;&lt;/d:assert-content&gt;&lt;/command&gt;
+
+    &lt;command&gt;&lt;d:set&gt;&lt;d:wpath&gt;Project name&lt;/d:wpath&gt;&lt;d:value&gt;My Fancy Web App Under Test&lt;/d:value&gt;&lt;/d:set&gt;&lt;/command&gt;
+    &lt;command&gt;&lt;d:select&gt;&lt;d:wpath&gt;JAVA&lt;/d:wpath&gt;&lt;/d:select&gt;&lt;/command&gt;
+
+    &lt;command&gt;&lt;d:click-on&gt;&lt;d:wpath&gt;Submit My Truth&lt;/d:wpath&gt;&lt;/d:click-on&gt;&lt;/command&gt;
+    &lt;command&gt;&lt;d:assert-content&gt;&lt;d:content&gt;Thank you for submitting your truth about WETATOR&lt;/d:content&gt;&lt;/d:assert-content&gt;&lt;/command&gt;
+&lt;/test-case&gt;
+</pre>
+</p>
+
+<h4>Comments</h4>
+<p>
+Use the <code>&lt;comment&gt;</code> element to add a comment to your test output.
+The text content of the comment element is treated as Markdown (same as the <code>describe</code> command).
+<pre>
+    &lt;comment&gt;This is a plain comment&lt;/comment&gt;
+    &lt;comment&gt;# Fill the form
+Use the fields below to fill the registration form.&lt;/comment&gt;
+</pre>
+</p>
+
+<h4>Disabled commands</h4>
+<p>
+A command can be disabled (skipped during test execution) by adding the <code>disabled="true"</code> attribute.
+<pre>
+    &lt;command disabled="true"&gt;&lt;d:click-on&gt;&lt;d:wpath&gt;Not yet implemented&lt;/d:wpath&gt;&lt;/d:click-on&gt;&lt;/command&gt;
+</pre>
+</p>
+
+<h4>Encoding</h4>
+<p>
+Wetator always assumes UTF-8 encoding for <code>.wet</code> files. Declare this in the XML header:
+<pre>
+&lt;?xml version='1.0' encoding='UTF-8'?&gt;
+</pre>
+</p>
+
 </div>

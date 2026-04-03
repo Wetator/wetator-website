@@ -59,7 +59,7 @@
     <table>
     <tr>
       <th class="col_commmand">Type</th>
-      <th class="col_commmand">Content-Type Heder</th>
+      <th class="col_commmand">Content-Type Header</th>
     </tr>
     <tr class="odd">
       <td class="col_commmand">PDF</td>
@@ -80,8 +80,8 @@
     </table>
     </p>
 
-    <h3>Check the content of an PDF file.</h3>
-    <p>TODO</p>
+    <h3>Check the content of a PDF file.</h3>
+    <p>If your application allows downloading a PDF, use 'open-url' to navigate to the PDF and then 'assert-content' to verify its text content.</p>
     <table>
     <tr>
       <th class="col_comment"></th>
@@ -91,8 +91,14 @@
     </tr>
     <tr class="odd">
       <td class="col_comment"></td>
+      <td class="col_commmand">open-url</td>
+      <td class="col_param1">reports/invoice.pdf</td>
+      <td class="col_param2"></td>
+    </tr>
+    <tr class="even">
+      <td class="col_comment"></td>
       <td class="col_commmand">assert-content</td>
-      <td class="col_param1">TODO</td>
+      <td class="col_param1">Invoice No., Total Amount</td>
       <td class="col_param2"></td>
     </tr>
     </table>

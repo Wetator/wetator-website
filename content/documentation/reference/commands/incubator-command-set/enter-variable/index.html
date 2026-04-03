@@ -1,0 +1,76 @@
+---
+title: "Enter Variable"
+menu:
+  main:
+    name: "Enter Variable"
+    parent: "Incubator Command Set"
+    weight: 700
+
+weight: 700
+date: 2023-05-06T00:00:00+02:00
+draft: false
+---
+
+<div class="docu">
+  {{% cmd-register-cs-hint %}}
+  <p class="hint">Requires version 3.0</p>
+  <p>Prompts the user to enter a value for a variable at test runtime.<br/>
+  Use this command when a value (e.g. a one-time password or a dynamically assigned value)
+  cannot be known in advance and must be supplied interactively during the test run.
+  </p>
+  <div class="hint">
+    The variable name must start with '$'. For secret variables (e.g. passwords), prefix the
+    variable name with '$$' — Wetator will mask the value in reports.
+  </div>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">variable-name</div>
+      <div class="desc">The name of the variable to set (required).<br/>
+        Must start with '$'. Use '$$' prefix to mark the variable as secret.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">hint-text</div>
+      <div class="desc">An optional message shown in the input dialog to guide the user.
+        If omitted, a default message is shown.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="example">
+      <h3>Prompt for a one-time password during the test run</h3>
+      <p>Prompt the user to enter a one-time password, store it in the secret variable '$$otp',
+      and then use it to fill in the OTP field.</p>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">enter-variable</td>
+          <td class="col_param1">$$otp</td>
+          <td class="col_param2">Please enter the one-time password from your authenticator app</td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">set</td>
+          <td class="col_param1">One-Time Password</td>
+          <td class="col_param2">${$otp}</td>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">click-on</td>
+          <td class="col_param1">Verify</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

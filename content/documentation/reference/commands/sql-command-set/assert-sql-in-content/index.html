@@ -13,4 +13,63 @@ draft: false
 
 <div class="docu">
   {{% cmd-register-cs-hint %}}
+  <p>Executes the given SQL query against the configured database and asserts that all returned values appear in the current page content.<br/>
+  This is useful to verify that data from the database is correctly displayed in the application's UI.
+  Null column values are ignored.
+  </p>
+
+  <h3>Parameters</h3>
+  <div class="params">
+    <div class="param">
+      <div class="name">sql-query</div>
+      <div class="desc">The SQL SELECT statement to execute (required).<br/>
+        To target a specific database connection, prefix the SQL with '@[db-name] ', e.g. '@mydb SELECT ...'.
+        If no prefix is given, the default connection is used.
+      </div>
+    </div>
+    <div class="param">
+      <div class="name">timeout</div>
+      <div class="desc">An optional timeout in seconds.<br/>
+        If specified, Wetator will wait up to this number of seconds for the page content to match.
+        Useful for pages that load data asynchronously.
+      </div>
+    </div>
+  </div>
+
+  <h3>Examples</h3>
+  <div class="examples">
+    <div class="configFile">Config (wetator.config)</div>
+    <div class="configContent">
+      wetator.commandSets=org.wetator.commandset.SqlCommandSet<br/>
+      wetator.db.connections=mydb<br/>
+      wetator.db.mydb.driver=org.hsqldb.jdbcDriver<br/>
+      wetator.db.mydb.url=jdbc:hsqldb:mem:testdb<br/>
+      wetator.db.mydb.user=sa<br/>
+      wetator.db.mydb.password=
+    </div>
+
+    <div class="example">
+      <h3>Assert that all user names from the database are shown on the current page</h3>
+      <table>
+        <tr>
+          <th class="col_comment"></th>
+          <th class="col_commmand">Command</th>
+          <th class="col_param1">Parameter</th>
+          <th class="col_param2">Optional Parameter</th>
+        </tr>
+        <tr class="odd">
+          <td class="col_comment"></td>
+          <td class="col_commmand">open-url</td>
+          <td class="col_param1">users/list</td>
+          <td class="col_param2"></td>
+        </tr>
+        <tr class="even">
+          <td class="col_comment"></td>
+          <td class="col_commmand">assert-sql-in-content</td>
+          <td class="col_param1">SELECT name FROM users ORDER BY id</td>
+          <td class="col_param2"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

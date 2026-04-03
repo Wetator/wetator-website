@@ -10,4 +10,84 @@ draft: false
 ---
 
 <div class="docu">
+
+<p>Wetator supports Microsoft Excel files (both <code>.xls</code> and <code>.xlsx</code>) as a convenient way to
+write and maintain test cases using a spreadsheet layout. The Excel format is especially useful for
+non-technical team members who prefer a tabular view of test steps.</p>
+
+<h4>File structure</h4>
+<p>
+Each row in the spreadsheet represents one test step. The columns are used as follows:
+</p>
+<ul>
+  <li><b>Column A</b> — optional comment for the step (displayed in the report)</li>
+  <li><b>Column B</b> — the command name (e.g. <code>open-url</code>, <code>assert-content</code>)</li>
+  <li><b>Column C</b> — the first parameter (e.g. the URL or WPath)</li>
+  <li><b>Column D</b> — the second (optional) parameter (e.g. the value to set)</li>
+</ul>
+<p>Empty rows are ignored. A template file <code>empty.xls</code> is included in the Wetator distribution under the <code>templates</code> directory.</p>
+
+<h4>A simple test script might look like this</h4>
+<table>
+  <tr>
+    <th class="col_comment">Comment</th>
+    <th class="col_commmand">Command</th>
+    <th class="col_param1">Parameter</th>
+    <th class="col_param2">Optional Parameter</th>
+  </tr>
+  <tr class="odd">
+    <td class="col_comment"></td>
+    <td class="col_commmand">open-url</td>
+    <td class="col_param1">https://www.wetator.org/testform</td>
+    <td class="col_param2"></td>
+  </tr>
+  <tr class="even">
+    <td class="col_comment"></td>
+    <td class="col_commmand">assert-title</td>
+    <td class="col_param1">WETATOR / Test Form</td>
+    <td class="col_param2"></td>
+  </tr>
+  <tr class="odd">
+    <td class="col_comment"></td>
+    <td class="col_commmand">assert-content</td>
+    <td class="col_param1">The form below is only for testing purpose</td>
+    <td class="col_param2"></td>
+  </tr>
+  <tr class="even">
+    <td class="col_comment"></td>
+    <td class="col_commmand">set</td>
+    <td class="col_param1">Project name</td>
+    <td class="col_param2">My Fancy Web App Under Test</td>
+  </tr>
+  <tr class="odd">
+    <td class="col_comment"></td>
+    <td class="col_commmand">select</td>
+    <td class="col_param1">JAVA</td>
+    <td class="col_param2"></td>
+  </tr>
+  <tr class="even">
+    <td class="col_comment"></td>
+    <td class="col_commmand">click-on</td>
+    <td class="col_param1">Submit My Truth</td>
+    <td class="col_param2"></td>
+  </tr>
+  <tr class="odd">
+    <td class="col_comment"></td>
+    <td class="col_commmand">assert-content</td>
+    <td class="col_param1">Thank you for submitting your truth about WETATOR</td>
+    <td class="col_param2"></td>
+  </tr>
+</table>
+
+<h4>Comments</h4>
+<p>
+If you like to add a comment, leave the command column (column B) empty and place the comment text in the first parameter column (column C).
+Alternatively, use the <code>describe</code> command to add a Markdown-formatted description that will appear in the test report.
+</p>
+
+<h4>Disabled commands</h4>
+<p>
+To disable (skip) a command without removing it, prefix the command name with '#', e.g. <code>#click-on</code>.
+</p>
+
 </div>

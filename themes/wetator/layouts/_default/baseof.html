@@ -18,9 +18,11 @@
   {{- block "main" . }}{{- end }}
 
 
-  {{ if ne nil (.Resources.GetMatch "addcontent.html") }}
-    {{ with .Resources.GetMatch "addcontent.html" }}
-      {{ .Content | safeHTML }}
+  {{ if .Parent }}
+    {{ if eq .Parent.Type "command-set" }}
+      {{ with .Resources.GetMatch "addcontent.html" }}
+        {{ .Content | safeHTML }}
+      {{ end }}
     {{ end }}
   {{ end }}
 
